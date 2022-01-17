@@ -17,17 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recurso 23" translatesAutoresizingMaskIntoConstraints="NO" id="ZKR-cm-mjh">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="ZKR-cm-mjh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZKR-cm-mjh" secondAttribute="trailing" id="CGi-Q4-l4A"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZKR-cm-mjh" secondAttribute="bottom" id="b30-Yr-Ju6"/>
-                            <constraint firstItem="ZKR-cm-mjh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bfD-SY-7Fq"/>
-                            <constraint firstItem="ZKR-cm-mjh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tFd-xL-0IO"/>
+                            <constraint firstAttribute="trailing" secondItem="ZKR-cm-mjh" secondAttribute="trailing" id="CGi-Q4-l4A"/>
+                            <constraint firstAttribute="bottom" secondItem="ZKR-cm-mjh" secondAttribute="bottom" id="b30-Yr-Ju6"/>
+                            <constraint firstAttribute="leading" secondItem="ZKR-cm-mjh" secondAttribute="leading" id="bfD-SY-7Fq"/>
+                            <constraint firstItem="ZKR-cm-mjh" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="tFd-xL-0IO"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,7 +37,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Recurso 23" width="415" height="819"/>
+        <image name="Splash" width="415" height="819"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
