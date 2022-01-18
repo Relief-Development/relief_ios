@@ -16,30 +16,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aviso Legal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h46-sO-Ftb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aviso Legal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h46-sO-Ftb">
                                 <rect key="frame" x="127" y="137" width="160" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="E7H-dP-4Ld"/>
+                                    <constraint firstAttribute="width" constant="160" id="hTu-kw-etW"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_logoPequeñoUsuario" translatesAutoresizingMaskIntoConstraints="NO" id="kHW-k6-Je1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logoPequeñoUsuario" translatesAutoresizingMaskIntoConstraints="NO" id="kHW-k6-Je1">
                                 <rect key="frame" x="156" y="55" width="103" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="0WP-BF-g5C"/>
+                                    <constraint firstAttribute="height" constant="54" id="nI8-a9-KLB"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A2p-s6-xew">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A2p-s6-xew">
                                 <rect key="frame" x="34" y="218" width="347" height="335"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Para facilidad del Usuario y para los efectos conducentes del presente Contrato, Relief proporciona laas definiciones pertinentes de los siguientes conceptos, mismos que aparecerán más adelante en el presente documento. Las siguientes palabras deberán ser interpretadas según se define en este apartado. Para efectos de diferenciación, los términos que en lo sucesivo se definen, serán descritoscon la primera letra en mayúscula y únicamente cuando se utilicen con dicho formato es cuando deberán de interpretarse como tales.</mutableString>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="335" id="5xz-4a-udd"/>
+                                    <constraint firstAttribute="width" constant="347" id="8At-Dm-D5K"/>
+                                </constraints>
+                                <string key="text">Para facilidad del Usuario y para los efectos conducentes del presente Contrato, Relief proporciona laas definiciones pertinentes de los siguientes conceptos, mismos que aparecerán más adelante en el presente documento. Las siguientes palabras deberán ser interpretadas según se define en este apartado. Para efectos de diferenciación, los términos que en lo sucesivo se definen, serán descritoscon la primera letra en mayúscula y únicamente cuando se utilicen con dicho formato es cuando deberán de interpretarse como tales.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3p7-U8-pvG">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3p7-U8-pvG">
                                 <rect key="frame" x="34" y="580" width="347" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="347" id="8pQ-aT-9tn"/>
+                                    <constraint firstAttribute="height" constant="150" id="JVW-8n-lmB"/>
+                                </constraints>
                                 <string key="text">"Aviso de Privacidad": Es el Aviso de Privacidad respecto de la recolección y uso de datos personales que son recabados por Relief mediante la plataforma.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -48,6 +60,21 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kHW-k6-Je1" secondAttribute="trailing" constant="155" id="BWq-jC-EHq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3p7-U8-pvG" secondAttribute="trailing" constant="33" id="MoI-2r-Zty"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3p7-U8-pvG" secondAttribute="bottom" constant="132" id="QoT-Ta-4Oa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h46-sO-Ftb" secondAttribute="trailing" constant="127" id="SRP-d2-xL9"/>
+                            <constraint firstItem="h46-sO-Ftb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="TzZ-eM-lOa"/>
+                            <constraint firstItem="3p7-U8-pvG" firstAttribute="top" secondItem="A2p-s6-xew" secondAttribute="bottom" constant="27" id="X7d-af-gFw"/>
+                            <constraint firstItem="A2p-s6-xew" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="dgB-rC-TIH"/>
+                            <constraint firstItem="kHW-k6-Je1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156" id="fLc-9k-D62"/>
+                            <constraint firstItem="A2p-s6-xew" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="174" id="g8g-Pk-fIf"/>
+                            <constraint firstItem="h46-sO-Ftb" firstAttribute="top" secondItem="kHW-k6-Je1" secondAttribute="bottom" constant="28" id="gyJ-HX-XC2"/>
+                            <constraint firstItem="3p7-U8-pvG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="mTR-aD-NWW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A2p-s6-xew" secondAttribute="trailing" constant="33" id="o8a-0K-XmV"/>
+                            <constraint firstItem="kHW-k6-Je1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="ttM-1R-XX8"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -56,7 +83,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="img_logoPequeñoUsuario" width="55" height="44"/>
+        <image name="img_logoPequeñoUsuario" width="55" height="44"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
