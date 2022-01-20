@@ -78,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19B8D2862799D46F00F1EFA9 /* Massage */ = {
+			isa = PBXGroup;
+			children = (
+				19B8D2812799CF2100F1EFA9 /* HomeViewController.swift */,
+			);
+			path = Massage;
+			sourceTree = "<group>";
+		};
 		3335E5CB2795C742008DF917 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +109,7 @@
 		3335E5D62795C742008DF917 /* Relief */ = {
 			isa = PBXGroup;
 			children = (
+				19B8D2862799D46F00F1EFA9 /* Massage */,
 				3335E5D72795C742008DF917 /* AppDelegate.swift */,
 				3335E5D92795C742008DF917 /* SceneDelegate.swift */,
 				3335E5DB2795C742008DF917 /* ViewController.swift */,
@@ -108,7 +117,6 @@
 				3335E5E02795C743008DF917 /* Assets.xcassets */,
 				3335E5E22795C743008DF917 /* LaunchScreen.storyboard */,
 				3335E5E52795C743008DF917 /* Info.plist */,
-				19B8D2812799CF2100F1EFA9 /* HomeViewController.swift */,
 			);
 			path = Relief;
 			sourceTree = "<group>";

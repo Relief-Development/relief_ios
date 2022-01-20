@@ -45,7 +45,7 @@
         <scene sceneID="QlT-Ux-Cfs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GNs-XA-f74" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="rwi-Xh-XiS"/>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" selectedImage="house.fill" id="rwi-Xh-XiS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ojL-KW-dXq">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -68,7 +68,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oDE-ZR-xQy">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="massagetabbarback"/>
                         <color key="selectedImageTintColor" name="massage"/>
                     </tabBar>
                     <connections>
@@ -100,7 +100,7 @@
         <scene sceneID="rRn-7w-CRy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m0w-HU-8Fq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="mb9-bJ-mRf"/>
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" selectedImage="person.fill" id="mb9-bJ-mRf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zR7-oO-TlT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -117,10 +117,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="massage">
             <color red="0.46700000762939453" green="0.37299999594688416" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="massagetabbarback">
+            <color red="0.93333339689999995" green="0.76862752440000004" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
