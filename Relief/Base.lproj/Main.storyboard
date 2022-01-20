@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -45,37 +46,66 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CGw-wV-HGB">
-                                <rect key="frame" x="191" y="459" width="32" height="226"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CGw-wV-HGB">
+                                <rect key="frame" x="40" y="447.5" width="334" height="250"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="arX-v6-s2e">
-                                        <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="arX-v6-s2e">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="B8j-fs-Cma"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VY5-Mo-BXR">
-                                        <rect key="frame" x="0.0" y="64" width="32" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VY5-Mo-BXR">
+                                        <rect key="frame" x="0.0" y="70" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2GT-oV-BaR"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZBW-x1-ccL">
-                                        <rect key="frame" x="0.0" y="128" width="32" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZBW-x1-ccL">
+                                        <rect key="frame" x="0.0" y="140" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="TS9-5e-vAG"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Pr-bO-20s">
-                                        <rect key="frame" x="0.0" y="192" width="32" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Pr-bO-20s">
+                                        <rect key="frame" x="0.0" y="210" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="aQG-nf-53l"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2Pr-bO-20s" secondAttribute="trailing" id="3T9-BR-k9I"/>
+                                    <constraint firstItem="2Pr-bO-20s" firstAttribute="top" secondItem="ZBW-x1-ccL" secondAttribute="bottom" constant="30" id="BC5-7H-zbY"/>
+                                    <constraint firstItem="2Pr-bO-20s" firstAttribute="leading" secondItem="CGw-wV-HGB" secondAttribute="leading" id="CkE-Jz-dzT"/>
+                                    <constraint firstItem="VY5-Mo-BXR" firstAttribute="top" secondItem="arX-v6-s2e" secondAttribute="bottom" constant="30" id="TCp-Bu-JbR"/>
+                                    <constraint firstItem="ZBW-x1-ccL" firstAttribute="top" secondItem="VY5-Mo-BXR" secondAttribute="bottom" constant="30" id="V9V-ZV-LyJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Pr-bO-20s" secondAttribute="bottom" id="WhL-5L-X2E"/>
+                                    <constraint firstItem="VY5-Mo-BXR" firstAttribute="leading" secondItem="CGw-wV-HGB" secondAttribute="leading" id="aN2-Vj-62o"/>
+                                    <constraint firstAttribute="trailing" secondItem="arX-v6-s2e" secondAttribute="trailing" id="eQ1-WJ-P1u"/>
+                                    <constraint firstItem="arX-v6-s2e" firstAttribute="top" secondItem="CGw-wV-HGB" secondAttribute="top" id="fbs-HL-IYL"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZBW-x1-ccL" secondAttribute="trailing" id="h9F-kc-LN7"/>
+                                    <constraint firstItem="arX-v6-s2e" firstAttribute="leading" secondItem="CGw-wV-HGB" secondAttribute="leading" id="jvf-7N-Lgz"/>
+                                    <constraint firstItem="ZBW-x1-ccL" firstAttribute="leading" secondItem="CGw-wV-HGB" secondAttribute="leading" id="l2J-rn-Tzo"/>
+                                    <constraint firstAttribute="trailing" secondItem="VY5-Mo-BXR" secondAttribute="trailing" id="zWI-19-bVm"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZNe-FW-pOS"/>
                         <color key="backgroundColor" name="user"/>
                         <constraints>
+                            <constraint firstItem="CGw-wV-HGB" firstAttribute="leading" secondItem="ZNe-FW-pOS" secondAttribute="leading" constant="40" id="LPJ-CZ-Sqv"/>
+                            <constraint firstItem="CGw-wV-HGB" firstAttribute="top" secondItem="x9f-0M-vlL" secondAttribute="bottom" constant="130" id="Sw7-OP-isl"/>
+                            <constraint firstItem="ZNe-FW-pOS" firstAttribute="trailing" secondItem="CGw-wV-HGB" secondAttribute="trailing" constant="40" id="hcs-fp-e5c"/>
                             <constraint firstItem="ppL-2k-yiv" firstAttribute="top" secondItem="ZNe-FW-pOS" secondAttribute="top" constant="70" id="lsn-a1-gPl"/>
-                            <constraint firstItem="ZNe-FW-pOS" firstAttribute="trailing" secondItem="CGw-wV-HGB" secondAttribute="trailing" constant="20" id="nNK-Y5-cYw"/>
                             <constraint firstItem="x9f-0M-vlL" firstAttribute="top" secondItem="ppL-2k-yiv" secondAttribute="bottom" constant="30" id="nwK-97-4tP"/>
                             <constraint firstItem="ppL-2k-yiv" firstAttribute="centerX" secondItem="XKX-F0-arR" secondAttribute="centerX" id="yk5-I9-eTZ"/>
                         </constraints>
