@@ -77,7 +77,6 @@
                         <segue destination="tyv-YC-ccb" kind="relationship" relationship="viewControllers" id="e7y-h8-nBx"/>
                         <segue destination="7rJ-rz-vZK" kind="relationship" relationship="viewControllers" id="5Gg-Qo-08R"/>
                         <segue destination="Paa-OP-pJZ" kind="relationship" relationship="viewControllers" id="gr5-UY-tPv"/>
-                        <segue destination="ZBq-4I-yFT" kind="relationship" relationship="viewControllers" id="3so-Z3-sKL"/>
                         <segue destination="nRZ-iO-ESn" kind="relationship" relationship="viewControllers" id="ZsD-da-dIb"/>
                     </connections>
                 </tabBarController>
@@ -140,41 +139,6 @@
             <point key="canvasLocation" x="1596" y="1512"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="WDP-aU-2Ni">
-            <objects>
-                <viewController id="c5c-T1-UWb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Qaq-Bv-HeL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="yxY-vW-dmr"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="r7f-Jm-5l5"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hHR-sd-WYk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2506" y="2275"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="RlV-i2-B5v">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZBq-4I-yFT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="message.fill" catalog="system" id="az6-v7-Aet"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bF7-Vu-gws">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="c5c-T1-UWb" kind="relationship" relationship="rootViewController" id="6mb-K5-AEb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JPQ-O7-xLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1587" y="2275"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="gyf-jr-jdr">
             <objects>
                 <viewController id="1OR-SA-uib" sceneMemberID="viewController">
@@ -188,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANK-cN-bME" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2497" y="3025"/>
+            <point key="canvasLocation" x="2506" y="2287"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wd1-fv-pWv">
@@ -207,14 +171,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7c-cf-8XC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1587" y="3025"/>
+            <point key="canvasLocation" x="1587" y="2287"/>
         </scene>
     </scenes>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
-        <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="User">
             <color red="0.0" green="0.57300001382827759" blue="0.56099998950958252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
