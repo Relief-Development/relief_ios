@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-4" y="65"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="MA5-ym-ofs">
             <objects>
-                <viewController id="RjZ-96-Cdf" sceneMemberID="viewController">
+                <viewController id="RjZ-96-Cdf" customClass="HomeViewController" customModule="Relief" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UJ0-JO-4iN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,6 +66,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="khg-Cr-Da5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oDE-ZR-xQy">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" name="massage"/>

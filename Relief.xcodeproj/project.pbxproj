@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19B8D2822799CF2100F1EFA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B8D2812799CF2100F1EFA9 /* HomeViewController.swift */; };
 		3335E5D82795C742008DF917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5D72795C742008DF917 /* AppDelegate.swift */; };
 		3335E5DA2795C742008DF917 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5D92795C742008DF917 /* SceneDelegate.swift */; };
 		3335E5DC2795C742008DF917 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5DB2795C742008DF917 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19B8D2812799CF2100F1EFA9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3335E5D42795C742008DF917 /* Relief.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Relief.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3335E5D72795C742008DF917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3335E5D92795C742008DF917 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				3335E5E02795C743008DF917 /* Assets.xcassets */,
 				3335E5E22795C743008DF917 /* LaunchScreen.storyboard */,
 				3335E5E52795C743008DF917 /* Info.plist */,
+				19B8D2812799CF2100F1EFA9 /* HomeViewController.swift */,
 			);
 			path = Relief;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				3335E5DC2795C742008DF917 /* ViewController.swift in Sources */,
 				3335E5D82795C742008DF917 /* AppDelegate.swift in Sources */,
 				3335E5DA2795C742008DF917 /* SceneDelegate.swift in Sources */,
+				19B8D2822799CF2100F1EFA9 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
