@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-614" y="80"/>
         </scene>
-        <!--View Controller-->
+        <!--Home User View Controller-->
         <scene sceneID="hfZ-uK-dHI">
             <objects>
-                <viewController id="0wL-hQ-DUV" customClass="ViewController" customModule="Relief" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0wL-hQ-DUV" customClass="HomeUserViewController" customModule="Relief" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Emp-Yo-zCo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +45,7 @@
         <scene sceneID="swP-MU-hRo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tyv-YC-ccb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="ulA-ZT-Mzs">
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" selectedImage="house.fill" id="ulA-ZT-Mzs">
                         <color key="badgeColor" name="User"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -67,10 +67,12 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3u0-Pk-e58" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3o5-lk-CHe">
+                    <tabBar key="tabBar" autoresizesSubviews="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3o5-lk-CHe">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="tabbarback"/>
                         <color key="tintColor" name="User"/>
+                        <color key="barTintColor" name="tabbarback"/>
                         <color key="selectedImageTintColor" name="User"/>
                     </tabBar>
                     <connections>
@@ -104,7 +106,7 @@
         <scene sceneID="XWM-QK-J28">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7rJ-rz-vZK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="JHi-54-gtu"/>
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="JHi-54-gtu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="U81-nD-1Aj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -129,7 +131,7 @@
                         <viewLayoutGuide key="safeArea" id="KqG-8V-T19"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="map.fill" catalog="system" id="igX-uy-1qK">
+                    <tabBarItem key="tabBarItem" title="" image="map" catalog="system" selectedImage="map.fill" id="igX-uy-1qK">
                         <color key="badgeColor" systemColor="labelColor"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="OxM-ZW-7qb"/>
@@ -158,7 +160,7 @@
         <scene sceneID="Wd1-fv-pWv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nRZ-iO-ESn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="0eF-bB-aFi"/>
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" selectedImage="person.fill" id="0eF-bB-aFi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TJ8-DD-kX6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -175,12 +177,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="map" catalog="system" width="128" height="110"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="User">
             <color red="0.0" green="0.57300001382827759" blue="0.56099998950958252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="tabbarback">
+            <color red="0.69803923369999998" green="0.9529411793" blue="0.9529411793" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
