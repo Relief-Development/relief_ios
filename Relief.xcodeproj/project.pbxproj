@@ -16,6 +16,7 @@
 		3335E5E42795C743008DF917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3335E5E22795C743008DF917 /* LaunchScreen.storyboard */; };
 		3335E5EF2795C743008DF917 /* ReliefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5EE2795C743008DF917 /* ReliefTests.swift */; };
 		3335E5FA2795C743008DF917 /* ReliefUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5F92795C743008DF917 /* ReliefUITests.swift */; };
+		47F65F46279F27A900D4185C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F65F45279F27A900D4185C /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3335E5F52795C743008DF917 /* ReliefUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReliefUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3335E5F92795C743008DF917 /* ReliefUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliefUITests.swift; sourceTree = "<group>"; };
 		3335E5FB2795C743008DF917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47F65F45279F27A900D4185C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				3335E5E02795C743008DF917 /* Assets.xcassets */,
 				3335E5E22795C743008DF917 /* LaunchScreen.storyboard */,
 				3335E5E52795C743008DF917 /* Info.plist */,
+				47F65F45279F27A900D4185C /* LoginVC.swift */,
 			);
 			path = Relief;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				3335E5D82795C742008DF917 /* AppDelegate.swift in Sources */,
 				19B8D2842799D02000F1EFA9 /* HomeUserViewController.swift in Sources */,
 				3335E5DA2795C742008DF917 /* SceneDelegate.swift in Sources */,
+				47F65F46279F27A900D4185C /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
