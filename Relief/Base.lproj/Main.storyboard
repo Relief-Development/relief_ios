@@ -98,12 +98,32 @@
                                     <constraint firstAttribute="trailing" secondItem="VY5-Mo-BXR" secondAttribute="trailing" id="zWI-19-bVm"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8g-5L-zq9">
+                                <rect key="frame" x="137" y="808" width="140" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="ycT-4o-ERx"/>
+                                </constraints>
+                                <color key="tintColor" name="user_light"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign in">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                    <color key="baseBackgroundColor" name="user_light"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1T-FW-dKL">
+                                <rect key="frame" x="40" y="705" width="136" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="user_light"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZNe-FW-pOS"/>
                         <color key="backgroundColor" name="user"/>
                         <constraints>
                             <constraint firstItem="CGw-wV-HGB" firstAttribute="leading" secondItem="ZNe-FW-pOS" secondAttribute="leading" constant="40" id="LPJ-CZ-Sqv"/>
                             <constraint firstItem="CGw-wV-HGB" firstAttribute="top" secondItem="x9f-0M-vlL" secondAttribute="bottom" constant="130" id="Sw7-OP-isl"/>
+                            <constraint firstItem="r8g-5L-zq9" firstAttribute="centerX" secondItem="XKX-F0-arR" secondAttribute="centerX" id="dUF-wW-UjR"/>
                             <constraint firstItem="ZNe-FW-pOS" firstAttribute="trailing" secondItem="CGw-wV-HGB" secondAttribute="trailing" constant="40" id="hcs-fp-e5c"/>
                             <constraint firstItem="ppL-2k-yiv" firstAttribute="top" secondItem="ZNe-FW-pOS" secondAttribute="top" constant="70" id="lsn-a1-gPl"/>
                             <constraint firstItem="x9f-0M-vlL" firstAttribute="top" secondItem="ppL-2k-yiv" secondAttribute="bottom" constant="30" id="nwK-97-4tP"/>
@@ -120,6 +140,9 @@
         <image name="img_logoTutorialUsuario" width="239" height="190"/>
         <namedColor name="user">
             <color red="0.0" green="0.57300001382827759" blue="0.56099998950958252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="user_light">
+            <color red="0.31000000238418579" green="0.76499998569488525" blue="0.76099997758865356" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
