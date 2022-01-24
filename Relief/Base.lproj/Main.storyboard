@@ -500,10 +500,10 @@
             </objects>
             <point key="canvasLocation" x="1587" y="3031"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile User View Controller-->
         <scene sceneID="8DA-TZ-67j">
             <objects>
-                <viewController id="Ude-Dc-bMg" sceneMemberID="viewController">
+                <viewController id="Ude-Dc-bMg" customClass="ProfileUserViewController" customModule="Relief" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tla-eq-cha">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -652,6 +652,10 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ude-Dc-bMg" id="5Vc-Xl-1lX"/>
+                                    <outlet property="delegate" destination="Ude-Dc-bMg" id="uBT-Dy-pd8"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OlM-Je-01V"/>
