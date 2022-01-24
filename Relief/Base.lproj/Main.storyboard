@@ -337,10 +337,95 @@
             </objects>
             <point key="canvasLocation" x="5320" y="80"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="dgc-iK-akj">
+            <objects>
+                <viewController storyboardIdentifier="loginID" id="Myz-pi-tiv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fG3-mf-Ag3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logoLoginRegistro" translatesAutoresizingMaskIntoConstraints="NO" id="bLH-nX-8Xh">
+                                <rect key="frame" x="87" y="166" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="mAv-qL-LNr"/>
+                                    <constraint firstAttribute="height" constant="128" id="qgq-Me-VKp"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BfG-Mi-c6M">
+                                <rect key="frame" x="20.5" y="337" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0v1-R0-1jh">
+                                <rect key="frame" x="20.5" y="411" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="He olvidado la contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcb-5V-dHj">
+                                <rect key="frame" x="108.5" y="474" width="197.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="tabbarback"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGQ-yI-8bp">
+                                <rect key="frame" x="20.5" y="573" width="373" height="34.5"/>
+                                <color key="backgroundColor" name="tabbarback"/>
+                                <color key="tintColor" name="user"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Login">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿No tienes una cuenta? Créala con un simple click" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTm-6A-WBc">
+                                <rect key="frame" x="97" y="724" width="220" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="1fR-QG-sg2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="tabbarback"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgg-Ij-Ba1">
+                                <rect key="frame" x="20.5" y="805" width="373" height="31"/>
+                                <color key="tintColor" name="tabbarback"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="REGISTRATE"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kZI-Zc-xDc"/>
+                        <color key="backgroundColor" name="user"/>
+                        <constraints>
+                            <constraint firstItem="Pcb-5V-dHj" firstAttribute="top" secondItem="0v1-R0-1jh" secondAttribute="bottom" constant="29" id="78L-vH-bhH"/>
+                            <constraint firstItem="0v1-R0-1jh" firstAttribute="width" secondItem="fG3-mf-Ag3" secondAttribute="width" multiplier="0.9" id="ATN-i7-Nud"/>
+                            <constraint firstItem="kZI-Zc-xDc" firstAttribute="bottom" secondItem="pgg-Ij-Ba1" secondAttribute="bottom" constant="26" id="DGL-yB-3Do"/>
+                            <constraint firstItem="BfG-Mi-c6M" firstAttribute="top" secondItem="bLH-nX-8Xh" secondAttribute="bottom" constant="43" id="LxF-md-b2D"/>
+                            <constraint firstItem="bLH-nX-8Xh" firstAttribute="centerX" secondItem="kZI-Zc-xDc" secondAttribute="centerX" id="Pca-sq-AdI"/>
+                            <constraint firstItem="bLH-nX-8Xh" firstAttribute="top" secondItem="kZI-Zc-xDc" secondAttribute="top" constant="122" id="Rtw-qb-AZN"/>
+                            <constraint firstItem="BfG-Mi-c6M" firstAttribute="width" secondItem="fG3-mf-Ag3" secondAttribute="width" multiplier="0.9" id="T1p-ne-v0b"/>
+                            <constraint firstItem="GGQ-yI-8bp" firstAttribute="centerX" secondItem="kZI-Zc-xDc" secondAttribute="centerX" id="VH5-DZ-rRc"/>
+                            <constraint firstItem="pgg-Ij-Ba1" firstAttribute="width" secondItem="fG3-mf-Ag3" secondAttribute="width" multiplier="0.9" id="W1A-kz-7uB"/>
+                            <constraint firstItem="0v1-R0-1jh" firstAttribute="top" secondItem="BfG-Mi-c6M" secondAttribute="bottom" constant="40" id="Wja-nk-ylR"/>
+                            <constraint firstItem="GGQ-yI-8bp" firstAttribute="top" secondItem="Pcb-5V-dHj" secondAttribute="bottom" constant="78" id="cDB-2T-eX3"/>
+                            <constraint firstItem="BfG-Mi-c6M" firstAttribute="centerX" secondItem="kZI-Zc-xDc" secondAttribute="centerX" id="eJN-09-qbl"/>
+                            <constraint firstItem="pgg-Ij-Ba1" firstAttribute="top" secondItem="YTm-6A-WBc" secondAttribute="bottom" constant="40" id="esb-I9-G0P"/>
+                            <constraint firstItem="pgg-Ij-Ba1" firstAttribute="centerX" secondItem="kZI-Zc-xDc" secondAttribute="centerX" id="l0Z-AX-jp3"/>
+                            <constraint firstItem="GGQ-yI-8bp" firstAttribute="width" secondItem="fG3-mf-Ag3" secondAttribute="width" multiplier="0.9" id="mIN-9g-EeP"/>
+                            <constraint firstItem="Pcb-5V-dHj" firstAttribute="centerX" secondItem="kZI-Zc-xDc" secondAttribute="centerX" id="sZj-8t-7kO"/>
+                            <constraint firstItem="YTm-6A-WBc" firstAttribute="centerX" secondItem="kZI-Zc-xDc" secondAttribute="centerX" id="umr-XO-Z6u"/>
+                            <constraint firstItem="0v1-R0-1jh" firstAttribute="centerX" secondItem="kZI-Zc-xDc" secondAttribute="centerX" id="x9a-nQ-PbA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ftp-J4-T2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660.86956521739137" y="-663.61607142857144"/>
+        </scene>
     </scenes>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="img_logoLoginRegistro" width="126" height="141"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
@@ -357,6 +442,9 @@
         </namedColor>
         <namedColor name="tabbarback">
             <color red="0.69800001382827759" green="0.95300000905990601" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="user">
+            <color red="0.0" green="0.57300001382827759" blue="0.56099998950958252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
