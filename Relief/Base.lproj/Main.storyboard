@@ -32,8 +32,20 @@
                     <view key="view" contentMode="scaleToFill" id="UJ0-JO-4iN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffE-Yw-wi1">
+                                <rect key="frame" x="169" y="430.5" width="76" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iDg-Cm-sna"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ffE-Yw-wi1" firstAttribute="centerX" secondItem="UJ0-JO-4iN" secondAttribute="centerX" id="15o-85-KwV"/>
+                            <constraint firstItem="ffE-Yw-wi1" firstAttribute="centerY" secondItem="UJ0-JO-4iN" secondAttribute="centerY" id="VjQ-Yi-23z"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xHY-YL-GUM"/>
                 </viewController>
@@ -87,8 +99,20 @@
                     <view key="view" contentMode="scaleToFill" id="cqD-Nx-DfX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfS-Qu-jrj">
+                                <rect key="frame" x="167.5" y="430.5" width="79" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7rn-Vk-aaz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BfS-Qu-jrj" firstAttribute="centerX" secondItem="cqD-Nx-DfX" secondAttribute="centerX" id="oqm-BV-acC"/>
+                            <constraint firstItem="BfS-Qu-jrj" firstAttribute="centerY" secondItem="cqD-Nx-DfX" secondAttribute="centerY" id="tiP-DY-ize"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gAz-rk-dCH"/>
                 </viewController>
@@ -125,7 +149,7 @@
             <color red="0.46700000762939453" green="0.37299999594688416" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="massagetabbarback">
-            <color red="0.93333339689999995" green="0.76862752440000004" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.93300002813339233" green="0.76899999380111694" blue="0.5690000057220459" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
