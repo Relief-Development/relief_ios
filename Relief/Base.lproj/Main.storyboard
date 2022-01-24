@@ -32,8 +32,20 @@
                     <view key="view" contentMode="scaleToFill" id="Emp-Yo-zCo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4E-9D-IJh">
+                                <rect key="frame" x="169" y="430.5" width="76" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Lbv-GL-iZK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="C4E-9D-IJh" firstAttribute="centerX" secondItem="Emp-Yo-zCo" secondAttribute="centerX" id="agX-L2-gI1"/>
+                            <constraint firstItem="C4E-9D-IJh" firstAttribute="centerY" secondItem="Emp-Yo-zCo" secondAttribute="centerY" id="flt-bF-Dof"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JDz-t9-9e0"/>
                 </viewController>
@@ -93,8 +105,20 @@
                     <view key="view" contentMode="scaleToFill" id="dvh-b1-Qug">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDT-e6-fib">
+                                <rect key="frame" x="163" y="430.5" width="88" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uxO-n9-STh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rDT-e6-fib" firstAttribute="centerY" secondItem="dvh-b1-Qug" secondAttribute="centerY" id="bce-Ul-U5B"/>
+                            <constraint firstItem="rDT-e6-fib" firstAttribute="centerX" secondItem="dvh-b1-Qug" secondAttribute="centerX" id="cJf-U9-DeI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZI7-Si-UkI"/>
                 </viewController>
@@ -128,8 +152,20 @@
                     <view key="view" contentMode="scaleToFill" id="tuI-7g-FTE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lE-lz-lI6">
+                                <rect key="frame" x="179" y="430.5" width="56" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="KqG-8V-T19"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5lE-lz-lI6" firstAttribute="centerY" secondItem="tuI-7g-FTE" secondAttribute="centerY" id="58I-pJ-W7z"/>
+                            <constraint firstItem="5lE-lz-lI6" firstAttribute="centerX" secondItem="tuI-7g-FTE" secondAttribute="centerX" id="V8b-Iq-Bvh"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="map" catalog="system" selectedImage="map.fill" id="igX-uy-1qK">
                         <color key="badgeColor" systemColor="labelColor"/>
@@ -147,8 +183,20 @@
                     <view key="view" contentMode="scaleToFill" id="eax-Cz-CiP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpP-ac-Ani">
+                                <rect key="frame" x="167.5" y="430.5" width="79" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ngr-cN-62M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RpP-ac-Ani" firstAttribute="centerX" secondItem="eax-Cz-CiP" secondAttribute="centerX" id="aWd-19-0j5"/>
+                            <constraint firstItem="RpP-ac-Ani" firstAttribute="centerY" secondItem="eax-Cz-CiP" secondAttribute="centerY" id="xCb-CO-Z4D"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DI4-Qk-SQO"/>
                 </viewController>
@@ -188,7 +236,7 @@
             <color red="0.0" green="0.57300001382827759" blue="0.56099998950958252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="tabbarback">
-            <color red="0.69803923369999998" green="0.9529411793" blue="0.9529411793" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.69800001382827759" green="0.95300000905990601" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
