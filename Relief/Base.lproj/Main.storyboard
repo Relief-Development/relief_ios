@@ -77,6 +77,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Gzp-J0-QhT">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YGK-Gz-TEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3u0-Pk-e58" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" autoresizesSubviews="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3o5-lk-CHe">
@@ -94,7 +95,6 @@
                         <segue destination="1OR-SA-uib" kind="relationship" relationship="viewControllers" id="Ua7-xU-1hV"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YGK-Gz-TEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="685.50724637681162" y="79.6875"/>
         </scene>
@@ -394,13 +394,133 @@
                     <view key="view" contentMode="scaleToFill" id="nba-pF-1EM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQz-Lx-Caw">
+                                <rect key="frame" x="82" y="312" width="250" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bDi-Tm-InM"/>
+                                    <constraint firstAttribute="width" constant="250" id="tpt-hQ-TBS"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Politica de privacidad">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NTR-l6-bSA" kind="show" id="tFS-oA-EKf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yK6-1o-vvY">
+                                <rect key="frame" x="82" y="379" width="250" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="F1S-sE-zGQ"/>
+                                    <constraint firstAttribute="height" constant="40" id="PSt-Zg-gS3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Aviso legal">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XrF-Ox-EEb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pQz-Lx-Caw" firstAttribute="centerX" secondItem="XrF-Ox-EEb" secondAttribute="centerX" id="1DX-UY-q2v"/>
+                            <constraint firstItem="yK6-1o-vvY" firstAttribute="top" secondItem="pQz-Lx-Caw" secondAttribute="bottom" constant="27" id="Diq-0i-PCl"/>
+                            <constraint firstItem="pQz-Lx-Caw" firstAttribute="top" secondItem="XrF-Ox-EEb" secondAttribute="top" constant="312" id="NBW-zw-Tle"/>
+                            <constraint firstItem="pQz-Lx-Caw" firstAttribute="leading" secondItem="XrF-Ox-EEb" secondAttribute="leading" constant="82" id="OYV-tT-ks1"/>
+                            <constraint firstItem="yK6-1o-vvY" firstAttribute="leading" secondItem="XrF-Ox-EEb" secondAttribute="leading" constant="82" id="T38-IX-qNV"/>
+                            <constraint firstItem="XrF-Ox-EEb" firstAttribute="trailing" secondItem="yK6-1o-vvY" secondAttribute="trailing" constant="82" id="VSg-3C-Xz8"/>
+                            <constraint firstItem="XrF-Ox-EEb" firstAttribute="trailing" secondItem="pQz-Lx-Caw" secondAttribute="trailing" constant="82" id="sM1-Tw-CD6"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Pd-ud-hvC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2330" y="2251"/>
+            <point key="canvasLocation" x="2328.985507246377" y="2250.6696428571427"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="w9S-SB-K1K">
+            <objects>
+                <viewController id="NTR-l6-bSA" customClass="ViewController" customModule="Relief" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Itv-eD-WOw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Política de privacidad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Os9-YX-nji">
+                                <rect key="frame" x="42" y="90" width="320" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GN1-L7-XDb"/>
+                                    <constraint firstAttribute="width" constant="320" id="LRa-Ul-xER"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logoPequeñoUsuario" translatesAutoresizingMaskIntoConstraints="NO" id="bNR-wJ-jjA">
+                                <rect key="frame" x="167" y="19" width="80" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bqR-P2-ChK"/>
+                                    <constraint firstAttribute="width" constant="80" id="ui0-Yt-slO"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="43Q-5C-GRI">
+                                <rect key="frame" x="20" y="156" width="350" height="130"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="W57-HE-nBn"/>
+                                    <constraint firstAttribute="height" constant="130" id="YnB-wk-YAx"/>
+                                </constraints>
+                                <string key="text">En Relief valoramos su confianza y privacidad, por este motivo, le explicamos, a continuación, de forma sencilla y transparente, cómo utilizamos exactamente sus datos.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1di-N1-KyR">
+                                <rect key="frame" x="20" y="286" width="350" height="180"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="DwN-BI-1Yp"/>
+                                    <constraint firstAttribute="height" constant="180" id="c3I-L6-49c"/>
+                                </constraints>
+                                <string key="text">Le animamos a que lea con detenimiento esta política de privacidad (en adelante, la Política) y, además, si surgiese alguna duda o quisiese más información a este respecto, puede escribirnos a privacyEU@relief.com.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9p5-QW-GNF">
+                                <rect key="frame" x="20" y="466" width="350" height="180"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="ChW-PM-hYa"/>
+                                    <constraint firstAttribute="height" constant="180" id="beg-Sr-fnb"/>
+                                </constraints>
+                                <string key="text">A los efectos de interpretar la presente política, los términos que se encuentren en ella con mayúscula tendrán el mismo significado que el que se asigna en los Términos de Uso, excepto que de forma expresa en el contexto de la presente.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M6m-fD-RT6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bNR-wJ-jjA" firstAttribute="leading" secondItem="M6m-fD-RT6" secondAttribute="leading" constant="167" id="Brx-sE-jZn"/>
+                            <constraint firstItem="bNR-wJ-jjA" firstAttribute="top" secondItem="M6m-fD-RT6" secondAttribute="top" constant="19" id="CTj-ac-yy2"/>
+                            <constraint firstItem="43Q-5C-GRI" firstAttribute="leading" secondItem="M6m-fD-RT6" secondAttribute="leading" constant="20" id="Mn2-Zx-O4v"/>
+                            <constraint firstItem="43Q-5C-GRI" firstAttribute="top" secondItem="Os9-YX-nji" secondAttribute="bottom" constant="16" id="NUr-Di-xk7"/>
+                            <constraint firstItem="M6m-fD-RT6" firstAttribute="trailing" secondItem="bNR-wJ-jjA" secondAttribute="trailing" constant="167" id="OCH-mF-mn4"/>
+                            <constraint firstItem="Os9-YX-nji" firstAttribute="top" secondItem="bNR-wJ-jjA" secondAttribute="bottom" constant="21" id="ehD-bo-Uta"/>
+                            <constraint firstItem="1di-N1-KyR" firstAttribute="top" secondItem="43Q-5C-GRI" secondAttribute="bottom" id="g95-fr-Ata"/>
+                            <constraint firstItem="1di-N1-KyR" firstAttribute="centerX" secondItem="43Q-5C-GRI" secondAttribute="centerX" id="lJe-Mh-hQI"/>
+                            <constraint firstItem="9p5-QW-GNF" firstAttribute="top" secondItem="1di-N1-KyR" secondAttribute="bottom" id="lzH-8N-8Mo"/>
+                            <constraint firstItem="9p5-QW-GNF" firstAttribute="centerX" secondItem="1di-N1-KyR" secondAttribute="centerX" id="mhc-3R-L5J"/>
+                            <constraint firstItem="Os9-YX-nji" firstAttribute="leading" secondItem="M6m-fD-RT6" secondAttribute="leading" constant="42" id="o76-9V-Hqr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="urD-8T-ayD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R11-md-geg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3073.913043478261" y="2250.6696428571427"/>
         </scene>
     </scenes>
     <resources>
@@ -418,7 +538,7 @@
             <color red="0.0" green="0.57300001382827759" blue="0.56099998950958252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="background_list">
-            <color red="0.30980393290000002" green="0.76470589639999997" blue="0.7607843876" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.31000000238418579" green="0.76499998569488525" blue="0.76099997758865356" alpha="0.20000000298023224" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="tabbarback">
             <color red="0.69800001382827759" green="0.95300000905990601" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
