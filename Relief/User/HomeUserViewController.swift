@@ -13,5 +13,7 @@ class HomeUserViewController: UIViewController{
         self.tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "user_light")
         self.tabBarController?.tabBar.invalidateIntrinsicContentSize()
     }
+    
+
 }
 
