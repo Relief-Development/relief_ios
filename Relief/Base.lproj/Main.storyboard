@@ -298,38 +298,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logoLoginRegistro" translatesAutoresizingMaskIntoConstraints="NO" id="bLH-nX-8Xh">
-                                <rect key="frame" x="87" y="166" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="mAv-qL-LNr"/>
-                                    <constraint firstAttribute="height" constant="128" id="qgq-Me-VKp"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BfG-Mi-c6M">
-                                <rect key="frame" x="20.5" y="337" width="373" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BfG-Mi-c6M">
+                                <rect key="frame" x="168" y="337" width="78" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0v1-R0-1jh">
-                                <rect key="frame" x="20.5" y="411" width="373" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0v1-R0-1jh">
+                                <rect key="frame" x="156" y="411" width="102.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="He olvidado la contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcb-5V-dHj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="He olvidado la contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcb-5V-dHj">
                                 <rect key="frame" x="108.5" y="474" width="197.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="tabbarback"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGQ-yI-8bp">
-                                <rect key="frame" x="20.5" y="573" width="373" height="34.5"/>
-                                <color key="backgroundColor" name="tabbarback"/>
-                                <color key="tintColor" name="user"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Login">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
-                                </buttonConfiguration>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿No tienes una cuenta? Créala con un simple click" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTm-6A-WBc">
                                 <rect key="frame" x="97" y="724" width="220" height="41"/>
                                 <constraints>
@@ -340,7 +324,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgg-Ij-Ba1">
-                                <rect key="frame" x="20.5" y="805" width="373" height="31"/>
+                                <rect key="frame" x="153.5" y="805" width="107" height="31"/>
                                 <color key="tintColor" name="tabbarback"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="REGISTRATE"/>
@@ -350,20 +334,11 @@
                         <color key="backgroundColor" name="user"/>
                         <constraints>
                             <constraint firstItem="Pcb-5V-dHj" firstAttribute="top" secondItem="0v1-R0-1jh" secondAttribute="bottom" constant="29" id="78L-vH-bhH"/>
-                            <constraint firstItem="0v1-R0-1jh" firstAttribute="width" secondItem="fG3-mf-Ag3" secondAttribute="width" multiplier="0.9" id="ATN-i7-Nud"/>
                             <constraint firstItem="kZI-Zc-xDc" firstAttribute="bottom" secondItem="pgg-Ij-Ba1" secondAttribute="bottom" constant="26" id="DGL-yB-3Do"/>
-                            <constraint firstItem="BfG-Mi-c6M" firstAttribute="top" secondItem="bLH-nX-8Xh" secondAttribute="bottom" constant="43" id="LxF-md-b2D"/>
-                            <constraint firstItem="bLH-nX-8Xh" firstAttribute="centerX" secondItem="kZI-Zc-xDc" secondAttribute="centerX" id="Pca-sq-AdI"/>
-                            <constraint firstItem="bLH-nX-8Xh" firstAttribute="top" secondItem="kZI-Zc-xDc" secondAttribute="top" constant="122" id="Rtw-qb-AZN"/>
-                            <constraint firstItem="BfG-Mi-c6M" firstAttribute="width" secondItem="fG3-mf-Ag3" secondAttribute="width" multiplier="0.9" id="T1p-ne-v0b"/>
-                            <constraint firstItem="GGQ-yI-8bp" firstAttribute="centerX" secondItem="kZI-Zc-xDc" secondAttribute="centerX" id="VH5-DZ-rRc"/>
-                            <constraint firstItem="pgg-Ij-Ba1" firstAttribute="width" secondItem="fG3-mf-Ag3" secondAttribute="width" multiplier="0.9" id="W1A-kz-7uB"/>
                             <constraint firstItem="0v1-R0-1jh" firstAttribute="top" secondItem="BfG-Mi-c6M" secondAttribute="bottom" constant="40" id="Wja-nk-ylR"/>
-                            <constraint firstItem="GGQ-yI-8bp" firstAttribute="top" secondItem="Pcb-5V-dHj" secondAttribute="bottom" constant="78" id="cDB-2T-eX3"/>
                             <constraint firstItem="BfG-Mi-c6M" firstAttribute="centerX" secondItem="kZI-Zc-xDc" secondAttribute="centerX" id="eJN-09-qbl"/>
                             <constraint firstItem="pgg-Ij-Ba1" firstAttribute="top" secondItem="YTm-6A-WBc" secondAttribute="bottom" constant="40" id="esb-I9-G0P"/>
                             <constraint firstItem="pgg-Ij-Ba1" firstAttribute="centerX" secondItem="kZI-Zc-xDc" secondAttribute="centerX" id="l0Z-AX-jp3"/>
-                            <constraint firstItem="GGQ-yI-8bp" firstAttribute="width" secondItem="fG3-mf-Ag3" secondAttribute="width" multiplier="0.9" id="mIN-9g-EeP"/>
                             <constraint firstItem="Pcb-5V-dHj" firstAttribute="centerX" secondItem="kZI-Zc-xDc" secondAttribute="centerX" id="sZj-8t-7kO"/>
                             <constraint firstItem="YTm-6A-WBc" firstAttribute="centerX" secondItem="kZI-Zc-xDc" secondAttribute="centerX" id="umr-XO-Z6u"/>
                             <constraint firstItem="0v1-R0-1jh" firstAttribute="centerX" secondItem="kZI-Zc-xDc" secondAttribute="centerX" id="x9a-nQ-PbA"/>
@@ -382,21 +357,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logoTutorialUsuario" translatesAutoresizingMaskIntoConstraints="NO" id="UJb-HO-PoO">
-                                <rect key="frame" x="107" y="114" width="200" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="ffO-I9-b2s"/>
-                                    <constraint firstAttribute="width" constant="200" id="voW-SS-nhJ"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="RELIEF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oo-dA-AQB">
-                                <rect key="frame" x="174" y="294" width="66" height="23.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9Ex-cQ-j8J">
-                                <rect key="frame" x="40" y="447.5" width="334" height="250"/>
+                                <rect key="frame" x="40" y="294" width="334" height="250"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7lr-Ow-6ZF">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
@@ -448,41 +410,62 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kT-c9-I9M">
-                                <rect key="frame" x="137" y="808" width="140" height="34"/>
+                                <rect key="frame" x="47" y="808" width="320" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="Eq1-vn-1Tz"/>
+                                    <constraint firstAttribute="width" constant="320" id="Eq1-vn-1Tz"/>
                                 </constraints>
                                 <color key="tintColor" name="user_light"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign in">
+                                <buttonConfiguration key="configuration" style="filled" title="Registrarse">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                     <color key="baseBackgroundColor" name="user_light"/>
                                 </buttonConfiguration>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYq-Ew-fmZ">
-                                <rect key="frame" x="40" y="705" width="136" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Ya estas registrado? Inicia sesión" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYq-Ew-fmZ">
+                                <rect key="frame" x="77.5" y="564" width="259" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" name="user_light"/>
+                                <color key="textColor" name="tabbarback"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logoLoginRegistro" translatesAutoresizingMaskIntoConstraints="NO" id="IhZ-I4-37W">
+                                <rect key="frame" x="107" y="104" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="70g-eh-3Qz"/>
+                                    <constraint firstAttribute="width" constant="200" id="8e0-y0-Rcf"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Var-7J-Y9p">
+                                <rect key="frame" x="57" y="684.5" width="300" height="32"/>
+                                <color key="backgroundColor" name="tabbarback"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="xN8-Ss-EzE"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Usuario"/>
+                                    <segment title="Masajista"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" name="user"/>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KMJ-2f-Utd"/>
                         <color key="backgroundColor" name="user"/>
                         <constraints>
-                            <constraint firstItem="7oo-dA-AQB" firstAttribute="top" secondItem="UJb-HO-PoO" secondAttribute="bottom" constant="30" id="3Ie-SF-6im"/>
-                            <constraint firstItem="UJb-HO-PoO" firstAttribute="top" secondItem="KMJ-2f-Utd" secondAttribute="top" constant="70" id="7Ku-4x-z7I"/>
-                            <constraint firstItem="9Ex-cQ-j8J" firstAttribute="top" secondItem="7oo-dA-AQB" secondAttribute="bottom" constant="130" id="EAt-AH-AJi"/>
+                            <constraint firstItem="IhZ-I4-37W" firstAttribute="centerX" secondItem="KMJ-2f-Utd" secondAttribute="centerX" id="2Ga-Ze-LcX"/>
+                            <constraint firstItem="Var-7J-Y9p" firstAttribute="centerX" secondItem="KMJ-2f-Utd" secondAttribute="centerX" id="9dD-VZ-BMq"/>
                             <constraint firstItem="2kT-c9-I9M" firstAttribute="centerX" secondItem="gYM-1d-Xca" secondAttribute="centerX" id="Hke-l1-aA6"/>
-                            <constraint firstItem="KMJ-2f-Utd" firstAttribute="trailing" secondItem="9Ex-cQ-j8J" secondAttribute="trailing" constant="40" id="czB-CU-5j8"/>
-                            <constraint firstItem="9Ex-cQ-j8J" firstAttribute="leading" secondItem="KMJ-2f-Utd" secondAttribute="leading" constant="40" id="ef3-SU-odM"/>
-                            <constraint firstItem="UJb-HO-PoO" firstAttribute="centerX" secondItem="gYM-1d-Xca" secondAttribute="centerX" id="wqt-lw-OCe"/>
+                            <constraint firstItem="9Ex-cQ-j8J" firstAttribute="centerX" secondItem="KMJ-2f-Utd" secondAttribute="centerX" id="Lif-Db-WPG"/>
+                            <constraint firstItem="9Ex-cQ-j8J" firstAttribute="width" secondItem="gYM-1d-Xca" secondAttribute="width" multiplier="0.806763" id="eCT-xd-4AA"/>
+                            <constraint firstItem="EYq-Ew-fmZ" firstAttribute="top" secondItem="9Ex-cQ-j8J" secondAttribute="bottom" constant="20" id="eeC-NR-Lrp"/>
+                            <constraint firstItem="EYq-Ew-fmZ" firstAttribute="centerX" secondItem="KMJ-2f-Utd" secondAttribute="centerX" id="fQv-me-Khx"/>
+                            <constraint firstItem="IhZ-I4-37W" firstAttribute="top" secondItem="KMJ-2f-Utd" secondAttribute="top" constant="60" id="oRX-Nh-38F"/>
+                            <constraint firstItem="9Ex-cQ-j8J" firstAttribute="top" secondItem="IhZ-I4-37W" secondAttribute="bottom" constant="40" id="pYs-Q5-ncS"/>
+                            <constraint firstItem="Var-7J-Y9p" firstAttribute="top" secondItem="EYq-Ew-fmZ" secondAttribute="bottom" constant="100" id="ufx-Dv-eHD"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBi-W8-9Io" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1587" y="-664"/>
+            <point key="canvasLocation" x="1586.9565217391305" y="-664.28571428571422"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tlv-06-hWN">
@@ -913,7 +896,6 @@
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="img_logoLoginRegistro" width="126" height="141"/>
         <image name="img_logoPequeñoUsuario" width="55" height="44"/>
-        <image name="img_logoTutorialUsuario" width="239" height="190"/>
         <image name="img_marcoUsuario" width="149" height="149"/>
         <image name="img_masajeRelajante" width="50" height="50"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
