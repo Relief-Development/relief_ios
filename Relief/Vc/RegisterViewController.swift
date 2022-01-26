@@ -14,15 +14,22 @@ class RegisterViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     
        
     }
     @IBAction func buttonLoginTapped(_ sender: Any){
-        if let homeuser = storyboard?.instantiateViewController(withIdentifier: "home"){
+        if segmentregister?.selectedSegmentIndex == 0{
+        if let homeuser = storyboard?.instantiateViewController(withIdentifier: "HomeUser"){
             homeuser.modalPresentationStyle = .fullScreen
             self.present(homeuser, animated: true, completion: nil)
         }
-        
+        }else {
+            if let homemassage = storyboard?.instantiateViewController(withIdentifier: "HomeMassage"){
+                homemassage.modalPresentationStyle = .fullScreen
+                self.present(homemassage, animated: true, completion: nil)
+            }
+        }
     }
     @IBAction func buttonToLoginTapped(_ sender: Any){
         if let login = storyboard?.instantiateViewController(withIdentifier: "Login"){
