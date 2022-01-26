@@ -17,15 +17,17 @@ class RegisterViewController: UIViewController{
     
        
     }
-    @IBAction func buttonLoginTapped(){
-        if let homeuser = mainstoryboard.instantiateViewController(withIdentifier: "homeuser") as? HomeViewController{
-            view.window?.rootViewController = homeuser
+    @IBAction func buttonLoginTapped(_ sender: Any){
+        if let homeuser = storyboard?.instantiateViewController(withIdentifier: "home"){
+            homeuser.modalPresentationStyle = .fullScreen
+            self.present(homeuser, animated: true, completion: nil)
         }
         
     }
-    @IBAction func buttonToLoginTapped(){
-        if let login = mainstoryboard.instantiateViewController(withIdentifier: "login") as? RegisterViewController{
-            view.window?.rootViewController = login
+    @IBAction func buttonToLoginTapped(_ sender: Any){
+        if let login = storyboard?.instantiateViewController(withIdentifier: "Login"){
+            login.modalPresentationStyle = .fullScreen
+            self.present(login, animated: true, completion: nil)
         }
         
     }

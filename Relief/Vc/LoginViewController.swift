@@ -21,15 +21,17 @@ class LoginViewController: UIViewController{
         self.registerBtn?.layer.borderColor = UIColor(named: "tabbarback")?.cgColor
        
     }
-    @IBAction func buttonRegisterTapped(){
-        if let register = mainstoryboard.instantiateViewController(withIdentifier: "Register") as? RegisterViewController{
-            view.window?.rootViewController = register
+    @IBAction func buttonRegisterTapped(_ sender: Any){
+        if let register = storyboard?.instantiateViewController(withIdentifier: "Register"){
+            register.modalPresentationStyle = .fullScreen
+            self.present(register, animated: true, completion: nil)
         }
         
     }
-    @IBAction func buttonLoginTapped(){
-        if let homeuser = mainstoryboard.instantiateViewController(withIdentifier: "homeuser") as? HomeViewController{
-            view.window?.rootViewController = homeuser
+    @IBAction func buttonLoginTapped(_ sender: Any){
+        if let homeuser = storyboard?.instantiateViewController(withIdentifier: "home"){
+            homeuser.modalPresentationStyle = .fullScreen
+            self.present(homeuser, animated: true, completion: nil)
         }
         
     }

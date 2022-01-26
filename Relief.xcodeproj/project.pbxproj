@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191E7AE027A1B45A000810DE /* PoliticUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7ADF27A1B45A000810DE /* PoliticUserVC.swift */; };
+		191E7AE227A1B469000810DE /* LegalUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE127A1B469000810DE /* LegalUserVC.swift */; };
+		191E7AE427A1BD82000810DE /* ProfileMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE327A1BD82000810DE /* ProfileMassageVC.swift */; };
+		191E7AE627A1BDCC000810DE /* ProfileMassageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE527A1BDCC000810DE /* ProfileMassageCell.swift */; };
+		191E7AE827A1BE07000810DE /* ModalProfileMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE727A1BE07000810DE /* ModalProfileMassageVC.swift */; };
+		191E7AEA27A1BE5C000810DE /* PoliticMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE927A1BE5C000810DE /* PoliticMassageVC.swift */; };
+		191E7AEC27A1BE6E000810DE /* LegalMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AEB27A1BE6E000810DE /* LegalMassageVC.swift */; };
+		192318C127A19CBA00B1FAAB /* ModalProfileUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192318C027A19CBA00B1FAAB /* ModalProfileUserVC.swift */; };
 		19AD4C8C27A05A57006A3943 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD4C8B27A05A57006A3943 /* RegisterViewController.swift */; };
 		19AD4C8E27A062DB006A3943 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD4C8D27A062DB006A3943 /* LoginViewController.swift */; };
 		19AD4C9127A06E2E006A3943 /* Tatiana.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AD4C9027A06E2E006A3943 /* Tatiana.storyboard */; };
@@ -45,6 +53,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		191E7ADF27A1B45A000810DE /* PoliticUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticUserVC.swift; sourceTree = "<group>"; };
+		191E7AE127A1B469000810DE /* LegalUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalUserVC.swift; sourceTree = "<group>"; };
+		191E7AE327A1BD82000810DE /* ProfileMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMassageVC.swift; sourceTree = "<group>"; };
+		191E7AE527A1BDCC000810DE /* ProfileMassageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMassageCell.swift; sourceTree = "<group>"; };
+		191E7AE727A1BE07000810DE /* ModalProfileMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModalProfileMassageVC.swift; path = ../../../../../../ModalProfileMassageVC.swift; sourceTree = "<group>"; };
+		191E7AE927A1BE5C000810DE /* PoliticMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticMassageVC.swift; sourceTree = "<group>"; };
+		191E7AEB27A1BE6E000810DE /* LegalMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalMassageVC.swift; sourceTree = "<group>"; };
+		192318C027A19CBA00B1FAAB /* ModalProfileUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalProfileUserVC.swift; sourceTree = "<group>"; };
 		19AD4C8B27A05A57006A3943 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		19AD4C8D27A062DB006A3943 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		19AD4C9027A06E2E006A3943 /* Tatiana.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tatiana.storyboard; sourceTree = "<group>"; };
@@ -124,6 +140,9 @@
 				19B8D2832799D02000F1EFA9 /* HomeUserViewController.swift */,
 				19F663C4279F199200F724D4 /* ProfileUserViewController.swift */,
 				19F663C6279F1AA400F724D4 /* ProfileUserCell.swift */,
+				192318C027A19CBA00B1FAAB /* ModalProfileUserVC.swift */,
+				191E7ADF27A1B45A000810DE /* PoliticUserVC.swift */,
+				191E7AE127A1B469000810DE /* LegalUserVC.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -131,7 +150,12 @@
 		19B8D2862799D46F00F1EFA9 /* Massage */ = {
 			isa = PBXGroup;
 			children = (
+				191E7AE327A1BD82000810DE /* ProfileMassageVC.swift */,
 				19B8D2812799CF2100F1EFA9 /* HomeViewController.swift */,
+				191E7AE527A1BDCC000810DE /* ProfileMassageCell.swift */,
+				191E7AE727A1BE07000810DE /* ModalProfileMassageVC.swift */,
+				191E7AE927A1BE5C000810DE /* PoliticMassageVC.swift */,
+				191E7AEB27A1BE6E000810DE /* LegalMassageVC.swift */,
 			);
 			path = Massage;
 			sourceTree = "<group>";
@@ -326,13 +350,21 @@
 			files = (
 				19AD4C8E27A062DB006A3943 /* LoginViewController.swift in Sources */,
 				19F663C7279F1AA400F724D4 /* ProfileUserCell.swift in Sources */,
+				191E7AE827A1BE07000810DE /* ModalProfileMassageVC.swift in Sources */,
 				3335E5DC2795C742008DF917 /* ViewController.swift in Sources */,
+				192318C127A19CBA00B1FAAB /* ModalProfileUserVC.swift in Sources */,
+				191E7AE027A1B45A000810DE /* PoliticUserVC.swift in Sources */,
+				191E7AE227A1B469000810DE /* LegalUserVC.swift in Sources */,
+				191E7AE427A1BD82000810DE /* ProfileMassageVC.swift in Sources */,
 				3335E5D82795C742008DF917 /* AppDelegate.swift in Sources */,
+				191E7AEC27A1BE6E000810DE /* LegalMassageVC.swift in Sources */,
 				19AD4C8C27A05A57006A3943 /* RegisterViewController.swift in Sources */,
 				19F663C5279F199200F724D4 /* ProfileUserViewController.swift in Sources */,
 				19B8D2842799D02000F1EFA9 /* HomeUserViewController.swift in Sources */,
 				3335E5DA2795C742008DF917 /* SceneDelegate.swift in Sources */,
 				19B8D2822799CF2100F1EFA9 /* HomeViewController.swift in Sources */,
+				191E7AE627A1BDCC000810DE /* ProfileMassageCell.swift in Sources */,
+				191E7AEA27A1BE5C000810DE /* PoliticMassageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
