@@ -10,11 +10,34 @@ import UIKit
 class RegisterViewController: UIViewController{
     
     @IBOutlet var segmentregister: UISegmentedControl?
+    @IBOutlet var userTF: UITextField?
+    @IBOutlet var passwordTF: UITextField?
+    @IBOutlet var nameTF: UITextField?
+    @IBOutlet var emailTF: UITextField?
     let mainstoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.userTF?.attributedPlaceholder = NSAttributedString(
+            string: "Usuario",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "user_light")]
+        )
+        self.passwordTF?.attributedPlaceholder = NSAttributedString(
+            string: "Contraseña",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "user_light")]
+        )
+        self.nameTF?.attributedPlaceholder = NSAttributedString(
+            string: "Nombre",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "user_light")]
+        )
+        self.emailTF?.attributedPlaceholder = NSAttributedString(
+            string: "Email",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "user_light")]
+        )
+
+
+
+
     
        
     }

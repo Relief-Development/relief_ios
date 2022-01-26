@@ -285,6 +285,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IlA-gg-yZa">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="mI1-tl-lMn"/>
                                         </constraints>
@@ -293,6 +294,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tad-gT-EzN">
                                         <rect key="frame" x="0.0" y="70" width="334" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="yj2-gb-IBd"/>
                                         </constraints>
@@ -368,7 +370,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="KUm-1T-cYa"/>
                     <connections>
+                        <outlet property="passwordTF" destination="tad-gT-EzN" id="rNC-ux-GVx"/>
                         <outlet property="registerBtn" destination="pgg-Ij-Ba1" id="V1w-c7-0nL"/>
+                        <outlet property="userTF" destination="IlA-gg-yZa" id="lRY-dQ-ljZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftp-J4-T2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -388,6 +392,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7lr-Ow-6ZF">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="gK3-UO-jSu"/>
                                         </constraints>
@@ -396,6 +401,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="emC-Mz-NmX">
                                         <rect key="frame" x="0.0" y="70" width="334" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="rCz-Zc-D64"/>
                                         </constraints>
@@ -404,6 +410,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ruO-9Z-rhW">
                                         <rect key="frame" x="0.0" y="140" width="334" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Svo-uT-yAJ"/>
                                         </constraints>
@@ -412,6 +419,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o74-iv-5vi">
                                         <rect key="frame" x="0.0" y="210" width="334" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="v7Y-ZK-RBR"/>
                                         </constraints>
@@ -502,7 +510,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTF" destination="emC-Mz-NmX" id="7H5-rh-BWU"/>
+                        <outlet property="nameTF" destination="7lr-Ow-6ZF" id="LLc-DJ-lAb"/>
+                        <outlet property="passwordTF" destination="o74-iv-5vi" id="0tF-pc-Ngh"/>
                         <outlet property="segmentregister" destination="Var-7J-Y9p" id="T7z-dz-I6f"/>
+                        <outlet property="userTF" destination="ruO-9Z-rhW" id="qZK-0a-3od"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBi-W8-9Io" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
