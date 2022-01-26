@@ -25,6 +25,7 @@
 		3335E5E42795C743008DF917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3335E5E22795C743008DF917 /* LaunchScreen.storyboard */; };
 		3335E5EF2795C743008DF917 /* ReliefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5EE2795C743008DF917 /* ReliefTests.swift */; };
 		3335E5FA2795C743008DF917 /* ReliefUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5F92795C743008DF917 /* ReliefUITests.swift */; };
+		47D51ED427A1F26A00301DFA /* RecoverPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D51ED327A1F26A00301DFA /* RecoverPassViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		3335E5F52795C743008DF917 /* ReliefUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReliefUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3335E5F92795C743008DF917 /* ReliefUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliefUITests.swift; sourceTree = "<group>"; };
 		3335E5FB2795C743008DF917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47D51ED327A1F26A00301DFA /* RecoverPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPassViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				19AD4C8B27A05A57006A3943 /* RegisterViewController.swift */,
 				19AD4C8D27A062DB006A3943 /* LoginViewController.swift */,
+				47D51ED327A1F26A00301DFA /* RecoverPassViewController.swift */,
 			);
 			path = Vc;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				3335E5D82795C742008DF917 /* AppDelegate.swift in Sources */,
 				19AD4C8C27A05A57006A3943 /* RegisterViewController.swift in Sources */,
 				19F663C5279F199200F724D4 /* ProfileUserViewController.swift in Sources */,
+				47D51ED427A1F26A00301DFA /* RecoverPassViewController.swift in Sources */,
 				19B8D2842799D02000F1EFA9 /* HomeUserViewController.swift in Sources */,
 				3335E5DA2795C742008DF917 /* SceneDelegate.swift in Sources */,
 				19B8D2822799CF2100F1EFA9 /* HomeViewController.swift in Sources */,
