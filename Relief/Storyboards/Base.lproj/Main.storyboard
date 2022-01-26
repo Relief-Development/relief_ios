@@ -493,7 +493,7 @@
                                     <color key="baseBackgroundColor" name="tabbarback"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonLoginTapped" destination="5tW-ir-nh3" eventType="touchUpInside" id="t0u-PN-BlK"/>
+                                    <action selector="buttonToLoginTapped" destination="5tW-ir-nh3" eventType="touchUpInside" id="C38-Eg-Cmk"/>
                                     <segue destination="3u0-Pk-e58" kind="custom" id="jkI-A4-Be2"/>
                                 </connections>
                             </button>

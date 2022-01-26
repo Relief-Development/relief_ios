@@ -10,6 +10,7 @@ import UIKit
 class RegisterViewController: UIViewController{
     
     @IBOutlet var segmentregister: UISegmentedControl?
+    let mainstoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,13 +18,13 @@ class RegisterViewController: UIViewController{
        
     }
     @IBAction func buttonLoginTapped(){
-        if let homeuser = storyboard?.instantiateViewController(withIdentifier: "homeuser") as? HomeViewController{
+        if let homeuser = mainstoryboard.instantiateViewController(withIdentifier: "homeuser") as? HomeViewController{
             view.window?.rootViewController = homeuser
         }
         
     }
     @IBAction func buttonToLoginTapped(){
-        if let login = storyboard?.instantiateViewController(withIdentifier: "login") as? RegisterViewController{
+        if let login = mainstoryboard.instantiateViewController(withIdentifier: "login") as? RegisterViewController{
             view.window?.rootViewController = login
         }
         

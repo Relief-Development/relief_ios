@@ -11,6 +11,7 @@ class LoginViewController: UIViewController{
     
     @IBOutlet var loginBtn: UIButton?
     @IBOutlet var registerBtn: UIButton?
+    let mainstoryboard = UIStoryboard(name: "Main", bundle: nil)
 
     
     override func viewDidLoad() {
@@ -21,13 +22,13 @@ class LoginViewController: UIViewController{
        
     }
     @IBAction func buttonRegisterTapped(){
-        if let register = storyboard?.instantiateViewController(withIdentifier: "Register") as? RegisterViewController{
+        if let register = mainstoryboard.instantiateViewController(withIdentifier: "Register") as? RegisterViewController{
             view.window?.rootViewController = register
         }
         
     }
     @IBAction func buttonLoginTapped(){
-        if let homeuser = storyboard?.instantiateViewController(withIdentifier: "homeuser") as? HomeViewController{
+        if let homeuser = mainstoryboard.instantiateViewController(withIdentifier: "homeuser") as? HomeViewController{
             view.window?.rootViewController = homeuser
         }
         
