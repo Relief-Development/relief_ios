@@ -11,7 +11,6 @@
 		191E7AE227A1B469000810DE /* LegalUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE127A1B469000810DE /* LegalUserVC.swift */; };
 		191E7AE427A1BD82000810DE /* ProfileMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE327A1BD82000810DE /* ProfileMassageVC.swift */; };
 		191E7AE627A1BDCC000810DE /* ProfileMassageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE527A1BDCC000810DE /* ProfileMassageCell.swift */; };
-		191E7AE827A1BE07000810DE /* ModalProfileMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE727A1BE07000810DE /* ModalProfileMassageVC.swift */; };
 		191E7AEA27A1BE5C000810DE /* PoliticMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE927A1BE5C000810DE /* PoliticMassageVC.swift */; };
 		191E7AEC27A1BE6E000810DE /* LegalMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AEB27A1BE6E000810DE /* LegalMassageVC.swift */; };
 		192318C127A19CBA00B1FAAB /* ModalProfileUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192318C027A19CBA00B1FAAB /* ModalProfileUserVC.swift */; };
@@ -33,6 +32,7 @@
 		3335E5E42795C743008DF917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3335E5E22795C743008DF917 /* LaunchScreen.storyboard */; };
 		3335E5EF2795C743008DF917 /* ReliefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5EE2795C743008DF917 /* ReliefTests.swift */; };
 		3335E5FA2795C743008DF917 /* ReliefUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5F92795C743008DF917 /* ReliefUITests.swift */; };
+		419C33D327A2EE2300B0F45C /* ModalProfileMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */; };
 		47D51ED427A1F26A00301DFA /* RecoverPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D51ED327A1F26A00301DFA /* RecoverPassViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +58,6 @@
 		191E7AE127A1B469000810DE /* LegalUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalUserVC.swift; sourceTree = "<group>"; };
 		191E7AE327A1BD82000810DE /* ProfileMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMassageVC.swift; sourceTree = "<group>"; };
 		191E7AE527A1BDCC000810DE /* ProfileMassageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMassageCell.swift; sourceTree = "<group>"; };
-		191E7AE727A1BE07000810DE /* ModalProfileMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModalProfileMassageVC.swift; path = ../../../../../../ModalProfileMassageVC.swift; sourceTree = "<group>"; };
 		191E7AE927A1BE5C000810DE /* PoliticMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticMassageVC.swift; sourceTree = "<group>"; };
 		191E7AEB27A1BE6E000810DE /* LegalMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalMassageVC.swift; sourceTree = "<group>"; };
 		192318C027A19CBA00B1FAAB /* ModalProfileUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalProfileUserVC.swift; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		3335E5F52795C743008DF917 /* ReliefUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReliefUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3335E5F92795C743008DF917 /* ReliefUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliefUITests.swift; sourceTree = "<group>"; };
 		3335E5FB2795C743008DF917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalProfileMassageVC.swift; sourceTree = "<group>"; };
 		47D51ED327A1F26A00301DFA /* RecoverPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPassViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,9 +156,9 @@
 				191E7AE327A1BD82000810DE /* ProfileMassageVC.swift */,
 				19B8D2812799CF2100F1EFA9 /* HomeViewController.swift */,
 				191E7AE527A1BDCC000810DE /* ProfileMassageCell.swift */,
-				191E7AE727A1BE07000810DE /* ModalProfileMassageVC.swift */,
 				191E7AE927A1BE5C000810DE /* PoliticMassageVC.swift */,
 				191E7AEB27A1BE6E000810DE /* LegalMassageVC.swift */,
+				419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */,
 			);
 			path = Massage;
 			sourceTree = "<group>";
@@ -353,7 +353,6 @@
 			files = (
 				19AD4C8E27A062DB006A3943 /* LoginViewController.swift in Sources */,
 				19F663C7279F1AA400F724D4 /* ProfileUserCell.swift in Sources */,
-				191E7AE827A1BE07000810DE /* ModalProfileMassageVC.swift in Sources */,
 				3335E5DC2795C742008DF917 /* ViewController.swift in Sources */,
 				192318C127A19CBA00B1FAAB /* ModalProfileUserVC.swift in Sources */,
 				191E7AE027A1B45A000810DE /* PoliticUserVC.swift in Sources */,
@@ -366,6 +365,7 @@
 				47D51ED427A1F26A00301DFA /* RecoverPassViewController.swift in Sources */,
 				19B8D2842799D02000F1EFA9 /* HomeUserViewController.swift in Sources */,
 				3335E5DA2795C742008DF917 /* SceneDelegate.swift in Sources */,
+				419C33D327A2EE2300B0F45C /* ModalProfileMassageVC.swift in Sources */,
 				19B8D2822799CF2100F1EFA9 /* HomeViewController.swift in Sources */,
 				191E7AE627A1BDCC000810DE /* ProfileMassageCell.swift in Sources */,
 				191E7AEA27A1BE5C000810DE /* PoliticMassageVC.swift in Sources */,

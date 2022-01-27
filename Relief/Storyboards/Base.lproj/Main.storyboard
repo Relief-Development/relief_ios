@@ -1426,7 +1426,7 @@
                                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="goPolitics:" destination="qrg-Ed-xex" eventType="touchUpInside" id="cfW-WM-e3P"/>
+                                                    <action selector="goPolitics:" destination="qrg-Ed-xex" eventType="touchUpInside" id="7me-Z5-M0Z"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjL-kr-hvz">
@@ -1449,7 +1449,7 @@
                                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="goLegal:" destination="qrg-Ed-xex" eventType="touchUpInside" id="n4E-qX-XHX"/>
+                                                    <action selector="goLegal:" destination="qrg-Ed-xex" eventType="touchUpInside" id="Od1-ma-xHL"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGh-do-Uas">
@@ -1556,7 +1556,7 @@
                                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonToLoginTapped:" destination="qrg-Ed-xex" eventType="touchUpInside" id="ezE-jb-AVD"/>
+                                                    <action selector="buttonToLoginTapped:" destination="qrg-Ed-xex" eventType="touchUpInside" id="jXa-JK-Kqc"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1574,7 +1574,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
-                                    <action selector="closeVC2:" destination="qrg-Ed-xex" eventType="touchUpInside" id="HdP-9z-YbR"/>
+                                    <action selector="closeVC2:" destination="qrg-Ed-xex" eventType="touchUpInside" id="6rR-wt-HUB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1592,7 +1592,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="modalView" destination="7iH-tW-I9h" id="gar-Gm-hy0"/>
+                        <outlet property="modalView" destination="7iH-tW-I9h" id="0PX-L3-MZ7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phQ-ma-wVI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
