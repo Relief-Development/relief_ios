@@ -19,9 +19,6 @@ class ProfileUserViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
-   
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

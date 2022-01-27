@@ -33,6 +33,7 @@
 		3335E5EF2795C743008DF917 /* ReliefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5EE2795C743008DF917 /* ReliefTests.swift */; };
 		3335E5FA2795C743008DF917 /* ReliefUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5F92795C743008DF917 /* ReliefUITests.swift */; };
 		419C33D327A2EE2300B0F45C /* ModalProfileMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */; };
+		419C33D527A3054F00B0F45C /* HomeUserRecomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C33D427A3054F00B0F45C /* HomeUserRecomCell.swift */; };
 		47D51ED427A1F26A00301DFA /* RecoverPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D51ED327A1F26A00301DFA /* RecoverPassViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		3335E5F92795C743008DF917 /* ReliefUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliefUITests.swift; sourceTree = "<group>"; };
 		3335E5FB2795C743008DF917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalProfileMassageVC.swift; sourceTree = "<group>"; };
+		419C33D427A3054F00B0F45C /* HomeUserRecomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserRecomCell.swift; sourceTree = "<group>"; };
 		47D51ED327A1F26A00301DFA /* RecoverPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPassViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				19B8D2832799D02000F1EFA9 /* HomeUserViewController.swift */,
+				419C33D427A3054F00B0F45C /* HomeUserRecomCell.swift */,
 				19F663C4279F199200F724D4 /* ProfileUserViewController.swift */,
 				19F663C6279F1AA400F724D4 /* ProfileUserCell.swift */,
 				192318C027A19CBA00B1FAAB /* ModalProfileUserVC.swift */,
@@ -351,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				419C33D527A3054F00B0F45C /* HomeUserRecomCell.swift in Sources */,
 				19AD4C8E27A062DB006A3943 /* LoginViewController.swift in Sources */,
 				19F663C7279F1AA400F724D4 /* ProfileUserCell.swift in Sources */,
 				3335E5DC2795C742008DF917 /* ViewController.swift in Sources */,
