@@ -54,5 +54,9 @@ class LoginViewController: UIViewController{
             attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "user_light")]
         )
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 }
  
