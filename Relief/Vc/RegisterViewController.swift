@@ -18,24 +18,19 @@ class RegisterViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.userTF?.attributedPlaceholder = NSAttributedString(
-            string: "Usuario",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "user_light")]
-        )
-        self.passwordTF?.attributedPlaceholder = NSAttributedString(
-            string: "Contraseña",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "user_light")]
-        )
-        self.nameTF?.attributedPlaceholder = NSAttributedString(
-            string: "Nombre",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "user_light")]
-        )
-        self.emailTF?.attributedPlaceholder = NSAttributedString(
-            string: "Email",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "user_light")]
-        )
+        self.userTF?.attributedPlaceholder = getAttributeString("Usuario")
+        self.passwordTF?.attributedPlaceholder = getAttributeString("Contraseña")
+        self.nameTF?.attributedPlaceholder = getAttributeString("Nombre")
+        self.emailTF?.attributedPlaceholder = getAttributeString("Email")
+        
 
 
+        func getAttributeString(_ string: String) -> NSAttributedString {
+            return NSAttributedString(
+                string: string,
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "user_light")])
+                
+                }
 
 
     
