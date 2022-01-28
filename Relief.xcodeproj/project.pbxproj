@@ -7,8 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19B8D2842799D02000F1EFA9 /* HomeUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B8D2832799D02000F1EFA9 /* HomeUserViewController.swift */; };
+		191E7AE027A1B45A000810DE /* PoliticUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7ADF27A1B45A000810DE /* PoliticUserVC.swift */; };
+		191E7AE227A1B469000810DE /* LegalUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE127A1B469000810DE /* LegalUserVC.swift */; };
+		191E7AE427A1BD82000810DE /* ProfileMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE327A1BD82000810DE /* ProfileMassageVC.swift */; };
+		191E7AE627A1BDCC000810DE /* ProfileMassageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE527A1BDCC000810DE /* ProfileMassageCell.swift */; };
+		191E7AEA27A1BE5C000810DE /* PoliticMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE927A1BE5C000810DE /* PoliticMassageVC.swift */; };
+		191E7AEC27A1BE6E000810DE /* LegalMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AEB27A1BE6E000810DE /* LegalMassageVC.swift */; };
+		192318C127A19CBA00B1FAAB /* ModalProfileUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192318C027A19CBA00B1FAAB /* ModalProfileUserVC.swift */; };
+		193D149D27A47941005C8B7A /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 193D149C27A47940005C8B7A /* Fonts */; };
+		19AD4C8C27A05A57006A3943 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD4C8B27A05A57006A3943 /* RegisterViewController.swift */; };
+		19AD4C8E27A062DB006A3943 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD4C8D27A062DB006A3943 /* LoginViewController.swift */; };
+		19AD4C9127A06E2E006A3943 /* Tatiana.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AD4C9027A06E2E006A3943 /* Tatiana.storyboard */; };
+		19AD4C9327A06E3A006A3943 /* Xavi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AD4C9227A06E3A006A3943 /* Xavi.storyboard */; };
+		19AD4C9527A06E4C006A3943 /* Javiergarcia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AD4C9427A06E4C006A3943 /* Javiergarcia.storyboard */; };
+		19AD4C9727A06E5F006A3943 /* Javiercabañas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AD4C9627A06E5F006A3943 /* Javiercabañas.storyboard */; };
 		19B8D2822799CF2100F1EFA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B8D2812799CF2100F1EFA9 /* HomeViewController.swift */; };
+		19B8D2842799D02000F1EFA9 /* HomeUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B8D2832799D02000F1EFA9 /* HomeUserViewController.swift */; };
+		19F663C5279F199200F724D4 /* ProfileUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F663C4279F199200F724D4 /* ProfileUserViewController.swift */; };
+		19F663C7279F1AA400F724D4 /* ProfileUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F663C6279F1AA400F724D4 /* ProfileUserCell.swift */; };
 		3335E5D82795C742008DF917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5D72795C742008DF917 /* AppDelegate.swift */; };
 		3335E5DA2795C742008DF917 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5D92795C742008DF917 /* SceneDelegate.swift */; };
 		3335E5DC2795C742008DF917 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5DB2795C742008DF917 /* ViewController.swift */; };
@@ -17,6 +33,9 @@
 		3335E5E42795C743008DF917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3335E5E22795C743008DF917 /* LaunchScreen.storyboard */; };
 		3335E5EF2795C743008DF917 /* ReliefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5EE2795C743008DF917 /* ReliefTests.swift */; };
 		3335E5FA2795C743008DF917 /* ReliefUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5F92795C743008DF917 /* ReliefUITests.swift */; };
+		419C33D327A2EE2300B0F45C /* ModalProfileMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */; };
+		419C33D527A3054F00B0F45C /* HomeUserRecomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C33D427A3054F00B0F45C /* HomeUserRecomCell.swift */; };
+		47D51ED427A1F26A00301DFA /* RecoverPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D51ED327A1F26A00301DFA /* RecoverPassViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +56,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19B8D2832799D02000F1EFA9 /* HomeUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserViewController.swift; sourceTree = "<group>"; };
+		191E7ADF27A1B45A000810DE /* PoliticUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticUserVC.swift; sourceTree = "<group>"; };
+		191E7AE127A1B469000810DE /* LegalUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalUserVC.swift; sourceTree = "<group>"; };
+		191E7AE327A1BD82000810DE /* ProfileMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMassageVC.swift; sourceTree = "<group>"; };
+		191E7AE527A1BDCC000810DE /* ProfileMassageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMassageCell.swift; sourceTree = "<group>"; };
+		191E7AE927A1BE5C000810DE /* PoliticMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticMassageVC.swift; sourceTree = "<group>"; };
+		191E7AEB27A1BE6E000810DE /* LegalMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalMassageVC.swift; sourceTree = "<group>"; };
+		192318C027A19CBA00B1FAAB /* ModalProfileUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalProfileUserVC.swift; sourceTree = "<group>"; };
+		193D149C27A47940005C8B7A /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		19AD4C8B27A05A57006A3943 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		19AD4C8D27A062DB006A3943 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		19AD4C9027A06E2E006A3943 /* Tatiana.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tatiana.storyboard; sourceTree = "<group>"; };
+		19AD4C9227A06E3A006A3943 /* Xavi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Xavi.storyboard; sourceTree = "<group>"; };
+		19AD4C9427A06E4C006A3943 /* Javiergarcia.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Javiergarcia.storyboard; sourceTree = "<group>"; };
+		19AD4C9627A06E5F006A3943 /* Javiercabañas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Javiercabañas.storyboard"; sourceTree = "<group>"; };
 		19B8D2812799CF2100F1EFA9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		19B8D2832799D02000F1EFA9 /* HomeUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserViewController.swift; sourceTree = "<group>"; };
+		19F663C4279F199200F724D4 /* ProfileUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserViewController.swift; sourceTree = "<group>"; };
+		19F663C6279F1AA400F724D4 /* ProfileUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserCell.swift; sourceTree = "<group>"; };
 		3335E5D42795C742008DF917 /* Relief.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Relief.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3335E5D72795C742008DF917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3335E5D92795C742008DF917 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +88,9 @@
 		3335E5F52795C743008DF917 /* ReliefUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReliefUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3335E5F92795C743008DF917 /* ReliefUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliefUITests.swift; sourceTree = "<group>"; };
 		3335E5FB2795C743008DF917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalProfileMassageVC.swift; sourceTree = "<group>"; };
+		419C33D427A3054F00B0F45C /* HomeUserRecomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserRecomCell.swift; sourceTree = "<group>"; };
+		47D51ED327A1F26A00301DFA /* RecoverPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPassViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +118,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19AD4C8F27A06D00006A3943 /* Vc */ = {
+			isa = PBXGroup;
+			children = (
+				19AD4C8B27A05A57006A3943 /* RegisterViewController.swift */,
+				19AD4C8D27A062DB006A3943 /* LoginViewController.swift */,
+				47D51ED327A1F26A00301DFA /* RecoverPassViewController.swift */,
+			);
+			path = Vc;
+			sourceTree = "<group>";
+		};
+		19AD4C9827A06E64006A3943 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				19AD4C9027A06E2E006A3943 /* Tatiana.storyboard */,
+				19AD4C9227A06E3A006A3943 /* Xavi.storyboard */,
+				19AD4C9427A06E4C006A3943 /* Javiergarcia.storyboard */,
+				19AD4C9627A06E5F006A3943 /* Javiercabañas.storyboard */,
+				3335E5E22795C743008DF917 /* LaunchScreen.storyboard */,
+				3335E5DD2795C742008DF917 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		19B8D2852799D02D00F1EFA9 /* User */ = {
 			isa = PBXGroup;
 			children = (
 				19B8D2832799D02000F1EFA9 /* HomeUserViewController.swift */,
+				419C33D427A3054F00B0F45C /* HomeUserRecomCell.swift */,
+				19F663C4279F199200F724D4 /* ProfileUserViewController.swift */,
+				19F663C6279F1AA400F724D4 /* ProfileUserCell.swift */,
+				192318C027A19CBA00B1FAAB /* ModalProfileUserVC.swift */,
+				191E7ADF27A1B45A000810DE /* PoliticUserVC.swift */,
+				191E7AE127A1B469000810DE /* LegalUserVC.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -91,7 +158,12 @@
 		19B8D2862799D46F00F1EFA9 /* Massage */ = {
 			isa = PBXGroup;
 			children = (
+				191E7AE327A1BD82000810DE /* ProfileMassageVC.swift */,
 				19B8D2812799CF2100F1EFA9 /* HomeViewController.swift */,
+				191E7AE527A1BDCC000810DE /* ProfileMassageCell.swift */,
+				191E7AE927A1BE5C000810DE /* PoliticMassageVC.swift */,
+				191E7AEB27A1BE6E000810DE /* LegalMassageVC.swift */,
+				419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */,
 			);
 			path = Massage;
 			sourceTree = "<group>";
@@ -119,14 +191,15 @@
 		3335E5D62795C742008DF917 /* Relief */ = {
 			isa = PBXGroup;
 			children = (
+				193D149C27A47940005C8B7A /* Fonts */,
+				19AD4C9827A06E64006A3943 /* Storyboards */,
+				19AD4C8F27A06D00006A3943 /* Vc */,
 				19B8D2852799D02D00F1EFA9 /* User */,
 				19B8D2862799D46F00F1EFA9 /* Massage */,
 				3335E5D72795C742008DF917 /* AppDelegate.swift */,
 				3335E5D92795C742008DF917 /* SceneDelegate.swift */,
 				3335E5DB2795C742008DF917 /* ViewController.swift */,
-				3335E5DD2795C742008DF917 /* Main.storyboard */,
 				3335E5E02795C743008DF917 /* Assets.xcassets */,
-				3335E5E22795C743008DF917 /* LaunchScreen.storyboard */,
 				3335E5E52795C743008DF917 /* Info.plist */,
 			);
 			path = Relief;
@@ -255,7 +328,12 @@
 			files = (
 				3335E5E42795C743008DF917 /* LaunchScreen.storyboard in Resources */,
 				3335E5E12795C743008DF917 /* Assets.xcassets in Resources */,
+				19AD4C9327A06E3A006A3943 /* Xavi.storyboard in Resources */,
 				3335E5DF2795C742008DF917 /* Main.storyboard in Resources */,
+				19AD4C9527A06E4C006A3943 /* Javiergarcia.storyboard in Resources */,
+				19AD4C9127A06E2E006A3943 /* Tatiana.storyboard in Resources */,
+				19AD4C9727A06E5F006A3943 /* Javiercabañas.storyboard in Resources */,
+				193D149D27A47941005C8B7A /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +358,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				419C33D527A3054F00B0F45C /* HomeUserRecomCell.swift in Sources */,
+				19AD4C8E27A062DB006A3943 /* LoginViewController.swift in Sources */,
+				19F663C7279F1AA400F724D4 /* ProfileUserCell.swift in Sources */,
 				3335E5DC2795C742008DF917 /* ViewController.swift in Sources */,
+				192318C127A19CBA00B1FAAB /* ModalProfileUserVC.swift in Sources */,
+				191E7AE027A1B45A000810DE /* PoliticUserVC.swift in Sources */,
+				191E7AE227A1B469000810DE /* LegalUserVC.swift in Sources */,
+				191E7AE427A1BD82000810DE /* ProfileMassageVC.swift in Sources */,
 				3335E5D82795C742008DF917 /* AppDelegate.swift in Sources */,
+				191E7AEC27A1BE6E000810DE /* LegalMassageVC.swift in Sources */,
+				19AD4C8C27A05A57006A3943 /* RegisterViewController.swift in Sources */,
+				19F663C5279F199200F724D4 /* ProfileUserViewController.swift in Sources */,
+				47D51ED427A1F26A00301DFA /* RecoverPassViewController.swift in Sources */,
 				19B8D2842799D02000F1EFA9 /* HomeUserViewController.swift in Sources */,
 				3335E5DA2795C742008DF917 /* SceneDelegate.swift in Sources */,
+				419C33D327A2EE2300B0F45C /* ModalProfileMassageVC.swift in Sources */,
 				19B8D2822799CF2100F1EFA9 /* HomeViewController.swift in Sources */,
+				191E7AE627A1BDCC000810DE /* ProfileMassageCell.swift in Sources */,
+				191E7AEA27A1BE5C000810DE /* PoliticMassageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +553,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5GSTMD964Z;
 				INFOPLIST_FILE = Relief/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,7 +562,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Relief.Relief;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -479,6 +572,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5GSTMD964Z;
 				INFOPLIST_FILE = Relief/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -487,7 +581,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Relief.Relief;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

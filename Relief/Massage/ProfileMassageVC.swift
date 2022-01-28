@@ -1,0 +1,51 @@
+//
+//  ProfileMassageVC.swift
+//  Relief
+//
+//  Created by Alejandro Botana on 26/1/22.
+//
+
+import UIKit
+
+class ProfileMassageVC: UIViewController, UITableViewDelegate, UITableViewDataSource, ModalProfileMassageVCDelegate {
+    
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileMassageCellIdentifier", for: indexPath)
+        return cell
+    }
+    
+   
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "OpenSettingsMassageModal" {
+            if let settingsVC = segue.destination as? ModalProfileMassageVC {
+                settingsVC.delegate = self
+            }
+        }
+    }
+    
+    func mustGoPoliticsMassage() {
+        if let politics = storyboard?.instantiateViewController(withIdentifier: "PoliticMassageVc") {
+            politics.modalPresentationStyle = .fullScreen
+            self.present(politics, animated: true, completion: nil)
+        }
+    }
+    
+    func mustGoLegalMassage() {
+        if let legal = storyboard?.instantiateViewController(withIdentifier: "LegalMassageVc"){
+            legal.modalPresentationStyle = .fullScreen
+            self.present(legal, animated: true, completion: nil)
+        }
+    }
+
+}
