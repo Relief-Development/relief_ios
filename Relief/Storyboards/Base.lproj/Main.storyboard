@@ -87,49 +87,49 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="w4m-UJ-l1t">
-                                                    <rect key="frame" x="81" y="53" width="102" height="18"/>
+                                                    <rect key="frame" x="81" y="53" width="132" height="18"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dh0-bI-oas">
-                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="24" height="18"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="18" id="IKe-Mf-2Qg"/>
-                                                                <constraint firstAttribute="width" constant="18" id="cuP-O9-9LU"/>
+                                                                <constraint firstAttribute="width" constant="24" id="cuP-O9-9LU"/>
                                                             </constraints>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" image="ic_estrellaActiva"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYA-Zu-ELI">
-                                                            <rect key="frame" x="21" y="0.0" width="18" height="18"/>
+                                                            <rect key="frame" x="27" y="0.0" width="24" height="18"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="18" id="5qA-kd-cFe"/>
-                                                                <constraint firstAttribute="width" constant="18" id="ygp-tI-KEI"/>
+                                                                <constraint firstAttribute="width" constant="24" id="ygp-tI-KEI"/>
                                                             </constraints>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" title="Button" image="ic_estrellaActiva"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfP-Wc-FHV">
-                                                            <rect key="frame" x="42" y="0.0" width="18" height="18"/>
+                                                            <rect key="frame" x="54" y="0.0" width="24" height="18"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="18" id="03k-EE-DGc"/>
-                                                                <constraint firstAttribute="width" constant="18" id="S4d-mV-vg4"/>
+                                                                <constraint firstAttribute="width" constant="24" id="S4d-mV-vg4"/>
                                                             </constraints>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" title="Button" image="ic_estrellaActiva"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wz6-el-om0">
-                                                            <rect key="frame" x="63" y="0.0" width="18" height="18"/>
+                                                            <rect key="frame" x="81" y="0.0" width="24" height="18"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="18" id="hlh-0J-2oX"/>
-                                                                <constraint firstAttribute="width" constant="18" id="uoD-Zc-AJa"/>
+                                                                <constraint firstAttribute="width" constant="24" id="uoD-Zc-AJa"/>
                                                             </constraints>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" title="Button" image="ic_estrellaActiva"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EQ-lC-ycc">
-                                                            <rect key="frame" x="84" y="0.0" width="18" height="18"/>
+                                                            <rect key="frame" x="108" y="0.0" width="24" height="18"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="18" id="p3v-zf-QVv"/>
-                                                                <constraint firstAttribute="width" constant="18" id="rUc-Fk-yja"/>
+                                                                <constraint firstAttribute="width" constant="24" id="rUc-Fk-yja"/>
                                                             </constraints>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" title="Button" image="ic_estrellaActiva"/>
@@ -174,7 +174,7 @@
                                 <rect key="frame" x="20" y="548.5" width="374" height="202.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="76" id="brt-e1-1uy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeUserFavCellId" rowHeight="76" id="brt-e1-1uy" customClass="HomeUserRecomCell" customModule="Relief" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="374" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="brt-e1-1uy" id="BDL-fz-yx6">
@@ -206,59 +206,63 @@
                                                     <color key="textColor" systemColor="systemGrayColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipH-oH-nDH">
-                                                    <rect key="frame" x="349" y="11" width="20" height="20"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipH-oH-nDH">
+                                                    <rect key="frame" x="347" y="11" width="22" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="RBr-9B-af6"/>
-                                                        <constraint firstAttribute="width" constant="20" id="YoU-yz-wR7"/>
+                                                        <constraint firstAttribute="width" constant="22" id="YoU-yz-wR7"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="ic_favoritoActivo"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Button" image="ic_favoritoActivo"/>
+                                                    <connections>
+                                                        <action selector="favButtonTapped:" destination="brt-e1-1uy" eventType="touchUpInside" id="3HS-ra-lX8"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmZ-A1-kdg">
-                                                    <rect key="frame" x="81" y="54" width="18" height="18"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmZ-A1-kdg">
+                                                    <rect key="frame" x="81" y="54" width="24" height="18"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="18" id="McP-Tb-zl6"/>
+                                                        <constraint firstAttribute="width" constant="24" id="McP-Tb-zl6"/>
                                                         <constraint firstAttribute="height" constant="18" id="QnI-5j-j2c"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="ic_estrellaActiva" title=""/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Button" image="ic_estrellaActiva"/>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYg-QS-5aK">
-                                                    <rect key="frame" x="127" y="54" width="18" height="18"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYg-QS-5aK">
+                                                    <rect key="frame" x="139" y="54" width="24" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="hx7-dr-p68"/>
-                                                        <constraint firstAttribute="width" constant="18" id="vlf-uO-Skb"/>
+                                                        <constraint firstAttribute="width" constant="24" id="vlf-uO-Skb"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="ic_estrellaActiva"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Button" image="ic_estrellaActiva"/>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPz-MN-euy">
-                                                    <rect key="frame" x="150" y="54" width="18" height="18"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPz-MN-euy">
+                                                    <rect key="frame" x="168" y="54" width="24" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="5B4-od-AiJ"/>
-                                                        <constraint firstAttribute="width" constant="18" id="hBy-6W-E8F"/>
+                                                        <constraint firstAttribute="width" constant="24" id="hBy-6W-E8F"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="ic_estrellaActiva"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="ic_estrellaActiva"/>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUb-d1-iay">
-                                                    <rect key="frame" x="173" y="54" width="18" height="18"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUb-d1-iay">
+                                                    <rect key="frame" x="197" y="54" width="24" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="4Rd-uG-r29"/>
-                                                        <constraint firstAttribute="width" constant="18" id="IXe-83-dYd"/>
+                                                        <constraint firstAttribute="width" constant="24" id="IXe-83-dYd"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="ic_estrellaActiva"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Button" image="ic_estrellaActiva"/>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIE-ba-SZJ">
-                                                    <rect key="frame" x="104" y="54" width="18" height="18"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIE-ba-SZJ">
+                                                    <rect key="frame" x="110" y="54" width="24" height="18"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="18" id="8ea-ef-kYS"/>
+                                                        <constraint firstAttribute="width" constant="24" id="8ea-ef-kYS"/>
                                                         <constraint firstAttribute="height" constant="18" id="cxu-PF-LLe"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="ic_estrellaActiva"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Button" image="ic_estrellaActiva"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -272,6 +276,7 @@
                                                 <constraint firstItem="RoY-zh-v3K" firstAttribute="top" secondItem="BDL-fz-yx6" secondAttribute="top" constant="11" id="N3y-rO-MUL"/>
                                                 <constraint firstItem="RoY-zh-v3K" firstAttribute="leading" secondItem="xff-I1-dPH" secondAttribute="trailing" constant="23" id="O92-sh-iNv"/>
                                                 <constraint firstItem="ipH-oH-nDH" firstAttribute="centerY" secondItem="RoY-zh-v3K" secondAttribute="centerY" id="Phu-Oy-vBy"/>
+                                                <constraint firstAttribute="bottom" secondItem="Cba-kW-tTY" secondAttribute="bottom" constant="24" id="QSa-4V-1w9"/>
                                                 <constraint firstItem="ZUb-d1-iay" firstAttribute="leading" secondItem="PPz-MN-euy" secondAttribute="trailing" constant="5" id="Vbw-VW-oGP"/>
                                                 <constraint firstItem="xff-I1-dPH" firstAttribute="leading" secondItem="BDL-fz-yx6" secondAttribute="leading" constant="8" id="Y7b-aq-NRK"/>
                                                 <constraint firstItem="Cba-kW-tTY" firstAttribute="leading" secondItem="RoY-zh-v3K" secondAttribute="leading" id="auU-ro-83x"/>
@@ -284,14 +289,61 @@
                                                 <constraint firstItem="OIE-ba-SZJ" firstAttribute="centerY" secondItem="WmZ-A1-kdg" secondAttribute="centerY" id="zC4-5Q-yFX"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="heartButton" destination="ipH-oH-nDH" id="dvn-iJ-yCr"/>
+                                            <outlet property="nameLabel" destination="RoY-zh-v3K" id="wgh-VV-vzz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="0wL-hQ-DUV" id="ltG-8i-and"/>
+                                    <outlet property="delegate" destination="0wL-hQ-DUV" id="vxM-90-eZW"/>
+                                </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEc-Gm-jTN">
+                                <rect key="frame" x="20" y="546" width="374" height="220"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No has añadido ningún favorito" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgJ-0g-CnP">
+                                        <rect key="frame" x="40" y="204" width="294.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me-gusta" translatesAutoresizingMaskIntoConstraints="NO" id="U8L-bE-26Q">
+                                        <rect key="frame" x="82" y="10" width="210" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="77Q-uQ-EMB"/>
+                                            <constraint firstAttribute="width" constant="210" id="nFW-B0-iyY"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="4zo-xU-oaz"/>
+                                    <constraint firstItem="U8L-bE-26Q" firstAttribute="centerY" secondItem="IEc-Gm-jTN" secondAttribute="centerY" id="HTb-rY-DVA"/>
+                                    <constraint firstItem="MgJ-0g-CnP" firstAttribute="centerY" secondItem="IEc-Gm-jTN" secondAttribute="centerY" constant="107" id="aGd-so-AbI"/>
+                                    <constraint firstItem="U8L-bE-26Q" firstAttribute="centerX" secondItem="IEc-Gm-jTN" secondAttribute="centerX" id="lOJ-Te-Pdk"/>
+                                    <constraint firstItem="MgJ-0g-CnP" firstAttribute="centerX" secondItem="IEc-Gm-jTN" secondAttribute="centerX" id="uhu-Br-27E"/>
+                                    <constraint firstAttribute="width" constant="374" id="uod-fa-rcj"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zh9-vo-jaU">
+                                <rect key="frame" x="272" y="495" width="118.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Añadir favorito">
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="favTapped" destination="0wL-hQ-DUV" eventType="touchUpInside" id="yB9-Ku-VDk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lbv-GL-iZK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Lbv-GL-iZK" firstAttribute="trailing" secondItem="1iC-kJ-OyO" secondAttribute="trailing" constant="20" id="14l-pq-MDG"/>
+                            <constraint firstItem="IEc-Gm-jTN" firstAttribute="centerY" secondItem="Emp-Yo-zCo" secondAttribute="centerY" constant="208" id="1CR-Jt-TMT"/>
+                            <constraint firstItem="zh9-vo-jaU" firstAttribute="leading" secondItem="oXG-Q3-93V" secondAttribute="trailing" constant="2" id="2fw-If-bWt"/>
                             <constraint firstItem="Lbv-GL-iZK" firstAttribute="trailing" secondItem="y16-27-YjX" secondAttribute="trailing" constant="20" id="3Qm-7f-ORw"/>
                             <constraint firstItem="oXG-Q3-93V" firstAttribute="top" secondItem="y16-27-YjX" secondAttribute="bottom" constant="20" id="CQU-8l-Q8n"/>
                             <constraint firstItem="Lbv-GL-iZK" firstAttribute="bottom" secondItem="1iC-kJ-OyO" secondAttribute="bottom" constant="62" id="CbA-v5-tee"/>
@@ -303,14 +355,21 @@
                             <constraint firstItem="XTI-o5-cnB" firstAttribute="top" secondItem="Lbv-GL-iZK" secondAttribute="top" constant="10" id="dFr-w9-zma"/>
                             <constraint firstItem="1iC-kJ-OyO" firstAttribute="top" secondItem="oXG-Q3-93V" secondAttribute="bottom" constant="20" id="fqL-wn-ta7"/>
                             <constraint firstItem="19C-JX-dZ6" firstAttribute="leading" secondItem="Lbv-GL-iZK" secondAttribute="leading" constant="20" id="ghk-Ph-roz"/>
+                            <constraint firstItem="zh9-vo-jaU" firstAttribute="centerY" secondItem="oXG-Q3-93V" secondAttribute="centerY" id="hEW-ca-tGq"/>
                             <constraint firstItem="oXG-Q3-93V" firstAttribute="centerY" secondItem="Lbv-GL-iZK" secondAttribute="centerY" constant="60" id="ibR-wx-UUX"/>
                             <constraint firstItem="y16-27-YjX" firstAttribute="leading" secondItem="Lbv-GL-iZK" secondAttribute="leading" constant="20" id="sLT-my-lWF"/>
                             <constraint firstItem="1iC-kJ-OyO" firstAttribute="leading" secondItem="Lbv-GL-iZK" secondAttribute="leading" constant="20" id="tlg-le-ybi"/>
                             <constraint firstItem="XTI-o5-cnB" firstAttribute="leading" secondItem="Lbv-GL-iZK" secondAttribute="leading" constant="167" id="vMr-Gc-nXR"/>
+                            <constraint firstItem="IEc-Gm-jTN" firstAttribute="centerX" secondItem="Emp-Yo-zCo" secondAttribute="centerX" id="xcK-OR-WG2"/>
                             <constraint firstItem="19C-JX-dZ6" firstAttribute="top" secondItem="XTI-o5-cnB" secondAttribute="bottom" constant="20" id="ynd-AN-dtg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JDz-t9-9e0"/>
+                    <connections>
+                        <outlet property="favView" destination="IEc-Gm-jTN" id="MGl-t0-qWG"/>
+                        <outlet property="tableViewFav" destination="1iC-kJ-OyO" id="Zmr-t3-VKJ"/>
+                        <outlet property="tableViewRec" destination="y16-27-YjX" id="hPA-OZ-ARJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPS-o6-poj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2008,6 +2067,7 @@
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="me-gusta" width="512" height="512"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="User">
@@ -2057,6 +2117,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

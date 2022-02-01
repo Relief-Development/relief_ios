@@ -31,11 +31,8 @@ class RegisterViewController: UIViewController{
                 attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "user_light")])
                 
                 }
-
-
-    
-       
     }
+    
     @IBAction func buttonLoginTapped(_ sender: Any){
         if segmentregister?.selectedSegmentIndex == 0{
         if let homeuser = storyboard?.instantiateViewController(withIdentifier: "HomeUser"){

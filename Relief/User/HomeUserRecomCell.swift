@@ -9,9 +9,25 @@ import UIKit
 
 class HomeUserRecomCell: UITableViewCell {
     
-    static let identifier = "HomeUserRecomCellId"
+    static let identifierRecom = "HomeUserRecomCellId"
+    static let identifierFav = "HomeUserFavCellId"
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var burron: UIButton?
+    @IBOutlet var button: UIButton?
+    @IBOutlet var heartButton: UIButton?
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        configureButton()
+    }
     
+    func configureButton(){
+        let imageHeart = UIImage(named: "ic_favoritoActivo")
+        let imageHeartFilled = UIImage(named: "ic_favoritoInactivo")
+        heartButton?.setImage(imageHeart, for: .normal)
+        heartButton?.setImage(imageHeartFilled, for: .selected)
+    }
+    
+    @IBAction func favButtonTapped(_ sender: Any) {
+        heartButton?.isSelected.toggle()
+    }
 }
