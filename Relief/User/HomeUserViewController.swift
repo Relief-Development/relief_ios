@@ -11,7 +11,10 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
     private var homecell: HomeUserRecomCell?
     @IBOutlet var tableViewRec: UITableView!
     @IBOutlet var tableViewFav: UITableView!
+    @IBOutlet var emptyFavView: UIView!
+    @IBOutlet var recomendedView: UIView!
     @IBOutlet var favView: UIView!
+    @IBOutlet var segmentedHome: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +24,7 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 20
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -39,12 +42,30 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func favTapped() {
-        if(favView.isHidden == true) {
+        if(emptyFavView.isHidden == false) {
+            self.emptyFavView.isHidden = true
             self.favView.isHidden = false
         }
-        else {
+    }
+    
+//    @IBAction func segmentedAction(_ sender: UISegmentedControl) {
+//        if segmentedHome.selectedSegmentIndex == 1 {
+//            self.recomendedView.isHidden = true
+//            self.emptyFavView.isHidden = false
+//        }else if segmentedHome.selectedSegmentIndex == 0{
+//            self.recomendedView.isHidden = false
+//            self.favView.isHidden = true
+//        }
+//    }
+    @IBAction func tofavTapped() {
+        if segmentedHome.selectedSegmentIndex == 1 {
+            self.recomendedView.isHidden = true
+            self.emptyFavView.isHidden = false
+        }else if segmentedHome.selectedSegmentIndex == 0{
+            self.recomendedView.isHidden = false
             self.favView.isHidden = true
         }
+
     }
 }
 
