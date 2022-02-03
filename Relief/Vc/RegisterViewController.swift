@@ -35,12 +35,12 @@ class RegisterViewController: UIViewController{
     
     @IBAction func buttonLoginTapped(_ sender: Any){
         if segmentregister?.selectedSegmentIndex == 0{
-        if let homeuser = storyboard?.instantiateViewController(withIdentifier: "HomeUser"){
+        if let homeuser = storyboard?.instantiateViewController(withIdentifier: "TutorialUser1"){
             homeuser.modalPresentationStyle = .fullScreen
             self.present(homeuser, animated: true, completion: nil)
         }
         }else {
-            if let homemassage = storyboard?.instantiateViewController(withIdentifier: "HomeMassage"){
+            if let homemassage = storyboard?.instantiateViewController(withIdentifier: "TutorialMassage1"){
                 homemassage.modalPresentationStyle = .fullScreen
                 self.present(homemassage, animated: true, completion: nil)
             }

@@ -35,6 +35,8 @@
 		3335E5FA2795C743008DF917 /* ReliefUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5F92795C743008DF917 /* ReliefUITests.swift */; };
 		419C33D327A2EE2300B0F45C /* ModalProfileMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */; };
 		419C33D527A3054F00B0F45C /* HomeUserRecomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C33D427A3054F00B0F45C /* HomeUserRecomCell.swift */; };
+		41ED789E27AC2689004FCBF1 /* TutorialUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED789D27AC2689004FCBF1 /* TutorialUserController.swift */; };
+		41ED78A027AC2A5B004FCBF1 /* TutorialMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED789F27AC2A5B004FCBF1 /* TutorialMassageVC.swift */; };
 		47D51ED427A1F26A00301DFA /* RecoverPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D51ED327A1F26A00301DFA /* RecoverPassViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +92,8 @@
 		3335E5FB2795C743008DF917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalProfileMassageVC.swift; sourceTree = "<group>"; };
 		419C33D427A3054F00B0F45C /* HomeUserRecomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserRecomCell.swift; sourceTree = "<group>"; };
+		41ED789D27AC2689004FCBF1 /* TutorialUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialUserController.swift; sourceTree = "<group>"; };
+		41ED789F27AC2A5B004FCBF1 /* TutorialMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMassageVC.swift; sourceTree = "<group>"; };
 		47D51ED327A1F26A00301DFA /* RecoverPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPassViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +155,7 @@
 				192318C027A19CBA00B1FAAB /* ModalProfileUserVC.swift */,
 				191E7ADF27A1B45A000810DE /* PoliticUserVC.swift */,
 				191E7AE127A1B469000810DE /* LegalUserVC.swift */,
+				41ED789D27AC2689004FCBF1 /* TutorialUserController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				191E7AE927A1BE5C000810DE /* PoliticMassageVC.swift */,
 				191E7AEB27A1BE6E000810DE /* LegalMassageVC.swift */,
 				419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */,
+				41ED789F27AC2A5B004FCBF1 /* TutorialMassageVC.swift */,
 			);
 			path = Massage;
 			sourceTree = "<group>";
@@ -364,12 +370,14 @@
 				3335E5DC2795C742008DF917 /* ViewController.swift in Sources */,
 				192318C127A19CBA00B1FAAB /* ModalProfileUserVC.swift in Sources */,
 				191E7AE027A1B45A000810DE /* PoliticUserVC.swift in Sources */,
+				41ED789E27AC2689004FCBF1 /* TutorialUserController.swift in Sources */,
 				191E7AE227A1B469000810DE /* LegalUserVC.swift in Sources */,
 				191E7AE427A1BD82000810DE /* ProfileMassageVC.swift in Sources */,
 				3335E5D82795C742008DF917 /* AppDelegate.swift in Sources */,
 				191E7AEC27A1BE6E000810DE /* LegalMassageVC.swift in Sources */,
 				19AD4C8C27A05A57006A3943 /* RegisterViewController.swift in Sources */,
 				19F663C5279F199200F724D4 /* ProfileUserViewController.swift in Sources */,
+				41ED78A027AC2A5B004FCBF1 /* TutorialMassageVC.swift in Sources */,
 				47D51ED427A1F26A00301DFA /* RecoverPassViewController.swift in Sources */,
 				19B8D2842799D02000F1EFA9 /* HomeUserViewController.swift in Sources */,
 				3335E5DA2795C742008DF917 /* SceneDelegate.swift in Sources */,
