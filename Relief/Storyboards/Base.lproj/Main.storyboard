@@ -435,16 +435,62 @@ Entonces esta es tu aplicación.
                                     <action selector="tofavTapped" destination="0wL-hQ-DUV" eventType="touchUpInside" id="ERT-hp-kTi"/>
                                 </connections>
                             </button>
+                            <view opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etQ-ZU-nu8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhN-9q-IOP">
+                                <rect key="frame" x="36" y="310" width="342" height="276"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Home " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DG-47-cDW">
+                                        <rect key="frame" x="95.5" y="37" width="104.5" height="42"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="house" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fU6-mO-WFx">
+                                        <rect key="frame" x="200" y="36" width="42" height="42"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="Cwg-eu-3nc"/>
+                                            <constraint firstAttribute="width" constant="42" id="Hfz-4g-ChS"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4hb-Bo-zPm">
+                                        <rect key="frame" x="10" y="92" width="322" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">En la pantalla Home encontrarás tus masajistas favoritos, así como los masajistas o centros recomendados.
+</string>
+                                        <color key="textColor" name="tabbarback"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9o8-2i-GCc">
+                                        <rect key="frame" x="10" y="22" width="322" height="62"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="user"/>
+                                <constraints>
+                                    <constraint firstItem="fU6-mO-WFx" firstAttribute="leading" secondItem="2DG-47-cDW" secondAttribute="trailing" id="30F-kp-k8U"/>
+                                    <constraint firstAttribute="height" constant="276" id="Aw8-hq-VtR"/>
+                                    <constraint firstAttribute="width" constant="342" id="ycV-sF-AX3"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lbv-GL-iZK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="SYn-wT-dhl" firstAttribute="leading" secondItem="Lbv-GL-iZK" secondAttribute="leading" constant="20" id="2gB-Tl-Xvx"/>
+                            <constraint firstItem="etQ-ZU-nu8" firstAttribute="leading" secondItem="Lbv-GL-iZK" secondAttribute="leading" id="2sS-Lz-aeb"/>
                             <constraint firstItem="SYn-wT-dhl" firstAttribute="centerX" secondItem="Lbv-GL-iZK" secondAttribute="centerX" id="8mE-0Q-hvz"/>
                             <constraint firstItem="wHM-di-SCi" firstAttribute="centerX" secondItem="Emp-Yo-zCo" secondAttribute="centerX" id="AkD-KN-o9d"/>
                             <constraint firstItem="Lbv-GL-iZK" firstAttribute="bottom" secondItem="SYn-wT-dhl" secondAttribute="bottom" id="BTa-Qp-2pj"/>
+                            <constraint firstItem="etQ-ZU-nu8" firstAttribute="trailing" secondItem="Lbv-GL-iZK" secondAttribute="trailing" id="BcM-4h-74D"/>
                             <constraint firstItem="Lbv-GL-iZK" firstAttribute="trailing" secondItem="WUQ-ro-5cV" secondAttribute="trailing" constant="20" id="CiB-3t-h4B"/>
                             <constraint firstItem="lA8-yE-Vly" firstAttribute="centerX" secondItem="Emp-Yo-zCo" secondAttribute="centerX" id="DMb-eU-wPD"/>
+                            <constraint firstItem="OhN-9q-IOP" firstAttribute="centerX" secondItem="Emp-Yo-zCo" secondAttribute="centerX" id="DwR-Wg-rWn"/>
                             <constraint firstItem="Lbv-GL-iZK" firstAttribute="trailing" secondItem="XTI-o5-cnB" secondAttribute="trailing" constant="167" id="FjA-mw-u82"/>
                             <constraint firstItem="SYn-wT-dhl" firstAttribute="top" secondItem="lA8-yE-Vly" secondAttribute="bottom" constant="23" id="HAo-A3-uXW"/>
                             <constraint firstItem="Lbv-GL-iZK" firstAttribute="bottom" secondItem="4Yv-7X-vvL" secondAttribute="bottom" id="KZw-ii-NpV"/>
@@ -453,11 +499,14 @@ Entonces esta es tu aplicación.
                             <constraint firstItem="lA8-yE-Vly" firstAttribute="top" secondItem="XTI-o5-cnB" secondAttribute="bottom" constant="20" id="V5W-a7-SRx"/>
                             <constraint firstItem="Lbv-GL-iZK" firstAttribute="trailing" secondItem="4Yv-7X-vvL" secondAttribute="trailing" constant="20" id="Vet-rF-BuV"/>
                             <constraint firstItem="Lbv-GL-iZK" firstAttribute="trailing" secondItem="SYn-wT-dhl" secondAttribute="trailing" constant="20" id="axf-CE-zsI"/>
+                            <constraint firstItem="OhN-9q-IOP" firstAttribute="centerY" secondItem="Emp-Yo-zCo" secondAttribute="centerY" id="b0b-AP-MpC"/>
                             <constraint firstItem="wHM-di-SCi" firstAttribute="centerY" secondItem="lA8-yE-Vly" secondAttribute="centerY" id="c8b-QK-MnO"/>
                             <constraint firstItem="XTI-o5-cnB" firstAttribute="top" secondItem="Lbv-GL-iZK" secondAttribute="top" constant="10" id="dFr-w9-zma"/>
+                            <constraint firstItem="etQ-ZU-nu8" firstAttribute="top" secondItem="Emp-Yo-zCo" secondAttribute="top" id="js6-lM-OOc"/>
                             <constraint firstItem="WUQ-ro-5cV" firstAttribute="top" secondItem="lA8-yE-Vly" secondAttribute="bottom" constant="10" id="p5b-4F-HS4"/>
                             <constraint firstItem="lA8-yE-Vly" firstAttribute="width" secondItem="Emp-Yo-zCo" secondAttribute="width" multiplier="0.9" id="q2y-nL-7JK"/>
                             <constraint firstItem="XTI-o5-cnB" firstAttribute="leading" secondItem="Lbv-GL-iZK" secondAttribute="leading" constant="167" id="vMr-Gc-nXR"/>
+                            <constraint firstAttribute="bottom" secondItem="etQ-ZU-nu8" secondAttribute="bottom" id="vsg-X9-tnh"/>
                             <constraint firstItem="WUQ-ro-5cV" firstAttribute="leading" secondItem="Lbv-GL-iZK" secondAttribute="leading" constant="20" id="wyO-QT-7e5"/>
                             <constraint firstItem="Lbv-GL-iZK" firstAttribute="bottom" secondItem="WUQ-ro-5cV" secondAttribute="bottom" id="zW7-fR-7Ld"/>
                         </constraints>
@@ -475,7 +524,7 @@ Entonces esta es tu aplicación.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPS-o6-poj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1595.6521739130435" y="95.758928571428569"/>
+            <point key="canvasLocation" x="1595.6521739130435" y="79.6875"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Gzp-J0-QhT">
@@ -2221,6 +2270,21 @@ Entonces esta es tu aplicación.
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T7O-jC-BPc" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7935" y="-348"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1FQ-oD-WUz">
+            <objects>
+                <viewController id="Dc7-Xi-5MZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fvd-tu-16z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WBo-21-lun"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EHR-kV-Mcb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3178" y="-19"/>
         </scene>
     </scenes>
     <resources>
