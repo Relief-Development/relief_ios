@@ -70,6 +70,9 @@
                                 <color key="tintColor" name="user"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Solicitar contraseña"/>
+                                <connections>
+                                    <action selector="buttonMapTapped:" destination="7BT-9S-CDa" eventType="touchUpInside" id="Lj4-jg-J4m"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eV0-hV-9zG"/>
@@ -98,6 +101,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyB-mM-Lfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="795.6521739130435" y="57.589285714285708"/>
+        </scene>
+        <!--Map UserVC-->
+        <scene sceneID="HYB-Gc-LH3">
+            <objects>
+                <viewController storyboardIdentifier="Map" id="QML-IN-tU5" customClass="MapUserVC" customModule="Relief" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="Map" id="M9M-Lu-y42">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DO8-WY-w6k">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rz4-CO-35Y">
+                                <rect key="frame" x="19" y="51.5" width="334" height="35"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Buscar centros" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEi-R3-tJg">
+                                <rect key="frame" x="10" y="44" width="352" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fuX-K8-tZ7"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uz7-mL-CZA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rz4-CO-35Y" firstAttribute="width" secondItem="fEi-R3-tJg" secondAttribute="width" multiplier="0.95" id="3wZ-72-EwD"/>
+                            <constraint firstItem="fEi-R3-tJg" firstAttribute="top" secondItem="uz7-mL-CZA" secondAttribute="top" id="7NB-IB-b74"/>
+                            <constraint firstItem="uz7-mL-CZA" firstAttribute="trailing" secondItem="DO8-WY-w6k" secondAttribute="trailing" id="9ZS-la-QxI"/>
+                            <constraint firstItem="DO8-WY-w6k" firstAttribute="leading" secondItem="uz7-mL-CZA" secondAttribute="leading" id="Aol-qJ-j13"/>
+                            <constraint firstItem="fEi-R3-tJg" firstAttribute="leading" secondItem="DO8-WY-w6k" secondAttribute="leading" constant="10" id="EHB-Ew-FW2"/>
+                            <constraint firstItem="Rz4-CO-35Y" firstAttribute="centerX" secondItem="fEi-R3-tJg" secondAttribute="centerX" id="Mao-Df-Ifg"/>
+                            <constraint firstItem="Rz4-CO-35Y" firstAttribute="centerY" secondItem="fEi-R3-tJg" secondAttribute="centerY" id="Mz7-EY-qf6"/>
+                            <constraint firstItem="fEi-R3-tJg" firstAttribute="width" secondItem="DO8-WY-w6k" secondAttribute="width" multiplier="0.85" id="SbC-eX-gMv"/>
+                            <constraint firstItem="DO8-WY-w6k" firstAttribute="top" secondItem="M9M-Lu-y42" secondAttribute="top" id="erj-Ek-Q98"/>
+                            <constraint firstAttribute="bottom" secondItem="DO8-WY-w6k" secondAttribute="bottom" id="gue-Qx-FAA"/>
+                            <constraint firstItem="Rz4-CO-35Y" firstAttribute="height" secondItem="fEi-R3-tJg" secondAttribute="height" multiplier="0.7" id="rYS-r3-XMF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundBar" destination="Rz4-CO-35Y" id="hTO-MZ-gMd"/>
+                        <outlet property="mapView" destination="DO8-WY-w6k" id="6Sc-Kh-nfd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ck-pl-fHA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="73"/>
         </scene>
     </scenes>
     <resources>
