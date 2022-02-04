@@ -20,4 +20,12 @@ class RecoverPassViewController: UIViewController {
         
     }
     
+    @IBAction func buttonMapTapped(_ sender: Any){
+        if let map = storyboard?.instantiateViewController(withIdentifier: "Map"){
+            map.modalPresentationStyle = .fullScreen
+            self.present(map, animated: true, completion: nil)
+        }
+        
+    }
+    
 }
