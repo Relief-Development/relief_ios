@@ -51,16 +51,7 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-//    @IBAction func segmentedAction(_ sender: UISegmentedControl) {
-//        if segmentedHome.selectedSegmentIndex == 1 {
-//            self.recomendedView.isHidden = true
-//            self.emptyFavView.isHidden = false
-//        }else if segmentedHome.selectedSegmentIndex == 0{
-//            self.recomendedView.isHidden = false
-//            self.favView.isHidden = true
-//        }
-//    }
-    @IBAction func tofavTapped() {
+    @IBAction func segmentedValueChanged(_ sender: UISegmentedControl) {
         if segmentedHome.selectedSegmentIndex == 1 {
             self.recomendedView.isHidden = true
             self.emptyFavView.isHidden = false
@@ -70,8 +61,19 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    @IBAction func tofavTapped() {
+//        if segmentedHome.selectedSegmentIndex == 1 {
+//            self.recomendedView.isHidden = true
+//            self.emptyFavView.isHidden = false
+//        }else if segmentedHome.selectedSegmentIndex == 0{
+//            self.recomendedView.isHidden = false
+//            self.favView.isHidden = true
+//        }
+    }
+    
     @IBAction func closeTapped() {
         tutorialView.isHidden = true
     }
+    
 }
 

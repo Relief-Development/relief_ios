@@ -30,4 +30,18 @@ class HomeUserRecomCell: UITableViewCell {
     @IBAction func favButtonTapped(_ sender: Any) {
         heartButton?.isSelected.toggle()
     }
+    
+    @IBAction func starButtonTapped(_ button: UIButton) {
+        let pushedTag = button.tag 
+        
+        for tag in (1 ... 5) {
+            let starButton = (viewWithTag(tag) as! UIButton)
+            starButton.isHighlighted = false
+        }
+        
+        for tag in (1 ... pushedTag) {
+            let starButton = (viewWithTag(tag) as! UIButton)
+            starButton.isHighlighted = true
+        }
+    }
 }
