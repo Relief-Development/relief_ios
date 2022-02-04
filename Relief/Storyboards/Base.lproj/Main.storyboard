@@ -1293,7 +1293,6 @@ Entonces esta es tu aplicación.
                                             <constraint firstItem="iWW-i7-ULr" firstAttribute="leading" secondItem="lhZ-UA-Z3o" secondAttribute="leading" constant="10" id="Yhg-0D-IxS"/>
                                             <constraint firstItem="iWW-i7-ULr" firstAttribute="top" secondItem="B7G-cM-Va3" secondAttribute="bottom" constant="15" id="Zlh-Ax-00u"/>
                                             <constraint firstItem="Jgy-tq-CDR" firstAttribute="centerX" secondItem="lhZ-UA-Z3o" secondAttribute="centerX" id="e9C-65-OwS"/>
-                                            <constraint firstAttribute="width" constant="342" id="k01-uE-6gH"/>
                                             <constraint firstAttribute="trailing" secondItem="iWW-i7-ULr" secondAttribute="trailing" constant="10" id="qB1-I6-Wit"/>
                                             <constraint firstAttribute="bottom" secondItem="Jgy-tq-CDR" secondAttribute="bottom" constant="25" id="u4k-vp-GfL"/>
                                         </constraints>
