@@ -14,6 +14,7 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var emptyFavView: UIView!
     @IBOutlet var recomendedView: UIView!
     @IBOutlet var favView: UIView!
+    @IBOutlet var tutorialView: UIView!
     @IBOutlet var segmentedHome: UISegmentedControl!
     
     override func viewDidLoad() {
