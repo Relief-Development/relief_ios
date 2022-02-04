@@ -47,10 +47,7 @@ class RegisterViewController: UIViewController{
         }
     }
     @IBAction func buttonToLoginTapped(_ sender: Any){
-        if let login = storyboard?.instantiateViewController(withIdentifier: "Login"){
-            login.modalPresentationStyle = .fullScreen
-            self.present(login, animated: true, completion: nil)
-        }
+        self.dismiss(animated: true, completion: nil)
         
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
