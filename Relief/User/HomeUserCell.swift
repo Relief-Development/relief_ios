@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeUserRecomCell: UITableViewCell {
+class HomeUserCell: UITableViewCell {
     
     static let identifierRecom = "HomeUserRecomCellId"
     static let identifierFav = "HomeUserFavCellId"

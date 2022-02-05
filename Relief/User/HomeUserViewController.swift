@@ -8,7 +8,7 @@ import UIKit
 
 class HomeUserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    private var homecell: HomeUserRecomCell?
+    private var homecell: HomeUserCell?
     @IBOutlet var tableViewRec: UITableView!
     @IBOutlet var tableViewFav: UITableView!
     @IBOutlet var emptyFavView: UIView!
@@ -60,17 +60,7 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
             self.favView.isHidden = true
         }
     }
-    
-    @IBAction func tofavTapped() {
-//        if segmentedHome.selectedSegmentIndex == 1 {
-//            self.recomendedView.isHidden = true
-//            self.emptyFavView.isHidden = false
-//        }else if segmentedHome.selectedSegmentIndex == 0{
-//            self.recomendedView.isHidden = false
-//            self.favView.isHidden = true
-//        }
-    }
-    
+        
     @IBAction func closeTapped() {
         tutorialView.isHidden = true
     }
