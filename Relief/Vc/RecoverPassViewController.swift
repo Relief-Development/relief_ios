@@ -21,11 +21,11 @@ class RecoverPassViewController: UIViewController {
     }
     
     @IBAction func buttonMapTapped(_ sender: Any){
-        if let map = storyboard?.instantiateViewController(withIdentifier: "Map"){
+        if let map = storyboard?.instantiateViewController(withIdentifier: "MassageProfileFromUser"){
             map.modalPresentationStyle = .fullScreen
             self.present(map, animated: true, completion: nil)
         }
-        
+
     }
     
 }
