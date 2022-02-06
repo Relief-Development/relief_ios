@@ -58,6 +58,8 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
         }else if segmentedHome.selectedSegmentIndex == 0{
             self.recomendedView.isHidden = false
             self.favView.isHidden = true
+            self.emptyFavView.isHidden = true
+
         }
     }
         

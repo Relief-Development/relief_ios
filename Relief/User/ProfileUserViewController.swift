@@ -47,6 +47,14 @@ class ProfileUserViewController: UIViewController, UITableViewDelegate, UITableV
             self.present(legal, animated: true, completion: nil)
         }
     }
+    @IBAction func editProfileTapped() {
+        if let editprofile = storyboard?.instantiateViewController(withIdentifier: "EditProfileUser"){
+            editprofile.modalPresentationStyle = .fullScreen
+            self.present(editprofile, animated: true, completion: nil)
+        }
+    }
+    
+    
     
     @IBAction func closeTapped() {
         tutorialView.isHidden = true
