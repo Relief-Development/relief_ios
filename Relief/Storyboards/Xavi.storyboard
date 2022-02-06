@@ -70,9 +70,6 @@
                                 <color key="tintColor" name="user"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Solicitar contraseña"/>
-                                <connections>
-                                    <action selector="buttonMapTapped:" destination="7BT-9S-CDa" eventType="touchUpInside" id="gCA-vT-TAM"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eV0-hV-9zG"/>
