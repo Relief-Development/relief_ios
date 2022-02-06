@@ -16,6 +16,15 @@ class DetailMassageSearchUserVC: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserForSearchMassageIdentifier", for: indexPath)
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if let massageFromUser = storyboard?.instantiateViewController(withIdentifier: "MassageProfileFromUser") as? MassageProfileFromUserVC{
+            massageFromUser.modalPresentationStyle = .fullScreen
+            self.present(massageFromUser, animated: true, completion: nil)
+            
+        }
+    }
     
     
     
@@ -26,4 +35,5 @@ class DetailMassageSearchUserVC: UIViewController, UITableViewDelegate, UITableV
     
 
 }
+
 

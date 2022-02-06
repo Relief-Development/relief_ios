@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MassageProfileFromUser: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MassageProfileFromUserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
     @IBOutlet var tableViewVal: UITableView!
     
@@ -25,6 +25,10 @@ class MassageProfileFromUser: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileUserCell", for: indexPath)
         return cell
+    }
+    @IBAction func buttonToDetailTapped(){
+        self.dismiss(animated: true, completion: nil)
+        
     }
    
 }
