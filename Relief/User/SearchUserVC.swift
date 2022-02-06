@@ -8,6 +8,16 @@
 import UIKit
 
 class SearchUserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet var tutorialView: UIView!
+    @IBOutlet var tutorialTextSearchView: UIView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.title = "Búsqueda"
+        tutorialTextSearchView.layer.cornerRadius = 30
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -16,6 +26,7 @@ class SearchUserVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchUserMassageCellIdentifier", for: indexPath)
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
@@ -24,12 +35,7 @@ class SearchUserVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         }
     }
     
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationItem.title = "Busqueda"
+    @IBAction func closeTapped() {
+        tutorialView.isHidden = true
     }
-    
-
 }

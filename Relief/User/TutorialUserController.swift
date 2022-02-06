@@ -16,11 +16,10 @@ class TutorialUserController: UIViewController {
         tutorialView.layer.cornerRadius = 30
     }
    
-        @IBAction func buttonUserTapped(_ sender: Any){
-            if let homeuser = storyboard?.instantiateViewController(withIdentifier: "HomeUser"){
-                homeuser.modalPresentationStyle = .fullScreen
-                self.present(homeuser, animated: true, completion: nil)
-            }
-            
+    @IBAction func buttonUserTapped(_ sender: Any){
+        if let homeuser = storyboard?.instantiateViewController(withIdentifier: "HomeUser"){
+            homeuser.modalPresentationStyle = .fullScreen
+            self.present(homeuser, animated: true, completion: nil)
         }
+    }
 }
