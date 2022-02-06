@@ -34,12 +34,12 @@
 		3335E5EF2795C743008DF917 /* ReliefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5EE2795C743008DF917 /* ReliefTests.swift */; };
 		3335E5FA2795C743008DF917 /* ReliefUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5F92795C743008DF917 /* ReliefUITests.swift */; };
 		419C33D327A2EE2300B0F45C /* ModalProfileMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */; };
-		419C33D527A3054F00B0F45C /* HomeUserRecomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C33D427A3054F00B0F45C /* HomeUserRecomCell.swift */; };
-		478BF58727ADAF75009BFF78 /* Massagist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478BF58627ADAF75009BFF78 /* Massagist.swift */; };
-		47946A0F27AC36DA00682132 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47946A0E27AC36DA00682132 /* LocationViewModel.swift */; };
 		419C33D527A3054F00B0F45C /* HomeUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C33D427A3054F00B0F45C /* HomeUserCell.swift */; };
 		41ED789E27AC2689004FCBF1 /* TutorialUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED789D27AC2689004FCBF1 /* TutorialUserController.swift */; };
 		41ED78A027AC2A5B004FCBF1 /* TutorialMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED789F27AC2A5B004FCBF1 /* TutorialMassageVC.swift */; };
+		47730BA427B0149100E6F794 /* MassageProfileFromUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47730BA327B0149100E6F794 /* MassageProfileFromUserVC.swift */; };
+		478BF58727ADAF75009BFF78 /* Massagist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478BF58627ADAF75009BFF78 /* Massagist.swift */; };
+		47946A0F27AC36DA00682132 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47946A0E27AC36DA00682132 /* LocationViewModel.swift */; };
 		47D51ED427A1F26A00301DFA /* RecoverPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D51ED327A1F26A00301DFA /* RecoverPassViewController.swift */; };
 		47D5309127A99D4300AD2459 /* MapUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D5309027A99D4300AD2459 /* MapUserVC.swift */; };
 /* End PBXBuildFile section */
@@ -95,12 +95,12 @@
 		3335E5F92795C743008DF917 /* ReliefUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliefUITests.swift; sourceTree = "<group>"; };
 		3335E5FB2795C743008DF917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalProfileMassageVC.swift; sourceTree = "<group>"; };
-		419C33D427A3054F00B0F45C /* HomeUserRecomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserRecomCell.swift; sourceTree = "<group>"; };
-		478BF58627ADAF75009BFF78 /* Massagist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Massagist.swift; sourceTree = "<group>"; };
-		47946A0E27AC36DA00682132 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		419C33D427A3054F00B0F45C /* HomeUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserCell.swift; sourceTree = "<group>"; };
 		41ED789D27AC2689004FCBF1 /* TutorialUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialUserController.swift; sourceTree = "<group>"; };
 		41ED789F27AC2A5B004FCBF1 /* TutorialMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMassageVC.swift; sourceTree = "<group>"; };
+		47730BA327B0149100E6F794 /* MassageProfileFromUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassageProfileFromUserVC.swift; sourceTree = "<group>"; };
+		478BF58627ADAF75009BFF78 /* Massagist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Massagist.swift; sourceTree = "<group>"; };
+		47946A0E27AC36DA00682132 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		47D51ED327A1F26A00301DFA /* RecoverPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPassViewController.swift; sourceTree = "<group>"; };
 		47D5309027A99D4300AD2459 /* MapUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUserVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +166,7 @@
 				47D5309027A99D4300AD2459 /* MapUserVC.swift */,
 				47946A0E27AC36DA00682132 /* LocationViewModel.swift */,
 				41ED789D27AC2689004FCBF1 /* TutorialUserController.swift */,
+				47730BA327B0149100E6F794 /* MassageProfileFromUserVC.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -384,7 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47D5309127A99D4300AD2459 /* MapUserVC.swift in Sources */,
-				419C33D527A3054F00B0F45C /* HomeUserRecomCell.swift in Sources */,
+				419C33D527A3054F00B0F45C /* HomeUserCell.swift in Sources */,
 				419C33D527A3054F00B0F45C /* HomeUserCell.swift in Sources */,
 				19AD4C8E27A062DB006A3943 /* LoginViewController.swift in Sources */,
 				19F663C7279F1AA400F724D4 /* ProfileUserCell.swift in Sources */,
@@ -406,6 +407,7 @@
 				3335E5DA2795C742008DF917 /* SceneDelegate.swift in Sources */,
 				419C33D327A2EE2300B0F45C /* ModalProfileMassageVC.swift in Sources */,
 				19B8D2822799CF2100F1EFA9 /* HomeViewController.swift in Sources */,
+				47730BA427B0149100E6F794 /* MassageProfileFromUserVC.swift in Sources */,
 				191E7AE627A1BDCC000810DE /* ProfileMassageCell.swift in Sources */,
 				191E7AEA27A1BE5C000810DE /* PoliticMassageVC.swift in Sources */,
 			);
