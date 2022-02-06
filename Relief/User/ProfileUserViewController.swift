@@ -54,8 +54,6 @@ class ProfileUserViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
-    
-    
     @IBAction func closeTapped() {
         tutorialView.isHidden = true
     }

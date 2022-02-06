@@ -13,6 +13,8 @@ class MapUserVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
     
     @IBOutlet var backgroundBar: UIView?
     @IBOutlet var mapView: MKMapView!
+    @IBOutlet var tutorialView: UIView!
+    @IBOutlet var tutorialTextMapView: UIView!
     
 //    Esther Moreno lat and long
 //    40.436797570299035, -3.716440514606122
@@ -23,6 +25,7 @@ class MapUserVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.backgroundBar?.layer.cornerRadius = 10
+        tutorialTextMapView.layer.cornerRadius = 30
         
         let mass1 = Massagist()
         mass1.name = "Esther Moreno"
@@ -94,7 +97,8 @@ class MapUserVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
         }
     }
     
-    
-    
+    @IBAction func closeTapped() {
+        tutorialView.isHidden = true
+    }
 }
 
