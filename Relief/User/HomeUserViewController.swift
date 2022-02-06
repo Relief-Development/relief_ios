@@ -8,12 +8,14 @@ import UIKit
 
 class HomeUserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    private var homecell: HomeUserRecomCell?
+    private var homecell: HomeUserCell?
     @IBOutlet var tableViewRec: UITableView!
     @IBOutlet var tableViewFav: UITableView!
     @IBOutlet var emptyFavView: UIView!
     @IBOutlet var recomendedView: UIView!
     @IBOutlet var favView: UIView!
+    @IBOutlet var tutorialView: UIView!
+    @IBOutlet var tutorialTextHomeView: UIView!
     @IBOutlet var segmentedHome: UISegmentedControl!
     
     override func viewDidLoad() {
@@ -21,6 +23,7 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
         self.tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "user_light")
         self.tabBarController?.tabBar.invalidateIntrinsicContentSize()
         homecell?.button?.setTitle(" ", for: .normal)
+        tutorialTextHomeView.layer.cornerRadius = 30
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,16 +51,7 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-//    @IBAction func segmentedAction(_ sender: UISegmentedControl) {
-//        if segmentedHome.selectedSegmentIndex == 1 {
-//            self.recomendedView.isHidden = true
-//            self.emptyFavView.isHidden = false
-//        }else if segmentedHome.selectedSegmentIndex == 0{
-//            self.recomendedView.isHidden = false
-//            self.favView.isHidden = true
-//        }
-//    }
-    @IBAction func tofavTapped() {
+    @IBAction func segmentedValueChanged(_ sender: UISegmentedControl) {
         if segmentedHome.selectedSegmentIndex == 1 {
             self.recomendedView.isHidden = true
             self.emptyFavView.isHidden = false
@@ -65,7 +59,11 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
             self.recomendedView.isHidden = false
             self.favView.isHidden = true
         }
-
     }
+        
+    @IBAction func closeTapped() {
+        tutorialView.isHidden = true
+    }
+    
 }
 

@@ -9,7 +9,9 @@ import UIKit
 
 class ProfileUserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ModalProfileUserVCDelegate {
     
-
+    @IBOutlet var tutorialView: UIView!
+    @IBOutlet var tutorialTextProfileView: UIView!
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -21,7 +23,7 @@ class ProfileUserViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tutorialTextProfileView.layer.cornerRadius = 30
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,5 +46,9 @@ class ProfileUserViewController: UIViewController, UITableViewDelegate, UITableV
             legal.modalPresentationStyle = .fullScreen
             self.present(legal, animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func closeTapped() {
+        tutorialView.isHidden = true
     }
 }

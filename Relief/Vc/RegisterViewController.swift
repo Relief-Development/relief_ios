@@ -35,22 +35,19 @@ class RegisterViewController: UIViewController{
     
     @IBAction func buttonLoginTapped(_ sender: Any){
         if segmentregister?.selectedSegmentIndex == 0{
-        if let homeuser = storyboard?.instantiateViewController(withIdentifier: "HomeUser"){
+        if let homeuser = storyboard?.instantiateViewController(withIdentifier: "TutorialUser1"){
             homeuser.modalPresentationStyle = .fullScreen
             self.present(homeuser, animated: true, completion: nil)
         }
         }else {
-            if let homemassage = storyboard?.instantiateViewController(withIdentifier: "HomeMassage"){
+            if let homemassage = storyboard?.instantiateViewController(withIdentifier: "TutorialMassage1"){
                 homemassage.modalPresentationStyle = .fullScreen
                 self.present(homemassage, animated: true, completion: nil)
             }
         }
     }
     @IBAction func buttonToLoginTapped(_ sender: Any){
-        if let login = storyboard?.instantiateViewController(withIdentifier: "Login"){
-            login.modalPresentationStyle = .fullScreen
-            self.present(login, animated: true, completion: nil)
-        }
+        self.dismiss(animated: true, completion: nil)
         
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
