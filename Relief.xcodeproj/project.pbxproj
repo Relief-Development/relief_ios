@@ -38,12 +38,12 @@
 		3335E5E42795C743008DF917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3335E5E22795C743008DF917 /* LaunchScreen.storyboard */; };
 		3335E5EF2795C743008DF917 /* ReliefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5EE2795C743008DF917 /* ReliefTests.swift */; };
 		3335E5FA2795C743008DF917 /* ReliefUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335E5F92795C743008DF917 /* ReliefUITests.swift */; };
+		41523C1027B18A2D00558927 /* CreateAppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41523C0F27B18A2D00558927 /* CreateAppointmentVC.swift */; };
+		41747A6927B17CD6000BAF11 /* HomeMassageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41747A6827B17CD6000BAF11 /* HomeMassageCell.swift */; };
 		419C33D327A2EE2300B0F45C /* ModalProfileMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */; };
 		419C33D527A3054F00B0F45C /* HomeUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C33D427A3054F00B0F45C /* HomeUserCell.swift */; };
 		41ED789E27AC2689004FCBF1 /* TutorialUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED789D27AC2689004FCBF1 /* TutorialUserController.swift */; };
 		41ED78A027AC2A5B004FCBF1 /* TutorialMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED789F27AC2A5B004FCBF1 /* TutorialMassageVC.swift */; };
-		478BF58727ADAF75009BFF78 /* Massagist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478BF58627ADAF75009BFF78 /* Massagist.swift */; };
-		47946A0F27AC36DA00682132 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47946A0E27AC36DA00682132 /* LocationViewModel.swift */; };
 		47730BA427B0149100E6F794 /* MassageProfileFromUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47730BA327B0149100E6F794 /* MassageProfileFromUserVC.swift */; };
 		478BF58727ADAF75009BFF78 /* Massagist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478BF58627ADAF75009BFF78 /* Massagist.swift */; };
 		47946A0F27AC36DA00682132 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47946A0E27AC36DA00682132 /* LocationViewModel.swift */; };
@@ -106,12 +106,12 @@
 		3335E5F52795C743008DF917 /* ReliefUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReliefUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3335E5F92795C743008DF917 /* ReliefUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliefUITests.swift; sourceTree = "<group>"; };
 		3335E5FB2795C743008DF917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41523C0F27B18A2D00558927 /* CreateAppointmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAppointmentVC.swift; sourceTree = "<group>"; };
+		41747A6827B17CD6000BAF11 /* HomeMassageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMassageCell.swift; sourceTree = "<group>"; };
 		419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalProfileMassageVC.swift; sourceTree = "<group>"; };
 		419C33D427A3054F00B0F45C /* HomeUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserCell.swift; sourceTree = "<group>"; };
 		41ED789D27AC2689004FCBF1 /* TutorialUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialUserController.swift; sourceTree = "<group>"; };
 		41ED789F27AC2A5B004FCBF1 /* TutorialMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMassageVC.swift; sourceTree = "<group>"; };
-		478BF58627ADAF75009BFF78 /* Massagist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Massagist.swift; sourceTree = "<group>"; };
-		47946A0E27AC36DA00682132 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		47730BA327B0149100E6F794 /* MassageProfileFromUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassageProfileFromUserVC.swift; sourceTree = "<group>"; };
 		478BF58627ADAF75009BFF78 /* Massagist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Massagist.swift; sourceTree = "<group>"; };
 		47946A0E27AC36DA00682132 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
@@ -196,10 +196,12 @@
 				191E7AE327A1BD82000810DE /* ProfileMassageVC.swift */,
 				19B8D2812799CF2100F1EFA9 /* HomeViewController.swift */,
 				191E7AE527A1BDCC000810DE /* ProfileMassageCell.swift */,
+				41747A6827B17CD6000BAF11 /* HomeMassageCell.swift */,
 				191E7AE927A1BE5C000810DE /* PoliticMassageVC.swift */,
 				191E7AEB27A1BE6E000810DE /* LegalMassageVC.swift */,
 				419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */,
 				41ED789F27AC2A5B004FCBF1 /* TutorialMassageVC.swift */,
+				41523C0F27B18A2D00558927 /* CreateAppointmentVC.swift */,
 			);
 			path = Massage;
 			sourceTree = "<group>";
@@ -423,12 +425,14 @@
 				19F663C5279F199200F724D4 /* ProfileUserViewController.swift in Sources */,
 				41ED78A027AC2A5B004FCBF1 /* TutorialMassageVC.swift in Sources */,
 				47D51ED427A1F26A00301DFA /* RecoverPassViewController.swift in Sources */,
+				41523C1027B18A2D00558927 /* CreateAppointmentVC.swift in Sources */,
 				19522E6827B00C4000B26094 /* DetailMassageSearchUserVC.swift in Sources */,
 				19522E6A27B00CA600B26094 /* DetailMassageUserCell.swift in Sources */,
 				19B8D2842799D02000F1EFA9 /* HomeUserViewController.swift in Sources */,
 				19FA8E0E27AFFC7B00AB1FFC /* SearchUserMassageCell.swift in Sources */,
 				3335E5DA2795C742008DF917 /* SceneDelegate.swift in Sources */,
 				19CB454427B01C8200303660 /* EditUserProfileVC.swift in Sources */,
+				41747A6927B17CD6000BAF11 /* HomeMassageCell.swift in Sources */,
 				419C33D327A2EE2300B0F45C /* ModalProfileMassageVC.swift in Sources */,
 				19B8D2822799CF2100F1EFA9 /* HomeViewController.swift in Sources */,
 				47730BA427B0149100E6F794 /* MassageProfileFromUserVC.swift in Sources */,
