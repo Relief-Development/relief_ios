@@ -19,12 +19,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var thirdDateButton: UIButton!
     @IBOutlet var informationLabel: UILabel!
     @IBOutlet var calendarButton: UIButton!
+    @IBOutlet var tutorialView: UIView!
+    @IBOutlet var tutorialTextHomeView: UIView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "massage_light")
         self.navigationItem.title = "Citas"
-        self.addDateButton?.layer.cornerRadius = 6
+        tutorialTextHomeView.layer.cornerRadius = 30
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,7 +52,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
+    @IBAction func closeTapped() {
+        tutorialView.isHidden = true
+    }
+    
 
 }
+
 
 

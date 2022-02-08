@@ -25,6 +25,7 @@
 		19AD4C9727A06E5F006A3943 /* Javiercabañas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AD4C9627A06E5F006A3943 /* Javiercabañas.storyboard */; };
 		19B8D2822799CF2100F1EFA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B8D2812799CF2100F1EFA9 /* HomeViewController.swift */; };
 		19B8D2842799D02000F1EFA9 /* HomeUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B8D2832799D02000F1EFA9 /* HomeUserViewController.swift */; };
+		19B94CA927B2D461009D6FBC /* EditProfileMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B94CA827B2D461009D6FBC /* EditProfileMassageVC.swift */; };
 		19CB454427B01C8200303660 /* EditUserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CB454327B01C8200303660 /* EditUserProfileVC.swift */; };
 		19F663C5279F199200F724D4 /* ProfileUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F663C4279F199200F724D4 /* ProfileUserViewController.swift */; };
 		19F663C7279F1AA400F724D4 /* ProfileUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F663C6279F1AA400F724D4 /* ProfileUserCell.swift */; };
@@ -87,6 +88,7 @@
 		19AD4C9627A06E5F006A3943 /* Javiercabañas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Javiercabañas.storyboard"; sourceTree = "<group>"; };
 		19B8D2812799CF2100F1EFA9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		19B8D2832799D02000F1EFA9 /* HomeUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserViewController.swift; sourceTree = "<group>"; };
+		19B94CA827B2D461009D6FBC /* EditProfileMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileMassageVC.swift; sourceTree = "<group>"; };
 		19CB454327B01C8200303660 /* EditUserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserProfileVC.swift; sourceTree = "<group>"; };
 		19F663C4279F199200F724D4 /* ProfileUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserViewController.swift; sourceTree = "<group>"; };
 		19F663C6279F1AA400F724D4 /* ProfileUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserCell.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */,
 				41ED789F27AC2A5B004FCBF1 /* TutorialMassageVC.swift */,
 				41523C0F27B18A2D00558927 /* CreateAppointmentVC.swift */,
+				19B94CA827B2D461009D6FBC /* EditProfileMassageVC.swift */,
 			);
 			path = Massage;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				19AD4C8E27A062DB006A3943 /* LoginViewController.swift in Sources */,
 				19F663C7279F1AA400F724D4 /* ProfileUserCell.swift in Sources */,
 				19FA8E0C27AFFC4200AB1FFC /* SearchUserVC.swift in Sources */,
+				19B94CA927B2D461009D6FBC /* EditProfileMassageVC.swift in Sources */,
 				47946A0F27AC36DA00682132 /* LocationViewModel.swift in Sources */,
 				3335E5DC2795C742008DF917 /* ViewController.swift in Sources */,
 				478BF58727ADAF75009BFF78 /* Massagist.swift in Sources */,
