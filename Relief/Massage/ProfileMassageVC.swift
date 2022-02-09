@@ -9,7 +9,9 @@ import UIKit
 
 class ProfileMassageVC: UIViewController, UITableViewDelegate, UITableViewDataSource, ModalProfileMassageVCDelegate {
     
-
+    @IBOutlet var tutorialView: UIView!
+    @IBOutlet var tutorialTextHomeView: UIView!
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -24,7 +26,7 @@ class ProfileMassageVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tutorialTextHomeView.layer.cornerRadius = 30
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "OpenSettingsMassageModal" {
@@ -45,6 +47,15 @@ class ProfileMassageVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         if let legal = storyboard?.instantiateViewController(withIdentifier: "LegalMassageVc"){
             legal.modalPresentationStyle = .fullScreen
             self.present(legal, animated: true, completion: nil)
+        }
+    }
+    @IBAction func closeTapped() {
+        tutorialView.isHidden = true
+    }
+    @IBAction func editProfileTapped() {
+        if let editprofile = storyboard?.instantiateViewController(withIdentifier: "EditProfileMassage"){
+            editprofile.modalPresentationStyle = .fullScreen
+            self.present(editprofile, animated: true, completion: nil)
         }
     }
 

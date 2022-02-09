@@ -586,7 +586,7 @@ Entonces esta es tu aplicación.
             </objects>
             <point key="canvasLocation" x="685.50724637681162" y="79.6875"/>
         </scene>
-        <!--Busqueda-->
+        <!--Búsqueda-->
         <scene sceneID="ssd-ug-7IR">
             <objects>
                 <viewController id="uOL-mm-QuU" customClass="SearchUserVC" customModule="Relief" customModuleProvider="target" sceneMemberID="viewController">
@@ -770,7 +770,7 @@ Entonces esta es tu aplicación.
                             <constraint firstItem="npO-PT-4nn" firstAttribute="centerX" secondItem="uxO-n9-STh" secondAttribute="centerX" id="yyT-8T-6aS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Busqueda" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="ZI7-Si-UkI"/>
+                    <navigationItem key="navigationItem" title="Búsqueda" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="ZI7-Si-UkI"/>
                     <connections>
                         <outlet property="tutorialTextSearchView" destination="wCf-g5-dnh" id="2OL-na-O5F"/>
                         <outlet property="tutorialView" destination="qHh-I1-e4a" id="G0f-7K-GEq"/>
@@ -974,8 +974,8 @@ Entonces esta es tu aplicación.
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Y5-02-kjN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" selectedImage="house.fill" id="e14-8K-mN7"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dgL-qI-Mtu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="dgL-qI-Mtu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1007,7 +1007,7 @@ Entonces esta es tu aplicación.
             </objects>
             <point key="canvasLocation" x="6116" y="330"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Citas-->
         <scene sceneID="QmE-BK-Rj4">
             <objects>
                 <viewController id="gjn-zJ-G3o" customClass="HomeViewController" customModule="Relief" customModuleProvider="target" sceneMemberID="viewController">
@@ -1015,25 +1015,312 @@ Entonces esta es tu aplicación.
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2o-gb-5Ux">
-                                <rect key="frame" x="169" y="430.5" width="76" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logoPequeñoMasajista" translatesAutoresizingMaskIntoConstraints="NO" id="u1s-1D-AIP">
+                                <rect key="frame" x="167" y="140" width="80" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="OUg-Fk-Wb3"/>
+                                    <constraint firstAttribute="height" constant="50" id="tSv-uf-Uo7"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0V-En-ddz">
+                                <rect key="frame" x="0.0" y="210" width="414" height="170"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Martes, Febrero 8" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lui-Nu-IAp">
+                                        <rect key="frame" x="20" y="0.0" width="142" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="a7i-pT-En6">
+                                        <rect key="frame" x="20" y="36" width="374" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="or0-2T-UKE">
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Dnt-q9-miY"/>
+                                                    <constraint firstAttribute="width" constant="110" id="NVV-1E-FGP"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="11:00 AM">
+                                                    <color key="baseForegroundColor" name="massage"/>
+                                                    <color key="baseBackgroundColor" name="massagetabbarback"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhJ-QS-HOB">
+                                                <rect key="frame" x="132" y="0.0" width="110" height="45"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="11:00 AM">
+                                                    <color key="baseBackgroundColor" name="massage_light"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rA-nR-nNZ">
+                                                <rect key="frame" x="264" y="0.0" width="110" height="45"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="11:00 AM">
+                                                    <color key="baseBackgroundColor" name="massage_light"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Camilo Silva, 3 citas de masaje terapéutico pectoral." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qj1-mu-7FC">
+                                        <rect key="frame" x="20" y="99" width="361.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNu-rj-hLB">
+                                        <rect key="frame" x="20" y="125" width="136.5" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="kUd-di-yfv"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Ver en calendario"/>
+                                        <connections>
+                                            <action selector="goToCalendarWith_sender:" destination="gjn-zJ-G3o" eventType="touchUpInside" id="G8R-Nt-6Rd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="a7i-pT-En6" firstAttribute="leading" secondItem="lui-Nu-IAp" secondAttribute="leading" id="4f0-3M-5eX"/>
+                                    <constraint firstItem="qj1-mu-7FC" firstAttribute="leading" secondItem="lui-Nu-IAp" secondAttribute="leading" id="Ha7-aI-cT6"/>
+                                    <constraint firstItem="a7i-pT-En6" firstAttribute="top" secondItem="lui-Nu-IAp" secondAttribute="bottom" constant="15.5" id="Hao-IR-Lox"/>
+                                    <constraint firstItem="qj1-mu-7FC" firstAttribute="top" secondItem="a7i-pT-En6" secondAttribute="bottom" constant="18" id="QNF-Vm-zR5"/>
+                                    <constraint firstItem="wNu-rj-hLB" firstAttribute="top" secondItem="qj1-mu-7FC" secondAttribute="bottom" constant="8" symbolic="YES" id="RlF-N7-hgA"/>
+                                    <constraint firstItem="wNu-rj-hLB" firstAttribute="leading" secondItem="qj1-mu-7FC" secondAttribute="leading" id="Yel-6V-yYx"/>
+                                    <constraint firstItem="lui-Nu-IAp" firstAttribute="top" secondItem="e0V-En-ddz" secondAttribute="top" id="nPc-JR-50m"/>
+                                    <constraint firstItem="lui-Nu-IAp" firstAttribute="leading" secondItem="e0V-En-ddz" secondAttribute="leading" constant="20" id="pzy-jy-MgS"/>
+                                    <constraint firstAttribute="height" constant="170" id="s8r-Jo-gOn"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ec9-FM-dad">
+                                <rect key="frame" x="0.0" y="380" width="414" height="355"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="355" id="6Tg-bx-jQ1"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeMassageCellId" rowHeight="100" id="nQ7-Cj-ZgS" customClass="HomeMassageCell" customModule="Relief" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nQ7-Cj-ZgS" id="FkE-UJ-hRk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Martes, Febrero 8" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxh-Fq-WiF">
+                                                    <rect key="frame" x="20" y="11" width="142" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="YBV-2t-MBJ">
+                                                    <rect key="frame" x="20" y="40" width="374" height="45"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DA-W7-j5a">
+                                                            <rect key="frame" x="0.0" y="0.0" width="110" height="45"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="45" id="5Zj-Fl-PYW"/>
+                                                                <constraint firstAttribute="width" constant="110" id="cjU-Qz-ceK"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="filled" title="11:00 AM">
+                                                                <color key="baseBackgroundColor" name="massage_light"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xo-IT-6fs">
+                                                            <rect key="frame" x="132" y="0.0" width="110" height="45"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="filled" title="11:00 AM">
+                                                                <color key="baseBackgroundColor" name="massage_light"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVv-9F-D9s">
+                                                            <rect key="frame" x="264" y="0.0" width="110" height="45"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="filled" title="11:00 AM">
+                                                                <color key="baseBackgroundColor" name="massage_light"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qxh-Fq-WiF" firstAttribute="leading" secondItem="FkE-UJ-hRk" secondAttribute="leading" constant="20" symbolic="YES" id="29J-UK-7Jc"/>
+                                                <constraint firstItem="YBV-2t-MBJ" firstAttribute="leading" secondItem="Qxh-Fq-WiF" secondAttribute="leading" id="67Q-7H-h4b"/>
+                                                <constraint firstItem="Qxh-Fq-WiF" firstAttribute="top" secondItem="FkE-UJ-hRk" secondAttribute="top" constant="11" id="IAG-CF-LV3"/>
+                                                <constraint firstItem="YBV-2t-MBJ" firstAttribute="top" secondItem="Qxh-Fq-WiF" secondAttribute="bottom" constant="8.5" id="dHy-kz-5Y8"/>
+                                                <constraint firstAttribute="bottom" secondItem="YBV-2t-MBJ" secondAttribute="bottom" constant="15" id="ouZ-wF-pEQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="YBV-2t-MBJ" secondAttribute="trailing" constant="20" id="Kz7-rQ-OJL"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="Qxh-Fq-WiF" id="IMN-XC-g5Y"/>
+                                            <outlet property="firstDateButton" destination="6DA-W7-j5a" id="ldV-0y-mfL"/>
+                                            <outlet property="secondDateButton" destination="0xo-IT-6fs" id="3FH-LO-cme"/>
+                                            <outlet property="thirdDateButton" destination="OVv-9F-D9s" id="seE-Qu-2ib"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gjn-zJ-G3o" id="RYa-qG-Um8"/>
+                                    <outlet property="delegate" destination="gjn-zJ-G3o" id="Tvf-m5-GYI"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYY-XO-vLh">
+                                <rect key="frame" x="25.5" y="748" width="363" height="45"/>
+                                <color key="backgroundColor" name="massage"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="8Xu-8K-4lg"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Agregar cita">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addDatesWith_sender:" destination="gjn-zJ-G3o" eventType="touchUpInside" id="8di-Wl-N63"/>
+                                </connections>
+                            </button>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xms-uA-Rss">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recurso 22" translatesAutoresizingMaskIntoConstraints="NO" id="cX0-ba-mTp">
+                                        <rect key="frame" x="127" y="608" width="160" height="120"/>
+                                        <color key="tintColor" name="tabbarback"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="SWc-rk-pqv"/>
+                                            <constraint firstAttribute="width" constant="160" id="kUG-Zs-uTc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugJ-XP-uzp">
+                                        <rect key="frame" x="36" y="298" width="342" height="300"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="etc-4c-g5t">
+                                                <rect key="frame" x="10" y="72" width="322" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="Gfx-Sw-2nA"/>
+                                                </constraints>
+                                                <string key="text">Aquí encontrarás tus citas planeadas en orden cronológico. Para registrar tu primera cita solo pulsa el botón de agregar nota o cita
+</string>
+                                                <color key="textColor" name="massage"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AS8-bF-TK4">
+                                                <rect key="frame" x="99" y="5" width="144.5" height="59"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xea-O4-ovd">
+                                                        <rect key="frame" x="0.0" y="10" width="94.5" height="42"/>
+                                                        <color key="tintColor" name="massage"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                                        <color key="textColor" name="massage"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wWe-p0-M6t">
+                                                        <rect key="frame" x="102.5" y="9" width="42" height="42"/>
+                                                        <color key="tintColor" name="massage"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="42" id="3Nc-I1-YIM"/>
+                                                            <constraint firstAttribute="width" constant="42" id="Su0-zH-0bO"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Xea-O4-ovd" firstAttribute="top" secondItem="AS8-bF-TK4" secondAttribute="top" constant="10" id="9zG-3n-OJl"/>
+                                                    <constraint firstItem="wWe-p0-M6t" firstAttribute="centerY" secondItem="Xea-O4-ovd" secondAttribute="centerY" id="QgN-Fz-gY2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="wWe-p0-M6t" secondAttribute="trailing" id="UVU-8V-QBS"/>
+                                                    <constraint firstItem="wWe-p0-M6t" firstAttribute="leading" secondItem="Xea-O4-ovd" secondAttribute="trailing" constant="8" symbolic="YES" id="Z6B-7f-C5Y"/>
+                                                    <constraint firstItem="Xea-O4-ovd" firstAttribute="leading" secondItem="AS8-bF-TK4" secondAttribute="leading" id="ceJ-KS-WmX"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cM4-pg-e9k">
+                                                <rect key="frame" x="17" y="230" width="308" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="eNd-Ej-SZz"/>
+                                                </constraints>
+                                                <color key="tintColor" name="user_light"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Continuar">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                                    <color key="baseForegroundColor" name="massage"/>
+                                                    <color key="baseBackgroundColor" name="massagetabbarback"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonLoginTapped:" destination="5tW-ir-nh3" eventType="touchUpInside" id="el8-rw-MXa"/>
+                                                    <action selector="buttonUserTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dWU-eE-pz4"/>
+                                                    <action selector="closeTapped" destination="0wL-hQ-DUV" eventType="touchUpInside" id="7pg-sx-pPJ"/>
+                                                    <action selector="closeTapped" destination="gjn-zJ-G3o" eventType="touchUpInside" id="JeZ-Lh-4o9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="massage_light"/>
+                                        <constraints>
+                                            <constraint firstItem="etc-4c-g5t" firstAttribute="width" secondItem="ugJ-XP-uzp" secondAttribute="width" multiplier="0.94152" id="5Hf-wB-rA5"/>
+                                            <constraint firstAttribute="trailing" secondItem="etc-4c-g5t" secondAttribute="trailing" constant="10" id="6c8-Gr-1NW"/>
+                                            <constraint firstItem="cM4-pg-e9k" firstAttribute="centerX" secondItem="ugJ-XP-uzp" secondAttribute="centerX" id="70n-hh-ZXO"/>
+                                            <constraint firstItem="AS8-bF-TK4" firstAttribute="centerX" secondItem="ugJ-XP-uzp" secondAttribute="centerX" id="76e-UZ-3uH"/>
+                                            <constraint firstItem="cM4-pg-e9k" firstAttribute="top" secondItem="etc-4c-g5t" secondAttribute="bottom" constant="8" symbolic="YES" id="8sk-UM-zQn"/>
+                                            <constraint firstAttribute="height" constant="300" id="FLC-R6-pem"/>
+                                            <constraint firstItem="etc-4c-g5t" firstAttribute="leading" secondItem="ugJ-XP-uzp" secondAttribute="leading" constant="10" id="Mwo-hP-lMa"/>
+                                            <constraint firstItem="etc-4c-g5t" firstAttribute="top" secondItem="AS8-bF-TK4" secondAttribute="bottom" constant="8" symbolic="YES" id="O6C-32-pSF"/>
+                                            <constraint firstAttribute="bottom" secondItem="cM4-pg-e9k" secondAttribute="bottom" constant="25" id="VNS-Oy-CzH"/>
+                                            <constraint firstItem="cM4-pg-e9k" firstAttribute="width" secondItem="ugJ-XP-uzp" secondAttribute="width" multiplier="0.9" id="Zkw-89-kbX"/>
+                                            <constraint firstItem="AS8-bF-TK4" firstAttribute="top" secondItem="ugJ-XP-uzp" secondAttribute="top" constant="5" id="gvS-F3-lDJ"/>
+                                            <constraint firstItem="etc-4c-g5t" firstAttribute="centerX" secondItem="ugJ-XP-uzp" secondAttribute="centerX" id="zFl-l5-Cng"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.60307716840000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="cX0-ba-mTp" firstAttribute="centerX" secondItem="xms-uA-Rss" secondAttribute="centerX" id="CVH-01-xq0"/>
+                                    <constraint firstItem="ugJ-XP-uzp" firstAttribute="centerY" secondItem="xms-uA-Rss" secondAttribute="centerY" id="ELN-Up-JxV"/>
+                                    <constraint firstItem="cX0-ba-mTp" firstAttribute="top" secondItem="ugJ-XP-uzp" secondAttribute="bottom" constant="10" id="emW-d3-N5P"/>
+                                    <constraint firstItem="ugJ-XP-uzp" firstAttribute="centerX" secondItem="xms-uA-Rss" secondAttribute="centerX" id="hBn-mg-ghr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qQG-Xp-6iJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="l2o-gb-5Ux" firstAttribute="centerX" secondItem="zbS-CN-k1v" secondAttribute="centerX" id="KdB-1w-zpC"/>
-                            <constraint firstItem="l2o-gb-5Ux" firstAttribute="centerY" secondItem="zbS-CN-k1v" secondAttribute="centerY" id="MDj-u4-IyA"/>
+                            <constraint firstItem="u1s-1D-AIP" firstAttribute="centerX" secondItem="qQG-Xp-6iJ" secondAttribute="centerX" id="6K5-X1-0e6"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="xms-uA-Rss" secondAttribute="bottom" constant="-83" id="Dmy-AN-Zbz"/>
+                            <constraint firstItem="oYY-XO-vLh" firstAttribute="centerX" secondItem="Ec9-FM-dad" secondAttribute="centerX" id="F7L-xp-lzI"/>
+                            <constraint firstItem="xms-uA-Rss" firstAttribute="centerY" secondItem="zbS-CN-k1v" secondAttribute="centerY" id="G5n-Xf-X3N"/>
+                            <constraint firstItem="Ec9-FM-dad" firstAttribute="top" secondItem="e0V-En-ddz" secondAttribute="bottom" id="HV4-6p-CLX"/>
+                            <constraint firstItem="qQG-Xp-6iJ" firstAttribute="trailing" secondItem="e0V-En-ddz" secondAttribute="trailing" id="Ivw-Y9-qaE"/>
+                            <constraint firstItem="e0V-En-ddz" firstAttribute="width" secondItem="zbS-CN-k1v" secondAttribute="width" id="NZS-0A-Ks5"/>
+                            <constraint firstItem="Ec9-FM-dad" firstAttribute="centerX" secondItem="e0V-En-ddz" secondAttribute="centerX" id="Ycb-cU-ciP"/>
+                            <constraint firstItem="Ec9-FM-dad" firstAttribute="width" secondItem="zbS-CN-k1v" secondAttribute="width" id="aaB-AO-F4e"/>
+                            <constraint firstItem="qQG-Xp-6iJ" firstAttribute="top" secondItem="u1s-1D-AIP" secondAttribute="top" id="cv8-vF-W3f"/>
+                            <constraint firstItem="xms-uA-Rss" firstAttribute="centerX" secondItem="zbS-CN-k1v" secondAttribute="centerX" id="eil-dC-sA2"/>
+                            <constraint firstItem="qQG-Xp-6iJ" firstAttribute="bottom" secondItem="oYY-XO-vLh" secondAttribute="bottom" constant="20" id="g4a-Py-X2l"/>
+                            <constraint firstItem="oYY-XO-vLh" firstAttribute="width" secondItem="zbS-CN-k1v" secondAttribute="width" multiplier="0.876" id="h5c-SP-pCN"/>
+                            <constraint firstItem="e0V-En-ddz" firstAttribute="centerX" secondItem="u1s-1D-AIP" secondAttribute="centerX" id="inB-eH-5NA"/>
+                            <constraint firstItem="xms-uA-Rss" firstAttribute="leading" secondItem="Ec9-FM-dad" secondAttribute="leading" id="jiJ-06-fEb"/>
+                            <constraint firstItem="qQG-Xp-6iJ" firstAttribute="trailing" secondItem="a7i-pT-En6" secondAttribute="trailing" constant="20" id="qqO-2g-foE"/>
+                            <constraint firstItem="e0V-En-ddz" firstAttribute="top" secondItem="u1s-1D-AIP" secondAttribute="bottom" constant="20" id="vMX-05-MQ7"/>
+                            <constraint firstItem="e0V-En-ddz" firstAttribute="leading" secondItem="qQG-Xp-6iJ" secondAttribute="leading" id="zqg-fd-T58"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GNX-we-d88"/>
+                    <navigationItem key="navigationItem" title="Citas" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="GNX-we-d88"/>
+                    <connections>
+                        <outlet property="addDateButton" destination="oYY-XO-vLh" id="HoD-Nn-Uzk"/>
+                        <outlet property="calendarButton" destination="wNu-rj-hLB" id="qB4-HD-fgV"/>
+                        <outlet property="dateLabel" destination="lui-Nu-IAp" id="b79-7I-4X5"/>
+                        <outlet property="firstDateButton" destination="or0-2T-UKE" id="uRO-Om-6rG"/>
+                        <outlet property="informationLabel" destination="qj1-mu-7FC" id="vrg-vX-jFU"/>
+                        <outlet property="secondDateButton" destination="OhJ-QS-HOB" id="zmi-77-Gpw"/>
+                        <outlet property="tableView" destination="Ec9-FM-dad" id="h3d-F1-ZoN"/>
+                        <outlet property="thirdDateButton" destination="3rA-nR-nNZ" id="j7j-0A-uBo"/>
+                        <outlet property="todayDatesView" destination="e0V-En-ddz" id="PQL-Li-GfZ"/>
+                        <outlet property="tutorialTextHomeView" destination="ugJ-XP-uzp" id="m3O-2e-fQ5"/>
+                        <outlet property="tutorialView" destination="xms-uA-Rss" id="iFS-80-B2N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xKN-Fe-8tU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7935" y="330"/>
+            <point key="canvasLocation" x="7934.7826086956529" y="329.46428571428572"/>
         </scene>
         <!--Xavi-->
         <scene sceneID="Ljy-Ru-2xk">
@@ -1469,7 +1756,7 @@ Entonces esta es tu aplicación.
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rf0-LY-1fc">
                                         <rect key="frame" x="0.0" y="252.5" width="374" height="34.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubicacion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UJ-w1-OT4">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubicación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UJ-w1-OT4">
                                                 <rect key="frame" x="0.0" y="0.0" width="174" height="34.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -1642,7 +1929,7 @@ Entonces esta es tu aplicación.
                                     <color key="baseBackgroundColor" name="tabbarback"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="editProfileTapped" destination="Ude-Dc-bMg" eventType="touchUpInside" id="FsA-r3-h04"/>
+                                    <action selector="editProfileTapped" destination="Ude-Dc-bMg" eventType="touchUpInside" id="Mjx-Fz-5xR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1L-HL-Ssa">
@@ -1651,7 +1938,7 @@ Entonces esta es tu aplicación.
                                     <constraint firstAttribute="width" constant="160" id="bfE-L5-SdL"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Otros">
+                                <buttonConfiguration key="configuration" style="filled" title="Ajustes y mas">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                     <color key="baseForegroundColor" name="tabbarback"/>
                                     <color key="baseBackgroundColor" name="user"/>
@@ -1716,7 +2003,7 @@ Entonces esta es tu aplicación.
                                     <outlet property="delegate" destination="Ude-Dc-bMg" id="uBT-Dy-pd8"/>
                                 </connections>
                             </tableView>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0d-OU-haR">
+                            <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0d-OU-haR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhZ-UA-Z3o">
@@ -2325,7 +2612,7 @@ Entonces esta es tu aplicación.
                                     <color key="baseBackgroundColor" name="massagetabbarback"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="x4I-An-sj4" kind="show" id="qTD-po-UeQ"/>
+                                    <action selector="editProfileTapped" destination="eWz-tr-0Ic" eventType="touchUpInside" id="ECE-OT-ZEx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaI-Ps-9VV">
@@ -2334,7 +2621,7 @@ Entonces esta es tu aplicación.
                                     <constraint firstAttribute="width" constant="160" id="0Qr-5y-RHT"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Otros">
+                                <buttonConfiguration key="configuration" style="filled" title="Ajustes y mas">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                     <color key="baseForegroundColor" name="massagetabbarback"/>
                                     <color key="baseBackgroundColor" name="massage"/>
@@ -2399,6 +2686,102 @@ Entonces esta es tu aplicación.
                                     <outlet property="delegate" destination="eWz-tr-0Ic" id="mYv-Sb-egs"/>
                                 </connections>
                             </tableView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WlD-Yk-feB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihH-7T-XHV">
+                                        <rect key="frame" x="36" y="298" width="342" height="300"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oyH-PK-K3M">
+                                                <rect key="frame" x="10" y="72" width="322" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="kQU-Lp-lsF"/>
+                                                </constraints>
+                                                <string key="text">En esta pantalla encontrarás los datos de registro. Es importante que completes tu perfil para que des de alta los servicios que prestarás como masajista.</string>
+                                                <color key="textColor" name="massage"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQb-7T-88t">
+                                                <rect key="frame" x="105.5" y="5" width="131.5" height="52"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktD-AE-Q2q">
+                                                        <rect key="frame" x="0.0" y="10" width="81.5" height="42"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                                        <color key="textColor" name="massage"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VhB-6F-BGe">
+                                                        <rect key="frame" x="89.5" y="11.5" width="42" height="39.5"/>
+                                                        <color key="tintColor" name="massage"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="42" id="cl7-ys-KfZ"/>
+                                                            <constraint firstAttribute="width" constant="42" id="zYQ-U9-ZuV"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="VhB-6F-BGe" secondAttribute="trailing" id="Is5-N4-W7S"/>
+                                                    <constraint firstItem="VhB-6F-BGe" firstAttribute="leading" secondItem="ktD-AE-Q2q" secondAttribute="trailing" constant="8" symbolic="YES" id="USA-Zy-Tbi"/>
+                                                    <constraint firstItem="ktD-AE-Q2q" firstAttribute="top" secondItem="cQb-7T-88t" secondAttribute="top" constant="10" id="aBr-qi-d9l"/>
+                                                    <constraint firstItem="VhB-6F-BGe" firstAttribute="centerY" secondItem="ktD-AE-Q2q" secondAttribute="centerY" id="pEp-m8-tID"/>
+                                                    <constraint firstItem="ktD-AE-Q2q" firstAttribute="leading" secondItem="cQb-7T-88t" secondAttribute="leading" id="uzV-RA-eJd"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75z-Cg-32K">
+                                                <rect key="frame" x="17" y="230" width="308" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="AyX-kI-SaY"/>
+                                                </constraints>
+                                                <color key="tintColor" name="user_light"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Continuar">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                                    <color key="baseForegroundColor" name="massage"/>
+                                                    <color key="baseBackgroundColor" name="massagetabbarback"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonLoginTapped:" destination="5tW-ir-nh3" eventType="touchUpInside" id="mrl-ad-DwQ"/>
+                                                    <action selector="buttonUserTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X8d-I0-PJo"/>
+                                                    <action selector="closeTapped" destination="0wL-hQ-DUV" eventType="touchUpInside" id="Iy0-nn-lXh"/>
+                                                    <action selector="closeTapped" destination="eWz-tr-0Ic" eventType="touchUpInside" id="kyC-lx-kcN"/>
+                                                    <action selector="closeTapped" destination="Ude-Dc-bMg" eventType="touchUpInside" id="lll-iJ-oOi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="massage_light"/>
+                                        <constraints>
+                                            <constraint firstItem="75z-Cg-32K" firstAttribute="top" secondItem="oyH-PK-K3M" secondAttribute="bottom" constant="8" symbolic="YES" id="AdX-1j-lyk"/>
+                                            <constraint firstAttribute="bottom" secondItem="75z-Cg-32K" secondAttribute="bottom" constant="25" id="Ktz-9o-oNN"/>
+                                            <constraint firstItem="cQb-7T-88t" firstAttribute="centerX" secondItem="ihH-7T-XHV" secondAttribute="centerX" id="Okg-oU-PeT"/>
+                                            <constraint firstItem="oyH-PK-K3M" firstAttribute="leading" secondItem="ihH-7T-XHV" secondAttribute="leading" constant="10" id="eIu-3h-uBn"/>
+                                            <constraint firstAttribute="height" constant="300" id="eau-Ii-im7"/>
+                                            <constraint firstItem="oyH-PK-K3M" firstAttribute="top" secondItem="cQb-7T-88t" secondAttribute="bottom" constant="15" id="lCy-h4-e1h"/>
+                                            <constraint firstItem="oyH-PK-K3M" firstAttribute="width" secondItem="ihH-7T-XHV" secondAttribute="width" multiplier="0.94152" id="mQb-7h-9rb"/>
+                                            <constraint firstItem="cQb-7T-88t" firstAttribute="top" secondItem="ihH-7T-XHV" secondAttribute="top" constant="5" id="nz5-pm-OY7"/>
+                                            <constraint firstItem="oyH-PK-K3M" firstAttribute="centerX" secondItem="ihH-7T-XHV" secondAttribute="centerX" id="rDO-hP-p9d"/>
+                                            <constraint firstItem="75z-Cg-32K" firstAttribute="centerX" secondItem="ihH-7T-XHV" secondAttribute="centerX" id="vKK-TO-rhQ"/>
+                                            <constraint firstItem="75z-Cg-32K" firstAttribute="width" secondItem="ihH-7T-XHV" secondAttribute="width" multiplier="0.9" id="z92-Wk-Aum"/>
+                                            <constraint firstAttribute="trailing" secondItem="oyH-PK-K3M" secondAttribute="trailing" constant="10" id="zeB-Fv-NTP"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recurso 24" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mQ4-o4-VsK">
+                                        <rect key="frame" x="174" y="618" width="180" height="140"/>
+                                        <color key="tintColor" name="tabbarback"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="HLI-6D-m9P"/>
+                                            <constraint firstAttribute="height" constant="140" id="vDO-BZ-0rl"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.60307716840000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="mQ4-o4-VsK" firstAttribute="top" secondItem="ihH-7T-XHV" secondAttribute="bottom" constant="20" id="S4K-CA-Cag"/>
+                                    <constraint firstItem="ihH-7T-XHV" firstAttribute="centerY" secondItem="WlD-Yk-feB" secondAttribute="centerY" id="f0u-Ht-A2N"/>
+                                    <constraint firstAttribute="trailing" secondItem="mQ4-o4-VsK" secondAttribute="trailing" constant="60" id="fd4-q0-Zfg"/>
+                                    <constraint firstItem="ihH-7T-XHV" firstAttribute="centerX" secondItem="WlD-Yk-feB" secondAttribute="centerX" id="sIe-ni-gtg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TR6-xi-yO7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2410,9 +2793,13 @@ Entonces esta es tu aplicación.
                             <constraint firstItem="iEB-5K-2Iw" firstAttribute="top" secondItem="TR6-xi-yO7" secondAttribute="top" constant="10" id="GVv-Tz-TMs"/>
                             <constraint firstItem="TR6-xi-yO7" firstAttribute="trailing" secondItem="tST-li-0Ri" secondAttribute="trailing" constant="77" id="Kvt-5s-KNt"/>
                             <constraint firstItem="V5q-t3-1sg" firstAttribute="top" secondItem="IWD-V0-WWr" secondAttribute="bottom" constant="24" id="LV2-vz-jRX"/>
+                            <constraint firstItem="WlD-Yk-feB" firstAttribute="centerX" secondItem="V5q-t3-1sg" secondAttribute="centerX" id="Lnz-wN-wRZ"/>
+                            <constraint firstItem="WlD-Yk-feB" firstAttribute="top" secondItem="Ft6-qZ-t9K" secondAttribute="top" id="M1X-po-c0V"/>
                             <constraint firstItem="gQN-GS-clY" firstAttribute="top" secondItem="I0j-ZK-l7c" secondAttribute="bottom" constant="15" id="Mdt-U4-QTR"/>
+                            <constraint firstItem="WlD-Yk-feB" firstAttribute="leading" secondItem="Ft6-qZ-t9K" secondAttribute="leading" id="VCF-uU-5Nt"/>
                             <constraint firstItem="TR6-xi-yO7" firstAttribute="trailing" secondItem="IWD-V0-WWr" secondAttribute="trailing" constant="24" id="YF8-Oh-vGc"/>
                             <constraint firstItem="X7y-TS-5Oh" firstAttribute="top" secondItem="sdD-vy-dLH" secondAttribute="bottom" constant="8" symbolic="YES" id="ZB9-lS-DmR"/>
+                            <constraint firstAttribute="bottom" secondItem="WlD-Yk-feB" secondAttribute="bottom" id="bkw-PJ-H0l"/>
                             <constraint firstItem="bsY-7k-GqR" firstAttribute="leading" secondItem="TR6-xi-yO7" secondAttribute="leading" constant="20" id="crZ-pD-Aln"/>
                             <constraint firstItem="I0j-ZK-l7c" firstAttribute="leading" secondItem="TR6-xi-yO7" secondAttribute="leading" constant="20" id="d1s-hI-5pk"/>
                             <constraint firstItem="TR6-xi-yO7" firstAttribute="trailing" secondItem="bsY-7k-GqR" secondAttribute="trailing" constant="20" id="fE3-DF-uHy"/>
@@ -2436,10 +2823,14 @@ Entonces esta es tu aplicación.
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="person" catalog="system" selectedImage="person.fill" id="qV8-BR-85A"/>
                     <navigationItem key="navigationItem" id="4aD-Dt-0ob"/>
+                    <connections>
+                        <outlet property="tutorialTextHomeView" destination="ihH-7T-XHV" id="lID-r8-OZl"/>
+                        <outlet property="tutorialView" destination="WlD-Yk-feB" id="Po0-hz-Un9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NpC-NJ-I6O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6116" y="1187"/>
+            <point key="canvasLocation" x="6115.9420289855079" y="1186.6071428571429"/>
         </scene>
         <!--Legal MassageVC-->
         <scene sceneID="Ska-Wj-7KQ">
@@ -2466,7 +2857,7 @@ Entonces esta es tu aplicación.
                                     <constraint firstAttribute="width" constant="80" id="Agq-d1-Gd0"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORW-x0-Vdv">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORW-x0-Vdv">
                                 <rect key="frame" x="20" y="193" width="347" height="320"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -2478,7 +2869,7 @@ Entonces esta es tu aplicación.
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQj-ee-oXV">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQj-ee-oXV">
                                 <rect key="frame" x="20" y="513" width="347" height="150"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -2723,22 +3114,6 @@ Entonces esta es tu aplicación.
             </objects>
             <point key="canvasLocation" x="6858" y="1186"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="XRd-21-k8d">
-            <objects>
-                <viewController id="x4I-An-sj4" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7ke-MJ-a8T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="GCk-QT-Rqz"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="9NY-65-f6y"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BLC-KA-Dvd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6116" y="1940"/>
-        </scene>
         <!--Politic MassageVC-->
         <scene sceneID="cil-F7-mEa">
             <objects>
@@ -2764,7 +3139,7 @@ Entonces esta es tu aplicación.
                                     <constraint firstAttribute="width" constant="80" id="cz8-Mk-aOf"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgs-b5-Lkd">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgs-b5-Lkd">
                                 <rect key="frame" x="20" y="204" width="350" height="130"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -2776,7 +3151,7 @@ Entonces esta es tu aplicación.
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDa-5h-HNr">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDa-5h-HNr">
                                 <rect key="frame" x="20" y="334" width="350" height="180"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -2788,7 +3163,7 @@ Entonces esta es tu aplicación.
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F9-PA-RVC">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F9-PA-RVC">
                                 <rect key="frame" x="20" y="514" width="350" height="180"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -2922,20 +3297,147 @@ Entonces esta es tu aplicación.
             </objects>
             <point key="canvasLocation" x="7935" y="-348"/>
         </scene>
-        <!--View Controller-->
+        <!--Create AppointmentVC-->
         <scene sceneID="1FQ-oD-WUz">
             <objects>
-                <viewController id="Dc7-Xi-5MZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AppointmentID" id="Dc7-Xi-5MZ" customClass="CreateAppointmentVC" customModule="Relief" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fvd-tu-16z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logoPequeñoMasajista" translatesAutoresizingMaskIntoConstraints="NO" id="aIG-ad-VC7">
+                                <rect key="frame" x="167" y="44" width="80" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8VC-m1-CTl"/>
+                                    <constraint firstAttribute="width" constant="80" id="J3d-pE-dvp"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="Uo8-cb-UXT">
+                                <rect key="frame" x="20" y="295.5" width="374" height="305"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PcB-lA-ZGf">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u09-L6-Dqt">
+                                                <rect key="frame" x="0.0" y="0.0" width="174" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Marta" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="3iv-xj-qNR">
+                                                <rect key="frame" x="174" y="0.0" width="200" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="RFJ-q8-c8R"/>
+                                                </constraints>
+                                                <color key="textColor" name="massage_light"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kn2-Gi-ve7">
+                                        <rect key="frame" x="0.0" y="63" width="374" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripción" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Th1-bA-Mim">
+                                                <rect key="frame" x="0.0" y="0.0" width="174" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Calle Gaztambide" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="pff-Ru-noO">
+                                                <rect key="frame" x="174" y="0.0" width="200" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="EuM-LM-Ync"/>
+                                                </constraints>
+                                                <color key="textColor" name="massage_light"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="location"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rG7-8i-0XQ">
+                                        <rect key="frame" x="0.0" y="126" width="374" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha y hora" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAn-4T-Bay">
+                                                <rect key="frame" x="0.0" y="0.0" width="184" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="zlK-Mb-YBx">
+                                                <rect key="frame" x="184" y="0.0" width="70" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="DBW-CE-fbF"/>
+                                                </constraints>
+                                                <locale key="locale" localeIdentifier="es"/>
+                                            </datePicker>
+                                            <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="UqP-DJ-2wW">
+                                                <rect key="frame" x="254" y="0.0" width="120" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="Beb-I0-eKm"/>
+                                                    <constraint firstAttribute="height" constant="50" id="g0n-a7-MSQ"/>
+                                                </constraints>
+                                                <locale key="locale" localeIdentifier="es"/>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsT-rP-Lg6">
+                                        <rect key="frame" x="0.0" y="205" width="374" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servicio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcZ-M6-mS8">
+                                                <rect key="frame" x="0.0" y="0.0" width="124" height="100"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="center" semanticContentAttribute="playback" translatesAutoresizingMaskIntoConstraints="NO" id="cmr-Ho-Xjt">
+                                                <rect key="frame" x="124" y="0.0" width="250" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="NKJ-s1-ELU"/>
+                                                    <constraint firstAttribute="width" constant="250" id="kfK-XY-juu"/>
+                                                </constraints>
+                                            </pickerView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbx-Nb-zck">
+                                <rect key="frame" x="25.5" y="744" width="363" height="45"/>
+                                <color key="backgroundColor" name="massage"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Yjw-CG-nkf"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Guardar cita">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addDatesWith_sender:" destination="gjn-zJ-G3o" eventType="touchUpInside" id="xO8-Ub-NaY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="WBo-21-lun"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aIG-ad-VC7" firstAttribute="top" secondItem="WBo-21-lun" secondAttribute="top" id="33Q-ZO-IAu"/>
+                            <constraint firstItem="rbx-Nb-zck" firstAttribute="width" secondItem="fvd-tu-16z" secondAttribute="width" multiplier="0.876" id="6sQ-0a-IGK"/>
+                            <constraint firstItem="aIG-ad-VC7" firstAttribute="centerX" secondItem="WBo-21-lun" secondAttribute="centerX" id="7E8-PJ-o3f"/>
+                            <constraint firstItem="WBo-21-lun" firstAttribute="bottom" secondItem="rbx-Nb-zck" secondAttribute="bottom" constant="73" id="HDW-5s-TNI"/>
+                            <constraint firstItem="WBo-21-lun" firstAttribute="trailing" secondItem="Uo8-cb-UXT" secondAttribute="trailing" constant="20" id="KGz-s8-A5u"/>
+                            <constraint firstItem="Uo8-cb-UXT" firstAttribute="centerX" secondItem="fvd-tu-16z" secondAttribute="centerX" id="QaB-0e-Ge3"/>
+                            <constraint firstItem="Uo8-cb-UXT" firstAttribute="centerY" secondItem="fvd-tu-16z" secondAttribute="centerY" id="TR4-Hd-j0I"/>
+                            <constraint firstItem="rbx-Nb-zck" firstAttribute="centerX" secondItem="WBo-21-lun" secondAttribute="centerX" id="hkp-Yr-KI8"/>
+                            <constraint firstItem="Uo8-cb-UXT" firstAttribute="leading" secondItem="WBo-21-lun" secondAttribute="leading" constant="20" id="iA3-Sq-Zm2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="servicePicker" destination="cmr-Ho-Xjt" id="CnQ-Td-xtI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHR-kV-Mcb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3200" y="80"/>
+            <point key="canvasLocation" x="8788.4057971014499" y="328.79464285714283"/>
         </scene>
         <!--Map UserVC-->
         <scene sceneID="9rh-3L-1Vb">
@@ -3305,6 +3807,232 @@ Entonces esta es tu aplicación.
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flU-WA-NfJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4028" y="796"/>
+        </scene>
+        <!--Edit Profile MassageVC-->
+        <scene sceneID="o3W-8C-3Ve">
+            <objects>
+                <viewController storyboardIdentifier="EditProfileMassage" id="Twe-Is-Y3X" customClass="EditProfileMassageVC" customModule="Relief" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZeZ-ku-FP5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logoTutorialMasajista" translatesAutoresizingMaskIntoConstraints="NO" id="6yk-mw-9c9">
+                                <rect key="frame" x="167" y="64" width="80" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OpN-fG-2Rj"/>
+                                    <constraint firstAttribute="width" constant="80" id="gB9-E7-gJr"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRT-YV-CBr">
+                                <rect key="frame" x="20" y="64" width="22.5" height="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <color key="tintColor" name="massage"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" name="user"/>
+                                    <imageReference key="image" image="arrowshape.turn.up.backward.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonToProfileTapped" destination="G87-Ot-Szn" eventType="touchUpInside" id="K3w-1B-bIT"/>
+                                    <action selector="buttonToProfileTapped" destination="Twe-Is-Y3X" eventType="touchUpInside" id="pdK-Tf-NyU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editar perfil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybf-kp-l6v">
+                                <rect key="frame" x="116" y="134" width="182.5" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_marcoMasajista" translatesAutoresizingMaskIntoConstraints="NO" id="FyP-a5-LDu">
+                                <rect key="frame" x="132" y="192" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="GuH-ch-x4q"/>
+                                    <constraint firstAttribute="width" constant="150" id="OiK-9R-U7Q"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AUc-CP-1Bo">
+                                <rect key="frame" x="249" y="290.5" width="50" height="49"/>
+                                <color key="tintColor" name="massage_light"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hP3-Xc-eOl"/>
+                                    <constraint firstAttribute="width" constant="50" id="vmu-la-yhf"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="Yf2-n7-UUm">
+                                <rect key="frame" x="20" y="402" width="374" height="350"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ulT-D8-Qra">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyZ-qe-9gP">
+                                                <rect key="frame" x="0.0" y="0.0" width="174" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Marta" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jsu-zf-IdJ">
+                                                <rect key="frame" x="174" y="0.0" width="200" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="JV2-fM-tw4"/>
+                                                </constraints>
+                                                <color key="textColor" name="massage_light"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Coy-l8-TCe">
+                                        <rect key="frame" x="0.0" y="63" width="374" height="34.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0R-yh-tmr">
+                                                <rect key="frame" x="0.0" y="0.0" width="174" height="34.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="marta@marta.marta" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="c8Y-P7-RR0">
+                                                <rect key="frame" x="174" y="0.0" width="200" height="34.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="6bf-eP-i2U"/>
+                                                </constraints>
+                                                <color key="textColor" name="massage_light"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRb-Yy-ABd">
+                                        <rect key="frame" x="0.0" y="126.5" width="374" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mya-o9-YjB">
+                                                <rect key="frame" x="0.0" y="0.0" width="174" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Martamartita" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="6oE-Ni-VsT">
+                                                <rect key="frame" x="174" y="0.0" width="200" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="hre-me-m2O"/>
+                                                </constraints>
+                                                <color key="textColor" name="massage_light"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSQ-MM-sFz">
+                                        <rect key="frame" x="0.0" y="189.5" width="374" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repetir Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnt-I5-5zL">
+                                                <rect key="frame" x="0.0" y="0.0" width="174" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Martamartita" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="kc0-Nn-2Nj">
+                                                <rect key="frame" x="174" y="0.0" width="200" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="yZS-E2-l9F"/>
+                                                </constraints>
+                                                <color key="textColor" name="massage_light"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btD-kc-wuG">
+                                        <rect key="frame" x="0.0" y="252.5" width="374" height="34.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubicación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wy7-bf-mnj">
+                                                <rect key="frame" x="0.0" y="0.0" width="174" height="34.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Calle Gaztambide" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="7CY-qJ-m9g">
+                                                <rect key="frame" x="174" y="0.0" width="200" height="34.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="8T2-xt-V5c"/>
+                                                </constraints>
+                                                <color key="textColor" name="massage_light"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="location"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nil-Yv-vIq">
+                                        <rect key="frame" x="0.0" y="316" width="374" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preferencias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wK-qv-VFu">
+                                                <rect key="frame" x="0.0" y="0.0" width="174" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Masajes relajantes" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="cgP-of-R4I">
+                                                <rect key="frame" x="174" y="0.0" width="200" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="JsG-mq-Gnh"/>
+                                                </constraints>
+                                                <color key="textColor" name="massage_light"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="UjL-m4-x3u"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVe-P8-ecg">
+                                <rect key="frame" x="320" y="56.5" width="74" height="34.5"/>
+                                <color key="tintColor" name="massage"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Hecho">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonToProfileTapped" destination="Twe-Is-Y3X" eventType="touchUpInside" id="NlF-di-q8a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5f0-7I-L1c">
+                                <rect key="frame" x="249" y="290" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="D7p-85-Qlq"/>
+                                    <constraint firstAttribute="height" constant="50" id="Spr-M9-QXe"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Mtc-LF-877"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yf2-n7-UUm" firstAttribute="top" secondItem="FyP-a5-LDu" secondAttribute="bottom" constant="60" id="2Lc-TE-JIH"/>
+                            <constraint firstItem="Ybf-kp-l6v" firstAttribute="top" secondItem="6yk-mw-9c9" secondAttribute="bottom" constant="20" id="3mc-z8-t3X"/>
+                            <constraint firstItem="6yk-mw-9c9" firstAttribute="top" secondItem="Mtc-LF-877" secondAttribute="top" constant="20" id="6Qp-qQ-QH0"/>
+                            <constraint firstItem="FyP-a5-LDu" firstAttribute="centerX" secondItem="Ybf-kp-l6v" secondAttribute="centerX" id="AgT-nr-Rjd"/>
+                            <constraint firstItem="Mtc-LF-877" firstAttribute="trailing" secondItem="AUc-CP-1Bo" secondAttribute="trailing" constant="115" id="EA7-pA-jLV"/>
+                            <constraint firstItem="6yk-mw-9c9" firstAttribute="centerX" secondItem="Mtc-LF-877" secondAttribute="centerX" id="H26-Q5-JPW"/>
+                            <constraint firstItem="Yf2-n7-UUm" firstAttribute="leading" secondItem="Mtc-LF-877" secondAttribute="leading" constant="20" id="HdM-uw-fVf"/>
+                            <constraint firstItem="Mtc-LF-877" firstAttribute="trailing" secondItem="Yf2-n7-UUm" secondAttribute="trailing" constant="20" id="TnF-vm-9NU"/>
+                            <constraint firstItem="FyP-a5-LDu" firstAttribute="top" secondItem="Ybf-kp-l6v" secondAttribute="bottom" constant="17" id="VWe-Nr-sm5"/>
+                            <constraint firstItem="ZVe-P8-ecg" firstAttribute="centerY" secondItem="zRT-YV-CBr" secondAttribute="centerY" id="Vwu-iQ-rmf"/>
+                            <constraint firstItem="Mtc-LF-877" firstAttribute="trailing" secondItem="ZVe-P8-ecg" secondAttribute="trailing" constant="20" id="a6p-Oz-qUF"/>
+                            <constraint firstItem="zRT-YV-CBr" firstAttribute="leading" secondItem="Mtc-LF-877" secondAttribute="leading" constant="20" id="aBh-iG-YPo"/>
+                            <constraint firstItem="Ybf-kp-l6v" firstAttribute="centerX" secondItem="6yk-mw-9c9" secondAttribute="centerX" id="d44-df-w7Q"/>
+                            <constraint firstItem="5f0-7I-L1c" firstAttribute="top" secondItem="Ybf-kp-l6v" secondAttribute="bottom" constant="115" id="fcg-XJ-AzN"/>
+                            <constraint firstItem="AUc-CP-1Bo" firstAttribute="top" secondItem="Ybf-kp-l6v" secondAttribute="bottom" constant="115" id="q6T-eU-i8l"/>
+                            <constraint firstItem="zRT-YV-CBr" firstAttribute="top" secondItem="Mtc-LF-877" secondAttribute="top" constant="20" id="qD4-9s-hYb"/>
+                            <constraint firstItem="Mtc-LF-877" firstAttribute="trailing" secondItem="5f0-7I-L1c" secondAttribute="trailing" constant="115" id="rFI-MK-4Xa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9kM-MV-VMG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8h-ZT-VgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6116" y="1927"/>
         </scene>
     </scenes>
     <resources>
