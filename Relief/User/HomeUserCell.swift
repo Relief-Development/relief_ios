@@ -32,16 +32,21 @@ class HomeUserCell: UITableViewCell {
     }
     
     @IBAction func starButtonTapped(_ button: UIButton) {
-        let pushedTag = button.tag 
-        
         for tag in (1 ... 5) {
-            let starButton = (viewWithTag(tag) as! UIButton)
+            let starButton = (self.viewWithTag(tag) as! UIButton)
             starButton.isHighlighted = false
         }
         
-        for tag in (1 ... pushedTag) {
-            let starButton = (viewWithTag(tag) as! UIButton)
-            starButton.isHighlighted = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + TimeInterval(1/120)) {
+            let pushedTag = button.tag
+            
+            
+            
+            for tag in (1 ... pushedTag) {
+                if let starButton = (self.viewWithTag(tag) as? UIButton) {
+                    starButton.isHighlighted = true
+                }
+            }
         }
     }
 }
