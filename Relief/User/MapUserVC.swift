@@ -15,6 +15,8 @@ class MapUserVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var tutorialView: UIView!
     @IBOutlet var tutorialTextMapView: UIView!
+    var mapTutorial = true
+
     
 //    Esther Moreno lat and long
 //    40.436797570299035, -3.716440514606122
@@ -55,6 +57,13 @@ class MapUserVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
         print(usLocation.coordinate)
         
         getUserLocation()
+        
+        if let value = UserDefaults.standard.object(forKey: "Maptv") as? Bool{
+            mapTutorial = value
+        }
+        if (mapTutorial == false){
+            tutorialView.isHidden = true
+        }
     }
     
     func showUserLocation() {
@@ -98,6 +107,9 @@ class MapUserVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
     }
     
     @IBAction func closeTapped() {
+        mapTutorial = false
+        let name = mapTutorial
+        UserDefaults.standard.set(name, forKey: "Maptv")
         tutorialView.isHidden = true
     }
 }

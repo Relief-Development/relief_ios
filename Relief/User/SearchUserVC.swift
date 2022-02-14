@@ -11,11 +11,18 @@ class SearchUserVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     @IBOutlet var tutorialView: UIView!
     @IBOutlet var tutorialTextSearchView: UIView!
+    var searchTutorial = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Búsqueda"
         tutorialTextSearchView.layer.cornerRadius = 30
+        if let value = UserDefaults.standard.object(forKey: "Searchtv") as? Bool{
+            searchTutorial = value
+        }
+        if (searchTutorial == false){
+            tutorialView.isHidden = true
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,6 +43,9 @@ class SearchUserVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     @IBAction func closeTapped() {
+        searchTutorial = false
+        let name = searchTutorial
+        UserDefaults.standard.set(name, forKey: "Searchtv")
         tutorialView.isHidden = true
     }
 }

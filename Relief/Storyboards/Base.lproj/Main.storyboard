@@ -2003,7 +2003,7 @@ Entonces esta es tu aplicación.
                                     <outlet property="delegate" destination="Ude-Dc-bMg" id="uBT-Dy-pd8"/>
                                 </connections>
                             </tableView>
-                            <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0d-OU-haR">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0d-OU-haR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhZ-UA-Z3o">
