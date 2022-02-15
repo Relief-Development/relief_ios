@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import EventKit
 
 class CreateAppointmentVC: UIViewController, UIPickerViewDelegate, UIPickerViewAccessibilityDelegate, UIPickerViewDataSource {
     
     @IBOutlet var servicePicker: UIPickerView!
+    @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet var timePicker: UIDatePicker!
     
     struct Massage {
         var pick: String
@@ -34,5 +37,57 @@ class CreateAppointmentVC: UIViewController, UIPickerViewDelegate, UIPickerViewA
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return massages.count
+    }
+    
+    @IBAction func addtocalendar(){
+        let eventStore:EKEventStore = EKEventStore()
+
+                      eventStore.requestAccess(to: .event) { (granted, error) in
+
+                          if (granted) && (error == nil)
+
+                          {
+
+                            var dateComponents = DateComponents()
+                            dateComponents.year = 2022
+                            dateComponents.month = 3
+                            dateComponents.day = 12
+                            dateComponents.hour = 10
+                            dateComponents.minute = 00
+                            
+                            let startDate = Calendar.current.date(from: dateComponents)
+
+                            dateComponents.hour = 11
+
+                            let endDate = Calendar.current.date(from: dateComponents)
+                            
+                             let event:EKEvent = EKEvent(eventStore: eventStore)
+                              event.title = "Test relief"
+                              event.startDate = startDate
+                              event.endDate = endDate
+                              event.notes = "Masaje relajante"
+                              event.calendar = eventStore.defaultCalendarForNewEvents
+
+                              do {
+                                   try eventStore.save(event, span: .thisEvent)
+                              } catch let error as NSError {
+
+                              }
+
+
+                          } else {
+                          }
+                      }
+        let alertController = UIAlertController(title: "Su cita ha sido agregada al calendario", message: nil, preferredStyle: .alert)
+        alertController.view.tintColor = UIColor(named: "massage")
+
+        
+        
+        let aceptar = UIAlertAction(title: "Aceptar", style: .cancel  , handler: {(action) in
+            
+        })
+        alertController.addAction(aceptar)
+
+        self.present(alertController, animated: true, completion: nil)
     }
 }

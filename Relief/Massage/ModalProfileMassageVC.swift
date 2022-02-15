@@ -50,5 +50,12 @@ class ModalProfileMassageVC : ViewController{
         }
         
     }
+    
+    @IBAction func resetTutorial(){
+        if let homemassage = storyboard?.instantiateViewController(withIdentifier: "TutorialMassage1"){
+            homemassage.modalPresentationStyle = .fullScreen
+            self.present(homemassage, animated: true, completion: nil)
+        }
+    }
        
 }

@@ -28,6 +28,8 @@
 	<string>Tu camara se utilizará para añadir una foto a tu perfil</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Permite acceso a tu galeria para acceder a tu galeria</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Permite el acceso a tu calendario para poder añadir las citas a este</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

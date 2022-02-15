@@ -41,7 +41,7 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate & UIN
             self.picker.delegate = self
             self.present(self.picker, animated: true)
         })
-        let cancelar = UIAlertAction(title: "Cancelar", style: .cancel, handler: {(action) in
+        let cancelar = UIAlertAction(title: "Cancelar", style: .cancel  , handler: {(action) in
             
         })
         alertController.addAction(camara)

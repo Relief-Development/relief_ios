@@ -1167,19 +1167,24 @@ Entonces esta es tu aplicación.
                                     <outlet property="delegate" destination="gjn-zJ-G3o" id="Tvf-m5-GYI"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYY-XO-vLh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cx5-iB-JTt">
                                 <rect key="frame" x="25.5" y="748" width="363" height="45"/>
-                                <color key="backgroundColor" name="massage"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="8Xu-8K-4lg"/>
+                                    <constraint firstAttribute="height" constant="45" id="0aA-XT-dUV"/>
                                 </constraints>
-                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" name="user_light"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Agregar cita">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Añadir cita">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                    <color key="baseForegroundColor" name="massagetabbarback"/>
+                                    <color key="baseBackgroundColor" name="massage"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="addDatesWith_sender:" destination="gjn-zJ-G3o" eventType="touchUpInside" id="8di-Wl-N63"/>
+                                    <action selector="addDatesWith_sender:" destination="gjn-zJ-G3o" eventType="touchUpInside" id="icl-AC-GBD"/>
+                                    <action selector="buttonLoginTapped:" destination="5tW-ir-nh3" eventType="touchUpInside" id="Dxk-hS-vTF"/>
+                                    <action selector="buttonUserTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aZr-Zj-LDM"/>
+                                    <action selector="closeTapped" destination="gjn-zJ-G3o" eventType="touchUpInside" id="LtV-zZ-tfp"/>
+                                    <action selector="closeTapped" destination="0wL-hQ-DUV" eventType="touchUpInside" id="SIx-u3-knu"/>
                                 </connections>
                             </button>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xms-uA-Rss">
@@ -1285,7 +1290,6 @@ Entonces esta es tu aplicación.
                         <constraints>
                             <constraint firstItem="u1s-1D-AIP" firstAttribute="centerX" secondItem="qQG-Xp-6iJ" secondAttribute="centerX" id="6K5-X1-0e6"/>
                             <constraint firstAttribute="bottomMargin" secondItem="xms-uA-Rss" secondAttribute="bottom" constant="-83" id="Dmy-AN-Zbz"/>
-                            <constraint firstItem="oYY-XO-vLh" firstAttribute="centerX" secondItem="Ec9-FM-dad" secondAttribute="centerX" id="F7L-xp-lzI"/>
                             <constraint firstItem="xms-uA-Rss" firstAttribute="centerY" secondItem="zbS-CN-k1v" secondAttribute="centerY" id="G5n-Xf-X3N"/>
                             <constraint firstItem="Ec9-FM-dad" firstAttribute="top" secondItem="e0V-En-ddz" secondAttribute="bottom" id="HV4-6p-CLX"/>
                             <constraint firstItem="qQG-Xp-6iJ" firstAttribute="trailing" secondItem="e0V-En-ddz" secondAttribute="trailing" id="Ivw-Y9-qaE"/>
@@ -1294,18 +1298,18 @@ Entonces esta es tu aplicación.
                             <constraint firstItem="Ec9-FM-dad" firstAttribute="width" secondItem="zbS-CN-k1v" secondAttribute="width" id="aaB-AO-F4e"/>
                             <constraint firstItem="qQG-Xp-6iJ" firstAttribute="top" secondItem="u1s-1D-AIP" secondAttribute="top" id="cv8-vF-W3f"/>
                             <constraint firstItem="xms-uA-Rss" firstAttribute="centerX" secondItem="zbS-CN-k1v" secondAttribute="centerX" id="eil-dC-sA2"/>
-                            <constraint firstItem="qQG-Xp-6iJ" firstAttribute="bottom" secondItem="oYY-XO-vLh" secondAttribute="bottom" constant="20" id="g4a-Py-X2l"/>
-                            <constraint firstItem="oYY-XO-vLh" firstAttribute="width" secondItem="zbS-CN-k1v" secondAttribute="width" multiplier="0.876" id="h5c-SP-pCN"/>
                             <constraint firstItem="e0V-En-ddz" firstAttribute="centerX" secondItem="u1s-1D-AIP" secondAttribute="centerX" id="inB-eH-5NA"/>
                             <constraint firstItem="xms-uA-Rss" firstAttribute="leading" secondItem="Ec9-FM-dad" secondAttribute="leading" id="jiJ-06-fEb"/>
+                            <constraint firstItem="Cx5-iB-JTt" firstAttribute="centerX" secondItem="qQG-Xp-6iJ" secondAttribute="centerX" id="mW7-ex-gq2"/>
+                            <constraint firstItem="qQG-Xp-6iJ" firstAttribute="bottom" secondItem="Cx5-iB-JTt" secondAttribute="bottom" constant="20" id="pbi-aN-zu6"/>
                             <constraint firstItem="qQG-Xp-6iJ" firstAttribute="trailing" secondItem="a7i-pT-En6" secondAttribute="trailing" constant="20" id="qqO-2g-foE"/>
+                            <constraint firstItem="Cx5-iB-JTt" firstAttribute="width" secondItem="zbS-CN-k1v" secondAttribute="width" multiplier="0.876812" id="sNw-qQ-Xzg"/>
                             <constraint firstItem="e0V-En-ddz" firstAttribute="top" secondItem="u1s-1D-AIP" secondAttribute="bottom" constant="20" id="vMX-05-MQ7"/>
                             <constraint firstItem="e0V-En-ddz" firstAttribute="leading" secondItem="qQG-Xp-6iJ" secondAttribute="leading" id="zqg-fd-T58"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Citas" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="GNX-we-d88"/>
                     <connections>
-                        <outlet property="addDateButton" destination="oYY-XO-vLh" id="HoD-Nn-Uzk"/>
                         <outlet property="calendarButton" destination="wNu-rj-hLB" id="qB4-HD-fgV"/>
                         <outlet property="dateLabel" destination="lui-Nu-IAp" id="b79-7I-4X5"/>
                         <outlet property="firstDateButton" destination="or0-2T-UKE" id="uRO-Om-6rG"/>
@@ -2224,6 +2228,9 @@ Entonces esta es tu aplicación.
                                                     <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="resetTutorial" destination="h3E-kU-ljH" eventType="touchUpInside" id="qPV-gL-vcU"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUy-w6-YPc">
                                                 <rect key="frame" x="0.0" y="174" width="370" height="2"/>
@@ -2992,6 +2999,9 @@ Entonces esta es tu aplicación.
                                                     <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="resetTutorial" destination="qrg-Ed-xex" eventType="touchUpInside" id="dlL-B4-pQJ"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLB-UK-Hh8">
                                                 <rect key="frame" x="0.0" y="174" width="370" height="2"/>
@@ -3407,19 +3417,32 @@ Entonces esta es tu aplicación.
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbx-Nb-zck">
-                                <rect key="frame" x="25.5" y="744" width="363" height="45"/>
-                                <color key="backgroundColor" name="massage"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Yjw-CG-nkf"/>
-                                </constraints>
-                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KiO-oA-bEV">
+                                <rect key="frame" x="25.5" y="696" width="363" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Guardar cita">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add to calendar"/>
+                                <connections>
+                                    <action selector="addtocalendar" destination="Dc7-Xi-5MZ" eventType="touchUpInside" id="965-Wi-dIj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJS-Q8-OdK">
+                                <rect key="frame" x="25.5" y="744" width="363" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="nw3-At-w0N"/>
+                                </constraints>
+                                <color key="tintColor" name="user_light"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Guardar cita">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                    <color key="baseForegroundColor" name="massagetabbarback"/>
+                                    <color key="baseBackgroundColor" name="massage"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="addDatesWith_sender:" destination="gjn-zJ-G3o" eventType="touchUpInside" id="xO8-Ub-NaY"/>
+                                    <action selector="addDatesWith_sender:" destination="gjn-zJ-G3o" eventType="touchUpInside" id="0SI-lX-VWK"/>
+                                    <action selector="buttonLoginTapped:" destination="5tW-ir-nh3" eventType="touchUpInside" id="aZT-TD-l55"/>
+                                    <action selector="buttonUserTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="thv-bj-3ZB"/>
+                                    <action selector="closeTapped" destination="0wL-hQ-DUV" eventType="touchUpInside" id="bFM-NE-yhw"/>
+                                    <action selector="closeTapped" destination="gjn-zJ-G3o" eventType="touchUpInside" id="bkp-EL-kjU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3427,13 +3450,16 @@ Entonces esta es tu aplicación.
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aIG-ad-VC7" firstAttribute="top" secondItem="WBo-21-lun" secondAttribute="top" id="33Q-ZO-IAu"/>
-                            <constraint firstItem="rbx-Nb-zck" firstAttribute="width" secondItem="fvd-tu-16z" secondAttribute="width" multiplier="0.876" id="6sQ-0a-IGK"/>
                             <constraint firstItem="aIG-ad-VC7" firstAttribute="centerX" secondItem="WBo-21-lun" secondAttribute="centerX" id="7E8-PJ-o3f"/>
-                            <constraint firstItem="WBo-21-lun" firstAttribute="bottom" secondItem="rbx-Nb-zck" secondAttribute="bottom" constant="73" id="HDW-5s-TNI"/>
+                            <constraint firstItem="WBo-21-lun" firstAttribute="bottom" secondItem="QJS-Q8-OdK" secondAttribute="bottom" constant="73" id="9JQ-B4-kVi"/>
+                            <constraint firstItem="QJS-Q8-OdK" firstAttribute="top" secondItem="KiO-oA-bEV" secondAttribute="bottom" constant="17" id="DOb-qz-A3r"/>
                             <constraint firstItem="WBo-21-lun" firstAttribute="trailing" secondItem="Uo8-cb-UXT" secondAttribute="trailing" constant="20" id="KGz-s8-A5u"/>
+                            <constraint firstItem="QJS-Q8-OdK" firstAttribute="width" secondItem="fvd-tu-16z" secondAttribute="width" multiplier="0.876812" id="MyD-Oo-k68"/>
+                            <constraint firstItem="KiO-oA-bEV" firstAttribute="centerX" secondItem="QJS-Q8-OdK" secondAttribute="centerX" id="PWj-io-Nnf"/>
                             <constraint firstItem="Uo8-cb-UXT" firstAttribute="centerX" secondItem="fvd-tu-16z" secondAttribute="centerX" id="QaB-0e-Ge3"/>
                             <constraint firstItem="Uo8-cb-UXT" firstAttribute="centerY" secondItem="fvd-tu-16z" secondAttribute="centerY" id="TR4-Hd-j0I"/>
-                            <constraint firstItem="rbx-Nb-zck" firstAttribute="centerX" secondItem="WBo-21-lun" secondAttribute="centerX" id="hkp-Yr-KI8"/>
+                            <constraint firstItem="QJS-Q8-OdK" firstAttribute="centerX" secondItem="WBo-21-lun" secondAttribute="centerX" id="WKh-8j-KZt"/>
+                            <constraint firstItem="KiO-oA-bEV" firstAttribute="width" secondItem="fvd-tu-16z" secondAttribute="width" multiplier="0.876" id="WmV-nE-o4G"/>
                             <constraint firstItem="Uo8-cb-UXT" firstAttribute="leading" secondItem="WBo-21-lun" secondAttribute="leading" constant="20" id="iA3-Sq-Zm2"/>
                         </constraints>
                     </view>
@@ -4037,6 +4063,25 @@ Entonces esta es tu aplicación.
                     <navigationItem key="navigationItem" id="9kM-MV-VMG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8h-ZT-VgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Voj-6P-wvc">
+                    <rect key="frame" x="0.0" y="0.0" width="308" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="GQ6-Vf-5XY"/>
+                    </constraints>
+                    <color key="tintColor" name="user_light"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Continuar">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                        <color key="baseForegroundColor" name="massage"/>
+                        <color key="baseBackgroundColor" name="massagetabbarback"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="buttonLoginTapped:" destination="5tW-ir-nh3" eventType="touchUpInside" id="1bA-Am-Kdb"/>
+                        <action selector="buttonUserTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aRJ-cR-tez"/>
+                        <action selector="closeTapped" destination="gjn-zJ-G3o" eventType="touchUpInside" id="VAt-fe-opl"/>
+                        <action selector="closeTapped" destination="0wL-hQ-DUV" eventType="touchUpInside" id="Z76-FA-CgK"/>
+                    </connections>
+                </button>
             </objects>
             <point key="canvasLocation" x="6116" y="1927"/>
         </scene>

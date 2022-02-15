@@ -50,5 +50,11 @@ class ModalProfileUserVC : ViewController{
         }
         
     }
+    @IBAction func resetTutorial(){
+        if let homeuser = storyboard?.instantiateViewController(withIdentifier: "TutorialUser1"){
+            homeuser.modalPresentationStyle = .fullScreen
+            self.present(homeuser, animated: true, completion: nil)
+        }
+    }
        
 }
