@@ -1662,8 +1662,8 @@ Entonces esta es tu aplicación.
                                     <constraint firstAttribute="height" constant="150" id="kTO-hj-6hm"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hx5-d5-6aZ">
-                                <rect key="frame" x="249" y="290.5" width="50" height="49"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hx5-d5-6aZ">
+                                <rect key="frame" x="246" y="309.5" width="50" height="48"/>
                                 <color key="tintColor" name="user_light"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7Wz-k8-fA3"/>
@@ -1806,16 +1806,19 @@ Entonces esta es tu aplicación.
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonToProfileTapped" destination="Dga-mK-vKM" eventType="touchUpOutside" id="BlU-2N-y2h"/>
+                                    <action selector="galleryTapped" destination="Dga-mK-vKM" eventType="touchUpInside" id="Sg4-Rl-1F0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkC-dc-0lg">
-                                <rect key="frame" x="249" y="290" width="50" height="50"/>
+                                <rect key="frame" x="246" y="309" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="6hQ-15-e8i"/>
                                     <constraint firstAttribute="height" constant="50" id="hs3-Y9-IqR"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="buttonImageTapped" destination="Dga-mK-vKM" eventType="touchUpInside" id="pWE-L8-wXq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Em4-P6-EqV"/>
@@ -1823,24 +1826,27 @@ Entonces esta es tu aplicación.
                         <constraints>
                             <constraint firstItem="bXM-pe-OJe" firstAttribute="top" secondItem="Em4-P6-EqV" secondAttribute="top" constant="20" id="20F-bw-U0f"/>
                             <constraint firstItem="YEn-V9-Gcq" firstAttribute="leading" secondItem="Em4-P6-EqV" secondAttribute="leading" constant="20" id="B3K-zl-P7p"/>
-                            <constraint firstItem="Hx5-d5-6aZ" firstAttribute="top" secondItem="h81-Bt-TIy" secondAttribute="bottom" constant="115" id="Fjt-yC-AwT"/>
                             <constraint firstItem="YEn-V9-Gcq" firstAttribute="top" secondItem="wzC-Pm-Dwx" secondAttribute="bottom" constant="60" id="HVT-n2-OcB"/>
+                            <constraint firstItem="Hx5-d5-6aZ" firstAttribute="centerY" secondItem="wzC-Pm-Dwx" secondAttribute="centerY" multiplier="1.25" id="Iaj-GJ-QZY"/>
+                            <constraint firstItem="gkC-dc-0lg" firstAttribute="centerY" secondItem="wzC-Pm-Dwx" secondAttribute="centerY" multiplier="1.25" id="K4i-ca-KzE"/>
+                            <constraint firstItem="Hx5-d5-6aZ" firstAttribute="trailing" secondItem="wzC-Pm-Dwx" secondAttribute="trailing" multiplier="1.05" id="Lg2-bz-84Y"/>
                             <constraint firstItem="h81-Bt-TIy" firstAttribute="top" secondItem="zh3-Jh-njp" secondAttribute="bottom" constant="20" id="OlB-1Q-c2Z"/>
-                            <constraint firstItem="gkC-dc-0lg" firstAttribute="top" secondItem="h81-Bt-TIy" secondAttribute="bottom" constant="115" id="PB1-7L-MhY"/>
                             <constraint firstItem="Em4-P6-EqV" firstAttribute="trailing" secondItem="SQz-wn-yRw" secondAttribute="trailing" constant="20" id="QHc-8e-mI0"/>
                             <constraint firstItem="bXM-pe-OJe" firstAttribute="leading" secondItem="Em4-P6-EqV" secondAttribute="leading" constant="20" id="Tt5-7P-egh"/>
                             <constraint firstItem="wzC-Pm-Dwx" firstAttribute="centerX" secondItem="h81-Bt-TIy" secondAttribute="centerX" id="VfS-IJ-vz0"/>
                             <constraint firstItem="wzC-Pm-Dwx" firstAttribute="top" secondItem="h81-Bt-TIy" secondAttribute="bottom" constant="17" id="W4J-rm-dgM"/>
                             <constraint firstItem="zh3-Jh-njp" firstAttribute="centerX" secondItem="Em4-P6-EqV" secondAttribute="centerX" id="XBF-Xe-RwS"/>
-                            <constraint firstItem="Em4-P6-EqV" firstAttribute="trailing" secondItem="gkC-dc-0lg" secondAttribute="trailing" constant="115" id="XaI-8O-8KA"/>
                             <constraint firstItem="zh3-Jh-njp" firstAttribute="top" secondItem="Em4-P6-EqV" secondAttribute="top" constant="20" id="Xu3-in-Vhc"/>
                             <constraint firstItem="h81-Bt-TIy" firstAttribute="centerX" secondItem="zh3-Jh-njp" secondAttribute="centerX" id="koW-bS-C12"/>
-                            <constraint firstItem="Em4-P6-EqV" firstAttribute="trailing" secondItem="Hx5-d5-6aZ" secondAttribute="trailing" constant="115" id="o4I-MD-GH1"/>
+                            <constraint firstItem="gkC-dc-0lg" firstAttribute="trailing" secondItem="wzC-Pm-Dwx" secondAttribute="trailing" multiplier="1.05" id="nTj-Tv-bLd"/>
                             <constraint firstItem="Em4-P6-EqV" firstAttribute="trailing" secondItem="YEn-V9-Gcq" secondAttribute="trailing" constant="20" id="pmO-Jw-p5j"/>
                             <constraint firstItem="SQz-wn-yRw" firstAttribute="centerY" secondItem="bXM-pe-OJe" secondAttribute="centerY" id="qdA-Ac-xj2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ejI-zz-Y2p"/>
+                    <connections>
+                        <outlet property="imageProfile" destination="wzC-Pm-Dwx" id="XuQ-if-BqI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q9h-Pi-U5l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4045,6 +4051,7 @@ Entonces esta es tu aplicación.
         <image name="Recurso 29" width="344" height="414"/>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <image name="camera.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
