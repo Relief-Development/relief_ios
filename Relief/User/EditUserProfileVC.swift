@@ -33,12 +33,14 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate & UIN
         let camara = UIAlertAction(title: "Hacer foto", style: .default, handler: {(action) in
             self.picker.sourceType = .camera
             self.picker.cameraCaptureMode = .photo
+            self.picker.allowsEditing = true
             self.picker.delegate = self
             self.present(self.picker, animated: true)
         })
         let galeria = UIAlertAction(title: "Seleccionar foto", style: .default, handler: {(action) in
             self.picker.sourceType = .photoLibrary
             self.picker.delegate = self
+            self.picker.allowsEditing = true
             self.present(self.picker, animated: true)
         })
         let cancelar = UIAlertAction(title: "Cancelar", style: .cancel  , handler: {(action) in
