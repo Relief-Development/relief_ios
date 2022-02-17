@@ -64,5 +64,8 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate & UIN
             return
         }
         imageProfile.image = image
+        imageProfile.layer.borderColor = CGColor.init(red: 0, green: 146, blue: 143, alpha: 1)
+        imageProfile.layer.borderWidth = 6
+        imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
     }
 }
