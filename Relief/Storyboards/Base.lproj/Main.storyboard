@@ -1659,19 +1659,12 @@ Entonces esta es tu aplicación.
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_marcoUsuario" translatesAutoresizingMaskIntoConstraints="NO" id="wzC-Pm-Dwx">
-                                <rect key="frame" x="132" y="192" width="150" height="150"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wzC-Pm-Dwx">
+                                <rect key="frame" x="132" y="192.5" width="150" height="149"/>
+                                <color key="tintColor" red="0.39762863009999999" green="0.39762863009999999" blue="0.39762863009999999" alpha="0.70447019870000005" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="etG-Za-97N"/>
                                     <constraint firstAttribute="height" constant="150" id="kTO-hj-6hm"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hx5-d5-6aZ">
-                                <rect key="frame" x="246" y="309.5" width="50" height="48"/>
-                                <color key="tintColor" name="user_light"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="7Wz-k8-fA3"/>
-                                    <constraint firstAttribute="width" constant="50" id="pBB-Cn-7ec"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="YEn-V9-Gcq">
@@ -1814,35 +1807,41 @@ Entonces esta es tu aplicación.
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkC-dc-0lg">
-                                <rect key="frame" x="246" y="309" width="50" height="50"/>
+                                <rect key="frame" x="132" y="192" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="6hQ-15-e8i"/>
-                                    <constraint firstAttribute="height" constant="50" id="hs3-Y9-IqR"/>
+                                    <constraint firstAttribute="width" constant="150" id="6hQ-15-e8i"/>
+                                    <constraint firstAttribute="height" constant="150" id="hs3-Y9-IqR"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="buttonImageTapped" destination="Dga-mK-vKM" eventType="touchUpInside" id="pWE-L8-wXq"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCN-jx-sFp">
+                                <rect key="frame" x="185" y="352" width="44.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="user"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Em4-P6-EqV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bXM-pe-OJe" firstAttribute="top" secondItem="Em4-P6-EqV" secondAttribute="top" constant="20" id="20F-bw-U0f"/>
+                            <constraint firstItem="gkC-dc-0lg" firstAttribute="centerX" secondItem="wzC-Pm-Dwx" secondAttribute="centerX" id="7qM-3y-EdK"/>
                             <constraint firstItem="YEn-V9-Gcq" firstAttribute="leading" secondItem="Em4-P6-EqV" secondAttribute="leading" constant="20" id="B3K-zl-P7p"/>
                             <constraint firstItem="YEn-V9-Gcq" firstAttribute="top" secondItem="wzC-Pm-Dwx" secondAttribute="bottom" constant="60" id="HVT-n2-OcB"/>
-                            <constraint firstItem="Hx5-d5-6aZ" firstAttribute="centerY" secondItem="wzC-Pm-Dwx" secondAttribute="centerY" multiplier="1.25" id="Iaj-GJ-QZY"/>
-                            <constraint firstItem="gkC-dc-0lg" firstAttribute="centerY" secondItem="wzC-Pm-Dwx" secondAttribute="centerY" multiplier="1.25" id="K4i-ca-KzE"/>
-                            <constraint firstItem="Hx5-d5-6aZ" firstAttribute="trailing" secondItem="wzC-Pm-Dwx" secondAttribute="trailing" multiplier="1.05" id="Lg2-bz-84Y"/>
                             <constraint firstItem="h81-Bt-TIy" firstAttribute="top" secondItem="zh3-Jh-njp" secondAttribute="bottom" constant="20" id="OlB-1Q-c2Z"/>
+                            <constraint firstItem="nCN-jx-sFp" firstAttribute="top" secondItem="gkC-dc-0lg" secondAttribute="bottom" constant="10" id="PYu-Pr-oJq"/>
                             <constraint firstItem="Em4-P6-EqV" firstAttribute="trailing" secondItem="SQz-wn-yRw" secondAttribute="trailing" constant="20" id="QHc-8e-mI0"/>
+                            <constraint firstItem="gkC-dc-0lg" firstAttribute="centerY" secondItem="wzC-Pm-Dwx" secondAttribute="centerY" id="Rf5-yu-xcV"/>
                             <constraint firstItem="bXM-pe-OJe" firstAttribute="leading" secondItem="Em4-P6-EqV" secondAttribute="leading" constant="20" id="Tt5-7P-egh"/>
                             <constraint firstItem="wzC-Pm-Dwx" firstAttribute="centerX" secondItem="h81-Bt-TIy" secondAttribute="centerX" id="VfS-IJ-vz0"/>
                             <constraint firstItem="wzC-Pm-Dwx" firstAttribute="top" secondItem="h81-Bt-TIy" secondAttribute="bottom" constant="17" id="W4J-rm-dgM"/>
                             <constraint firstItem="zh3-Jh-njp" firstAttribute="centerX" secondItem="Em4-P6-EqV" secondAttribute="centerX" id="XBF-Xe-RwS"/>
                             <constraint firstItem="zh3-Jh-njp" firstAttribute="top" secondItem="Em4-P6-EqV" secondAttribute="top" constant="20" id="Xu3-in-Vhc"/>
+                            <constraint firstItem="nCN-jx-sFp" firstAttribute="centerX" secondItem="gkC-dc-0lg" secondAttribute="centerX" id="cAs-e4-Kbb"/>
                             <constraint firstItem="h81-Bt-TIy" firstAttribute="centerX" secondItem="zh3-Jh-njp" secondAttribute="centerX" id="koW-bS-C12"/>
-                            <constraint firstItem="gkC-dc-0lg" firstAttribute="trailing" secondItem="wzC-Pm-Dwx" secondAttribute="trailing" multiplier="1.05" id="nTj-Tv-bLd"/>
                             <constraint firstItem="Em4-P6-EqV" firstAttribute="trailing" secondItem="YEn-V9-Gcq" secondAttribute="trailing" constant="20" id="pmO-Jw-p5j"/>
                             <constraint firstItem="SQz-wn-yRw" firstAttribute="centerY" secondItem="bXM-pe-OJe" secondAttribute="centerY" id="qdA-Ac-xj2"/>
                         </constraints>
@@ -4096,7 +4095,6 @@ Entonces esta es tu aplicación.
         <image name="Recurso 29" width="344" height="414"/>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <image name="camera.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
@@ -4117,6 +4115,7 @@ Entonces esta es tu aplicación.
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="mic" catalog="system" width="108" height="128"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="User">
             <color red="0.0" green="0.57300001382827759" blue="0.56099998950958252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
