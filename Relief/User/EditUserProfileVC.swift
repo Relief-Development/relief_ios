@@ -60,7 +60,7 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate & UIN
         
         picker.dismiss(animated: true, completion: nil)
         
-        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else{
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else{
             return
         }
         imageProfile.image = image

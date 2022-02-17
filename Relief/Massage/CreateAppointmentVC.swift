@@ -13,6 +13,9 @@ class CreateAppointmentVC: UIViewController, UIPickerViewDelegate, UIPickerViewA
     @IBOutlet var servicePicker: UIPickerView!
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var timePicker: UIDatePicker!
+    @IBOutlet var eventTF: UITextField!
+    @IBOutlet var descriptionTF: UITextField!
+
     
     struct Massage {
         var pick: String
@@ -25,6 +28,8 @@ class CreateAppointmentVC: UIViewController, UIPickerViewDelegate, UIPickerViewA
         self.navigationItem.title = "Agregar cita"
         servicePicker.dataSource = self
         servicePicker.delegate = self
+        textFieldShouldReturn(eventTF)
+        textFieldShouldReturn(descriptionTF)
     }
         
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -62,10 +67,10 @@ class CreateAppointmentVC: UIViewController, UIPickerViewDelegate, UIPickerViewA
                             let endDate = Calendar.current.date(from: dateComponents)
                             
                              let event:EKEvent = EKEvent(eventStore: eventStore)
-                              event.title = "Test relief"
+                              event.title = self.eventTF.text
                               event.startDate = startDate
                               event.endDate = endDate
-                              event.notes = "Masaje relajante"
+                              event.notes = self.descriptionTF.text
                               event.calendar = eventStore.defaultCalendarForNewEvents
 
                               do {
@@ -89,5 +94,9 @@ class CreateAppointmentVC: UIViewController, UIPickerViewDelegate, UIPickerViewA
         alertController.addAction(aceptar)
 
         self.present(alertController, animated: true, completion: nil)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
