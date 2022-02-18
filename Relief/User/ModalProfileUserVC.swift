@@ -25,6 +25,7 @@ class ModalProfileUserVC : ViewController{
         self.modalView?.layer.cornerRadius = 20
         self.modalView?.layer.borderColor = UIColor(named: "user")?.cgColor
         self.modalView?.layer.borderWidth = 1
+        overrideUserInterfaceStyle = .light
         
     }
     
@@ -49,6 +50,12 @@ class ModalProfileUserVC : ViewController{
             self.present(login, animated: true, completion: nil)
         }
         
+    }
+    @IBAction func resetTutorial(){
+        if let homeuser = storyboard?.instantiateViewController(withIdentifier: "TutorialUser1"){
+            homeuser.modalPresentationStyle = .fullScreen
+            self.present(homeuser, animated: true, completion: nil)
+        }
     }
        
 }

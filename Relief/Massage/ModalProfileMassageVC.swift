@@ -25,7 +25,7 @@ class ModalProfileMassageVC : ViewController{
         self.modalView?.layer.cornerRadius = 20
         self.modalView?.layer.borderColor = UIColor(named: "massage")?.cgColor
         self.modalView?.layer.borderWidth = 1
-        
+        overrideUserInterfaceStyle = .light
     }
     
     @IBAction func closeVC2(_ sender: Any){
@@ -49,6 +49,13 @@ class ModalProfileMassageVC : ViewController{
             self.present(login, animated: true, completion: nil)
         }
         
+    }
+    
+    @IBAction func resetTutorial(){
+        if let homemassage = storyboard?.instantiateViewController(withIdentifier: "TutorialMassage1"){
+            homemassage.modalPresentationStyle = .fullScreen
+            self.present(homemassage, animated: true, completion: nil)
+        }
     }
        
 }

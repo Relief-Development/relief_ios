@@ -17,13 +17,21 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var tutorialView: UIView!
     @IBOutlet var tutorialTextHomeView: UIView!
     @IBOutlet var segmentedHome: UISegmentedControl!
+    var homeTutorial = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         self.tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "user_light")
         self.tabBarController?.tabBar.invalidateIntrinsicContentSize()
         homecell?.button?.setTitle(" ", for: .normal)
         tutorialTextHomeView.layer.cornerRadius = 30
+        if let value = UserDefaults.standard.object(forKey: "Hometv") as? Bool{
+            homeTutorial = value
+        }
+        if (homeTutorial == false){
+            tutorialView.isHidden = true
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,6 +72,9 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
     }
         
     @IBAction func closeTapped() {
+        homeTutorial = false
+        let name = homeTutorial
+        UserDefaults.standard.set(name, forKey: "Hometv")
         tutorialView.isHidden = true
     }
     

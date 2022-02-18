@@ -12,7 +12,7 @@ class PoliticUserVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        overrideUserInterfaceStyle = .light
     }
     @IBAction func buttonToProfileTapped(){
         self.dismiss(animated: true, completion: nil)

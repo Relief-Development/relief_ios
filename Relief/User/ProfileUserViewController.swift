@@ -11,6 +11,8 @@ class ProfileUserViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet var tutorialView: UIView!
     @IBOutlet var tutorialTextProfileView: UIView!
+    var profileTutorial = true
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
@@ -24,6 +26,14 @@ class ProfileUserViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         tutorialTextProfileView.layer.cornerRadius = 30
+        
+        if let value = UserDefaults.standard.object(forKey: "Profiletv") as? Bool{
+            profileTutorial = value
+        }
+        if (profileTutorial == false){
+            tutorialView.isHidden = true
+        }
+        overrideUserInterfaceStyle = .light
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -55,6 +65,9 @@ class ProfileUserViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     @IBAction func closeTapped() {
+        profileTutorial = false
+        let name = profileTutorial
+        UserDefaults.standard.set(name, forKey: "Profiletv")
         tutorialView.isHidden = true
     }
 }

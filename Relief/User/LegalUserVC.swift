@@ -12,6 +12,7 @@ class LegalUserVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
        
     }
     @IBAction func buttonToProfileTapped(){

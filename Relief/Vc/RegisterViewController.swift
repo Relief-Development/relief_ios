@@ -22,6 +22,7 @@ class RegisterViewController: UIViewController{
         self.passwordTF?.attributedPlaceholder = getAttributeString("Contraseña")
         self.nameTF?.attributedPlaceholder = getAttributeString("Nombre")
         self.emailTF?.attributedPlaceholder = getAttributeString("Email")
+        overrideUserInterfaceStyle = .light
         
 
 
@@ -39,11 +40,15 @@ class RegisterViewController: UIViewController{
             homeuser.modalPresentationStyle = .fullScreen
             self.present(homeuser, animated: true, completion: nil)
         }
-        }else {
+        }else if segmentregister?.selectedSegmentIndex == 1{
             if let homemassage = storyboard?.instantiateViewController(withIdentifier: "TutorialMassage1"){
                 homemassage.modalPresentationStyle = .fullScreen
                 self.present(homemassage, animated: true, completion: nil)
             }
+        }else {
+            let alertController = UIAlertController(title: nil, message: "Seleccione un tipo de usuario para registrarse", preferredStyle: .alert)
+            self.present(alertController, animated: true, completion: nil)
+            Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { _ in alertController.dismiss(animated: true, completion: nil) })
         }
     }
     @IBAction func buttonToLoginTapped(_ sender: Any){

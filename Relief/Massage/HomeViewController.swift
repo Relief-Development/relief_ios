@@ -21,6 +21,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var calendarButton: UIButton!
     @IBOutlet var tutorialView: UIView!
     @IBOutlet var tutorialTextHomeView: UIView!
+    var homeTutorialM = true
 
     
     override func viewDidLoad() {
@@ -28,6 +29,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "massage_light")
         self.navigationItem.title = "Citas"
         tutorialTextHomeView.layer.cornerRadius = 30
+        if let value = UserDefaults.standard.object(forKey: "HometvM") as? Bool{
+            homeTutorialM = value
+        }
+        if (homeTutorialM == false){
+            tutorialView.isHidden = true
+        }
+        overrideUserInterfaceStyle = .light
 
     }
     
@@ -53,6 +61,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     @IBAction func closeTapped() {
+        homeTutorialM = false
+        let name = homeTutorialM
+        UserDefaults.standard.set(name, forKey: "HometvM")
         tutorialView.isHidden = true
     }
     

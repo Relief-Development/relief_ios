@@ -11,6 +11,7 @@ class ProfileMassageVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     @IBOutlet var tutorialView: UIView!
     @IBOutlet var tutorialTextHomeView: UIView!
+    var profileTutorialM = true
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
@@ -27,6 +28,13 @@ class ProfileMassageVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         tutorialTextHomeView.layer.cornerRadius = 30
+        if let value = UserDefaults.standard.object(forKey: "ProfiletvM") as? Bool{
+            profileTutorialM = value
+        }
+        if (profileTutorialM == false){
+            tutorialView.isHidden = true
+        }
+        overrideUserInterfaceStyle = .light
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "OpenSettingsMassageModal" {
@@ -50,6 +58,9 @@ class ProfileMassageVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         }
     }
     @IBAction func closeTapped() {
+        profileTutorialM = false
+        let name = profileTutorialM
+        UserDefaults.standard.set(name, forKey: "ProfiletvM")
         tutorialView.isHidden = true
     }
     @IBAction func editProfileTapped() {
