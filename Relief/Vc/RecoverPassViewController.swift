@@ -17,6 +17,7 @@ class RecoverPassViewController: UIViewController {
         super.viewDidLoad()
         self.recoveryBtn?.layer.cornerRadius = 6
         self.recoveryEmailTextField?.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named:"user_light")!] )
+        overrideUserInterfaceStyle = .light
         
     }
     

@@ -21,6 +21,7 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         self.tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "user_light")
         self.tabBarController?.tabBar.invalidateIntrinsicContentSize()
         homecell?.button?.setTitle(" ", for: .normal)

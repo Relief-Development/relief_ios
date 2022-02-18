@@ -28,6 +28,7 @@ class MapUserVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
         super.viewDidLoad()
         self.backgroundBar?.layer.cornerRadius = 10
         tutorialTextMapView.layer.cornerRadius = 30
+        overrideUserInterfaceStyle = .light
         
         let mass1 = Massagist()
         mass1.name = "Esther Moreno"

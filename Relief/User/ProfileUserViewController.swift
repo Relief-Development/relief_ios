@@ -33,6 +33,7 @@ class ProfileUserViewController: UIViewController, UITableViewDelegate, UITableV
         if (profileTutorial == false){
             tutorialView.isHidden = true
         }
+        overrideUserInterfaceStyle = .light
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

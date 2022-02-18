@@ -16,6 +16,7 @@ class TutorialMassageVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tutorialMassageView.layer.cornerRadius = 30
+        overrideUserInterfaceStyle = .light
     }
    
     @IBAction func buttonMassageTapped(_ sender: Any){

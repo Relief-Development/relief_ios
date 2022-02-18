@@ -15,6 +15,7 @@ class TutorialUserController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tutorialView.layer.cornerRadius = 30
+        overrideUserInterfaceStyle = .light
     }
    
     @IBAction func buttonUserTapped(_ sender: Any){

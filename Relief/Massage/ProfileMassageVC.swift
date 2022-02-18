@@ -34,6 +34,7 @@ class ProfileMassageVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         if (profileTutorialM == false){
             tutorialView.isHidden = true
         }
+        overrideUserInterfaceStyle = .light
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "OpenSettingsMassageModal" {

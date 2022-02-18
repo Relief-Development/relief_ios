@@ -19,6 +19,7 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
         imageProfile.layer.borderColor = UIColor(named: "masssage")?.cgColor
         imageProfile.layer.borderWidth = 5
         imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
+        overrideUserInterfaceStyle = .light
        
     }
     @IBAction func buttonToProfileTapped(){
@@ -26,12 +27,12 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
         
     }
     @IBAction func saveTapped(){
-        self.dismiss(animated: true) {
-            let alertController = UIAlertController(title: nil, message: "Sus datos se han guardado", preferredStyle: .alert)
-            self.present(alertController, animated: true, completion: nil)
-            Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { _ in alertController.dismiss(animated: true, completion: nil) })
-            return
-        }
+        let alertController = UIAlertController(title: nil, message: "Sus datos se han guardado", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Continuar", style: .default, handler: {(action) in
+            self.dismiss(animated: true, completion: nil)
+        })
+        alertController.addAction(ok)
+        self.present(alertController, animated: true, completion: nil)
         
     }
     @IBAction func buttonImageTapped(){

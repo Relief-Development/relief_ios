@@ -3471,9 +3471,11 @@ Entonces esta es tu aplicación.
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="datePicker" destination="UqP-DJ-2wW" id="r65-jL-SFG"/>
                         <outlet property="descriptionTF" destination="pff-Ru-noO" id="EJ6-VB-mdS"/>
                         <outlet property="eventTF" destination="3iv-xj-qNR" id="xX0-De-0Ax"/>
                         <outlet property="servicePicker" destination="cmr-Ho-Xjt" id="CnQ-Td-xtI"/>
+                        <outlet property="timePicker" destination="zlK-Mb-YBx" id="6Cn-nJ-1SP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHR-kV-Mcb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4020,7 +4022,7 @@ Entonces esta es tu aplicación.
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonToProfileTapped" destination="Twe-Is-Y3X" eventType="touchUpInside" id="NlF-di-q8a"/>
+                                    <action selector="saveTapped" destination="Twe-Is-Y3X" eventType="touchUpInside" id="OYG-rg-vAF"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FIX-IY-adC">

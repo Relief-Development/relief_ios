@@ -25,6 +25,7 @@ class ModalProfileUserVC : ViewController{
         self.modalView?.layer.cornerRadius = 20
         self.modalView?.layer.borderColor = UIColor(named: "user")?.cgColor
         self.modalView?.layer.borderWidth = 1
+        overrideUserInterfaceStyle = .light
         
     }
     

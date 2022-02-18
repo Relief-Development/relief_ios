@@ -35,6 +35,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         if (homeTutorialM == false){
             tutorialView.isHidden = true
         }
+        overrideUserInterfaceStyle = .light
 
     }
     

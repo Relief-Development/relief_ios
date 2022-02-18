@@ -23,6 +23,7 @@ class SearchUserVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         if (searchTutorial == false){
             tutorialView.isHidden = true
         }
+        overrideUserInterfaceStyle = .light
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

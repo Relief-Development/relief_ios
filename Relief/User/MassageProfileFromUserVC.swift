@@ -15,6 +15,7 @@ class MassageProfileFromUserVC: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         self.tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "user_light")
         self.tabBarController?.tabBar.invalidateIntrinsicContentSize()
+        overrideUserInterfaceStyle = .light
     }
     
     

@@ -30,6 +30,7 @@ class CreateAppointmentVC: UIViewController, UIPickerViewDelegate, UIPickerViewA
         servicePicker.delegate = self
         eventTF.delegate = self
         descriptionTF.delegate = self
+        overrideUserInterfaceStyle = .light
     }
         
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -48,39 +49,54 @@ class CreateAppointmentVC: UIViewController, UIPickerViewDelegate, UIPickerViewA
         let eventStore:EKEventStore = EKEventStore()
 
                       eventStore.requestAccess(to: .event) { (granted, error) in
+                          DispatchQueue.main.async {
+                              
+                          
+                              if (granted) && (error == nil)
 
-                          if (granted) && (error == nil)
-
-                          {
-
-                            var dateComponents = DateComponents()
-                            dateComponents.year = 2022
-                            dateComponents.month = 3
-                            dateComponents.day = 12
-                            dateComponents.hour = 10
-                            dateComponents.minute = 00
+                              {
+                                let date = self.timePicker.date
+                                let calendar = Calendar.current
+                                let comp = calendar.dateComponents([.hour, .minute], from: date)
+                                let hour = comp.hour
+                                let minute = comp.minute
                             
-                            let startDate = Calendar.current.date(from: dateComponents)
+                                let date2 = self.datePicker.date
+                                let comp2 = calendar.dateComponents([.month, .year, .day], from: date2)
+                                let day = comp2.day
+                                let month = comp2.month
+                                let year = comp2.year
 
-                            dateComponents.hour = 11
+                                var dateComponents = DateComponents()
+                                dateComponents.year = year
+                                dateComponents.month = month
+                                dateComponents.day = day
+                                dateComponents.hour = hour
+                                dateComponents.minute = minute
+                                  
+                                
+                                
+                                let startDate = Calendar.current.date(from: dateComponents)
 
-                            let endDate = Calendar.current.date(from: dateComponents)
-                            
-                             let event:EKEvent = EKEvent(eventStore: eventStore)
-                              event.title = self.eventTF.text
-                              event.startDate = startDate
-                              event.endDate = endDate
-                              event.notes = self.descriptionTF.text
-                              event.calendar = eventStore.defaultCalendarForNewEvents
+                                  let endDate = startDate?.addingTimeInterval(3600)
+                                
+                                 let event:EKEvent = EKEvent(eventStore: eventStore)
+                                  event.title = self.eventTF.text
+                                  event.startDate = startDate
+                                  event.endDate = endDate
+                                  event.notes = self.descriptionTF.text
+                                  event.calendar = eventStore.defaultCalendarForNewEvents
 
-                              do {
-                                   try eventStore.save(event, span: .thisEvent)
-                              } catch let error as NSError {
+                                  do {
+                                       try eventStore.save(event, span: .thisEvent)
+                                  } catch let error as NSError {
+                                      print(error)
 
+                                  }
+
+
+                              } else {
                               }
-
-
-                          } else {
                           }
                       }
         let alertController = UIAlertController(title: "Su cita ha sido agregada al calendario", message: nil, preferredStyle: .alert)

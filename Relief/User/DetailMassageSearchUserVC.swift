@@ -31,6 +31,7 @@ class DetailMassageSearchUserVC: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Masajes relajantes"
+        overrideUserInterfaceStyle = .light
     }
     
 

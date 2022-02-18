@@ -18,6 +18,7 @@ class HomeUserCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         configureButton()
+        overrideUserInterfaceStyle = .light
     }
     
     func configureButton(){
