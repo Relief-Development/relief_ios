@@ -22,6 +22,7 @@ class RegisterViewController: UIViewController{
         self.passwordTF?.attributedPlaceholder = getAttributeString("Contraseña")
         self.nameTF?.attributedPlaceholder = getAttributeString("Nombre")
         self.emailTF?.attributedPlaceholder = getAttributeString("Email")
+        overrideUserInterfaceStyle = .light
         
 
 

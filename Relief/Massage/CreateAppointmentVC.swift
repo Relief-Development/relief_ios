@@ -8,7 +8,7 @@
 import UIKit
 import EventKit
 
-class CreateAppointmentVC: UIViewController, UIPickerViewDelegate, UIPickerViewAccessibilityDelegate, UIPickerViewDataSource {
+class CreateAppointmentVC: UIViewController, UIPickerViewDelegate, UIPickerViewAccessibilityDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     @IBOutlet var servicePicker: UIPickerView!
     @IBOutlet var datePicker: UIDatePicker!
@@ -28,8 +28,8 @@ class CreateAppointmentVC: UIViewController, UIPickerViewDelegate, UIPickerViewA
         self.navigationItem.title = "Agregar cita"
         servicePicker.dataSource = self
         servicePicker.delegate = self
-        textFieldShouldReturn(eventTF)
-        textFieldShouldReturn(descriptionTF)
+        eventTF.delegate = self
+        descriptionTF.delegate = self
     }
         
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -95,8 +95,7 @@ class CreateAppointmentVC: UIViewController, UIPickerViewDelegate, UIPickerViewA
 
         self.present(alertController, animated: true, completion: nil)
     }
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
-        return false
     }
 }

@@ -3463,6 +3463,8 @@ Entonces esta es tu aplicación.
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descriptionTF" destination="pff-Ru-noO" id="EJ6-VB-mdS"/>
+                        <outlet property="eventTF" destination="3iv-xj-qNR" id="xX0-De-0Ax"/>
                         <outlet property="servicePicker" destination="cmr-Ho-Xjt" id="CnQ-Td-xtI"/>
                     </connections>
                 </viewController>
