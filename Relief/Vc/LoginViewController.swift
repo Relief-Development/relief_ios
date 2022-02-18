@@ -11,10 +11,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet var loginBtn: UIButton?
     @IBOutlet var registerBtn: UIButton?
-    @IBOutlet var userTF: UITextField?
-    @IBOutlet var passwordTF: UITextField?
+    @IBOutlet var eyeBtn: UIButton!
+    @IBOutlet var userTF: UITextField!
+    @IBOutlet var passwordTF: UITextField!
     private var textField: UITextField?
     private var placeholder: String?
+    var eyeClick: Bool = false
 
     let mainstoryboard = UIStoryboard(name: "Main", bundle: nil)
 
@@ -29,6 +31,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         self.userTF?.attributedPlaceholder = getAttributeString("Usuario")
         self.passwordTF?.attributedPlaceholder = getAttributeString("Contraseña")
         overrideUserInterfaceStyle = .light
+        passwordTF.isSecureTextEntry = true
        
     }
     @IBAction func buttonRegisterTapped(_ sender: Any){
@@ -38,6 +41,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         }
         
     }
+    @IBAction func eyePassTapped(_ sender: UIButton) {
+            passwordTF.isSecureTextEntry = eyeClick
+            eyeClick.toggle()
+            eyeBtn.isSelected = eyeClick
+        }
     @IBAction func buttonLoginTapped(_ sender: Any){
         
         if(userTF?.text == "Marta" && passwordTF?.text == "1234"){

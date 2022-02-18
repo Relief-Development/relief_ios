@@ -17,13 +17,22 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate & UIN
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageProfile.layer.borderColor = UIColor(named: "user")?.cgColor
+        imageProfile.layer.borderWidth = 5
+        imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
        
     }
     @IBAction func buttonToProfileTapped(){
         self.dismiss(animated: true, completion: nil)
         
     }
-    @IBAction func galleryTapped(){
+    @IBAction func saveTapped(){
+        self.dismiss(animated: true) {
+            let alertController = UIAlertController(title: nil, message: "Sus datos se han guardado", preferredStyle: .alert)
+            self.present(alertController, animated: true, completion: nil)
+            Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { _ in alertController.dismiss(animated: true, completion: nil) })
+            return
+        }
         
     }
     @IBAction func buttonImageTapped(){
@@ -64,8 +73,9 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate & UIN
             return
         }
         imageProfile.image = image
-        imageProfile.layer.borderColor = CGColor.init(red: 0, green: 146, blue: 143, alpha: 1)
-        imageProfile.layer.borderWidth = 6
+        imageProfile.layer.borderColor = UIColor(named: "user")?.cgColor
+        imageProfile.layer.borderWidth = 5
         imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
+        
     }
 }
