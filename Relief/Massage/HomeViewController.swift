@@ -48,11 +48,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
 
-    @IBAction func addDates(_sender: Any) {
-        if let detailAppointment = storyboard?.instantiateViewController(withIdentifier: "AppointmentID") as? CreateAppointmentVC{
-            navigationController?.pushViewController(detailAppointment, animated: true)
-        }
-    }
     
     @IBAction func goToCalendar(_sender: Any) {
         guard let url = URL(string: "calshow://") else {

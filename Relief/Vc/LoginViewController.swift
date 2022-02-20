@@ -53,7 +53,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                 homeuser.modalPresentationStyle = .fullScreen
                 self.present(homeuser, animated: true, completion: nil)
             }
-        }else if (userTF?.text == "Ester" && passwordTF?.text == "1234"){
+        }else if (userTF?.text == "Esther" && passwordTF?.text == "1234"){
             if let homemassage = storyboard?.instantiateViewController(withIdentifier: "HomeMassage"){
                 homemassage.modalPresentationStyle = .fullScreen
                 self.present(homemassage, animated: true, completion: nil)

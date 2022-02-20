@@ -1180,11 +1180,10 @@ Entonces esta es tu aplicación.
                                     <color key="baseBackgroundColor" name="massage"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="addDatesWith_sender:" destination="gjn-zJ-G3o" eventType="touchUpInside" id="icl-AC-GBD"/>
                                     <action selector="buttonLoginTapped:" destination="5tW-ir-nh3" eventType="touchUpInside" id="Dxk-hS-vTF"/>
                                     <action selector="buttonUserTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aZr-Zj-LDM"/>
-                                    <action selector="closeTapped" destination="gjn-zJ-G3o" eventType="touchUpInside" id="LtV-zZ-tfp"/>
                                     <action selector="closeTapped" destination="0wL-hQ-DUV" eventType="touchUpInside" id="SIx-u3-knu"/>
+                                    <segue destination="Dc7-Xi-5MZ" kind="presentation" id="R1X-98-4dm"/>
                                 </connections>
                             </button>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xms-uA-Rss">
@@ -3325,18 +3324,18 @@ Entonces esta es tu aplicación.
             <objects>
                 <viewController storyboardIdentifier="AppointmentID" id="Dc7-Xi-5MZ" customClass="CreateAppointmentVC" customModule="Relief" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fvd-tu-16z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logoPequeñoMasajista" translatesAutoresizingMaskIntoConstraints="NO" id="aIG-ad-VC7">
-                                <rect key="frame" x="167" y="44" width="80" height="50"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logoTutorialMasajista" translatesAutoresizingMaskIntoConstraints="NO" id="aIG-ad-VC7">
+                                <rect key="frame" x="142" y="80" width="130" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="8VC-m1-CTl"/>
-                                    <constraint firstAttribute="width" constant="80" id="J3d-pE-dvp"/>
+                                    <constraint firstAttribute="height" constant="100" id="8VC-m1-CTl"/>
+                                    <constraint firstAttribute="width" constant="130" id="J3d-pE-dvp"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="Uo8-cb-UXT">
-                                <rect key="frame" x="20" y="295.5" width="374" height="305"/>
+                                <rect key="frame" x="20" y="268.5" width="374" height="305"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PcB-lA-ZGf">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -3424,16 +3423,8 @@ Entonces esta es tu aplicación.
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KiO-oA-bEV">
-                                <rect key="frame" x="25.5" y="696" width="363" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Add to calendar"/>
-                                <connections>
-                                    <action selector="addtocalendar" destination="Dc7-Xi-5MZ" eventType="touchUpInside" id="965-Wi-dIj"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJS-Q8-OdK">
-                                <rect key="frame" x="25.5" y="744" width="363" height="45"/>
+                                <rect key="frame" x="25.5" y="690" width="363" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="nw3-At-w0N"/>
                                 </constraints>
@@ -3445,7 +3436,7 @@ Entonces esta es tu aplicación.
                                     <color key="baseBackgroundColor" name="massage"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="addDatesWith_sender:" destination="gjn-zJ-G3o" eventType="touchUpInside" id="0SI-lX-VWK"/>
+                                    <action selector="addtocalendar" destination="Dc7-Xi-5MZ" eventType="touchUpInside" id="B3d-mi-KGU"/>
                                     <action selector="buttonLoginTapped:" destination="5tW-ir-nh3" eventType="touchUpInside" id="aZT-TD-l55"/>
                                     <action selector="buttonUserTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="thv-bj-3ZB"/>
                                     <action selector="closeTapped" destination="0wL-hQ-DUV" eventType="touchUpInside" id="bFM-NE-yhw"/>
@@ -3456,17 +3447,14 @@ Entonces esta es tu aplicación.
                         <viewLayoutGuide key="safeArea" id="WBo-21-lun"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aIG-ad-VC7" firstAttribute="top" secondItem="WBo-21-lun" secondAttribute="top" id="33Q-ZO-IAu"/>
+                            <constraint firstItem="aIG-ad-VC7" firstAttribute="top" secondItem="WBo-21-lun" secondAttribute="top" constant="80" id="33Q-ZO-IAu"/>
                             <constraint firstItem="aIG-ad-VC7" firstAttribute="centerX" secondItem="WBo-21-lun" secondAttribute="centerX" id="7E8-PJ-o3f"/>
                             <constraint firstItem="WBo-21-lun" firstAttribute="bottom" secondItem="QJS-Q8-OdK" secondAttribute="bottom" constant="73" id="9JQ-B4-kVi"/>
-                            <constraint firstItem="QJS-Q8-OdK" firstAttribute="top" secondItem="KiO-oA-bEV" secondAttribute="bottom" constant="17" id="DOb-qz-A3r"/>
                             <constraint firstItem="WBo-21-lun" firstAttribute="trailing" secondItem="Uo8-cb-UXT" secondAttribute="trailing" constant="20" id="KGz-s8-A5u"/>
                             <constraint firstItem="QJS-Q8-OdK" firstAttribute="width" secondItem="fvd-tu-16z" secondAttribute="width" multiplier="0.876812" id="MyD-Oo-k68"/>
-                            <constraint firstItem="KiO-oA-bEV" firstAttribute="centerX" secondItem="QJS-Q8-OdK" secondAttribute="centerX" id="PWj-io-Nnf"/>
                             <constraint firstItem="Uo8-cb-UXT" firstAttribute="centerX" secondItem="fvd-tu-16z" secondAttribute="centerX" id="QaB-0e-Ge3"/>
                             <constraint firstItem="Uo8-cb-UXT" firstAttribute="centerY" secondItem="fvd-tu-16z" secondAttribute="centerY" id="TR4-Hd-j0I"/>
                             <constraint firstItem="QJS-Q8-OdK" firstAttribute="centerX" secondItem="WBo-21-lun" secondAttribute="centerX" id="WKh-8j-KZt"/>
-                            <constraint firstItem="KiO-oA-bEV" firstAttribute="width" secondItem="fvd-tu-16z" secondAttribute="width" multiplier="0.876" id="WmV-nE-o4G"/>
                             <constraint firstItem="Uo8-cb-UXT" firstAttribute="leading" secondItem="WBo-21-lun" secondAttribute="leading" constant="20" id="iA3-Sq-Zm2"/>
                         </constraints>
                     </view>

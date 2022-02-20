@@ -9,43 +9,63 @@ import UIKit
 import EventKit
 
 class CreateAppointmentVC: UIViewController, UIPickerViewDelegate, UIPickerViewAccessibilityDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+
+@IBOutlet var servicePicker: UIPickerView!
+@IBOutlet var datePicker: UIDatePicker!
+@IBOutlet var timePicker: UIDatePicker!
+@IBOutlet var eventTF: UITextField!
+@IBOutlet var descriptionTF: UITextField!
+
+
+struct Massage {
+    var pick: String
+}
+
+let massages: [Massage] = [Massage(pick: "Seleccione masaje"),Massage(pick: "Masaje relajante"),Massage(pick: "Masaje facial"),Massage(pick: "Masaje terapéutico"),Massage(pick: "Masaje sueco")]
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+    self.navigationItem.title = "Agregar cita"
+    servicePicker.dataSource = self
+    servicePicker.delegate = self
+    eventTF.delegate = self
+    descriptionTF.delegate = self
+    overrideUserInterfaceStyle = .light
+}
     
-    @IBOutlet var servicePicker: UIPickerView!
-    @IBOutlet var datePicker: UIDatePicker!
-    @IBOutlet var timePicker: UIDatePicker!
-    @IBOutlet var eventTF: UITextField!
-    @IBOutlet var descriptionTF: UITextField!
+func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    let massage = massages[row].pick
+    return massage
+}
+
+func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    return 1
+}
+
+func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    return massages.count
+}
+func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    eventTF.text = "\(eventTF.text ?? "") - \(massages[row].pick)"
+}
+
+@IBAction func addtocalendar(){
+    
+    let alertController = UIAlertController(title: "Seleccione su opcion de guardado", message: nil, preferredStyle: .alert)
+    alertController.view.tintColor = UIColor(named: "massage")
 
     
-    struct Massage {
-        var pick: String
-    }
     
-    let massages: [Massage] = [Massage(pick: "Masaje relajante"),Massage(pick: "Masaje facial"),Massage(pick: "Masaje terapéutico"),Massage(pick: "Masaje sueco")]
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationItem.title = "Agregar cita"
-        servicePicker.dataSource = self
-        servicePicker.delegate = self
-        eventTF.delegate = self
-        descriptionTF.delegate = self
-        overrideUserInterfaceStyle = .light
-    }
+    let guardar = UIAlertAction(title: "Guardar", style: .default  , handler: {(action) in
+        let alertController2 = UIAlertController(title: "Su cita se ha guardado", message: nil, preferredStyle: .alert)
+            let continuar = UIAlertAction(title: "Continuar", style: .cancel  , handler: {(action) in
+                self.dismiss(animated: true, completion: nil)
+            })
         
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return massages[row].pick
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return massages.count
-    }
-    
-    @IBAction func addtocalendar(){
+        alertController2.addAction(continuar)
+        self.present(alertController2, animated: true, completion: nil)
+    })
+    let calendar = UIAlertAction(title: "Guardar y añadir al calendario", style: .default  , handler: {(action) in
         let eventStore:EKEventStore = EKEventStore()
 
                       eventStore.requestAccess(to: .event) { (granted, error) in
@@ -88,7 +108,14 @@ class CreateAppointmentVC: UIViewController, UIPickerViewDelegate, UIPickerViewA
                                   event.calendar = eventStore.defaultCalendarForNewEvents
 
                                   do {
-                                       try eventStore.save(event, span: .thisEvent)
+                                    try eventStore.save(event, span: .thisEvent)
+                                      let alertController3 = UIAlertController(title: "Su cita se ha guardado y se ha añadido al calendario", message: nil, preferredStyle: .alert)
+                                          let continuar = UIAlertAction(title: "Continuar", style: .cancel  , handler: {(action) in
+                                              self.dismiss(animated: true, completion: nil)
+                                          })
+                                      
+                                      alertController3.addAction(continuar)
+                                      self.present(alertController3, animated: true, completion: nil)
                                   } catch let error as NSError {
                                       print(error)
 
@@ -99,19 +126,14 @@ class CreateAppointmentVC: UIViewController, UIPickerViewDelegate, UIPickerViewA
                               }
                           }
                       }
-        let alertController = UIAlertController(title: "Su cita ha sido agregada al calendario", message: nil, preferredStyle: .alert)
-        alertController.view.tintColor = UIColor(named: "massage")
+    })
+    alertController.addAction(guardar)
+    alertController.addAction(calendar)
 
-        
-        
-        let aceptar = UIAlertAction(title: "Aceptar", style: .cancel  , handler: {(action) in
-            
-        })
-        alertController.addAction(aceptar)
 
-        self.present(alertController, animated: true, completion: nil)
-    }
-    @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-    }
+    self.present(alertController, animated: true, completion: nil)
+}
+@objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    self.view.endEditing(true)
+}
 }
