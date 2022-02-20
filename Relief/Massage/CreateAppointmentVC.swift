@@ -57,13 +57,8 @@ func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent c
     
     
     let guardar = UIAlertAction(title: "Guardar", style: .default  , handler: {(action) in
-        let alertController2 = UIAlertController(title: "Su cita se ha guardado", message: nil, preferredStyle: .alert)
-            let continuar = UIAlertAction(title: "Continuar", style: .cancel  , handler: {(action) in
-                self.dismiss(animated: true, completion: nil)
-            })
         
-        alertController2.addAction(continuar)
-        self.present(alertController2, animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     })
     let calendar = UIAlertAction(title: "Guardar y añadir al calendario", style: .default  , handler: {(action) in
         let eventStore:EKEventStore = EKEventStore()
@@ -109,13 +104,7 @@ func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent c
 
                                   do {
                                     try eventStore.save(event, span: .thisEvent)
-                                      let alertController3 = UIAlertController(title: "Su cita se ha guardado y se ha añadido al calendario", message: nil, preferredStyle: .alert)
-                                          let continuar = UIAlertAction(title: "Continuar", style: .cancel  , handler: {(action) in
-                                              self.dismiss(animated: true, completion: nil)
-                                          })
-                                      
-                                      alertController3.addAction(continuar)
-                                      self.present(alertController3, animated: true, completion: nil)
+                                      self.dismiss(animated: true, completion: nil)
                                   } catch let error as NSError {
                                       print(error)
 
