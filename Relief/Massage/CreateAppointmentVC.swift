@@ -16,7 +16,9 @@ class CreateAppointmentVC: UIViewController, UIPickerViewDelegate, UIPickerViewA
 @IBOutlet var eventTF: UITextField!
 @IBOutlet var descriptionTF: UITextField!
 
-
+    private var userName: String? = ""
+    
+    private var indice: Int? = 0
 struct Massage {
     var pick: String
 }
@@ -46,7 +48,16 @@ func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: I
     return massages.count
 }
 func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-    eventTF.text = "\(eventTF.text ?? "") - \(massages[row].pick)"
+    indice = row
+    if eventTF.text == ""{
+        eventTF.placeholder = "Introduce un nombre"
+    }else{
+        if(indice == 0){
+            eventTF.text = "\(userName ?? "")"
+        }else{
+            eventTF.text = "\(userName ?? "") - \(massages[row].pick)"
+        }
+    }
 }
 
 @IBAction func addtocalendar(){
@@ -124,5 +135,7 @@ func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent c
 }
 @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     self.view.endEditing(true)
+    userName = textField.text
+    return true
 }
 }
