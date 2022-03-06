@@ -14,6 +14,11 @@
 		191E7AEA27A1BE5C000810DE /* PoliticMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE927A1BE5C000810DE /* PoliticMassageVC.swift */; };
 		191E7AEC27A1BE6E000810DE /* LegalMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AEB27A1BE6E000810DE /* LegalMassageVC.swift */; };
 		192318C127A19CBA00B1FAAB /* ModalProfileUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192318C027A19CBA00B1FAAB /* ModalProfileUserVC.swift */; };
+		1936FEBF27D5439500E74E85 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1936FEBE27D5439500E74E85 /* User.swift */; };
+		1936FEC127D5442D00E74E85 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1936FEC027D5442D00E74E85 /* Response.swift */; };
+		1936FEC427D544B900E74E85 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1936FEC327D544B900E74E85 /* Connection.swift */; };
+		1936FEC627D544FF00E74E85 /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1936FEC527D544FF00E74E85 /* DataMapper.swift */; };
+		1936FEC927D5456800E74E85 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1936FEC827D5456800E74E85 /* AppData.swift */; };
 		193D149D27A47941005C8B7A /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 193D149C27A47940005C8B7A /* Fonts */; };
 		19522E6827B00C4000B26094 /* DetailMassageSearchUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19522E6727B00C4000B26094 /* DetailMassageSearchUserVC.swift */; };
 		19522E6A27B00CA600B26094 /* DetailMassageUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19522E6927B00CA600B26094 /* DetailMassageUserCell.swift */; };
@@ -77,6 +82,11 @@
 		191E7AE927A1BE5C000810DE /* PoliticMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticMassageVC.swift; sourceTree = "<group>"; };
 		191E7AEB27A1BE6E000810DE /* LegalMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalMassageVC.swift; sourceTree = "<group>"; };
 		192318C027A19CBA00B1FAAB /* ModalProfileUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalProfileUserVC.swift; sourceTree = "<group>"; };
+		1936FEBE27D5439500E74E85 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1936FEC027D5442D00E74E85 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		1936FEC327D544B900E74E85 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		1936FEC527D544FF00E74E85 /* DataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
+		1936FEC827D5456800E74E85 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		193D149C27A47940005C8B7A /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		19522E6727B00C4000B26094 /* DetailMassageSearchUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMassageSearchUserVC.swift; sourceTree = "<group>"; };
 		19522E6927B00CA600B26094 /* DetailMassageUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMassageUserCell.swift; sourceTree = "<group>"; };
@@ -146,6 +156,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1936FEC227D544A300E74E85 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				1936FEC327D544B900E74E85 /* Connection.swift */,
+				1936FEC527D544FF00E74E85 /* DataMapper.swift */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		1936FEC727D5455700E74E85 /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				1936FEC827D5456800E74E85 /* AppData.swift */,
+			);
+			path = Sessions;
+			sourceTree = "<group>";
+		};
 		19AD4C8F27A06D00006A3943 /* Vc */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +259,8 @@
 		3335E5D62795C742008DF917 /* Relief */ = {
 			isa = PBXGroup;
 			children = (
+				1936FEC727D5455700E74E85 /* Sessions */,
+				1936FEC227D544A300E74E85 /* DataLayer */,
 				478BF58527ADAF54009BFF78 /* Model */,
 				193D149C27A47940005C8B7A /* Fonts */,
 				19AD4C9827A06E64006A3943 /* Storyboards */,
@@ -269,6 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				478BF58627ADAF75009BFF78 /* Massagist.swift */,
+				1936FEBE27D5439500E74E85 /* User.swift */,
+				1936FEC027D5442D00E74E85 /* Response.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -408,19 +439,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1936FEC627D544FF00E74E85 /* DataMapper.swift in Sources */,
 				47D5309127A99D4300AD2459 /* MapUserVC.swift in Sources */,
 				419C33D527A3054F00B0F45C /* HomeUserCell.swift in Sources */,
 				419C33D527A3054F00B0F45C /* HomeUserCell.swift in Sources */,
 				19AD4C8E27A062DB006A3943 /* LoginViewController.swift in Sources */,
+				1936FEC127D5442D00E74E85 /* Response.swift in Sources */,
 				19F663C7279F1AA400F724D4 /* ProfileUserCell.swift in Sources */,
 				19FA8E0C27AFFC4200AB1FFC /* SearchUserVC.swift in Sources */,
 				19B94CA927B2D461009D6FBC /* EditProfileMassageVC.swift in Sources */,
 				47946A0F27AC36DA00682132 /* LocationViewModel.swift in Sources */,
 				3335E5DC2795C742008DF917 /* ViewController.swift in Sources */,
+				1936FEC427D544B900E74E85 /* Connection.swift in Sources */,
 				478BF58727ADAF75009BFF78 /* Massagist.swift in Sources */,
 				192318C127A19CBA00B1FAAB /* ModalProfileUserVC.swift in Sources */,
 				191E7AE027A1B45A000810DE /* PoliticUserVC.swift in Sources */,
 				41ED789E27AC2689004FCBF1 /* TutorialUserController.swift in Sources */,
+				1936FEBF27D5439500E74E85 /* User.swift in Sources */,
 				191E7AE227A1B469000810DE /* LegalUserVC.swift in Sources */,
 				191E7AE427A1BD82000810DE /* ProfileMassageVC.swift in Sources */,
 				3335E5D82795C742008DF917 /* AppDelegate.swift in Sources */,
@@ -430,6 +465,7 @@
 				41ED78A027AC2A5B004FCBF1 /* TutorialMassageVC.swift in Sources */,
 				47D51ED427A1F26A00301DFA /* RecoverPassViewController.swift in Sources */,
 				41523C1027B18A2D00558927 /* CreateAppointmentVC.swift in Sources */,
+				1936FEC927D5456800E74E85 /* AppData.swift in Sources */,
 				19522E6827B00C4000B26094 /* DetailMassageSearchUserVC.swift in Sources */,
 				19522E6A27B00CA600B26094 /* DetailMassageUserCell.swift in Sources */,
 				19B8D2842799D02000F1EFA9 /* HomeUserViewController.swift in Sources */,
