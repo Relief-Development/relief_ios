@@ -35,6 +35,63 @@ class RegisterViewController: UIViewController{
     }
     
     @IBAction func buttonLoginTapped(_ sender: Any){
+//        if segmentregister?.selectedSegmentIndex == 0 {
+//            puesto = "Usuario"
+//
+//        }else if segmentregister?.selectedSegmentIndex == 1 {
+//            puesto = "Masajista"
+//
+//        }else {
+//            self.Alert(title: "Selecciona el tipo de usuario que quieres crear")
+//
+//        }
+//        if(nameTF?.text == "" || passwordTF?.text == "" || repeatPasswordTF?.text == "" || userTF?.text == "" || emailTF?.text == ""){
+//            self.Alert(title: "Rellena todos los campos")
+//
+//        }else if passwordTF.text != repeatPasswordTF.text {
+//            self.Alert(title: "Las contraseñas no coinciden")
+//
+//        }else{
+//            let params: [String: Any] = [
+//                "email": emailTF?.text ?? "",
+//                "password": passwordTF?.text ?? "",
+//                "name": nameTF?.text ?? "",
+//                "user": userTF?.text ?? ""
+//
+//            ]
+//
+//            //print(params)
+//
+//            DataMapper.shared.register(params: params) { response in
+//                if(response == nil){
+//                    self.Alert(title: "Error en la conexion")
+//                }else{
+//                    DispatchQueue.main.async {
+//
+//                        self.response = response
+//
+//                        if(response?.status == 0){
+//                            self.Alert(title: (response?.msg)!)
+//
+//                        }else if response?.status == 1{
+//                            self.emailTF.text = ""
+//                            self.passwordTF.text = ""
+//                            self.repeatPasswordTF.text = ""
+//                            self.nameTF.text = ""
+//                            self.userTF.text = ""
+//                            self.segmentregister?.selectedSegmentIndex = UISegmentedControl.noSegment
+//
+//
+//                            self.Alert(title: (response?.msg)!)
+//
+//                        }else if response?.status == 401{
+//                            self.Alert(title: (response?.msg)!)
+//                        }
+//                    }
+//                }
+//            }
+//        }
+    
         if segmentregister?.selectedSegmentIndex == 0{
         if let homeuser = storyboard?.instantiateViewController(withIdentifier: "TutorialUser1"){
             homeuser.modalPresentationStyle = .fullScreen

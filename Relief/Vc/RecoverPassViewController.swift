@@ -21,6 +21,45 @@ class RecoverPassViewController: UIViewController {
         
     }
     
+//    @IBAction func buttonRecoverTapped(_ sender: Any){
+//        if(recoveryEmailTF?.text == "" ){
+//            self.Alert(title: "Rellena los campos")
+//        }else{
+//            let params: [String: Any] = [
+//                "email": recoveryEmailTF?.text ?? ""
+//            ]
+//            print(params)
+//
+//            DataMapper.shared.recoverPass(params: params, completion: { response in
+//
+//                if(response == nil){
+//                    DispatchQueue.main.async {
+//                        print("LA RESPUESTA ES")
+//                        print(response)
+//                        self.noDataView.isHidden = false
+//                        self.Alert(title: "Error en la conexion")
+//                        self.recoveryEmailTF?.text = ""
+//                    }
+//                }else{
+//                    DispatchQueue.main.async {
+//
+//                        self.response = response
+//
+//                        if(response?.status == 0){
+//                            self.Alert(title: (response?.msg)!)
+//                        }else if response?.status == 1{
+//                            self.Alert(title: (response?.msg)!)
+//                        }
+//                    }
+//
+//
+//                }
+//            })
+//
+//
+//            }
+//        }
+    
 //    @IBAction func buttonMapTapped(_ sender: Any){
 //        if let map = storyboard?.instantiateViewController(withIdentifier: "MassageProfileFromUser"){
 //            map.modalPresentationStyle = .fullScreen
