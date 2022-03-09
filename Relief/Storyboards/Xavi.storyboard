@@ -33,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logoLoginRegistro" translatesAutoresizingMaskIntoConstraints="NO" id="m59-JM-YXy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recurso 29" translatesAutoresizingMaskIntoConstraints="NO" id="m59-JM-YXy">
                                 <rect key="frame" x="107" y="104" width="200" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="W4K-Z9-jJW"/>
@@ -100,7 +100,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="img_logoLoginRegistro" width="126" height="141"/>
+        <image name="Recurso 29" width="344" height="414"/>
         <namedColor name="tabbarback">
             <color red="0.69800001382827759" green="0.95300000905990601" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

@@ -18,6 +18,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var noDataView: UIView!
     @IBOutlet var spinner: UIActivityIndicatorView?
     
+    var response: Response?
+
     private var textField: UITextField?
     private var placeholder: String?
     var eyeClick: Bool = false
@@ -51,75 +53,75 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             eyeBtn.isSelected = eyeClick
         }
     @IBAction func buttonLoginTapped(_ sender: Any){
-//        if(userTF?.text == "" || passwordTF?.text == "" ){
-//            self.Alert(title: "Los campos de usuario o de contraseña estan vacios")
-//        }else{
-//            self.chargeView.isHidden = false
-//            let params: [String: Any] = [
-//                "email": userTF?.text ?? "",
-//                "password": passwordTF?.text ?? ""
-//            ]
-//            //print(params)
-//            DataMapper.shared.login(params: params) { response in
-//                if(response == nil){
-//                    DispatchQueue.main.async {
-//                        //print("LA RESPUESTA ES")
-//                        //print(response)
-//                        self.spinner?.removeFromSuperview()
-//                        self.noDataView.isHidden = false
-//                        self.Alert(title: "Error en la conexion")
-//                        self.userTF?.text = ""
-//                        self.passwordTF.text = ""
-//
-//                    }
-//
-//                }else{
-//                    DispatchQueue.main.async {
-//
-//                        self.response = response
-//
-//                        if(response?.status == 0){
-//                            self.Alert(title: (response?.msg)!)
-//                        }else if response?.status == 1{
-//                            print(self.response?.listaempleados)
-//                            AppData.shared.puesto = self.response?.listaempleados?[0].puesto ?? ""
-//                            AppData.shared.apiToken = self.response?.msg ?? ""
-//                            let apitoken = AppData.shared.apiToken
-//                            UserDefaults.standard.set(apitoken, forKey: "token")
-//                            let puesto = AppData.shared.puesto
-//                            UserDefaults.standard.set(puesto, forKey: "puesto")
-//
-//                            if let homeuser = self.storyboard?.instantiateViewController(withIdentifier: "Home"){
-//                                homeuser.modalPresentationStyle = .fullScreen
-//                                self.present(homeuser, animated: true, completion: nil)
-//                                self.chargeView.isHidden = true
-//                            }
-//                        }else if response?.status == 401{
-//                            self.Alert(title: (response?.msg)!)
-//                        }
-//                    }
-//
-//
-//                }
-//            }
-//        }
-        
-        
-        if(userTF?.text == "Marta" && passwordTF?.text == "1234"){
-            if let homeuser = storyboard?.instantiateViewController(withIdentifier: "HomeUser"){
-                homeuser.modalPresentationStyle = .fullScreen
-                self.present(homeuser, animated: true, completion: nil)
+        if(userTF?.text == "" || passwordTF?.text == "" ){
+            self.Alert(title: "Los campos de usuario o de contraseña estan vacios")
+        }else{
+            self.chargeView.isHidden = false
+            let params: [String: Any] = [
+                "email": userTF?.text ?? "",
+                "password": passwordTF?.text ?? ""
+            ]
+            //print(params)
+            DataMapper.shared.login(params: params) { response in
+                if(response == nil){
+                    DispatchQueue.main.async {
+                        //print("LA RESPUESTA ES")
+                        //print(response)
+                        self.spinner?.removeFromSuperview()
+                        self.noDataView.isHidden = false
+                        self.Alert(title: "Error en la conexion")
+                        self.userTF?.text = ""
+                        self.passwordTF.text = ""
+
+                    }
+
+                }else{
+                    DispatchQueue.main.async {
+
+                        self.response = response
+
+                        if(response?.status == 0){
+                            self.Alert(title: (response?.msg)!)
+                        }else if response?.status == 1{
+                            //print(self.response?.listaempleados)
+                            //AppData.shared.puesto = self.response?.listaempleados?[0].puesto ?? ""
+                            AppData.shared.apiToken = self.response?.msg ?? ""
+                            let apitoken = AppData.shared.apiToken
+                            UserDefaults.standard.set(apitoken, forKey: "token")
+                            //let puesto = AppData.shared.puesto
+                            //UserDefaults.standard.set(puesto, forKey: "puesto")
+
+                            if let homeuser = self.storyboard?.instantiateViewController(withIdentifier: "Home"){
+                                homeuser.modalPresentationStyle = .fullScreen
+                                self.present(homeuser, animated: true, completion: nil)
+                                self.chargeView.isHidden = true
+                            }
+                        }else if response?.status == 401{
+                            self.Alert(title: (response?.msg)!)
+                        }
+                    }
+
+
+                }
             }
-        }else if (userTF?.text == "Esther" && passwordTF?.text == "1234"){
-            if let homemassage = storyboard?.instantiateViewController(withIdentifier: "HomeMassage"){
-                homemassage.modalPresentationStyle = .fullScreen
-                self.present(homemassage, animated: true, completion: nil)
-            }
-        }else {
-            let alertController = UIAlertController(title: nil, message: "Ese usuario no esta registrado", preferredStyle: .alert)
-            self.present(alertController, animated: true, completion: nil)
-            Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { _ in alertController.dismiss(animated: true, completion: nil) })
         }
+        
+        
+//        if(userTF?.text == "Marta" && passwordTF?.text == "1234"){
+//            if let homeuser = storyboard?.instantiateViewController(withIdentifier: "HomeUser"){
+//                homeuser.modalPresentationStyle = .fullScreen
+//                self.present(homeuser, animated: true, completion: nil)
+//            }
+//        }else if (userTF?.text == "Esther" && passwordTF?.text == "1234"){
+//            if let homemassage = storyboard?.instantiateViewController(withIdentifier: "HomeMassage"){
+//                homemassage.modalPresentationStyle = .fullScreen
+//                self.present(homemassage, animated: true, completion: nil)
+//            }
+//        }else {
+//            let alertController = UIAlertController(title: nil, message: "Ese usuario no esta registrado", preferredStyle: .alert)
+//            self.present(alertController, animated: true, completion: nil)
+//            Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { _ in alertController.dismiss(animated: true, completion: nil) })
+//        }
         
         
     }
@@ -133,7 +135,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "user_light")])
             
             }
+    func Alert(title:String){
+        let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .default, handler: {(action) in
+            self.chargeView.isHidden = true
+            self.noDataView.isHidden = true
+            
+        })
+        alertController.addAction(ok)
 
+        self.present(alertController, animated: true, completion: nil)
+    }
 
 }
  

@@ -27,6 +27,17 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate & UIN
         self.dismiss(animated: true, completion: nil)
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        if let imageP = UserDefaults.standard.object(forKey: "image") as? String{
+            let decodedData = NSData(base64Encoded: imageP, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters)
+            var decodedimage = UIImage(data: decodedData as! Data)
+            print(decodedimage)
+            imageProfile.image = decodedimage as! UIImage
+            imageProfile.layer.borderColor = UIColor(named: "user")?.cgColor
+            imageProfile.layer.borderWidth = 5
+            imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
+        }
+    }
     @IBAction func saveTapped(){
         let alertController = UIAlertController(title: nil, message: "Sus datos se han guardado", preferredStyle: .alert)
         let ok = UIAlertAction(title: "Continuar", style: .default, handler: {(action) in
@@ -77,6 +88,24 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate & UIN
         imageProfile.layer.borderColor = UIColor(named: "user")?.cgColor
         imageProfile.layer.borderWidth = 5
         imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
+        UserDefaults.standard.set(convertImageToBase64(image: image), forKey: "image")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print("ESTA ES LA IMAGEN")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(convertImageToBase64(image: image))
         
     }
+    func convertImageToBase64(image: UIImage) -> String{
+        let imageData = image.jpegData(compressionQuality: 0.6)!
+        return imageData.base64EncodedString(options: Data.Base64EncodingOptions.lineLength64Characters)
+        
+    }
+    let imageStringData = convertImageToBase64(image: )
+    
 }

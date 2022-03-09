@@ -11,6 +11,7 @@ class ProfileUserViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet var tutorialView: UIView!
     @IBOutlet var tutorialTextProfileView: UIView!
+    @IBOutlet var imageProfile: UIImageView!
     var profileTutorial = true
 
     
@@ -34,6 +35,20 @@ class ProfileUserViewController: UIViewController, UITableViewDelegate, UITableV
             tutorialView.isHidden = true
         }
         overrideUserInterfaceStyle = .light
+        
+        
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        if let imageP = UserDefaults.standard.object(forKey: "image") as? String{
+            let decodedData = NSData(base64Encoded: imageP, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters)
+            var decodedimage = UIImage(data: decodedData as! Data)
+            print(decodedimage)
+            imageProfile.image = decodedimage as! UIImage
+            imageProfile.layer.borderColor = UIColor(named: "user")?.cgColor
+            imageProfile.layer.borderWidth = 5
+            imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
