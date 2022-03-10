@@ -10,4 +10,5 @@ import Foundation
 class AppData {
     static let shared = AppData()
     var apiToken: String = ""
+    var imageProfile: String = ""
 }

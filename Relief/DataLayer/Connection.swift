@@ -11,7 +11,7 @@ import UIKit
 
 final class Connection {
     
-    let baseUrl = ""
+    let baseUrl = "http://localhost/relief-app/public/api/"
     
     
     func connection(to endpoint: String ,params: [String: Any]?, method: String ,completion: @escaping (Data?) -> Void) {
