@@ -1453,10 +1453,10 @@ Entonces esta es tu aplicación.
                                             <constraint firstAttribute="width" constant="20" id="9AB-0v-5au"/>
                                             <constraint firstAttribute="height" constant="20" id="CQJ-Es-OkF"/>
                                         </constraints>
-                                        <color key="color" name="user"/>
+                                        <color key="color" name="tabbarback"/>
                                     </activityIndicatorView>
                                 </subviews>
-                                <color key="backgroundColor" name="red"/>
+                                <color key="backgroundColor" name="user"/>
                                 <constraints>
                                     <constraint firstItem="gYd-4F-fAm" firstAttribute="centerY" secondItem="l4r-zV-XhE" secondAttribute="centerY" id="OKw-lm-sA2"/>
                                     <constraint firstItem="gYd-4F-fAm" firstAttribute="centerX" secondItem="l4r-zV-XhE" secondAttribute="centerX" id="cyR-PD-1bY"/>
@@ -2215,7 +2215,9 @@ Entonces esta es tu aplicación.
                     <tabBarItem key="tabBarItem" title="" image="person" catalog="system" selectedImage="person.fill" id="V5D-Jh-O5R"/>
                     <navigationItem key="navigationItem" id="Fm1-dv-jOq"/>
                     <connections>
+                        <outlet property="createdTV" destination="ICE-mZ-e3g" id="Qtu-97-KAY"/>
                         <outlet property="imageProfile" destination="5GS-Un-UxA" id="jZT-pN-oU0"/>
+                        <outlet property="nameL" destination="no2-Iw-Lta" id="PKX-i7-nOm"/>
                         <outlet property="tutorialTextProfileView" destination="lhZ-UA-Z3o" id="oeL-4y-jRa"/>
                         <outlet property="tutorialView" destination="W0d-OU-haR" id="Dbv-yY-SrC"/>
                     </connections>
@@ -4189,9 +4191,6 @@ Entonces esta es tu aplicación.
         </namedColor>
         <namedColor name="modalUserColor">
             <color red="0.86699998378753662" green="0.90200001001358032" blue="0.90200001001358032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="red">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tabbarback">
             <color red="0.69800001382827759" green="0.95300000905990601" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

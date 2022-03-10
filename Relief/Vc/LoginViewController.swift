@@ -85,9 +85,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                         }else if response?.status == 1{
                             //print(self.response?.listaempleados)
                             AppData.shared.imageProfile = self.response?.image ?? ""
+                            AppData.shared.name = self.response?.profile?[0].name ?? ""
+                            AppData.shared.created_at = self.response?.profile?[0].created_at ?? ""
+
                             AppData.shared.apiToken = self.response?.msg ?? ""
                             let apitoken = AppData.shared.apiToken
                             UserDefaults.standard.set(apitoken, forKey: "token")
+                            let name = AppData.shared.name
+                            UserDefaults.standard.set(name, forKey: "name")
+                            let created = AppData.shared.created_at
+                            UserDefaults.standard.set(created, forKey: "created")
                             let image = AppData.shared.imageProfile
                             UserDefaults.standard.set(image, forKey: "image")
 

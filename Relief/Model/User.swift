@@ -13,5 +13,6 @@ struct User: Codable {
     var password: String?
     var image: String?
     var role: String?
-    
+    var created_at: String?
+
 }

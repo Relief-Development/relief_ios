@@ -11,4 +11,6 @@ class AppData {
     static let shared = AppData()
     var apiToken: String = ""
     var imageProfile: String = ""
+    var name: String = ""
+    var created_at: String = ""
 }

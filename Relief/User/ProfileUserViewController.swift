@@ -11,6 +11,10 @@ class ProfileUserViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet var tutorialView: UIView!
     @IBOutlet var tutorialTextProfileView: UIView!
+    @IBOutlet var nameL: UILabel!
+    @IBOutlet var createdTV: UITextView!
+
+    
     @IBOutlet var imageProfile: UIImageView!
     var profileTutorial = true
 
@@ -40,6 +44,12 @@ class ProfileUserViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        if let nameP = UserDefaults.standard.object(forKey: "name") as? String{
+            nameL.text = nameP
+        }
+        if let createdP = UserDefaults.standard.object(forKey: "created") as? String{
+            createdTV.text = createdP
+        }
         if let imageP = UserDefaults.standard.object(forKey: "image") as? String{
             let decodedData = NSData(base64Encoded: imageP, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters)
             var decodedimage = UIImage(data: decodedData as! Data)
