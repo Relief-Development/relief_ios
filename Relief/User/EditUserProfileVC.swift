@@ -89,17 +89,21 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate & UIN
         imageProfile.layer.borderWidth = 5
         imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
         UserDefaults.standard.set(convertImageToBase64(image: image), forKey: "image")
-        print(" ")
-        print(" ")
-        print(" ")
-        print(" ")
-        print(" ")
-        print("ESTA ES LA IMAGEN")
-        print(" ")
-        print(" ")
-        print(" ")
-        print(convertImageToBase64(image: image))
+//        print(" ")
+//        print(" ")
+//        print(" ")
+//        print(" ")
+//        print(" ")
+//        print("ESTA ES LA IMAGEN")
+//        print(" ")
+//        print(" ")
+//        print(" ")
         
+        
+        let params: [String: Any] = [
+            "image" : convertImageToBase64(image: image)
+        ]
+//        print(params)
     }
     func convertImageToBase64(image: UIImage) -> String{
         let imageData = image.jpegData(compressionQuality: 0.6)!

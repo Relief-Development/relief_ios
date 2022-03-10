@@ -12,5 +12,7 @@ struct Response: Codable {
     var msg: String?
     var profile: [User]?
     var token: String?
+    var image: String?
+
     
 }

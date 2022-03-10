@@ -96,7 +96,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                                 self.present(homeuser, animated: true, completion: nil)
                                 self.chargeView.isHidden = true
                             }
-                        }else if response?.status == 401{
+                        }else if response?.status == 2{
                             self.Alert(title: (response?.msg)!)
                         }
                     }
