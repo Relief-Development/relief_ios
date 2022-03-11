@@ -86,6 +86,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                             //print(self.response?.listaempleados)
                             AppData.shared.imageProfile = self.response?.image ?? ""
                             AppData.shared.name = self.response?.profile?[0].name ?? ""
+                            AppData.shared.email = self.response?.profile?[0].email ?? ""
+
                             AppData.shared.created_at = self.response?.profile?[0].created_at ?? ""
 
                             AppData.shared.apiToken = self.response?.msg ?? ""
@@ -93,11 +95,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                             UserDefaults.standard.set(apitoken, forKey: "token")
                             let name = AppData.shared.name
                             UserDefaults.standard.set(name, forKey: "name")
+                            let email = AppData.shared.email
+                            UserDefaults.standard.set(email, forKey: "email")
+                            print("ESTE ES EL EMAIL")
+                            print(email)
+                            let address = AppData.shared.address
+                            UserDefaults.standard.set(address, forKey: "address")
                             let created = AppData.shared.created_at
                             UserDefaults.standard.set(created, forKey: "created")
                             let image = AppData.shared.imageProfile
                             UserDefaults.standard.set(image, forKey: "image")
-
+                            print(response)
                             //let puesto = AppData.shared.puesto
                             //UserDefaults.standard.set(puesto, forKey: "puesto")
 

@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import CoreLocation
 
-class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate{
+class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate, ModalUbicationMassageVCDelegate{
+    
+    
     
     @IBOutlet var imageProfile: UIImageView!
+    @IBOutlet var addressTf: UITextField!
+
     let picker = UIImagePickerController()
-    
+     
     
     
     override func viewDidLoad() {
@@ -21,6 +26,13 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
         imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
         overrideUserInterfaceStyle = .light
        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EditToUbicationSegue" {
+            let ubicationVC = segue.destination as! ModalUbicationMassageVC
+            ubicationVC.delegate = self
+        }
     }
     @IBAction func buttonToProfileTapped(){
         self.dismiss(animated: true, completion: nil)
@@ -77,5 +89,29 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
         imageProfile.layer.borderWidth = 5
         imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
         
+    }
+    
+    // MARK: - ModalUbicationVC delegate
+    func modalUbicationVC(_ modalUbicationVC: ModalUbicationMassageVC, didFinishWithAddress address: String) {
+        
+        addressTf.text = address
+
+        let geoCoder = CLGeocoder()
+        geoCoder.geocodeAddressString(address) { (placemarks, error) in
+            guard
+                let placemarks = placemarks,
+                let location = placemarks.first?.location
+            else {
+                // handle no location found
+                return
+            }
+            let params: [String: Any] = [
+                "lat" : location.coordinate.latitude,
+                "long" : location.coordinate.longitude
+                
+            ]
+            print(params)
+        }
+        modalUbicationVC.dismiss(animated: true, completion: nil)
     }
 }

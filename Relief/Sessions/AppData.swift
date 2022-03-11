@@ -13,4 +13,7 @@ class AppData {
     var imageProfile: String = ""
     var name: String = ""
     var created_at: String = ""
+    var email: String = ""
+    var address: String = ""
+    
 }

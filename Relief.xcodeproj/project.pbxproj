@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1915E99427DA83D60019FEEE /* ModalUbicationMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1915E99327DA83D60019FEEE /* ModalUbicationMassageVC.swift */; };
 		191E7AE027A1B45A000810DE /* PoliticUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7ADF27A1B45A000810DE /* PoliticUserVC.swift */; };
 		191E7AE227A1B469000810DE /* LegalUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE127A1B469000810DE /* LegalUserVC.swift */; };
 		191E7AE427A1BD82000810DE /* ProfileMassageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E7AE327A1BD82000810DE /* ProfileMassageVC.swift */; };
@@ -75,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1915E99327DA83D60019FEEE /* ModalUbicationMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalUbicationMassageVC.swift; sourceTree = "<group>"; };
 		191E7ADF27A1B45A000810DE /* PoliticUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticUserVC.swift; sourceTree = "<group>"; };
 		191E7AE127A1B469000810DE /* LegalUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalUserVC.swift; sourceTree = "<group>"; };
 		191E7AE327A1BD82000810DE /* ProfileMassageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMassageVC.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				191E7AE927A1BE5C000810DE /* PoliticMassageVC.swift */,
 				191E7AEB27A1BE6E000810DE /* LegalMassageVC.swift */,
 				419C33D227A2EE2300B0F45C /* ModalProfileMassageVC.swift */,
+				1915E99327DA83D60019FEEE /* ModalUbicationMassageVC.swift */,
 				41ED789F27AC2A5B004FCBF1 /* TutorialMassageVC.swift */,
 				41523C0F27B18A2D00558927 /* CreateAppointmentVC.swift */,
 				19B94CA827B2D461009D6FBC /* EditProfileMassageVC.swift */,
@@ -460,6 +463,7 @@
 				191E7AE427A1BD82000810DE /* ProfileMassageVC.swift in Sources */,
 				3335E5D82795C742008DF917 /* AppDelegate.swift in Sources */,
 				191E7AEC27A1BE6E000810DE /* LegalMassageVC.swift in Sources */,
+				1915E99427DA83D60019FEEE /* ModalUbicationMassageVC.swift in Sources */,
 				19AD4C8C27A05A57006A3943 /* RegisterViewController.swift in Sources */,
 				19F663C5279F199200F724D4 /* ProfileUserViewController.swift in Sources */,
 				41ED78A027AC2A5B004FCBF1 /* TutorialMassageVC.swift in Sources */,

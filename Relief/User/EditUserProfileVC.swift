@@ -11,6 +11,13 @@ import AVFoundation
 class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate{
     
     @IBOutlet var imageProfile: UIImageView!
+    @IBOutlet var nameTf: UITextField!
+    @IBOutlet var emailTf: UITextField!
+    @IBOutlet var passwordTf: UITextField!
+    @IBOutlet var rpasswordTf: UITextField!
+    @IBOutlet var addressTf: UITextField!
+
+
     let picker = UIImagePickerController()
     
     
@@ -37,6 +44,16 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate & UIN
             imageProfile.layer.borderWidth = 5
             imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
         }
+        if let nameP = UserDefaults.standard.object(forKey: "name") as? String{
+            print(nameP)
+            nameTf!.text = nameP
+        }
+        if let emailP = UserDefaults.standard.object(forKey: "email") as? String{
+            print(emailP)
+            emailTf!.text = emailP
+        }
+        
+
     }
     @IBAction func saveTapped(){
         let alertController = UIAlertController(title: nil, message: "Sus datos se han guardado", preferredStyle: .alert)

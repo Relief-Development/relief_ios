@@ -14,5 +14,10 @@ struct User: Codable {
     var image: String?
     var role: String?
     var created_at: String?
+    var address: String?
+    var lat: Float?
+    var long: Float?
+
+    
 
 }
