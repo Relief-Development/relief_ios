@@ -48,6 +48,8 @@ class ModalProfileMassageVC : ViewController{
             login.modalPresentationStyle = .fullScreen
             self.present(login, animated: true, completion: nil)
         }
+        let role = ""
+        UserDefaults.standard.set(role, forKey: "role")
         
     }
     

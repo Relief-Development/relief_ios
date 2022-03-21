@@ -8,6 +8,11 @@
 import UIKit
 
 class DetailMassageSearchUserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var massage:Massage?
+    @IBOutlet var descriptionTv: UITextView!
+    @IBOutlet var imageProfile: UIImageView!
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -32,8 +37,28 @@ class DetailMassageSearchUserVC: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         self.navigationItem.title = "Masajes relajantes"
         overrideUserInterfaceStyle = .light
+        if let name = self.massage?.name{
+            self.navigationItem.title = name
+        }
+        if let description = massage?.description{
+            self.descriptionTv!.text = description
+        }
+        if let imageP = self.massage?.image{
+            if imageP != ""{
+                let decodedData = NSData(base64Encoded: imageP, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters)
+                var decodedimage = UIImage(data: decodedData as! Data)
+                //print(decodedimage)
+                imageProfile.image = decodedimage as! UIImage
+                imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
+
+               
+            }else{
+                imageProfile.image = UIImage(systemName: "person.circle.fill")
+                imageProfile.tintColor = UIColor(named: "gray")
+
+            }
     }
-    
+    }
 
 }
 

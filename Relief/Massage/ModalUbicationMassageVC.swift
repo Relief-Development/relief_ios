@@ -20,6 +20,7 @@ class ModalUbicationMassageVC : ViewController{
     @IBOutlet var streetTf: UITextField!
     @IBOutlet var numberTf: UITextField!
     @IBOutlet var cityTf: UITextField!
+    @IBOutlet var floorTf: UITextField!
     @IBOutlet var postalCodeTf: UITextField!
 
     
@@ -52,9 +53,16 @@ class ModalUbicationMassageVC : ViewController{
             self.showAlert(title: "Rellena el campo numero")
             return
         }
+        guard let floor = floorTf.text, !floor.isEmpty else {
+            self.showAlert(title: "Rellena el campo piso")
+            return
+        }
         
         
-        let address = "\(street),\(number), \(city), \(postalCode)"
+        let address = "\(street), \(number), \(city), \(postalCode)"
+        let addressU =  "\(street), \(number), \(floor), \(city), \(postalCode)"
+        UserDefaults.standard.set(addressU, forKey: "address")
+        
         delegate?.modalUbicationVC(self, didFinishWithAddress: address)
     }
     

@@ -34,12 +34,32 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         userTF?.delegate = self
         passwordTF?.delegate = self
         self.registerBtn?.layer.borderColor = UIColor(named: "tabbarback")?.cgColor
-        self.userTF?.attributedPlaceholder = getAttributeString("Usuario")
+        self.userTF?.attributedPlaceholder = getAttributeString("Email")
         self.passwordTF?.attributedPlaceholder = getAttributeString("Contraseña")
         overrideUserInterfaceStyle = .light
         passwordTF.isSecureTextEntry = true
+        
+        
        
     }
+//    override func viewWillAppear(_ animated: Bool) {
+//        if let roll = UserDefaults.standard.object(forKey: "role") as? String{
+//            AppData.shared.role = roll
+//            print("Este es el role")
+//            print(roll)
+//        }
+//        if AppData.shared.role == "Usuario"{
+//            if let homeuser = self.storyboard?.instantiateViewController(withIdentifier: "HomeUser"){
+//                homeuser.modalPresentationStyle = .fullScreen
+//                self.present(homeuser, animated: true, completion: nil)
+//            }
+//        }else if AppData.shared.role == "Masajista"{
+//            if let homemassage = self.storyboard?.instantiateViewController(withIdentifier: "homeMassage2"){
+//                        homemassage.modalPresentationStyle = .fullScreen
+//                            self.present(homemassage, animated: true, completion: nil)
+//                    }
+//        }
+//    }
     @IBAction func buttonRegisterTapped(_ sender: Any){
         if let register = storyboard?.instantiateViewController(withIdentifier: "Register"){
             register.modalPresentationStyle = .fullScreen
@@ -54,11 +74,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         }
     @IBAction func buttonLoginTapped(_ sender: Any){
         if(userTF?.text == "" || passwordTF?.text == "" ){
-            self.Alert(title: "Los campos de usuario o de contraseña estan vacios")
+            self.showAlert(title: "Los campos de usuario o de contraseña estan vacios")
         }else{
             self.chargeView.isHidden = false
             let params: [String: Any] = [
-                "username": userTF?.text ?? "",
+                "email": userTF?.text ?? "",
                 "password": passwordTF?.text ?? ""
             ]
             print(params)
@@ -67,9 +87,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                     DispatchQueue.main.async {
                         print("LA RESPUESTA ES")
                         print(response)
-                        self.spinner?.removeFromSuperview()
+                        self.chargeView.isHidden = true
                         self.noDataView.isHidden = false
-                        self.Alert(title: "Error en la conexion")
+                        self.showAlert(title: "Error en la conexion")
                         self.userTF?.text = ""
                         self.passwordTF.text = ""
 
@@ -77,45 +97,84 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
 
                 }else{
                     DispatchQueue.main.async {
-
                         self.response = response
-
                         if(response?.status == 0){
-                            self.Alert(title: (response?.msg)!)
+                            self.showAlert(title: (response?.msg)!)
                         }else if response?.status == 1{
-                            //print(self.response?.listaempleados)
-                            AppData.shared.imageProfile = self.response?.image ?? ""
+                            AppData.shared.imageProfile = self.response?.profile?[0].image ?? ""
                             AppData.shared.name = self.response?.profile?[0].name ?? ""
                             AppData.shared.email = self.response?.profile?[0].email ?? ""
-
                             AppData.shared.created_at = self.response?.profile?[0].created_at ?? ""
+                            AppData.shared.apiToken = self.response?.token ?? ""
+                            AppData.shared.lat =  self.response?.profile?[0].lat ?? 0.0
+                            AppData.shared.long =  self.response?.profile?[0].long ?? 0.0
+                            AppData.shared.address = self.response?.profile?[0].address ?? ""
+                            AppData.shared.description = self.response?.profile?[0].description ?? ""
+                            AppData.shared.role = self.response?.profile?[0].role ?? ""
 
-                            AppData.shared.apiToken = self.response?.msg ?? ""
                             let apitoken = AppData.shared.apiToken
                             UserDefaults.standard.set(apitoken, forKey: "token")
+                            
                             let name = AppData.shared.name
                             UserDefaults.standard.set(name, forKey: "name")
+                            
+                            let role = AppData.shared.role
+                            UserDefaults.standard.set(role, forKey: "role")
+                            
                             let email = AppData.shared.email
                             UserDefaults.standard.set(email, forKey: "email")
-                            print("ESTE ES EL EMAIL")
-                            print(email)
+                            
                             let address = AppData.shared.address
                             UserDefaults.standard.set(address, forKey: "address")
+                            
+                            let description = AppData.shared.description
+                            UserDefaults.standard.set(description, forKey: "description")
+                            
                             let created = AppData.shared.created_at
                             UserDefaults.standard.set(created, forKey: "created")
+                            
                             let image = AppData.shared.imageProfile
                             UserDefaults.standard.set(image, forKey: "image")
-                            print(response)
-                            //let puesto = AppData.shared.puesto
-                            //UserDefaults.standard.set(puesto, forKey: "puesto")
+                            
+                            let lat = AppData.shared.lat
+                            UserDefaults.standard.set(image, forKey: "lat")
+                            
+                            let long = AppData.shared.long
+                            UserDefaults.standard.set(image, forKey: "long")
+                            print("")
+                            print("")
+                            print("")
+                            print("")
+                            print("")
+                            print("")
+                            print("")
+                            print("")
+                            print("")
+                            print("")
+                            print("ROLE")
+                            print(UserDefaults.standard.object(forKey: "role") as! String)
 
-                            if let homeuser = self.storyboard?.instantiateViewController(withIdentifier: "HomeUser"){
-                                homeuser.modalPresentationStyle = .fullScreen
-                                self.present(homeuser, animated: true, completion: nil)
-                                self.chargeView.isHidden = true
+                            print(image)
+
+                            self.chargeView.isHidden = true
+                            if response?.profile?[0].role == "Masajista"{
+                                if let homemassage = self.storyboard?.instantiateViewController(withIdentifier: "HomeMassage"){
+                                            homemassage.modalPresentationStyle = .fullScreen
+                                                self.present(homemassage, animated: true, completion: nil)
+                                        }
+                            }else if response?.profile?[0].role == "Usuario"{
+                                if let homeuser = self.storyboard?.instantiateViewController(withIdentifier: "HomeUser"){
+                                    homeuser.modalPresentationStyle = .fullScreen
+                                    self.present(homeuser, animated: true, completion: nil)
+                                }
                             }
+                        
                         }else if response?.status == 2{
-                            self.Alert(title: (response?.msg)!)
+                            self.chargeView.isHidden = true
+                            self.showAlert(title: (response?.msg)!)
+                        }else if response?.status == 3{
+                            self.chargeView.isHidden = true
+                            self.showAlert(title: (response?.msg)!)
                         }
                     }
 
@@ -125,17 +184,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         }
         
         
-//        if(userTF?.text == "Marta" && passwordTF?.text == "1234"){
-//            if let homeuser = storyboard?.instantiateViewController(withIdentifier: "HomeUser"){
-//                homeuser.modalPresentationStyle = .fullScreen
-//                self.present(homeuser, animated: true, completion: nil)
-//            }
-//        }else if (userTF?.text == "Esther" && passwordTF?.text == "1234"){
-//            if let homemassage = storyboard?.instantiateViewController(withIdentifier: "HomeMassage"){
-//                homemassage.modalPresentationStyle = .fullScreen
-//                self.present(homemassage, animated: true, completion: nil)
-//            }
-//        }else {
+//else {
 //            let alertController = UIAlertController(title: nil, message: "Ese usuario no esta registrado", preferredStyle: .alert)
 //            self.present(alertController, animated: true, completion: nil)
 //            Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { _ in alertController.dismiss(animated: true, completion: nil) })
@@ -153,11 +202,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "user_light")])
             
             }
-    func Alert(title:String){
+    func showAlert(title:String){
         let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
         let ok = UIAlertAction(title: "Ok", style: .default, handler: {(action) in
             self.chargeView.isHidden = true
             self.noDataView.isHidden = true
+            self.userTF?.text = ""
+            self.passwordTF.text = ""
             
         })
         alertController.addAction(ok)

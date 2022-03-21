@@ -12,10 +12,13 @@ final class DataMapper{
     private init() {}
     
     var login = "login"
-    var lista = "lista"
-    var recuperarPass = "recoverPassword"
+    var lista = "users/detailMassage"
+    var recuperarPass = "users/recoverPassword"
     var profile = "profile"
-    var register = "registerUser"
+    var register = "users/registerUser"
+    var editProfile = "users/editProfile"
+    var getTherapistInMap = "users/getTherapistInMap"
+    
 
     func login(params: [String: Any]?, completion: @escaping (Response?) -> Void) {
         Connection().connection(to: login, params: params, method: "POST") { data in
@@ -100,6 +103,41 @@ final class DataMapper{
                         let response = try decoder.decode(Response.self, from: data)
                             completion(response)
                     } catch {
+                        completion(nil)
+                    }
+            }
+    
+    }
+    func editProfile(params: [String: Any]?, completion: @escaping (Response?) -> Void) {
+            Connection().connection(to: editProfile, params: params, method: "POST") { data in
+                    guard let data = data else {
+                        completion(nil)
+                        return
+                    }
+                    
+                    do {
+                        let decoder = JSONDecoder()
+                        let response = try decoder.decode(Response.self, from: data)
+                            completion(response)
+                    } catch {
+                        completion(nil)
+                    }
+            }
+    
+    }
+    func getTherapistInMap(params: [String: Any]?, completion: @escaping (Response?) -> Void) {
+            Connection().connection(to: getTherapistInMap, params: params, method: "POST") { data in
+                    guard let data = data else {
+                        completion(nil)
+                        return
+                    }
+                    
+                    do {
+                        let decoder = JSONDecoder()
+                        let response = try decoder.decode(Response.self, from: data)
+                            completion(response)
+                    } catch let e {
+                        print(e.localizedDescription)
                         completion(nil)
                     }
             }

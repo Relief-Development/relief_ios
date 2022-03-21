@@ -13,6 +13,7 @@ struct Response: Codable {
     var profile: [User]?
     var token: String?
     var image: String?
+    var massages: [Massage]?
 
     
 }
