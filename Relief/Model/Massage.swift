@@ -11,4 +11,5 @@ struct Massage: Codable {
     var name: String?
     var description: String?
     var image: String?
+    var id: Int?
 }

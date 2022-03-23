@@ -35,9 +35,10 @@ struct User: Codable {
     var role: String?
     var created_at: String?
     var address: String?
-    //var phone_number: String?
+    var phone_number: String?
     var lat: Double?
     var long: Double?
+    var media: String?
 
     
 

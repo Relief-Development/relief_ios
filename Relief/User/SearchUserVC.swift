@@ -44,8 +44,6 @@ class SearchUserVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             ]
             print(params)
         DataMapper.shared.list(params: params) { response in
-                print("recibe datos de lista")
-                print(response)
                 if(response == nil){
                     DispatchQueue.main.async {
                         //print("LA RESPUESTA ES")

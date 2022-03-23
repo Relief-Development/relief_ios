@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Myz-pi-tiv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Myz-pi-tiv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -983,6 +983,7 @@ Entonces esta es tu aplicación.
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="background_list"/>
                                         <connections>
+                                            <outlet property="imageProfile" destination="Jsm-6i-0yC" id="5AU-lq-Lzx"/>
                                             <outlet property="nameLabel" destination="9hL-gj-J5s" id="JGS-6H-X37"/>
                                         </connections>
                                     </tableViewCell>
@@ -992,20 +993,72 @@ Entonces esta es tu aplicación.
                                     <outlet property="delegate" destination="2mG-GN-Zm8" id="Qtl-MF-uTl"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkk-Ed-zjd">
+                                <rect key="frame" x="0.0" y="256" width="414" height="594"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="vy9-uq-LIq">
+                                        <rect key="frame" x="188.5" y="278.5" width="37" height="37"/>
+                                        <color key="color" name="red"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="vy9-uq-LIq" firstAttribute="centerY" secondItem="kkk-Ed-zjd" secondAttribute="centerY" id="dDZ-FM-BGy"/>
+                                    <constraint firstItem="vy9-uq-LIq" firstAttribute="centerX" secondItem="kkk-Ed-zjd" secondAttribute="centerX" id="hfq-rH-dqs"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJo-jT-eON">
+                                <rect key="frame" x="0.0" y="256" width="414" height="594"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Npj-do-H5D">
+                                        <rect key="frame" x="7" y="217" width="400" height="160"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cable.connector.horizontal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wSf-LB-eDS">
+                                                <rect key="frame" x="0.0" y="6" width="400" height="68"/>
+                                                <color key="tintColor" name="red"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="jjI-YC-8fO"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error en la conexion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvv-h5-fUg">
+                                                <rect key="frame" x="0.0" y="80" width="400" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="400" id="1c9-xa-Z1Y"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                <color key="textColor" name="red"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Npj-do-H5D" firstAttribute="centerY" secondItem="jJo-jT-eON" secondAttribute="centerY" id="896-iB-k8r"/>
+                                    <constraint firstItem="Npj-do-H5D" firstAttribute="centerX" secondItem="jJo-jT-eON" secondAttribute="centerX" id="OQL-Cf-570"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="kkk-Ed-zjd" firstAttribute="trailing" secondItem="jJo-jT-eON" secondAttribute="trailing" id="1Tb-Jd-B8F"/>
+                            <constraint firstItem="kkk-Ed-zjd" firstAttribute="leading" secondItem="P9E-g3-mc6" secondAttribute="leadingMargin" constant="-20" id="3ls-aM-9lS"/>
                             <constraint firstItem="vK7-jr-4Rr" firstAttribute="centerX" secondItem="P9E-g3-mc6" secondAttribute="centerX" id="CXg-Th-TZ3"/>
+                            <constraint firstItem="kkk-Ed-zjd" firstAttribute="bottom" secondItem="jJo-jT-eON" secondAttribute="bottom" id="E0d-r7-AB2"/>
+                            <constraint firstItem="Ugd-pI-GLV" firstAttribute="top" secondItem="kkk-Ed-zjd" secondAttribute="bottom" constant="12" id="GGW-Wf-4p9"/>
+                            <constraint firstItem="kkk-Ed-zjd" firstAttribute="leading" secondItem="jJo-jT-eON" secondAttribute="leading" id="Hzd-J2-7nq"/>
                             <constraint firstItem="vK7-jr-4Rr" firstAttribute="top" secondItem="P0T-o1-VbI" secondAttribute="bottom" constant="10" id="Ibs-6v-OAz"/>
                             <constraint firstItem="kbk-m3-HVM" firstAttribute="top" secondItem="JDL-Rv-ivO" secondAttribute="bottom" constant="10" id="JpS-Yk-wy5"/>
                             <constraint firstItem="P0T-o1-VbI" firstAttribute="leading" secondItem="qyp-F4-nrP" secondAttribute="leading" id="KAK-La-lji"/>
+                            <constraint firstItem="kkk-Ed-zjd" firstAttribute="top" secondItem="jJo-jT-eON" secondAttribute="top" id="VfG-Wg-bAN"/>
                             <constraint firstItem="qyp-F4-nrP" firstAttribute="leading" secondItem="P9E-g3-mc6" secondAttribute="leading" constant="20" id="Zpw-PT-883"/>
                             <constraint firstItem="qyp-F4-nrP" firstAttribute="top" secondItem="kbk-m3-HVM" secondAttribute="bottom" constant="20" id="aq7-PG-eEy"/>
+                            <constraint firstItem="kkk-Ed-zjd" firstAttribute="top" secondItem="P0T-o1-VbI" secondAttribute="bottom" constant="10" id="b8K-Jd-bcP"/>
                             <constraint firstAttribute="trailing" secondItem="P0T-o1-VbI" secondAttribute="trailing" constant="24" id="c3Z-hU-MnY"/>
                             <constraint firstItem="vK7-jr-4Rr" firstAttribute="leading" secondItem="P9E-g3-mc6" secondAttribute="leading" constant="20" id="hAn-82-qvL"/>
                             <constraint firstAttribute="trailing" secondItem="vK7-jr-4Rr" secondAttribute="trailing" constant="20" id="hG6-sI-Pl0"/>
                             <constraint firstItem="P0T-o1-VbI" firstAttribute="top" secondItem="qyp-F4-nrP" secondAttribute="bottom" id="jSW-pE-t4U"/>
                             <constraint firstItem="Ugd-pI-GLV" firstAttribute="top" secondItem="vK7-jr-4Rr" secondAttribute="bottom" id="jjI-1U-6DH"/>
+                            <constraint firstItem="kkk-Ed-zjd" firstAttribute="centerX" secondItem="vK7-jr-4Rr" secondAttribute="centerX" id="mZE-l9-gBS"/>
                             <constraint firstItem="kbk-m3-HVM" firstAttribute="centerX" secondItem="P9E-g3-mc6" secondAttribute="centerX" id="qSp-h4-1Jg"/>
                             <constraint firstAttribute="trailing" secondItem="qyp-F4-nrP" secondAttribute="trailing" constant="20" id="rvt-D2-fEd"/>
                             <constraint firstItem="qyp-F4-nrP" firstAttribute="centerX" secondItem="P9E-g3-mc6" secondAttribute="centerX" id="usv-h5-f5U"/>
@@ -1014,6 +1067,9 @@ Entonces esta es tu aplicación.
                     <connections>
                         <outlet property="descriptionTv" destination="HiR-6x-xfs" id="iLp-40-jXa"/>
                         <outlet property="imageProfile" destination="ojV-Qr-vD0" id="Hkd-ap-ADQ"/>
+                        <outlet property="noDataView" destination="jJo-jT-eON" id="x1w-x2-AdW"/>
+                        <outlet property="spinnerView" destination="kkk-Ed-zjd" id="mUP-9O-DX7"/>
+                        <outlet property="tableView" destination="vK7-jr-4Rr" id="8ex-Lf-kg3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tnn-c8-gKi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4165,7 +4221,7 @@ Entonces esta es tu aplicación.
                                     <constraint firstAttribute="height" constant="150" id="zLY-HG-gow"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Masajista a domicilio con 15 años de experiencia, te invito a concocer mis servicios, escribeme!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deE-xd-stu">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Masajista a domicilio con 15 años de experiencia, te invito a concocer mis servicios, escribeme!" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deE-xd-stu">
                                 <rect key="frame" x="196" y="175" width="198" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -4176,7 +4232,7 @@ Entonces esta es tu aplicación.
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Yz-tJ-Fd7">
-                                <rect key="frame" x="196" y="293" width="198" height="34.5"/>
+                                <rect key="frame" x="196" y="293" width="150" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Localización">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
@@ -4184,6 +4240,14 @@ Entonces esta es tu aplicación.
                                     <color key="baseBackgroundColor" name="user"/>
                                 </buttonConfiguration>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fPa-6E-c60">
+                                <rect key="frame" x="359" y="294.5" width="35" height="32.5"/>
+                                <color key="tintColor" name="user"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="JAH-fC-uOH"/>
+                                    <constraint firstAttribute="height" constant="35" id="bja-Yg-LGo"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SR6-VL-bD1">
                                 <rect key="frame" x="20" y="445.5" width="370" height="2"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
@@ -4302,13 +4366,23 @@ Entonces esta es tu aplicación.
                                     <action selector="buttonToProfileTapped" destination="G87-Ot-Szn" eventType="touchUpInside" id="kZc-24-HM4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iB-CY-Lrt">
+                                <rect key="frame" x="359" y="293" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="D4u-h7-AaV"/>
+                                    <constraint firstAttribute="width" constant="35" id="dEc-nk-MyX"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="callTherapist" destination="Xq9-vb-TJI" eventType="touchUpInside" id="m0d-FM-5jL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JAK-Aj-sJ9" firstAttribute="leading" secondItem="QYw-gx-W3d" secondAttribute="leading" constant="20" id="19x-mC-ke3"/>
                             <constraint firstItem="aPW-k0-bCe" firstAttribute="leading" secondItem="QYw-gx-W3d" secondAttribute="leading" constant="20" id="1pW-4j-bmo"/>
                             <constraint firstItem="VhV-cD-Jzm" firstAttribute="leading" secondItem="QYw-gx-W3d" secondAttribute="leading" constant="20" id="3ZH-cP-lum"/>
-                            <constraint firstItem="0Yz-tJ-Fd7" firstAttribute="width" secondItem="deE-xd-stu" secondAttribute="width" id="5VW-6Y-DA3"/>
                             <constraint firstItem="hDe-On-c8d" firstAttribute="top" secondItem="X9N-Bc-yKN" secondAttribute="bottom" constant="20" id="8e9-zL-hTh"/>
                             <constraint firstItem="X9N-Bc-yKN" firstAttribute="centerX" secondItem="QYw-gx-W3d" secondAttribute="centerX" id="9Hn-dx-q1D"/>
                             <constraint firstAttribute="trailing" secondItem="tmW-QI-jD0" secondAttribute="trailing" constant="167" id="9mS-7Z-7ra"/>
@@ -4320,14 +4394,18 @@ Entonces esta es tu aplicación.
                             <constraint firstItem="JAK-Aj-sJ9" firstAttribute="top" secondItem="YXp-TR-2MP" secondAttribute="bottom" constant="20" id="Igv-2S-EZk"/>
                             <constraint firstItem="SR6-VL-bD1" firstAttribute="leading" secondItem="QYw-gx-W3d" secondAttribute="leading" constant="20" id="Jwo-2P-dbY"/>
                             <constraint firstAttribute="trailing" secondItem="JAK-Aj-sJ9" secondAttribute="trailing" constant="20" id="Kir-hC-h5f"/>
+                            <constraint firstItem="7iB-CY-Lrt" firstAttribute="leading" secondItem="0Yz-tJ-Fd7" secondAttribute="trailing" constant="13" id="N1n-je-Kjr"/>
                             <constraint firstAttribute="trailing" secondItem="deE-xd-stu" secondAttribute="trailing" constant="20" id="Nju-B3-QJX"/>
+                            <constraint firstItem="7iB-CY-Lrt" firstAttribute="centerY" secondItem="fPa-6E-c60" secondAttribute="centerY" id="PHD-sL-nLE"/>
+                            <constraint firstItem="fPa-6E-c60" firstAttribute="trailing" secondItem="deE-xd-stu" secondAttribute="trailing" id="PNe-3W-cgY"/>
                             <constraint firstItem="0Yz-tJ-Fd7" firstAttribute="top" secondItem="deE-xd-stu" secondAttribute="bottom" constant="18" id="PkN-ch-sak"/>
                             <constraint firstItem="X9N-Bc-yKN" firstAttribute="top" secondItem="0Yz-tJ-Fd7" secondAttribute="bottom" constant="40" id="XlE-sN-8vb"/>
-                            <constraint firstItem="0Yz-tJ-Fd7" firstAttribute="trailing" secondItem="deE-xd-stu" secondAttribute="trailing" id="YOi-ik-8gs"/>
+                            <constraint firstItem="7iB-CY-Lrt" firstAttribute="centerX" secondItem="fPa-6E-c60" secondAttribute="centerX" id="aoy-a9-Tdi"/>
                             <constraint firstItem="0Yz-tJ-Fd7" firstAttribute="leading" secondItem="deE-xd-stu" secondAttribute="leading" id="hNe-CL-nXv"/>
                             <constraint firstItem="tmW-QI-jD0" firstAttribute="leading" secondItem="QYw-gx-W3d" secondAttribute="leading" constant="167" id="hjh-zZ-1jz"/>
                             <constraint firstItem="YXp-TR-2MP" firstAttribute="centerX" secondItem="QYw-gx-W3d" secondAttribute="centerX" id="jCG-wg-a9W"/>
                             <constraint firstItem="dDE-Xn-FGs" firstAttribute="leading" secondItem="QYw-gx-W3d" secondAttribute="leading" constant="20" id="lOA-Bf-QFh"/>
+                            <constraint firstItem="fPa-6E-c60" firstAttribute="centerY" secondItem="0Yz-tJ-Fd7" secondAttribute="centerY" id="mB3-ZX-pf9"/>
                             <constraint firstAttribute="trailing" secondItem="SR6-VL-bD1" secondAttribute="trailing" constant="24" id="oE4-4V-eqa"/>
                             <constraint firstItem="VhV-cD-Jzm" firstAttribute="top" secondItem="aPW-k0-bCe" secondAttribute="bottom" constant="15" id="ohZ-1p-7bm"/>
                             <constraint firstItem="aPW-k0-bCe" firstAttribute="top" secondItem="tmW-QI-jD0" secondAttribute="bottom" constant="20" id="qMw-Ke-dHw"/>
@@ -4340,6 +4418,9 @@ Entonces esta es tu aplicación.
                     <tabBarItem key="tabBarItem" title="" image="person" catalog="system" selectedImage="person.fill" id="b4u-KV-hgU"/>
                     <navigationItem key="navigationItem" id="Csp-7J-W9E"/>
                     <connections>
+                        <outlet property="descriptionTv" destination="deE-xd-stu" id="omQ-pG-aqI"/>
+                        <outlet property="imageProfile" destination="VhV-cD-Jzm" id="QuF-zK-LgC"/>
+                        <outlet property="nameProfile" destination="aPW-k0-bCe" id="z9g-Dn-NQk"/>
                         <outlet property="tableViewVal" destination="JAK-Aj-sJ9" id="3aN-ds-pFg"/>
                     </connections>
                 </viewController>
@@ -5093,6 +5174,7 @@ Entonces esta es tu aplicación.
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
         <namedColor name="Black">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

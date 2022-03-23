@@ -14,6 +14,7 @@ struct Response: Codable {
     var token: String?
     var image: String?
     var massages: [Massage]?
+    var list: [User]?
 
     
 }

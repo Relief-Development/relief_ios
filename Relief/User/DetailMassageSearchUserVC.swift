@@ -5,6 +5,13 @@
 //  Created by Alejandro Botana on 6/2/22.
 //
 
+//
+//  DetailMassageSearchUserVC.swift
+//  Relief
+//
+//  Created by Alejandro Botana on 6/2/22.
+//
+
 import UIKit
 
 class DetailMassageSearchUserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -12,20 +19,35 @@ class DetailMassageSearchUserVC: UIViewController, UITableViewDelegate, UITableV
     var massage:Massage?
     @IBOutlet var descriptionTv: UITextView!
     @IBOutlet var imageProfile: UIImageView!
+    @IBOutlet var spinnerView: UIView!
+    @IBOutlet var noDataView: UIView!
+    @IBOutlet var tableView: UITableView!
+    
+    var response: Response?
+
+
+
+
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return response?.list?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UserForSearchMassageIdentifier", for: indexPath)
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "UserForSearchMassageIdentifier", for: indexPath) as? DetailMassageUserCell{
+            cell.user = response?.list?[indexPath.row]
+            return cell
+            
+        }else {
+            return UITableViewCell()
+        }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
         if let massageFromUser = storyboard?.instantiateViewController(withIdentifier: "MassageProfileFromUser") as? MassageProfileFromUserVC{
             massageFromUser.modalPresentationStyle = .fullScreen
+            massageFromUser.user = response?.list?[indexPath.row]
             self.present(massageFromUser, animated: true, completion: nil)
             
         }
@@ -58,6 +80,62 @@ class DetailMassageSearchUserVC: UIViewController, UITableViewDelegate, UITableV
 
             }
     }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.spinnerView.isHidden = false
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.isHidden = true
+        
+                
+            let params: [String: Any] = [
+                "id": self.massage?.id
+            ]
+            print(params)
+        DataMapper.shared.getTherapistForMassage(params: params) { response in
+                if(response == nil){
+                    DispatchQueue.main.async {
+                        //print("LA RESPUESTA ES")
+                        //print(response)
+                        self.spinnerView.isHidden = true
+                        self.noDataView.isHidden = false
+                        self.showAlert(title: "Error en la conexion")
+
+                    }
+                }else{
+                        DispatchQueue.main.async {
+                            self.response = response
+                            self.spinnerView.isHidden = true
+                            self.tableView.isHidden = false
+                            self.tableView.reloadData()
+
+                            
+                            if(response?.status == 0){
+                                //error
+                            }else if response?.status == 1{
+                                print("")
+                                print("")
+                                print("")
+                                print("")
+                                print(self.response?.list?[1].name)
+                                print(self.response?.list?[1].phone_number)
+                                
+                        }else if response?.status == 2{
+                            self.showAlert(title: (response?.msg)!)
+                        }else if response?.status == 3{
+                            self.showAlert(title: (response?.msg)!)
+                        }
+                    }
+                }
+            }
+    }
+    func showAlert(title:String){
+        let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .default, handler: {(action) in
+        })
+        alertController.addAction(ok)
+        self.present(alertController, animated: true, completion: nil)
     }
 
 }

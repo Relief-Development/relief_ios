@@ -18,6 +18,8 @@ final class DataMapper{
     var register = "users/registerUser"
     var editProfile = "users/editProfile"
     var getTherapistInMap = "users/getTherapistInMap"
+    var getTherapistForMassage = "users/getTherapistForMassage"
+
     
 
     func login(params: [String: Any]?, completion: @escaping (Response?) -> Void) {
@@ -127,6 +129,24 @@ final class DataMapper{
     }
     func getTherapistInMap(params: [String: Any]?, completion: @escaping (Response?) -> Void) {
             Connection().connection(to: getTherapistInMap, params: params, method: "POST") { data in
+                    guard let data = data else {
+                        completion(nil)
+                        return
+                    }
+                    
+                    do {
+                        let decoder = JSONDecoder()
+                        let response = try decoder.decode(Response.self, from: data)
+                            completion(response)
+                    } catch let e {
+                        print(e.localizedDescription)
+                        completion(nil)
+                    }
+            }
+    
+    }
+    func getTherapistForMassage(params: [String: Any]?, completion: @escaping (Response?) -> Void) {
+            Connection().connection(to: getTherapistForMassage, params: params, method: "POST") { data in
                     guard let data = data else {
                         completion(nil)
                         return
