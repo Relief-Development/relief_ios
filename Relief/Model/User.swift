@@ -39,6 +39,7 @@ struct User: Codable {
     var lat: Double?
     var long: Double?
     var media: String?
+    var id: Int?
 
     
 

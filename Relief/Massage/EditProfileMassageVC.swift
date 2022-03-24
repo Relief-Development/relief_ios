@@ -115,7 +115,8 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
                         "api_token": UserDefaults.standard.object(forKey: "token") as? String ?? "",
                         "lat": lat,
                         "long": long,
-                        "address": UserDefaults.standard.object(forKey: "address") as? String ?? ""
+                        "address": UserDefaults.standard.object(forKey: "address") as? String ?? "",
+                        "services": UserDefaults.standard.object(forKey: "Massage") as? Array ?? []
         
                     ]
         

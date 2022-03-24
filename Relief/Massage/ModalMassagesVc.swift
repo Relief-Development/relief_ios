@@ -43,27 +43,27 @@ class ModalMassagesVC : ViewController{
     }
     @IBAction func saveTapped(_ sender: Any) {
         if switch1?.isOn == true {
-            let switchM1 = 1
+            let switchM1 = 7
             massages.append(switchM1)
         }
         if switch2?.isOn == true {
-            let switchM2 = 2
+            let switchM2 = 12
             massages.append(switchM2)
         }
         if switch3?.isOn == true {
-            let switchM3 = 3
+            let switchM3 = 11
             massages.append(switchM3)
         }
         if switch4?.isOn == true {
-            let switchM4 = 4
+            let switchM4 = 14
             massages.append(switchM4)
         }
         if switch5?.isOn == true {
-            let switchM5 = 5
+            let switchM5 = 10
             massages.append(switchM5)
         }
         if switch6?.isOn == true {
-            let switchM6 = 6
+            let switchM6 = 8
             massages.append(switchM6)
         }
         print(massages)
