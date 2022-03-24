@@ -19,7 +19,8 @@ class AppData {
     var lat: Double = 0.0
     var long: Double = 0.0
     var description: String = ""
-    //var phone: String = ""
+    var phone_number: String = ""
+    var id: Int = 0
 
     
 }

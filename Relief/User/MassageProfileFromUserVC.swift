@@ -16,6 +16,8 @@ class MassageProfileFromUserVC: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet var noDataView: UIView!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var star: UIButton!
+    @IBOutlet var heartButton: UIButton?
+
     
     var response: Response?
 
@@ -28,6 +30,7 @@ class MassageProfileFromUserVC: UIViewController, UITableViewDelegate, UITableVi
         self.tabBarController?.tabBar.unselectedItemTintColor = UIColor(named: "user_light")
         self.tabBarController?.tabBar.invalidateIntrinsicContentSize()
         overrideUserInterfaceStyle = .light
+        
         
         if let name = self.user?.name{
             self.nameProfile.text = name
@@ -93,6 +96,38 @@ class MassageProfileFromUserVC: UIViewController, UITableViewDelegate, UITableVi
             }
         }
     }
+    @IBAction func favButtonnTapped(_ sender: Any) {
+        heartButton?.isSelected.toggle()
+        
+        let params: [String: Any] = [
+            "therapist_id": self.user?.id,
+            "user_id": UserDefaults.standard.object(forKey: "id") as? Int ?? 0,
+            "api_token": UserDefaults.standard.object(forKey: "token") as? String ?? ""
+        ]
+        
+        DataMapper.shared.addRemoveFavorites(params: params) { response in
+            print(response)
+            if(response == nil){
+                DispatchQueue.main.async {
+                    self.showAlert(title: "Error en la conexion")
+                }
+            }else{
+                
+                    DispatchQueue.main.async {
+                        self.response = response
+                        if(response?.status == 0){
+                            //error
+                        }else if response?.status == 1{
+                            
+                    }else if response?.status == 2{
+                        self.showAlert(title: (response?.msg)!)
+                    }else if response?.status == 3{
+                        self.showAlert(title: (response?.msg)!)
+                    }
+                }
+            }
+        }
+    }
     @IBAction func locationTapped(){
         if let lat = self.user?.lat {
             UserDefaults.standard.set(lat, forKey: "latLocation")
@@ -100,13 +135,25 @@ class MassageProfileFromUserVC: UIViewController, UITableViewDelegate, UITableVi
         if let long = self.user?.long {
             UserDefaults.standard.set(long, forKey: "longLocation")
         }
-        if let map = storyboard?.instantiateViewController(withIdentifier: "MapUser"){
+        if let name = self.user?.name {
+            UserDefaults.standard.set(name, forKey: "nameLocation")
+        }
+        
+        if let map = storyboard?.instantiateViewController(withIdentifier: "MapUserLocation"){
             map.modalPresentationStyle = .fullScreen
             self.present(map, animated: true, completion: nil)
         }
     }
+    func configureButton(){
+        let imageHeart = UIImage(named: "ic_favoritoActivo")
+        let imageHeartFilled = UIImage(named: "ic_favoritoInactivo")
+        heartButton?.setImage(imageHeart, for: .normal)
+        heartButton?.setImage(imageHeartFilled, for: .selected)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        configureButton()
         self.spinnerView.isHidden = false
         tableView.dataSource = self
         tableView.delegate = self

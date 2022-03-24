@@ -13,7 +13,18 @@ class MapMassageUserVC: UIViewController, MKMapViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let annotation = [Massagist()]
-        mapView.addAnnotation(annotation as! MKAnnotation)
+        let lat = UserDefaults.standard.object(forKey: "latLocation") as! Double
+        let long = UserDefaults.standard.object(forKey: "longLocation") as! Double
+        let name = UserDefaults.standard.object(forKey: "nameLocation") as! String
+        
+        let mass1 = Massagist()
+        mass1.name = name
+        mass1.lng = long
+        mass1.lat = lat
+        
+        let massagists = [mass1]
+        
+        mapView.addAnnotations(massagists)
+
     }
 }

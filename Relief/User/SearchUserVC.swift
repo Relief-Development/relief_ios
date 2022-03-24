@@ -40,7 +40,7 @@ class SearchUserVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
                 
             let params: [String: Any] = [
-                "api_token": AppData.shared.apiToken ?? ""
+                "api_token": UserDefaults.standard.object(forKey: "token") as? String ?? ""
             ]
             print(params)
         DataMapper.shared.list(params: params) { response in

@@ -33,26 +33,6 @@ class MapUserVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
         
         
         
-        let mass1 = Massagist()
-        mass1.name = "Carla"
-        mass1.serviceDescription = "Masajes relajantes"
-        mass1.lng = -3.71553778648380017557428800500929355621337890625
-        mass1.lat = 40.43759536743200300179523765109479427337646484375
-        
-        let mass2 = Massagist()
-        mass2.name = "La Pili"
-        mass2.serviceDescription = "Masajes sensuales"
-        mass2.lng = -3.718440514506122
-        mass2.lat = 40.436797570199035
-        
-        
-//        let mass = Massagist()
-//        mass3.name = response?.profile.name
-//        mass3.serviceDescription = "Masajes de espalda"
-//        mass3.lng = -3.711440574506122
-//        mass3.lat = 40.435797590199035
-//
-        
         if let value = UserDefaults.standard.object(forKey: "Maptv") as? Bool{
             mapTutorial = value
         }

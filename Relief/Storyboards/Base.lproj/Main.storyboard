@@ -276,7 +276,8 @@ Entonces esta es tu aplicación.
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" title="Button" image="ic_favoritoActivo"/>
                                                             <connections>
-                                                                <action selector="favButtonTapped:" destination="NOF-1J-r5x" eventType="touchUpInside" id="fgM-QS-PWq"/>
+                                                                <action selector="favButtonTapped:" destination="NOF-1J-r5x" eventType="touchUpInside" id="NBg-V0-dRO"/>
+                                                                <action selector="favTapped" destination="0wL-hQ-DUV" eventType="touchUpInside" id="wlf-PY-220"/>
                                                             </connections>
                                                         </button>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="HJv-vT-9We">
@@ -404,9 +405,6 @@ Entonces esta es tu aplicación.
                                             <constraint firstAttribute="width" constant="150" id="L4c-9r-9Pb"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <connections>
-                                            <action selector="favTapped" destination="0wL-hQ-DUV" eventType="touchUpInside" id="hSQ-m8-bJ3"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No has añadido ningún favorito" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGF-BC-7tw">
                                         <rect key="frame" x="33" y="409" width="308.5" height="26.5"/>
@@ -4239,6 +4237,9 @@ Entonces esta es tu aplicación.
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" name="user"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="locationTapped" destination="Xq9-vb-TJI" eventType="touchUpInside" id="LRE-M1-z2R"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fPa-6E-c60">
                                 <rect key="frame" x="359" y="294.5" width="35" height="32.5"/>
@@ -4440,6 +4441,19 @@ Entonces esta es tu aplicación.
                                     <action selector="callTherapist" destination="Xq9-vb-TJI" eventType="touchUpInside" id="m0d-FM-5jL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtV-DR-lOH">
+                                <rect key="frame" x="334" y="64" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="IDe-YR-Y58"/>
+                                    <constraint firstAttribute="height" constant="40" id="cTW-3h-5xj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="ic_favoritoActivo"/>
+                                <connections>
+                                    <action selector="favButtonnTapped:" destination="Xq9-vb-TJI" eventType="touchUpInside" id="7EK-e3-qUz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -4465,6 +4479,7 @@ Entonces esta es tu aplicación.
                             <constraint firstItem="7iB-CY-Lrt" firstAttribute="centerY" secondItem="fPa-6E-c60" secondAttribute="centerY" id="PHD-sL-nLE"/>
                             <constraint firstItem="fPa-6E-c60" firstAttribute="trailing" secondItem="deE-xd-stu" secondAttribute="trailing" id="PNe-3W-cgY"/>
                             <constraint firstItem="0Yz-tJ-Fd7" firstAttribute="top" secondItem="deE-xd-stu" secondAttribute="bottom" constant="18" id="PkN-ch-sak"/>
+                            <constraint firstItem="QtV-DR-lOH" firstAttribute="top" secondItem="Mml-ij-p41" secondAttribute="bottom" constant="20" id="S3P-Oc-n47"/>
                             <constraint firstItem="X9N-Bc-yKN" firstAttribute="top" secondItem="0Yz-tJ-Fd7" secondAttribute="bottom" constant="40" id="XlE-sN-8vb"/>
                             <constraint firstItem="7iB-CY-Lrt" firstAttribute="centerX" secondItem="fPa-6E-c60" secondAttribute="centerX" id="aoy-a9-Tdi"/>
                             <constraint firstItem="S8W-QK-jQW" firstAttribute="bottom" secondItem="JAK-Aj-sJ9" secondAttribute="bottom" id="dgH-Sz-sXR"/>
@@ -4475,6 +4490,7 @@ Entonces esta es tu aplicación.
                             <constraint firstItem="dDE-Xn-FGs" firstAttribute="leading" secondItem="QYw-gx-W3d" secondAttribute="leading" constant="20" id="lOA-Bf-QFh"/>
                             <constraint firstItem="Sjl-Ln-hci" firstAttribute="trailing" secondItem="JAK-Aj-sJ9" secondAttribute="trailing" id="llN-0h-QXq"/>
                             <constraint firstItem="fPa-6E-c60" firstAttribute="centerY" secondItem="0Yz-tJ-Fd7" secondAttribute="centerY" id="mB3-ZX-pf9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QtV-DR-lOH" secondAttribute="trailing" constant="20" id="nGs-pH-MiS"/>
                             <constraint firstItem="Sjl-Ln-hci" firstAttribute="top" secondItem="YXp-TR-2MP" secondAttribute="bottom" constant="19.5" id="nTc-Tu-V7H"/>
                             <constraint firstAttribute="trailing" secondItem="SR6-VL-bD1" secondAttribute="trailing" constant="24" id="oE4-4V-eqa"/>
                             <constraint firstItem="S8W-QK-jQW" firstAttribute="bottom" secondItem="Sjl-Ln-hci" secondAttribute="bottom" id="oLJ-Ff-fbY"/>
@@ -4491,6 +4507,7 @@ Entonces esta es tu aplicación.
                     <navigationItem key="navigationItem" id="Csp-7J-W9E"/>
                     <connections>
                         <outlet property="descriptionTv" destination="deE-xd-stu" id="omQ-pG-aqI"/>
+                        <outlet property="heartButton" destination="QtV-DR-lOH" id="BAK-k7-XO5"/>
                         <outlet property="imageProfile" destination="VhV-cD-Jzm" id="QuF-zK-LgC"/>
                         <outlet property="nameProfile" destination="aPW-k0-bCe" id="z9g-Dn-NQk"/>
                         <outlet property="noDataView" destination="Sjl-Ln-hci" id="1F3-bB-rcm"/>
@@ -4501,35 +4518,6 @@ Entonces esta es tu aplicación.
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flU-WA-NfJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4028" y="796"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="98n-7b-nP1">
-            <objects>
-                <viewController id="8ST-Nv-iiQ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OOL-0n-0TH"/>
-                        <viewControllerLayoutGuide type="bottom" id="cGV-Gn-h0s"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5hi-Yb-VH4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wy3-6R-ads">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="wy3-6R-ads" secondAttribute="bottom" id="4QU-vu-KQ5"/>
-                            <constraint firstItem="wy3-6R-ads" firstAttribute="leading" secondItem="5hi-Yb-VH4" secondAttribute="leading" id="SCd-rL-d3C"/>
-                            <constraint firstItem="wy3-6R-ads" firstAttribute="top" secondItem="5hi-Yb-VH4" secondAttribute="top" id="XZ5-oW-NKm"/>
-                            <constraint firstAttribute="right" secondItem="wy3-6R-ads" secondAttribute="right" id="deL-e1-qi6"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A4B-kb-GYZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4772" y="796"/>
         </scene>
         <!--Modal Ubication MassageVC-->
         <scene sceneID="RoG-dY-yxw">
