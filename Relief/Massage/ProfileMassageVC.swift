@@ -14,18 +14,27 @@ class ProfileMassageVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     @IBOutlet var nameL: UILabel!
     @IBOutlet var ubicationTV: UITextView!
     @IBOutlet var imageProfile: UIImageView!
+    @IBOutlet var spinnerView: UIView!
+    @IBOutlet var noDataView: UIView!
+    @IBOutlet var tableView: UITableView!
 
-    
+    var response: Response?
     var profileTutorialM = true
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return response?.list?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileMassageCellIdentifier", for: indexPath)
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileMassageCell2", for: indexPath) as? ProfileMassageCell{
+            cell.user = response?.list?[indexPath.row]
+            return cell
+            
+        }else {
+            return UITableViewCell()
+        }
     }
+
     
    
     
@@ -42,6 +51,7 @@ class ProfileMassageVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         overrideUserInterfaceStyle = .light
     }
     override func viewWillAppear(_ animated: Bool) {
+        self.spinnerView.isHidden = false
         if let nameP = UserDefaults.standard.object(forKey: "name") as? String{
             nameL.text = nameP
         }
@@ -64,6 +74,38 @@ class ProfileMassageVC: UIViewController, UITableViewDelegate, UITableViewDataSo
             imageProfile.layer.borderWidth = 5
             imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
         }
+        let params2: [String: Any] = [
+            "id": UserDefaults.standard.object(forKey: "id") as? Int,
+            "api_token": UserDefaults.standard.object(forKey: "token") as? String
+        ]
+        print(params2)
+        DataMapper.shared.getServices(params: params2) { response in
+            if(response == nil){
+                DispatchQueue.main.async {
+                        //print("LA RESPUESTA ES")
+                        //print(response)
+                        self.spinnerView.isHidden = true
+                        self.noDataView.isHidden = false
+
+                    }
+                }else{
+                        DispatchQueue.main.async {
+                            self.response = response
+                            self.spinnerView.isHidden = true
+                            self.tableView.isHidden = false
+                            self.tableView.reloadData()
+
+                            
+                            if(response?.status == 0){
+                                //error
+                            }else if response?.status == 1{
+                                
+                        }else if response?.status == 2{
+                        }else if response?.status == 3{
+                        }
+                    }
+                }
+            }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "OpenSettingsMassageModal" {
