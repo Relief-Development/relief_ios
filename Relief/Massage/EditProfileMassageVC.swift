@@ -8,7 +8,7 @@
 import UIKit
 import CoreLocation
 
-class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate, ModalUbicationMassageVCDelegate, ModalMassagesVCDelegate{
+class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate, ModalUbicationMassageVCDelegate, ModalMassagesVCDelegate, UITextFieldDelegate, UITextViewDelegate{
 
     
     
@@ -39,6 +39,13 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
         super.viewDidLoad()
         imageProfile.layer.borderColor = UIColor(named: "masssage")?.cgColor
         imageProfile.layer.borderWidth = 5
+        nameTf.delegate = self
+        emailTf.delegate = self
+        addressTf.delegate = self
+        rpasswordTf.delegate = self
+        passwordTf.delegate = self
+        phoneTF.delegate = self
+        descriptionTF.delegate = self
         imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
         overrideUserInterfaceStyle = .light
        
@@ -92,7 +99,7 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
                 descriptionTF.text = descriptionP
             //}
         }
-        if let phone = UserDefaults.standard.object(forKey: "phone") as? String{
+        if let phone = UserDefaults.standard.object(forKey: "phone_number") as? String{
            // if ubicationP != ""{
                 phoneTF.text = phone
             //}
@@ -116,6 +123,7 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
                         "lat": lat,
                         "long": long,
                         "address": UserDefaults.standard.object(forKey: "address") as? String ?? "",
+                        "phone_number": phoneTF?.text ?? "",
                         "services": UserDefaults.standard.object(forKey: "Massage") as? Array ?? []
         
                     ]
@@ -144,7 +152,7 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
                                     let description = self.descriptionTF.text
                                     UserDefaults.standard.set(description, forKey: "description")
                                     let phone = self.phoneTF.text
-                                    UserDefaults.standard.set(phone, forKey: "phone")
+                                    UserDefaults.standard.set(phone, forKey: "phone_number")
                                     self.showAlert(title: (response?.msg)!)
         
                                 }else if response?.status == 401{
@@ -246,5 +254,8 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
         alertController.addAction(ok)
 
         self.present(alertController, animated: true, completion: nil)
+    }
+    @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
     }
 }

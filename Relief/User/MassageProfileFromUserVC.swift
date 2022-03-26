@@ -55,9 +55,10 @@ class MassageProfileFromUserVC: UIViewController, UITableViewDelegate, UITableVi
     }
     }
     @IBAction func callTherapist(){
-        let number = Int(self.user?.phone_number ?? "")
+        if let number = Int(self.user?.phone_number ?? ""){
         guard let url = URL(string: "tel://\(number)"), UIApplication.shared.canOpenURL(url) else { return }
          UIApplication.shared.openURL(url)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -99,13 +100,13 @@ class MassageProfileFromUserVC: UIViewController, UITableViewDelegate, UITableVi
     @IBAction func favButtonnTapped(_ sender: Any) {
         heartButton?.isSelected.toggle()
         
-        let params: [String: Any] = [
-            "therapist_id": self.user?.id,
-            "user_id": UserDefaults.standard.object(forKey: "id") as? Int ?? 0,
+        let params2: [String: Any] = [
+            "therapist_id": String(self.user?.id ?? 0),
             "api_token": UserDefaults.standard.object(forKey: "token") as? String ?? ""
         ]
         
-        DataMapper.shared.addRemoveFavorites(params: params) { response in
+        DataMapper.shared.addRemoveFavorites(params: params2) { response in
+            print(params2)
             print(response)
             if(response == nil){
                 DispatchQueue.main.async {
@@ -139,14 +140,12 @@ class MassageProfileFromUserVC: UIViewController, UITableViewDelegate, UITableVi
             UserDefaults.standard.set(name, forKey: "nameLocation")
         }
         
-        if let map = storyboard?.instantiateViewController(withIdentifier: "MapUserLocation"){
-            map.modalPresentationStyle = .fullScreen
-            self.present(map, animated: true, completion: nil)
+        if let map = storyboard?.instantiateViewController(withIdentifier: "MapUserLocation"){            self.present(map, animated: true, completion: nil)
         }
     }
     func configureButton(){
-        let imageHeart = UIImage(named: "ic_favoritoActivo")
-        let imageHeartFilled = UIImage(named: "ic_favoritoInactivo")
+        let imageHeart = UIImage(named: "ic_favoritoInactivo")
+        let imageHeartFilled = UIImage(named: "ic_favoritoActivo")
         heartButton?.setImage(imageHeart, for: .normal)
         heartButton?.setImage(imageHeartFilled, for: .selected)
     }
@@ -159,27 +158,31 @@ class MassageProfileFromUserVC: UIViewController, UITableViewDelegate, UITableVi
         tableView.delegate = self
         tableView.isHidden = true
         
-//        let chargetag = Int(self.user?.media ?? "")
-//        for tag in (1 ... 5) {
-//            let starButton = (self.view .viewWithTag(tag) as! UIButton)
-//            starButton.isHighlighted = false
-//        }
-//        for tag in (1 ... (chargetag ?? 0)) {
-//                if let starButton = (self.view .viewWithTag(tag) as? UIButton) {
-//                    starButton.isHighlighted = true
-//                }
-//            }
-//
-
-                
-            let params: [String: Any] = [
-                "id": self.user?.id,
-                "api_token": AppData.shared.apiToken ?? ""
-            ]
-            print(params)
+        for tag in (1 ... 5) {
+            let starButton = (self.view.viewWithTag(tag) as! UIButton)
+            starButton.isHighlighted = false
+        }
+        
+        if var valoration = Float(user?.media ?? "0") {
+            valoration = round(valoration)
+            
+            if valoration > 0 {
+                for tag in (1 ... Int(valoration)) {
+                    if let starButton = (self.view.viewWithTag(tag) as? UIButton) {
+                        starButton.isHighlighted = true
+                    }
+                }
+            }
+        }
+            
+        let params: [String: Any] = [
+            "id": self.user?.id,
+            "api_token": AppData.shared.apiToken ?? ""
+        ]
+        print(params)
         DataMapper.shared.getServices(params: params) { response in
-                if(response == nil){
-                    DispatchQueue.main.async {
+            if(response == nil){
+                DispatchQueue.main.async {
                         //print("LA RESPUESTA ES")
                         //print(response)
                         self.spinnerView.isHidden = true

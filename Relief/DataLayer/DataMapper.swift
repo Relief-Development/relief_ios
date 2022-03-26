@@ -21,6 +21,9 @@ final class DataMapper{
     var getTherapistForMassage = "users/getTherapistForMassage"
     var getServices = "users/getServices"
     var addRemoveFavorites = "users/addRemoveFavorites"
+    var getFavorites = "users/getFavorites"
+    var getRecommendedTherapist = "users/getRecommendedTherapists"
+    var search = "users/search"
 
 
     
@@ -186,6 +189,60 @@ final class DataMapper{
     }
     func addRemoveFavorites(params: [String: Any]?, completion: @escaping (Response?) -> Void) {
             Connection().connection(to: addRemoveFavorites, params: params, method: "POST") { data in
+                    guard let data = data else {
+                        completion(nil)
+                        return
+                    }
+                    
+                    do {
+                        let decoder = JSONDecoder()
+                        let response = try decoder.decode(Response.self, from: data)
+                            completion(response)
+                    } catch let e {
+                        print(e.localizedDescription)
+                        completion(nil)
+                    }
+            }
+    
+    }
+    func getFavorites(params: [String: Any]?, completion: @escaping (Response?) -> Void) {
+            Connection().connection(to: getFavorites, params: params, method: "POST") { data in
+                    guard let data = data else {
+                        completion(nil)
+                        return
+                    }
+                    
+                    do {
+                        let decoder = JSONDecoder()
+                        let response = try decoder.decode(Response.self, from: data)
+                            completion(response)
+                    } catch let e {
+                        print(e.localizedDescription)
+                        completion(nil)
+                    }
+            }
+    
+    }
+    func getRecommendedTherapist(params: [String: Any]?, completion: @escaping (Response?) -> Void) {
+            Connection().connection(to: getRecommendedTherapist, params: params, method: "POST") { data in
+                    guard let data = data else {
+                        completion(nil)
+                        return
+                    }
+                    
+                    do {
+                        let decoder = JSONDecoder()
+                        let response = try decoder.decode(Response.self, from: data)
+                            completion(response)
+                    } catch let e {
+                        print(e.localizedDescription)
+                        completion(nil)
+                    }
+            }
+    
+    }
+    func search(params: [String: Any]?, completion: @escaping (Response?) -> Void) {
+            Connection().connection(to: search, params: params, method: "POST") { data in
                     guard let data = data else {
                         completion(nil)
                         return

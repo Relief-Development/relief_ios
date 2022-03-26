@@ -11,7 +11,7 @@ protocol ModalUbicationMassageVCDelegate {
     func modalUbicationVC(_ modalUbicationVC: ModalUbicationMassageVC, didFinishWithAddress address: String)
 }
 
-class ModalUbicationMassageVC : ViewController{
+class ModalUbicationMassageVC : ViewController, UITextFieldDelegate{
     
     var delegate: ModalUbicationMassageVCDelegate?
     
@@ -28,6 +28,12 @@ class ModalUbicationMassageVC : ViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.modalView?.layer.cornerRadius = 20
+        streetTf.delegate = self
+        numberTf.delegate = self
+        cityTf.delegate = self
+        postalCodeTf.delegate = self
+        floorTf.delegate = self
+
         self.modalView?.layer.borderColor = UIColor(named: "massage")?.cgColor
         self.modalView?.layer.borderWidth = 1
         overrideUserInterfaceStyle = .light
@@ -74,6 +80,9 @@ class ModalUbicationMassageVC : ViewController{
         alertController.addAction(ok)
 
         self.present(alertController, animated: true, completion: nil)
+    }
+    @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
     }
        
 }

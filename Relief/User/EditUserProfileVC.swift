@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate{
+class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate, UITextFieldDelegate,  UINavigationControllerDelegate{
     
     @IBOutlet var imageProfile: UIImageView!
     @IBOutlet var nameTf: UITextField!
@@ -28,6 +28,12 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate & UIN
         super.viewDidLoad()
         imageProfile.layer.borderColor = UIColor(named: "user")?.cgColor
         imageProfile.layer.borderWidth = 5
+        nameTf.delegate = self
+        emailTf.delegate = self
+        addressTf.delegate = self
+        rpasswordTf.delegate = self
+        passwordTf.delegate = self
+
         imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
         overrideUserInterfaceStyle = .light
        
@@ -60,6 +66,7 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate & UIN
             emailTf!.text = emailP
         }
         
+        
 
     }
     @IBAction func saveTapped(){
@@ -73,15 +80,12 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate & UIN
                         "password": passwordTf?.text ?? "",
                         "name": nameTf?.text ?? "",
                         "image": UserDefaults.standard.object(forKey: "image") as? String ?? "",
-                        "api_token": UserDefaults.standard.object(forKey: "token") as? String ?? ""
+                        "api_token": UserDefaults.standard.object(forKey: "token") as? String ?? "",
+                        "services": []
         
                     ]
-        
-                    print(params)
-        
+                
                     DataMapper.shared.editProfile(params: params) { response in
-                        print("AQUI ESTA LA RESPUESTA")
-                        print(response)
                         if(response == nil){
                             self.showAlert(title: "Error en la conexion")
                             self.chargeView.isHidden = true
@@ -175,6 +179,9 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate & UIN
         alertController.addAction(ok)
 
         self.present(alertController, animated: true, completion: nil)
+    }
+    @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
     }
     
 }

@@ -114,12 +114,6 @@ class DetailMassageSearchUserVC: UIViewController, UITableViewDelegate, UITableV
                             if(response?.status == 0){
                                 //error
                             }else if response?.status == 1{
-                                print("")
-                                print("")
-                                print("")
-                                print("")
-                                print(self.response?.list?[1].name)
-                                print(self.response?.list?[1].phone_number)
                                 
                         }else if response?.status == 2{
                             self.showAlert(title: (response?.msg)!)

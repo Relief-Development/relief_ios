@@ -140,7 +140,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                             UserDefaults.standard.set(image, forKey: "image")
                             
                             let id = AppData.shared.id
-                            UserDefaults.standard.set(image, forKey: "id")
+                            UserDefaults.standard.set(id, forKey: "id")
                             
                             let phone = AppData.shared.phone_number
                             UserDefaults.standard.set(phone, forKey: "phone_number")

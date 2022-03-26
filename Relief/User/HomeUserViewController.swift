@@ -17,7 +17,10 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var tutorialView: UIView!
     @IBOutlet var tutorialTextHomeView: UIView!
     @IBOutlet var segmentedHome: UISegmentedControl!
+    @IBOutlet var spinnerView: UIView!
+    @IBOutlet var noDataView: UIView!
     var homeTutorial = true
+    var response: Response?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,26 +35,38 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
         if (homeTutorial == false){
             tutorialView.isHidden = true
         }
+        self.chargeRecomended()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
-    }
-        
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if tableView == self.tableViewRec {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HomeUserRecomCellId", for: indexPath)
-            return cell
+            return response?.homeList?.count ?? 0
             
         } else if tableView == self.tableViewFav {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HomeUserFavCellId", for: indexPath)
-            return cell
+            return response?.homeList?.count ?? 0
         }
-        
-        return UITableViewCell()
+        return 0
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        if tableView == self.tableViewRec {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeUserRecomCellId", for: indexPath) as? HomeUserCell{
+            cell.user = response?.homeList?[indexPath.row]
+            return cell
+            }
+        } else if tableView == self.tableViewFav {
+            if let cell = tableViewFav.dequeueReusableCell(withIdentifier: "HomeUserFavCellId", for: indexPath) as? HomeUserCell{
+                cell.user = response?.homeList?[indexPath.row]
+                return cell
+            }
+        }
+        return UITableViewCell()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
     @IBAction func favTapped() {
         if(emptyFavView.isHidden == false) {
             self.emptyFavView.isHidden = true
@@ -62,20 +77,109 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func segmentedValueChanged(_ sender: UISegmentedControl) {
         if segmentedHome.selectedSegmentIndex == 1 {
             self.recomendedView.isHidden = true
-            self.emptyFavView.isHidden = false
+            self.spinnerView.isHidden = false
+            self.favView.isHidden = false
+            tableViewFav.dataSource = self
+            tableViewFav.delegate = self
+            tableViewFav.isHidden = true
+            
+                    
+                let params: [String: Any] = [
+                    "api_token": UserDefaults.standard.object(forKey: "token") as? String ?? ""
+                ]
+            DataMapper.shared.getFavorites(params: params) { response in
+                    if(response == nil){
+                        DispatchQueue.main.async {
+                            //print("LA RESPUESTA ES")
+                            //print(response)
+                            self.spinnerView.isHidden = true
+                            self.noDataView.isHidden = false
+                            self.showAlert(title: "Error en la conexion")
+
+                        }
+                    }else{
+                            DispatchQueue.main.async {
+                                self.response = response
+                                self.spinnerView.isHidden = true
+                                self.tableViewFav.isHidden = false
+                                self.tableViewFav.reloadData()
+                                
+                                if(response?.status == 0){
+                                    //error
+                                }else if response?.status == 1{
+                                    
+                                }else if response?.status == 2{
+                                    self.showAlert(title: (response?.msg)!)
+                                }else if response?.status == 3{
+                                    self.showAlert(title: (response?.msg)!)
+                                }else if response?.status == 7 {
+                                    self.emptyFavView.isHidden = false
+                            }
+                        }
+                    }
+                }
         }else if segmentedHome.selectedSegmentIndex == 0{
             self.recomendedView.isHidden = false
             self.favView.isHidden = true
-            self.emptyFavView.isHidden = true
-
+            self.chargeRecomended()
         }
     }
-        
+    
     @IBAction func closeTapped() {
         homeTutorial = false
         let name = homeTutorial
         UserDefaults.standard.set(name, forKey: "Hometv")
         tutorialView.isHidden = true
+    }
+    func showAlert(title:String){
+        let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .default, handler: {(action) in
+        })
+        alertController.addAction(ok)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    func chargeRecomended(){
+        self.spinnerView.isHidden = false
+        self.emptyFavView.isHidden = true
+        tableViewRec.dataSource = self
+        tableViewRec.delegate = self
+        tableViewRec.isHidden = true
+        
+        let params2: [String: Any] = [
+            "api_token": UserDefaults.standard.object(forKey: "token") as? String ?? ""
+        ]
+    DataMapper.shared.getRecommendedTherapist(params: params2) { response in
+            if(response == nil){
+                DispatchQueue.main.async {
+                    //print("LA RESPUESTA ES")
+                    //print(response)
+                    self.spinnerView.isHidden = true
+                    self.noDataView.isHidden = false
+                    self.showAlert(title: "Error en la conexion")
+
+                }
+            }else{
+                print(response)
+                    DispatchQueue.main.async {
+                        self.response = response
+                        self.spinnerView.isHidden = true
+                        self.tableViewRec.isHidden = false
+                        self.tableViewRec.reloadData()
+                        
+                        if(response?.status == 0){
+                            //error
+                        }else if response?.status == 1{
+                    }else if response?.status == 2{
+                        self.showAlert(title: (response?.msg)!)
+                    }else if response?.status == 3{
+                        self.showAlert(title: (response?.msg)!)
+                    }else if response?.status == 7 {
+                            self.emptyFavView.isHidden = false
+                    }
+                }
+            }
+        }
+
     }
     
 }

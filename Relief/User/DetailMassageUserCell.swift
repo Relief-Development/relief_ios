@@ -44,5 +44,22 @@ class DetailMassageUserCell: UITableViewCell {
 
             }
         }
+        
+        for tag in (1 ... 5) {
+            let starButton = (self.viewWithTag(tag) as! UIButton)
+            starButton.isHighlighted = false
+        }
+        
+        if var valoration = Float(user.media ?? "0") {
+            valoration = round(valoration)
+            
+            if valoration > 0 {
+                for tag in (1 ... Int(valoration)) {
+                    if let starButton = (self.viewWithTag(tag) as? UIButton) {
+                        starButton.isHighlighted = true
+                    }
+                }
+            }
+        }
     }
 }

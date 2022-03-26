@@ -25,6 +25,7 @@
 		19522E6827B00C4000B26094 /* DetailMassageSearchUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19522E6727B00C4000B26094 /* DetailMassageSearchUserVC.swift */; };
 		19522E6A27B00CA600B26094 /* DetailMassageUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19522E6927B00CA600B26094 /* DetailMassageUserCell.swift */; };
 		19561A1C27ECC18400432E9A /* MapMassageUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19561A1B27ECC18400432E9A /* MapMassageUserVC.swift */; };
+		19561A1E27EE35BA00432E9A /* SessionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19561A1D27EE35BA00432E9A /* SessionVC.swift */; };
 		19A1B65527E4E041006396F3 /* ModalMassagesVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A1B65427E4E041006396F3 /* ModalMassagesVc.swift */; };
 		19AD4C8C27A05A57006A3943 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD4C8B27A05A57006A3943 /* RegisterViewController.swift */; };
 		19AD4C8E27A062DB006A3943 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD4C8D27A062DB006A3943 /* LoginViewController.swift */; };
@@ -97,6 +98,7 @@
 		19522E6727B00C4000B26094 /* DetailMassageSearchUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMassageSearchUserVC.swift; sourceTree = "<group>"; };
 		19522E6927B00CA600B26094 /* DetailMassageUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMassageUserCell.swift; sourceTree = "<group>"; };
 		19561A1B27ECC18400432E9A /* MapMassageUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMassageUserVC.swift; sourceTree = "<group>"; };
+		19561A1D27EE35BA00432E9A /* SessionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionVC.swift; sourceTree = "<group>"; };
 		19A1B65327E3C5BB006396F3 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		19A1B65427E4E041006396F3 /* ModalMassagesVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalMassagesVc.swift; sourceTree = "<group>"; };
 		19AD4C8B27A05A57006A3943 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				19AD4C8B27A05A57006A3943 /* RegisterViewController.swift */,
 				19AD4C8D27A062DB006A3943 /* LoginViewController.swift */,
 				47D51ED327A1F26A00301DFA /* RecoverPassViewController.swift */,
+				19561A1D27EE35BA00432E9A /* SessionVC.swift */,
 			);
 			path = Vc;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				47730BA427B0149100E6F794 /* MassageProfileFromUserVC.swift in Sources */,
 				191E7AE627A1BDCC000810DE /* ProfileMassageCell.swift in Sources */,
 				191E7AEA27A1BE5C000810DE /* PoliticMassageVC.swift in Sources */,
+				19561A1E27EE35BA00432E9A /* SessionVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,6 +25,20 @@ class MapMassageUserVC: UIViewController, MKMapViewDelegate{
         let massagists = [mass1]
         
         mapView.addAnnotations(massagists)
+        var coordinate: CLLocationCoordinate2D {
+            CLLocationCoordinate2D(latitude: lat, longitude: long)
+        }
+        
+        centerInPosition(position: coordinate)
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        mapView.setRegion(region, animated: true)
 
+    }
+    @IBAction func backToDetail(){
+        self.dismiss(animated: true)
+    }
+    func centerInPosition(position:CLLocationCoordinate2D){
+        mapView.setCenter(position, animated: true)
     }
 }
