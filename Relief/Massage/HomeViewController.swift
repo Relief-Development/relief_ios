@@ -47,7 +47,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeMassageCellId", for: indexPath) as? HomeMassageCell{
             cell.appointment = response?.appointments?[indexPath.row]
             return cell
-            
+            tableView.deselectRow(at: indexPath, animated: true)
         }else {
             return UITableViewCell()
         }
@@ -59,7 +59,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             "api_token": UserDefaults.standard.object(forKey: "token") as? String
         ]
         DataMapper.shared.getAppointments(params: params2) { response in
-            print(response)
             if(response == nil){
                 DispatchQueue.main.async {
                     //print("LA RESPUESTA ES")
