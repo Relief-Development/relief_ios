@@ -23,11 +23,11 @@ class ModalMassagesVC : ViewController{
     @IBOutlet var switch4: UISwitch?
     @IBOutlet var switch5: UISwitch?
     @IBOutlet var switch6: UISwitch?
-
-
+    
+    
     var massages: Array = [Int]();
-
-
+    
+    
     
     
     override func viewDidLoad() {
@@ -80,8 +80,8 @@ class ModalMassagesVC : ViewController{
         let ok = UIAlertAction(title: "Ok", style: .default, handler: {(action) in
         })
         alertController.addAction(ok)
-
+        
         self.present(alertController, animated: true, completion: nil)
     }
-       
+    
 }

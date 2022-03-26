@@ -17,6 +17,6 @@ struct Response: Codable {
     var list: [User]?
     var homeList: [User]?
     var services: [User]?
-
+    var appointments: [Appointment]?
     
 }

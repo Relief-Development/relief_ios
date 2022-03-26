@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController{
+class RegisterViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet var segmentregister: UISegmentedControl?
     @IBOutlet var passwordTF: UITextField!
@@ -39,6 +39,13 @@ class RegisterViewController: UIViewController{
         self.passwordTF?.attributedPlaceholder = getAttributeString("Contraseña")
         self.nameTF?.attributedPlaceholder = getAttributeString("Nombre")
         self.emailTF?.attributedPlaceholder = getAttributeString("Email")
+        self.phoneTF?.attributedPlaceholder = getAttributeString("Telefono")
+        nameTF.delegate = self
+        repeatPasswordTF.delegate = self
+        passwordTF.delegate = self
+        emailTF.delegate = self
+        phoneTF.delegate = self
+
         overrideUserInterfaceStyle = .light
         passwordTF.isSecureTextEntry = true
         repeatPasswordTF.isSecureTextEntry = true
@@ -70,7 +77,9 @@ class RegisterViewController: UIViewController{
             self.infoMessage = "\(self.infoMessage!) \n- Ingrese un correo válido."
         }
         let isPhoneValid = isValidInput(toCheck: phoneTF.text!, regEx: phoneRegEx)
-        self.infoMessage = "\(self.infoMessage!) \n- El numero de telefono debe tener 9 numeros de longitud."
+        if !isPhoneValid && phoneTF.text != ""{
+            self.infoMessage = "\(self.infoMessage!) \n- El numero de telefono debe tener 9 numeros de longitud."
+        }
         //        Comprobamos si la contraseña cumple el patrón
         
         let isPasswordValid = isValidInput(toCheck: passwordTF.text!, regEx: passRegEx)
@@ -123,6 +132,7 @@ class RegisterViewController: UIViewController{
                         self.passwordTF.text = ""
                         self.repeatPasswordTF.text = ""
                         self.nameTF.text = ""
+                        self.phoneTF.text = ""
                         self.segmentregister?.selectedSegmentIndex = UISegmentedControl.noSegment
 
 

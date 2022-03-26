@@ -24,6 +24,10 @@ final class DataMapper{
     var getFavorites = "users/getFavorites"
     var getRecommendedTherapist = "users/getRecommendedTherapists"
     var search = "users/search"
+    var registerAppointments = "users/registerAppointments"
+    var getAppointments = "users/getAppointments"
+    var addRating = "users/addRating"
+
 
 
     
@@ -259,4 +263,61 @@ final class DataMapper{
             }
     
     }
+    func registerAppointments(params: [String: Any]?, completion: @escaping (Response?) -> Void) {
+            Connection().connection(to: registerAppointments, params: params, method: "PUT") { data in
+                    guard let data = data else {
+                        completion(nil)
+                        return
+                    }
+                    
+                    do {
+                        let decoder = JSONDecoder()
+                        let response = try decoder.decode(Response.self, from: data)
+                            completion(response)
+                    } catch let e {
+                        print(e.localizedDescription)
+                        completion(nil)
+                    }
+            }
+    
+    }
+    func getAppointments(params: [String: Any]?, completion: @escaping (Response?) -> Void) {
+            Connection().connection(to: getAppointments, params: params, method: "POST") { data in
+                    guard let data = data else {
+                        completion(nil)
+                        return
+                    }
+                    
+                    do {
+                        let decoder = JSONDecoder()
+                        let response = try decoder.decode(Response.self, from: data)
+                            completion(response)
+                    } catch let e {
+                        print(e.localizedDescription)
+                        completion(nil)
+                    }
+            }
+    
+    }
+    func addRating(params: [String: Any]?, completion: @escaping (Response?) -> Void) {
+            Connection().connection(to: addRating, params: params, method: "POST") { data in
+                    guard let data = data else {
+                        completion(nil)
+                        return
+                    }
+                    
+                    do {
+                        let decoder = JSONDecoder()
+                        let response = try decoder.decode(Response.self, from: data)
+                            completion(response)
+                    } catch let e {
+                        print(e.localizedDescription)
+                        completion(nil)
+                    }
+            }
+    
+    }
+    
+    
+    
 }

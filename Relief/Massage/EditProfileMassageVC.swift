@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 
 class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate, ModalUbicationMassageVCDelegate, ModalMassagesVCDelegate, UITextFieldDelegate, UITextViewDelegate{
-
+    
     
     
     @IBOutlet var imageProfile: UIImageView!
@@ -22,17 +22,17 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
     @IBOutlet var massageTF: UITextField!
     @IBOutlet var phoneTF: UITextField!
     @IBOutlet var chargeView: UIView!
-
-
-
+    
+    
+    
     var response: Response?
     var lat: Float = 0.0
     var long: Float = 0.0
     var adressU: String = ""
-
-
+    
+    
     let picker = UIImagePickerController()
-     
+    
     
     
     override func viewDidLoad() {
@@ -48,7 +48,7 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
         descriptionTF.delegate = self
         imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
         overrideUserInterfaceStyle = .light
-       
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -71,7 +71,7 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
                 var decodedimage = UIImage(data: decodedData as! Data)
                 //print(decodedimage)
                 imageProfile.image = decodedimage as! UIImage
-               
+                
             }else{
                 imageProfile.image = UIImage(systemName: "person.circle.fill")
             }
@@ -90,78 +90,78 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
             emailTf!.text = emailP
         }
         if let ubicationP = UserDefaults.standard.object(forKey: "address") as? String{
-           // if ubicationP != ""{
-                addressTf.text = ubicationP
+            // if ubicationP != ""{
+            addressTf.text = ubicationP
             //}
         }
         if let descriptionP = UserDefaults.standard.object(forKey: "description") as? String{
-           // if ubicationP != ""{
-                descriptionTF.text = descriptionP
+            // if ubicationP != ""{
+            descriptionTF.text = descriptionP
             //}
         }
         if let phone = UserDefaults.standard.object(forKey: "phone_number") as? String{
-           // if ubicationP != ""{
-                phoneTF.text = phone
+            // if ubicationP != ""{
+            phoneTF.text = phone
             //}
         }
         
-
+        
     }
     @IBAction func saveTapped(){
         self.chargeView.isHidden = false
         if passwordTf.text != rpasswordTf.text {
-                    self.showAlert(title: "Las contraseñas no coinciden")
-        
+            self.showAlert(title: "Las contraseñas no coinciden")
+            
+        }else{
+            let params: [String: Any] = [
+                "email": emailTf?.text ?? "",
+                "password": passwordTf?.text ?? "",
+                "name": nameTf?.text ?? "",
+                "description": descriptionTF.text ?? "",
+                "image": UserDefaults.standard.object(forKey: "image") as? String ?? "",
+                "api_token": UserDefaults.standard.object(forKey: "token") as? String ?? "",
+                "lat": lat,
+                "long": long,
+                "address": UserDefaults.standard.object(forKey: "address") as? String ?? "",
+                "phone_number": phoneTF?.text ?? "",
+                "services": UserDefaults.standard.object(forKey: "Massage") as? Array ?? []
+                
+            ]
+            
+            print(params)
+            
+            DataMapper.shared.editProfile(params: params) { response in
+                print("AQUI ESTA LA RESPUESTA")
+                print(response)
+                if(response == nil){
+                    self.chargeView.isHidden = true
+                    self.showAlert(title: "Error en la conexion")
                 }else{
-                    let params: [String: Any] = [
-                        "email": emailTf?.text ?? "",
-                        "password": passwordTf?.text ?? "",
-                        "name": nameTf?.text ?? "",
-                        "description": descriptionTF.text ?? "",
-                        "image": UserDefaults.standard.object(forKey: "image") as? String ?? "",
-                        "api_token": UserDefaults.standard.object(forKey: "token") as? String ?? "",
-                        "lat": lat,
-                        "long": long,
-                        "address": UserDefaults.standard.object(forKey: "address") as? String ?? "",
-                        "phone_number": phoneTF?.text ?? "",
-                        "services": UserDefaults.standard.object(forKey: "Massage") as? Array ?? []
-        
-                    ]
-        
-                    print(params)
-        
-                    DataMapper.shared.editProfile(params: params) { response in
-                        print("AQUI ESTA LA RESPUESTA")
-                        print(response)
-                        if(response == nil){
-                            self.chargeView.isHidden = true
-                            self.showAlert(title: "Error en la conexion")
-                        }else{
-                            DispatchQueue.main.async {
-                                self.chargeView.isHidden = true
-                                self.response = response
-        
-                                if(response?.status == 0){
-                                    self.showAlert(title: (response?.msg)!)
-        
-                                }else if response?.status == 1{
-                                    let name = self.nameTf.text
-                                    UserDefaults.standard.set(name, forKey: "name")
-                                    let email = self.emailTf.text
-                                    UserDefaults.standard.set(email, forKey: "email")
-                                    let description = self.descriptionTF.text
-                                    UserDefaults.standard.set(description, forKey: "description")
-                                    let phone = self.phoneTF.text
-                                    UserDefaults.standard.set(phone, forKey: "phone_number")
-                                    self.showAlert(title: (response?.msg)!)
-        
-                                }else if response?.status == 401{
-                                    self.showAlert(title: (response?.msg)!)
-                                }
-                            }
+                    DispatchQueue.main.async {
+                        self.chargeView.isHidden = true
+                        self.response = response
+                        
+                        if(response?.status == 0){
+                            self.showAlert(title: (response?.msg)!)
+                            
+                        }else if response?.status == 1{
+                            let name = self.nameTf.text
+                            UserDefaults.standard.set(name, forKey: "name")
+                            let email = self.emailTf.text
+                            UserDefaults.standard.set(email, forKey: "email")
+                            let description = self.descriptionTF.text
+                            UserDefaults.standard.set(description, forKey: "description")
+                            let phone = self.phoneTF.text
+                            UserDefaults.standard.set(phone, forKey: "phone_number")
+                            self.showAlert(title: (response?.msg)!)
+                            
+                        }else if response?.status == 401{
+                            self.showAlert(title: (response?.msg)!)
                         }
                     }
                 }
+            }
+        }
         
     }
     @IBAction func buttonToProfileTapped(){
@@ -171,7 +171,7 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
     @IBAction func buttonImageTapped(){
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         alertController.view.tintColor = UIColor(named: "massage")
-
+        
         let camara = UIAlertAction(title: "Hacer foto", style: .default, handler: {(action) in
             self.picker.sourceType = .camera
             self.picker.cameraCaptureMode = .photo
@@ -191,7 +191,7 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
         alertController.addAction(camara)
         alertController.addAction(galeria)
         alertController.addAction(cancelar)
-
+        
         self.present(alertController, animated: true, completion: nil)
         
     }
@@ -215,13 +215,13 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
     // MARK: - ModalUbicationVC delegate
     func modalUbicationVC(_ modalUbicationVC: ModalUbicationMassageVC, didFinishWithAddress address: String) {
         if let ubicationP = UserDefaults.standard.object(forKey: "address") as? String{
-           // if ubicationP != ""{
-                addressTf.text = ubicationP
+            // if ubicationP != ""{
+            addressTf.text = ubicationP
             //}
         }else {
         }
         
-
+        
         let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(address) { (placemarks, error) in
             guard
@@ -233,7 +233,7 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
             }
             self.lat = Float(location.coordinate.latitude)
             self.long = Float(location.coordinate.longitude)
-                
+            
             
         }
         modalUbicationVC.dismiss(animated: true, completion: nil)
@@ -252,7 +252,7 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
         let ok = UIAlertAction(title: "Ok", style: .default, handler: {(action) in
         })
         alertController.addAction(ok)
-
+        
         self.present(alertController, animated: true, completion: nil)
     }
     @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {

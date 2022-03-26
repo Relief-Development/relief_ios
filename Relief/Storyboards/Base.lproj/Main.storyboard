@@ -125,7 +125,7 @@ Entonces esta es tu aplicación.
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="635"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeUserRecomCellId" rowHeight="100" id="ux1-Y0-BfK" customClass="HomeUserCell" customModule="Relief" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeUserRecomCellId" rowHeight="100" id="ux1-Y0-BfK" customClass="HomeRecommendedUserCell" customModule="Relief" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="44.5" width="374" height="100"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ux1-Y0-BfK" id="fxF-dr-8xh">
@@ -148,20 +148,6 @@ Entonces esta es tu aplicación.
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHk-Y6-fEo">
-                                                            <rect key="frame" x="347" y="10" width="22" height="20"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="22" id="reB-YA-51u"/>
-                                                                <constraint firstAttribute="height" constant="20" id="sXg-QO-pJc"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            <state key="normal" title="Button" image="ic_favoritoActivo"/>
-                                                            <connections>
-                                                                <action selector="favButtonTapped:" destination="ux1-Y0-BfK" eventType="touchUpInside" id="kqh-zY-cez"/>
-                                                                <action selector="favTapped" destination="0wL-hQ-DUV" eventType="touchUpInside" id="5Vv-tF-Nod"/>
-                                                            </connections>
-                                                        </button>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="SOO-jX-iMv">
                                                             <rect key="frame" x="81" y="39" width="201" height="56"/>
                                                             <subviews>
@@ -172,9 +158,6 @@ Entonces esta es tu aplicación.
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
-                                                                    <connections>
-                                                                        <action selector="starButtonTapped:" destination="ux1-Y0-BfK" eventType="touchUpInside" id="gaO-Wi-7wd"/>
-                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUz-zF-XjX">
                                                                     <rect key="frame" x="43" y="0.0" width="29" height="56"/>
@@ -183,9 +166,6 @@ Entonces esta es tu aplicación.
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
-                                                                    <connections>
-                                                                        <action selector="starButtonTapped:" destination="ux1-Y0-BfK" eventType="touchUpInside" id="fPl-1g-hOK"/>
-                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLC-bX-9gy">
                                                                     <rect key="frame" x="86" y="0.0" width="29" height="56"/>
@@ -194,9 +174,6 @@ Entonces esta es tu aplicación.
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
-                                                                    <connections>
-                                                                        <action selector="starButtonTapped:" destination="ux1-Y0-BfK" eventType="touchUpInside" id="rGU-X9-Mwg"/>
-                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vv-74-cqT">
                                                                     <rect key="frame" x="129" y="0.0" width="29" height="56"/>
@@ -205,9 +182,6 @@ Entonces esta es tu aplicación.
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
-                                                                    <connections>
-                                                                        <action selector="starButtonTapped:" destination="ux1-Y0-BfK" eventType="touchUpInside" id="XJh-eX-IP6"/>
-                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjG-KQ-qD8">
                                                                     <rect key="frame" x="172" y="0.0" width="29" height="56"/>
@@ -216,15 +190,11 @@ Entonces esta es tu aplicación.
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
-                                                                    <connections>
-                                                                        <action selector="starButtonTapped:" destination="ux1-Y0-BfK" eventType="touchUpInside" id="Egk-ln-Nfy"/>
-                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="qHk-Y6-fEo" secondAttribute="trailing" constant="5" id="0Id-A7-owf"/>
                                                         <constraint firstItem="3kQ-kH-YAs" firstAttribute="top" secondItem="fxF-dr-8xh" secondAttribute="top" constant="13" id="6wu-RW-YHm"/>
                                                         <constraint firstItem="3kQ-kH-YAs" firstAttribute="leading" secondItem="fxF-dr-8xh" secondAttribute="leading" constant="8" id="C8w-JN-k22"/>
                                                         <constraint firstItem="SOO-jX-iMv" firstAttribute="leading" secondItem="Gb0-Ui-H0R" secondAttribute="leading" id="JJE-if-I7W"/>
@@ -232,12 +202,10 @@ Entonces esta es tu aplicación.
                                                         <constraint firstItem="SOO-jX-iMv" firstAttribute="top" secondItem="Gb0-Ui-H0R" secondAttribute="bottom" constant="10" id="QMG-yH-5oL"/>
                                                         <constraint firstAttribute="trailing" secondItem="Gb0-Ui-H0R" secondAttribute="trailing" constant="20" id="Ym5-aa-izJ"/>
                                                         <constraint firstItem="Gb0-Ui-H0R" firstAttribute="top" secondItem="fxF-dr-8xh" secondAttribute="top" constant="11" id="dKg-eC-TDd"/>
-                                                        <constraint firstItem="qHk-Y6-fEo" firstAttribute="centerY" secondItem="Gb0-Ui-H0R" secondAttribute="centerY" id="hOG-UR-HbJ"/>
                                                         <constraint firstItem="Gb0-Ui-H0R" firstAttribute="leading" secondItem="3kQ-kH-YAs" secondAttribute="trailing" constant="23" id="kg7-OJ-1XR"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="heartButton" destination="qHk-Y6-fEo" id="AIv-DN-E3K"/>
                                                     <outlet property="imageProfile" destination="3kQ-kH-YAs" id="hR5-mC-AG1"/>
                                                     <outlet property="nameLabel" destination="Gb0-Ui-H0R" id="YNj-MZ-M08"/>
                                                 </connections>
@@ -313,9 +281,6 @@ Entonces esta es tu aplicación.
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
-                                                                    <connections>
-                                                                        <action selector="starButtonTapped:" destination="NOF-1J-r5x" eventType="touchUpInside" id="21E-nv-OII"/>
-                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VC2-65-uQQ">
                                                                     <rect key="frame" x="43" y="0.0" width="29" height="56"/>
@@ -324,9 +289,6 @@ Entonces esta es tu aplicación.
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
-                                                                    <connections>
-                                                                        <action selector="starButtonTapped:" destination="NOF-1J-r5x" eventType="touchUpInside" id="GKp-U4-l8V"/>
-                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8R-6l-b0C">
                                                                     <rect key="frame" x="86" y="0.0" width="29" height="56"/>
@@ -335,9 +297,6 @@ Entonces esta es tu aplicación.
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
-                                                                    <connections>
-                                                                        <action selector="starButtonTapped:" destination="NOF-1J-r5x" eventType="touchUpInside" id="cGV-Yf-2gC"/>
-                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nij-Vu-eoA">
                                                                     <rect key="frame" x="129" y="0.0" width="29" height="56"/>
@@ -346,9 +305,6 @@ Entonces esta es tu aplicación.
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
-                                                                    <connections>
-                                                                        <action selector="starButtonTapped:" destination="NOF-1J-r5x" eventType="touchUpInside" id="sVr-Da-M8G"/>
-                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tib-So-3sM">
                                                                     <rect key="frame" x="172" y="0.0" width="29" height="56"/>
@@ -357,9 +313,6 @@ Entonces esta es tu aplicación.
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
-                                                                    <connections>
-                                                                        <action selector="starButtonTapped:" destination="NOF-1J-r5x" eventType="touchUpInside" id="tdZ-0D-7C3"/>
-                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -1327,53 +1280,39 @@ Entonces esta es tu aplicación.
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0V-En-ddz">
-                                <rect key="frame" x="0.0" y="210" width="414" height="170"/>
+                                <rect key="frame" x="0.0" y="210" width="414" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Martes, Febrero 8" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lui-Nu-IAp">
-                                        <rect key="frame" x="20" y="0.0" width="142" height="20.5"/>
+                                        <rect key="frame" x="20" y="0.0" width="142" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="a7i-pT-En6">
-                                        <rect key="frame" x="20" y="36" width="374" height="45"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="or0-2T-UKE">
-                                                <rect key="frame" x="0.0" y="0.0" width="110" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="Dnt-q9-miY"/>
-                                                    <constraint firstAttribute="width" constant="110" id="NVV-1E-FGP"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="11:00 AM">
-                                                    <color key="baseForegroundColor" name="massage"/>
-                                                    <color key="baseBackgroundColor" name="massagetabbarback"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhJ-QS-HOB">
-                                                <rect key="frame" x="132" y="0.0" width="110" height="45"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="11:00 AM">
-                                                    <color key="baseBackgroundColor" name="massage_light"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rA-nR-nNZ">
-                                                <rect key="frame" x="264" y="0.0" width="110" height="45"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="11:00 AM">
-                                                    <color key="baseBackgroundColor" name="massage_light"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Camilo Silva, 3 citas de masaje terapéutico pectoral." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qj1-mu-7FC">
-                                        <rect key="frame" x="20" y="99" width="361.5" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" systemColor="systemGrayColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="or0-2T-UKE">
+                                        <rect key="frame" x="20" y="31.5" width="110" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Dnt-q9-miY"/>
+                                            <constraint firstAttribute="width" constant="110" id="NVV-1E-FGP"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="11:00 AM">
+                                            <color key="baseForegroundColor" name="massage"/>
+                                            <color key="baseBackgroundColor" name="massagetabbarback"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2A-wk-Nc1">
+                                        <rect key="frame" x="27" y="85" width="370" height="65"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="Skp-ua-f9d"/>
+                                            <constraint firstAttribute="width" constant="370" id="lT0-1V-Jca"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNu-rj-hLB">
-                                        <rect key="frame" x="20" y="125" width="136.5" height="30"/>
+                                        <rect key="frame" x="20" y="150" width="136.5" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="kUd-di-yfv"/>
                                         </constraints>
@@ -1385,23 +1324,21 @@ Entonces esta es tu aplicación.
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="a7i-pT-En6" firstAttribute="leading" secondItem="lui-Nu-IAp" secondAttribute="leading" id="4f0-3M-5eX"/>
-                                    <constraint firstItem="qj1-mu-7FC" firstAttribute="leading" secondItem="lui-Nu-IAp" secondAttribute="leading" id="Ha7-aI-cT6"/>
-                                    <constraint firstItem="a7i-pT-En6" firstAttribute="top" secondItem="lui-Nu-IAp" secondAttribute="bottom" constant="15.5" id="Hao-IR-Lox"/>
-                                    <constraint firstItem="qj1-mu-7FC" firstAttribute="top" secondItem="a7i-pT-En6" secondAttribute="bottom" constant="18" id="QNF-Vm-zR5"/>
-                                    <constraint firstItem="wNu-rj-hLB" firstAttribute="top" secondItem="qj1-mu-7FC" secondAttribute="bottom" constant="8" symbolic="YES" id="RlF-N7-hgA"/>
-                                    <constraint firstItem="wNu-rj-hLB" firstAttribute="leading" secondItem="qj1-mu-7FC" secondAttribute="leading" id="Yel-6V-yYx"/>
+                                    <constraint firstItem="wNu-rj-hLB" firstAttribute="top" secondItem="Z2A-wk-Nc1" secondAttribute="bottom" id="8xy-hK-BGq"/>
+                                    <constraint firstItem="or0-2T-UKE" firstAttribute="top" secondItem="lui-Nu-IAp" secondAttribute="bottom" constant="10" id="9lf-lH-CsT"/>
+                                    <constraint firstItem="or0-2T-UKE" firstAttribute="leading" secondItem="e0V-En-ddz" secondAttribute="leading" constant="20" symbolic="YES" id="GlD-Ba-ATx"/>
+                                    <constraint firstItem="Z2A-wk-Nc1" firstAttribute="leading" secondItem="e0V-En-ddz" secondAttribute="leading" constant="27" id="O5C-qU-qiv"/>
+                                    <constraint firstItem="Z2A-wk-Nc1" firstAttribute="top" secondItem="or0-2T-UKE" secondAttribute="bottom" constant="8.5" id="Vt0-Zk-pYv"/>
+                                    <constraint firstAttribute="bottom" secondItem="wNu-rj-hLB" secondAttribute="bottom" id="WLx-uf-RWP"/>
                                     <constraint firstItem="lui-Nu-IAp" firstAttribute="top" secondItem="e0V-En-ddz" secondAttribute="top" id="nPc-JR-50m"/>
                                     <constraint firstItem="lui-Nu-IAp" firstAttribute="leading" secondItem="e0V-En-ddz" secondAttribute="leading" constant="20" id="pzy-jy-MgS"/>
-                                    <constraint firstAttribute="height" constant="170" id="s8r-Jo-gOn"/>
+                                    <constraint firstItem="wNu-rj-hLB" firstAttribute="leading" secondItem="or0-2T-UKE" secondAttribute="leading" id="rd4-eP-Lwa"/>
+                                    <constraint firstAttribute="height" constant="180" id="s8r-Jo-gOn"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ec9-FM-dad">
-                                <rect key="frame" x="0.0" y="380" width="414" height="355"/>
+                                <rect key="frame" x="0.0" y="390" width="414" height="355"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="355" id="6Tg-bx-jQ1"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeMassageCellId" rowHeight="100" id="nQ7-Cj-ZgS" customClass="HomeMassageCell" customModule="Relief" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
@@ -1416,53 +1353,45 @@ Entonces esta es tu aplicación.
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="YBV-2t-MBJ">
-                                                    <rect key="frame" x="20" y="40" width="374" height="45"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DA-W7-j5a">
-                                                            <rect key="frame" x="0.0" y="0.0" width="110" height="45"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="45" id="5Zj-Fl-PYW"/>
-                                                                <constraint firstAttribute="width" constant="110" id="cjU-Qz-ceK"/>
-                                                            </constraints>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="filled" title="11:00 AM">
-                                                                <color key="baseBackgroundColor" name="massage_light"/>
-                                                            </buttonConfiguration>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xo-IT-6fs">
-                                                            <rect key="frame" x="132" y="0.0" width="110" height="45"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="filled" title="11:00 AM">
-                                                                <color key="baseBackgroundColor" name="massage_light"/>
-                                                            </buttonConfiguration>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVv-9F-D9s">
-                                                            <rect key="frame" x="264" y="0.0" width="110" height="45"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="filled" title="11:00 AM">
-                                                                <color key="baseBackgroundColor" name="massage_light"/>
-                                                            </buttonConfiguration>
-                                                        </button>
-                                                    </subviews>
-                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DA-W7-j5a">
+                                                    <rect key="frame" x="20" y="40" width="110" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="5Zj-Fl-PYW"/>
+                                                        <constraint firstAttribute="width" constant="110" id="cjU-Qz-ceK"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="11:00 AM">
+                                                        <color key="baseBackgroundColor" name="massage_light"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opv-XW-WF6">
+                                                    <rect key="frame" x="150" y="40" width="230" height="45"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="RdE-8M-IT5"/>
+                                                        <constraint firstAttribute="width" constant="250" id="fYx-MT-FOm"/>
+                                                    </constraints>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Opv-XW-WF6" secondAttribute="trailing" constant="34" id="0Ii-vs-XTa"/>
+                                                <constraint firstAttribute="bottom" secondItem="6DA-W7-j5a" secondAttribute="bottom" constant="15" id="1pc-3R-07C"/>
                                                 <constraint firstItem="Qxh-Fq-WiF" firstAttribute="leading" secondItem="FkE-UJ-hRk" secondAttribute="leading" constant="20" symbolic="YES" id="29J-UK-7Jc"/>
-                                                <constraint firstItem="YBV-2t-MBJ" firstAttribute="leading" secondItem="Qxh-Fq-WiF" secondAttribute="leading" id="67Q-7H-h4b"/>
+                                                <constraint firstItem="Opv-XW-WF6" firstAttribute="centerY" secondItem="6DA-W7-j5a" secondAttribute="centerY" id="2Ti-Fg-ac9"/>
+                                                <constraint firstItem="6DA-W7-j5a" firstAttribute="top" secondItem="Qxh-Fq-WiF" secondAttribute="bottom" constant="8.5" id="Er1-DE-rW2"/>
                                                 <constraint firstItem="Qxh-Fq-WiF" firstAttribute="top" secondItem="FkE-UJ-hRk" secondAttribute="top" constant="11" id="IAG-CF-LV3"/>
-                                                <constraint firstItem="YBV-2t-MBJ" firstAttribute="top" secondItem="Qxh-Fq-WiF" secondAttribute="bottom" constant="8.5" id="dHy-kz-5Y8"/>
-                                                <constraint firstAttribute="bottom" secondItem="YBV-2t-MBJ" secondAttribute="bottom" constant="15" id="ouZ-wF-pEQ"/>
+                                                <constraint firstItem="6DA-W7-j5a" firstAttribute="leading" secondItem="Qxh-Fq-WiF" secondAttribute="leading" id="RKk-Gq-6gJ"/>
+                                                <constraint firstItem="Opv-XW-WF6" firstAttribute="leading" secondItem="6DA-W7-j5a" secondAttribute="trailing" constant="20" id="qC2-vt-7tM"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="YBV-2t-MBJ" secondAttribute="trailing" constant="20" id="Kz7-rQ-OJL"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="dateLabel" destination="Qxh-Fq-WiF" id="IMN-XC-g5Y"/>
-                                            <outlet property="firstDateButton" destination="6DA-W7-j5a" id="ldV-0y-mfL"/>
-                                            <outlet property="secondDateButton" destination="0xo-IT-6fs" id="3FH-LO-cme"/>
-                                            <outlet property="thirdDateButton" destination="OVv-9F-D9s" id="seE-Qu-2ib"/>
+                                            <outlet property="descriptionTV" destination="Opv-XW-WF6" id="8en-qh-Fba"/>
+                                            <outlet property="timeBtn" destination="6DA-W7-j5a" id="XOa-E1-nud"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1471,6 +1400,81 @@ Entonces esta es tu aplicación.
                                     <outlet property="delegate" destination="gjn-zJ-G3o" id="Tvf-m5-GYI"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dm2-TU-YtH">
+                                <rect key="frame" x="0.0" y="390" width="414" height="354"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="k5A-2W-F4N">
+                                        <rect key="frame" x="7" y="97" width="400" height="160"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cable.connector.horizontal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="K3O-xJ-hMO">
+                                                <rect key="frame" x="0.0" y="6" width="400" height="68"/>
+                                                <color key="tintColor" name="massage"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="o6U-v9-Fb7"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error en la conexion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqC-pb-9y5">
+                                                <rect key="frame" x="0.0" y="80" width="400" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="400" id="SAG-98-eES"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                <color key="textColor" name="massage"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="k5A-2W-F4N" firstAttribute="centerY" secondItem="dm2-TU-YtH" secondAttribute="centerY" id="4rm-lv-FkQ"/>
+                                    <constraint firstItem="k5A-2W-F4N" firstAttribute="top" secondItem="dm2-TU-YtH" secondAttribute="top" constant="97" id="9V4-iW-Gdo"/>
+                                    <constraint firstItem="k5A-2W-F4N" firstAttribute="centerX" secondItem="dm2-TU-YtH" secondAttribute="centerX" id="VBG-Yo-UYy"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjO-Cn-bme">
+                                <rect key="frame" x="0.0" y="390" width="414" height="338"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="2U1-eX-XBv">
+                                        <rect key="frame" x="188.5" y="150.5" width="37" height="37"/>
+                                        <color key="color" name="massage"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="2U1-eX-XBv" firstAttribute="centerX" secondItem="tjO-Cn-bme" secondAttribute="centerX" id="Itb-vI-gui"/>
+                                    <constraint firstItem="2U1-eX-XBv" firstAttribute="centerY" secondItem="tjO-Cn-bme" secondAttribute="centerY" id="j6H-Ks-38L"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIR-nD-Krr">
+                                <rect key="frame" x="0.0" y="390" width="414" height="355"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="S1w-yp-8yK">
+                                        <rect key="frame" x="7" y="97" width="400" height="160"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list.dash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ggV-iF-cHv">
+                                                <rect key="frame" x="0.0" y="3" width="400" height="74"/>
+                                                <color key="tintColor" name="massage"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="h13-PP-5dY"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No tienes servicios" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNl-lM-Me7">
+                                                <rect key="frame" x="0.0" y="80" width="400" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="400" id="utU-Eh-Ns4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                <color key="textColor" name="massage"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="S1w-yp-8yK" firstAttribute="centerX" secondItem="eIR-nD-Krr" secondAttribute="centerX" id="m98-uO-FTI"/>
+                                    <constraint firstItem="S1w-yp-8yK" firstAttribute="top" secondItem="eIR-nD-Krr" secondAttribute="top" constant="97" id="qbB-Rf-utc"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cx5-iB-JTt">
                                 <rect key="frame" x="25.5" y="748" width="363" height="45"/>
                                 <constraints>
@@ -1489,7 +1493,7 @@ Entonces esta es tu aplicación.
                                     <segue destination="Dc7-Xi-5MZ" kind="presentation" id="R1X-98-4dm"/>
                                 </connections>
                             </button>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xms-uA-Rss">
+                            <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xms-uA-Rss">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recurso 22" translatesAutoresizingMaskIntoConstraints="NO" id="cX0-ba-mTp">
@@ -1588,23 +1592,36 @@ Entonces esta es tu aplicación.
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ec9-FM-dad" firstAttribute="top" secondItem="e0V-En-ddz" secondAttribute="bottom" id="2EX-iX-Orr"/>
+                            <constraint firstItem="Cx5-iB-JTt" firstAttribute="top" secondItem="tjO-Cn-bme" secondAttribute="bottom" constant="20" id="3gN-g0-GMs"/>
+                            <constraint firstItem="xms-uA-Rss" firstAttribute="leading" secondItem="dm2-TU-YtH" secondAttribute="leading" id="569-fV-gwZ"/>
                             <constraint firstItem="u1s-1D-AIP" firstAttribute="centerX" secondItem="zbS-CN-k1v" secondAttribute="centerX" id="6K5-X1-0e6"/>
+                            <constraint firstAttribute="trailing" secondItem="eIR-nD-Krr" secondAttribute="trailing" id="9R9-R3-BbJ"/>
                             <constraint firstAttribute="bottomMargin" secondItem="xms-uA-Rss" secondAttribute="bottom" constant="-83" id="Dmy-AN-Zbz"/>
+                            <constraint firstItem="eIR-nD-Krr" firstAttribute="top" secondItem="e0V-En-ddz" secondAttribute="bottom" id="ENL-rG-MV0"/>
+                            <constraint firstItem="xms-uA-Rss" firstAttribute="trailing" secondItem="dm2-TU-YtH" secondAttribute="trailing" id="Eek-ed-hOw"/>
                             <constraint firstItem="xms-uA-Rss" firstAttribute="centerY" secondItem="zbS-CN-k1v" secondAttribute="centerY" id="G5n-Xf-X3N"/>
-                            <constraint firstItem="Ec9-FM-dad" firstAttribute="top" secondItem="e0V-En-ddz" secondAttribute="bottom" id="HV4-6p-CLX"/>
+                            <constraint firstAttribute="trailing" secondItem="tjO-Cn-bme" secondAttribute="trailing" id="I3d-c2-Bac"/>
+                            <constraint firstItem="dm2-TU-YtH" firstAttribute="top" secondItem="e0V-En-ddz" secondAttribute="bottom" id="IX6-UG-X39"/>
                             <constraint firstAttribute="trailing" secondItem="e0V-En-ddz" secondAttribute="trailing" id="Ivw-Y9-qaE"/>
                             <constraint firstItem="e0V-En-ddz" firstAttribute="width" secondItem="zbS-CN-k1v" secondAttribute="width" id="NZS-0A-Ks5"/>
-                            <constraint firstItem="Ec9-FM-dad" firstAttribute="centerX" secondItem="e0V-En-ddz" secondAttribute="centerX" id="Ycb-cU-ciP"/>
-                            <constraint firstItem="Ec9-FM-dad" firstAttribute="width" secondItem="zbS-CN-k1v" secondAttribute="width" id="aaB-AO-F4e"/>
+                            <constraint firstItem="tjO-Cn-bme" firstAttribute="top" secondItem="e0V-En-ddz" secondAttribute="bottom" id="RaI-D8-Ivb"/>
+                            <constraint firstItem="tjO-Cn-bme" firstAttribute="leading" secondItem="zbS-CN-k1v" secondAttribute="leading" id="Vpz-Qo-hKV"/>
+                            <constraint firstAttribute="trailing" secondItem="Ec9-FM-dad" secondAttribute="trailing" id="Wyx-vi-L8n"/>
+                            <constraint firstItem="yg1-v3-fY3" firstAttribute="top" secondItem="Ec9-FM-dad" secondAttribute="bottom" constant="68" id="brB-64-OZc"/>
                             <constraint firstItem="r2Q-7u-Qox" firstAttribute="bottom" secondItem="u1s-1D-AIP" secondAttribute="top" id="cv8-vF-W3f"/>
                             <constraint firstItem="xms-uA-Rss" firstAttribute="centerX" secondItem="zbS-CN-k1v" secondAttribute="centerX" id="eil-dC-sA2"/>
+                            <constraint firstItem="xms-uA-Rss" firstAttribute="leading" secondItem="eIR-nD-Krr" secondAttribute="leading" id="go7-3O-DZD"/>
+                            <constraint firstItem="xms-uA-Rss" firstAttribute="leading" secondItem="Ec9-FM-dad" secondAttribute="leading" id="h1G-CN-5wg"/>
                             <constraint firstItem="e0V-En-ddz" firstAttribute="centerX" secondItem="u1s-1D-AIP" secondAttribute="centerX" id="inB-eH-5NA"/>
-                            <constraint firstItem="xms-uA-Rss" firstAttribute="leading" secondItem="Ec9-FM-dad" secondAttribute="leading" id="jiJ-06-fEb"/>
+                            <constraint firstItem="eIR-nD-Krr" firstAttribute="leading" secondItem="zbS-CN-k1v" secondAttribute="leading" id="j6d-EA-8uG"/>
                             <constraint firstItem="Cx5-iB-JTt" firstAttribute="centerX" secondItem="zbS-CN-k1v" secondAttribute="centerX" id="mW7-ex-gq2"/>
+                            <constraint firstItem="Ec9-FM-dad" firstAttribute="leading" secondItem="zbS-CN-k1v" secondAttribute="leading" id="o24-aL-kZV"/>
                             <constraint firstItem="yg1-v3-fY3" firstAttribute="top" secondItem="Cx5-iB-JTt" secondAttribute="bottom" constant="20" id="pbi-aN-zu6"/>
-                            <constraint firstAttribute="trailing" secondItem="a7i-pT-En6" secondAttribute="trailing" constant="20" id="qqO-2g-foE"/>
                             <constraint firstItem="Cx5-iB-JTt" firstAttribute="width" secondItem="zbS-CN-k1v" secondAttribute="width" multiplier="0.876812" id="sNw-qQ-Xzg"/>
+                            <constraint firstItem="Cx5-iB-JTt" firstAttribute="top" secondItem="eIR-nD-Krr" secondAttribute="bottom" constant="3" id="uU9-oU-zzX"/>
                             <constraint firstItem="e0V-En-ddz" firstAttribute="top" secondItem="u1s-1D-AIP" secondAttribute="bottom" constant="20" id="vMX-05-MQ7"/>
+                            <constraint firstItem="xms-uA-Rss" firstAttribute="trailing" secondItem="eIR-nD-Krr" secondAttribute="trailing" id="xd4-SI-Rl6"/>
                             <constraint firstItem="e0V-En-ddz" firstAttribute="leading" secondItem="zbS-CN-k1v" secondAttribute="leading" id="zqg-fd-T58"/>
                         </constraints>
                     </view>
@@ -1612,11 +1629,12 @@ Entonces esta es tu aplicación.
                     <connections>
                         <outlet property="calendarButton" destination="wNu-rj-hLB" id="qB4-HD-fgV"/>
                         <outlet property="dateLabel" destination="lui-Nu-IAp" id="b79-7I-4X5"/>
-                        <outlet property="firstDateButton" destination="or0-2T-UKE" id="uRO-Om-6rG"/>
-                        <outlet property="informationLabel" destination="qj1-mu-7FC" id="vrg-vX-jFU"/>
-                        <outlet property="secondDateButton" destination="OhJ-QS-HOB" id="zmi-77-Gpw"/>
+                        <outlet property="descriptionTV" destination="Z2A-wk-Nc1" id="VWf-z1-odx"/>
+                        <outlet property="noDataView" destination="dm2-TU-YtH" id="f4K-x7-w6F"/>
+                        <outlet property="noServicesView" destination="eIR-nD-Krr" id="Y10-BA-7VD"/>
+                        <outlet property="spinnerView" destination="tjO-Cn-bme" id="LUk-N5-zAj"/>
                         <outlet property="tableView" destination="Ec9-FM-dad" id="h3d-F1-ZoN"/>
-                        <outlet property="thirdDateButton" destination="3rA-nR-nNZ" id="j7j-0A-uBo"/>
+                        <outlet property="timeBtn" destination="or0-2T-UKE" id="JsY-Wz-K9C"/>
                         <outlet property="todayDatesView" destination="e0V-En-ddz" id="PQL-Li-GfZ"/>
                         <outlet property="tutorialTextHomeView" destination="ugJ-XP-uzp" id="m3O-2e-fQ5"/>
                         <outlet property="tutorialView" destination="xms-uA-Rss" id="iFS-80-B2N"/>
@@ -1844,10 +1862,10 @@ Entonces esta es tu aplicación.
             </objects>
             <point key="canvasLocation" x="1800.0000000000002" y="-664.28571428571422"/>
         </scene>
-        <!--Register View Controller-->
+        <!--View Controller-->
         <scene sceneID="v9B-cz-0GV">
             <objects>
-                <viewController storyboardIdentifier="Register" id="5tW-ir-nh3" customClass="RegisterViewController" customModule="Relief" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Register2" id="5tW-ir-nh3" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LdE-Wn-dOk"/>
                         <viewControllerLayoutGuide type="bottom" id="Pk7-Pk-K5j"/>
@@ -1946,8 +1964,8 @@ Entonces esta es tu aplicación.
                                     <constraint firstAttribute="width" constant="200" id="8e0-y0-Rcf"/>
                                 </constraints>
                             </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="Var-7J-Y9p">
-                                <rect key="frame" x="57" y="716" width="300" height="32"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="Var-7J-Y9p">
+                                <rect key="frame" x="57" y="736" width="300" height="32"/>
                                 <color key="backgroundColor" name="tabbarback"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="xN8-Ss-EzE"/>
@@ -1959,7 +1977,7 @@ Entonces esta es tu aplicación.
                                 <color key="selectedSegmentTintColor" name="user"/>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0g-QF-JrN">
-                                <rect key="frame" x="65.5" y="634" width="283" height="34.5"/>
+                                <rect key="frame" x="65.5" y="634" width="283" height="41.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="¿Ya estas registrado? Inicia sesión">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
@@ -1970,7 +1988,7 @@ Entonces esta es tu aplicación.
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona el tipo de usuario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysP-JH-S7t">
-                                <rect key="frame" x="98" y="675.5" width="218" height="20.5"/>
+                                <rect key="frame" x="98" y="695.5" width="218" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="tabbarback"/>
                                 <nil key="highlightedColor"/>
@@ -2041,13 +2059,14 @@ Entonces esta es tu aplicación.
                             <constraint firstItem="rli-sN-tCr" firstAttribute="centerY" secondItem="ruO-9Z-rhW" secondAttribute="centerY" id="3a5-hx-Lw0"/>
                             <constraint firstItem="Var-7J-Y9p" firstAttribute="centerX" secondItem="gYM-1d-Xca" secondAttribute="centerX" id="9dD-VZ-BMq"/>
                             <constraint firstItem="Var-7J-Y9p" firstAttribute="top" secondItem="ysP-JH-S7t" secondAttribute="bottom" constant="20" id="DDq-C0-soq"/>
-                            <constraint firstItem="2kT-c9-I9M" firstAttribute="top" secondItem="Var-7J-Y9p" secondAttribute="bottom" constant="50" id="EP8-9p-EOB"/>
+                            <constraint firstItem="2kT-c9-I9M" firstAttribute="top" secondItem="Var-7J-Y9p" secondAttribute="bottom" constant="30" id="EP8-9p-EOB"/>
                             <constraint firstItem="x0g-QF-JrN" firstAttribute="top" secondItem="o74-iv-5vi" secondAttribute="bottom" constant="20" id="HG8-ZX-hbp"/>
                             <constraint firstItem="2kT-c9-I9M" firstAttribute="centerX" secondItem="gYM-1d-Xca" secondAttribute="centerX" id="Hke-l1-aA6"/>
                             <constraint firstItem="9Ex-cQ-j8J" firstAttribute="centerX" secondItem="gYM-1d-Xca" secondAttribute="centerX" id="Lif-Db-WPG"/>
                             <constraint firstItem="ysP-JH-S7t" firstAttribute="centerX" secondItem="Var-7J-Y9p" secondAttribute="centerX" id="Nhx-73-xbB"/>
                             <constraint firstItem="x0g-QF-JrN" firstAttribute="centerX" secondItem="o74-iv-5vi" secondAttribute="centerX" id="PUc-vg-CKi"/>
                             <constraint firstItem="8Ig-Wl-ewA" firstAttribute="top" secondItem="IhZ-I4-37W" secondAttribute="bottom" constant="8" symbolic="YES" id="Vhc-NI-Rcn"/>
+                            <constraint firstItem="ysP-JH-S7t" firstAttribute="top" secondItem="x0g-QF-JrN" secondAttribute="bottom" constant="20" id="Wgn-Xw-sYg"/>
                             <constraint firstItem="2kT-c9-I9M" firstAttribute="width" secondItem="gYM-1d-Xca" secondAttribute="width" multiplier="0.806763" id="WmV-ey-egy"/>
                             <constraint firstItem="rli-sN-tCr" firstAttribute="centerX" secondItem="ruO-9Z-rhW" secondAttribute="centerX" multiplier="1.85" id="X4t-CT-gkL"/>
                             <constraint firstItem="8Ig-Wl-ewA" firstAttribute="leading" secondItem="gYM-1d-Xca" secondAttribute="leading" id="Xvg-nt-6Lu"/>
@@ -2068,6 +2087,7 @@ Entonces esta es tu aplicación.
                         <outlet property="nameTF" destination="7lr-Ow-6ZF" id="LLc-DJ-lAb"/>
                         <outlet property="noDataView" destination="8Ig-Wl-ewA" id="EBf-tp-kcr"/>
                         <outlet property="passwordTF" destination="ruO-9Z-rhW" id="Ynw-nM-taO"/>
+                        <outlet property="phoneTF" destination="YdE-Xa-JiU" id="0rS-fE-Eoc"/>
                         <outlet property="repeatPasswordTF" destination="o74-iv-5vi" id="ZHh-eq-btL"/>
                         <outlet property="segmentregister" destination="Var-7J-Y9p" id="T7z-dz-I6f"/>
                     </connections>
@@ -2664,12 +2684,6 @@ Entonces esta es tu aplicación.
                                     <constraint firstAttribute="width" constant="370" id="mTo-w0-g50"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valorados recientemente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAe-C1-y5B">
-                                <rect key="frame" x="67" y="426" width="280" height="29"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0d-OU-haR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
@@ -2784,10 +2798,8 @@ Entonces esta es tu aplicación.
                             <constraint firstItem="6zA-xZ-6p3" firstAttribute="leading" secondItem="tla-eq-cha" secondAttribute="leading" constant="167" id="R3N-zy-zgI"/>
                             <constraint firstItem="MGM-lA-NbF" firstAttribute="top" secondItem="ICE-mZ-e3g" secondAttribute="bottom" constant="8" symbolic="YES" id="RcC-mh-4sy"/>
                             <constraint firstItem="F1L-HL-Ssa" firstAttribute="leading" secondItem="I7u-o2-qmA" secondAttribute="trailing" constant="30" id="Wnf-8c-kZm"/>
-                            <constraint firstItem="sAe-C1-y5B" firstAttribute="centerX" secondItem="tla-eq-cha" secondAttribute="centerX" id="YSD-zT-NyI"/>
                             <constraint firstItem="F1L-HL-Ssa" firstAttribute="centerY" secondItem="I7u-o2-qmA" secondAttribute="centerY" id="bL0-4B-XE1"/>
                             <constraint firstAttribute="trailing" secondItem="S7z-xM-MGY" secondAttribute="trailing" constant="69" id="emK-xG-qIN"/>
-                            <constraint firstItem="sAe-C1-y5B" firstAttribute="top" secondItem="2Dh-dm-Pko" secondAttribute="bottom" constant="24" id="hE2-hN-2Ar"/>
                             <constraint firstAttribute="trailing" secondItem="6zA-xZ-6p3" secondAttribute="trailing" constant="167" id="jWE-oc-BXQ"/>
                             <constraint firstAttribute="trailing" secondItem="MGM-lA-NbF" secondAttribute="trailing" constant="67" id="rfM-Dt-nQi"/>
                             <constraint firstItem="Igj-qQ-4pu" firstAttribute="top" secondItem="no2-Iw-Lta" secondAttribute="bottom" constant="15" id="wR1-Hi-HcD"/>
@@ -3414,6 +3426,36 @@ Entonces esta es tu aplicación.
                                     <constraint firstItem="vGE-2D-uc9" firstAttribute="centerY" secondItem="hUP-1z-02b" secondAttribute="centerY" id="g1v-PM-uK3"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMQ-qv-bWA">
+                                <rect key="frame" x="20" y="474.5" width="374" height="292"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PBi-LQ-jYh">
+                                        <rect key="frame" x="-13" y="66" width="400" height="160"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list.dash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3no-tP-sHY">
+                                                <rect key="frame" x="0.0" y="3" width="400" height="74"/>
+                                                <color key="tintColor" name="massage"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="aBA-Sh-dYX"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No tienes servicios" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMB-Sg-Y31">
+                                                <rect key="frame" x="0.0" y="80" width="400" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="400" id="LQh-rt-IaK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                <color key="textColor" name="massage"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="PBi-LQ-jYh" firstAttribute="centerX" secondItem="EMQ-qv-bWA" secondAttribute="centerX" id="0FD-ST-Ral"/>
+                                    <constraint firstItem="PBi-LQ-jYh" firstAttribute="centerY" secondItem="EMQ-qv-bWA" secondAttribute="centerY" id="RKt-3h-Tm9"/>
+                                </constraints>
+                            </view>
                             <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WlD-Yk-feB">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
@@ -3529,10 +3571,13 @@ Entonces esta es tu aplicación.
                             <constraint firstAttribute="trailing" secondItem="IWD-V0-WWr" secondAttribute="trailing" constant="24" id="YF8-Oh-vGc"/>
                             <constraint firstItem="X7y-TS-5Oh" firstAttribute="top" secondItem="sdD-vy-dLH" secondAttribute="bottom" constant="8" symbolic="YES" id="ZB9-lS-DmR"/>
                             <constraint firstItem="hUP-1z-02b" firstAttribute="leading" secondItem="bsY-7k-GqR" secondAttribute="leading" id="ZHp-Jg-Vgi"/>
+                            <constraint firstItem="EMQ-qv-bWA" firstAttribute="top" secondItem="V5q-t3-1sg" secondAttribute="bottom" constant="20" id="bSO-yi-1cO"/>
                             <constraint firstAttribute="bottom" secondItem="WlD-Yk-feB" secondAttribute="bottom" id="bkw-PJ-H0l"/>
                             <constraint firstItem="hUP-1z-02b" firstAttribute="centerY" secondItem="bsY-7k-GqR" secondAttribute="centerY" id="cQO-GC-vAf"/>
+                            <constraint firstItem="EMQ-qv-bWA" firstAttribute="leading" secondItem="bsY-7k-GqR" secondAttribute="leading" id="cXM-BN-g4T"/>
                             <constraint firstItem="bsY-7k-GqR" firstAttribute="leading" secondItem="Ft6-qZ-t9K" secondAttribute="leading" constant="20" id="crZ-pD-Aln"/>
                             <constraint firstItem="I0j-ZK-l7c" firstAttribute="leading" secondItem="Ft6-qZ-t9K" secondAttribute="leading" constant="20" id="d1s-hI-5pk"/>
+                            <constraint firstItem="EMQ-qv-bWA" firstAttribute="bottom" secondItem="Yyo-X2-UF0" secondAttribute="bottom" id="dg5-8n-8FO"/>
                             <constraint firstItem="Yyo-X2-UF0" firstAttribute="trailing" secondItem="hUP-1z-02b" secondAttribute="trailing" id="e44-31-F14"/>
                             <constraint firstAttribute="trailing" secondItem="bsY-7k-GqR" secondAttribute="trailing" constant="20" id="fE3-DF-uHy"/>
                             <constraint firstItem="IWD-V0-WWr" firstAttribute="top" secondItem="wjx-Zt-3Yb" secondAttribute="bottom" constant="20" id="gpC-nA-nqY"/>
@@ -3553,6 +3598,7 @@ Entonces esta es tu aplicación.
                             <constraint firstItem="bsY-7k-GqR" firstAttribute="top" secondItem="V5q-t3-1sg" secondAttribute="bottom" constant="20" id="wX7-dg-bcN"/>
                             <constraint firstAttribute="trailing" secondItem="sdD-vy-dLH" secondAttribute="trailing" constant="109" id="y4d-MB-eCY"/>
                             <constraint firstAttribute="trailing" secondItem="iEB-5K-2Iw" secondAttribute="trailing" constant="167" id="yuu-g1-5xO"/>
+                            <constraint firstItem="EMQ-qv-bWA" firstAttribute="trailing" secondItem="hUP-1z-02b" secondAttribute="trailing" id="zFV-zT-sr7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="person" catalog="system" selectedImage="person.fill" id="qV8-BR-85A"/>
@@ -3561,6 +3607,7 @@ Entonces esta es tu aplicación.
                         <outlet property="imageProfile" destination="gQN-GS-clY" id="NXb-DK-RCT"/>
                         <outlet property="nameL" destination="I0j-ZK-l7c" id="cqU-wS-yiV"/>
                         <outlet property="noDataView" destination="hUP-1z-02b" id="7E2-zh-fR4"/>
+                        <outlet property="noServicesView" destination="EMQ-qv-bWA" id="cvp-yY-pUu"/>
                         <outlet property="spinnerView" destination="Yyo-X2-UF0" id="At2-gN-3rf"/>
                         <outlet property="tableView" destination="bsY-7k-GqR" id="m5b-FG-Z9h"/>
                         <outlet property="tutorialTextHomeView" destination="ihH-7T-XHV" id="lID-r8-OZl"/>
@@ -4375,7 +4422,7 @@ Entonces esta es tu aplicación.
                                     <constraint firstAttribute="height" constant="150" id="zLY-HG-gow"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Masajista a domicilio con 15 años de experiencia, te invito a concocer mis servicios, escribeme!" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deE-xd-stu">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Este usuario actualmente no dispone de una descripción" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deE-xd-stu">
                                 <rect key="frame" x="196" y="175" width="198" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -5470,10 +5517,10 @@ Entonces esta es tu aplicación.
             </objects>
             <point key="canvasLocation" x="4028" y="-664"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="MsT-g6-km0">
             <objects>
-                <viewController id="AVW-Zv-1Ld" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Register" id="AVW-Zv-1Ld" customClass="RegisterViewController" customModule="Relief" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F6I-rC-Lgm"/>
                         <viewControllerLayoutGuide type="bottom" id="Cna-oM-5Bt"/>
@@ -5569,6 +5616,7 @@ Entonces esta es tu aplicación.
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="buttonLoginTapped:" destination="5tW-ir-nh3" eventType="touchUpInside" id="HuZ-rm-qlV"/>
+                                                    <action selector="buttonLoginTapped:" destination="AVW-Zv-1Ld" eventType="touchUpInside" id="VTq-9h-b0u"/>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recurso 29" translatesAutoresizingMaskIntoConstraints="NO" id="cWh-eS-UXy">
@@ -5599,6 +5647,7 @@ Entonces esta es tu aplicación.
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="buttonToLoginTapped:" destination="5tW-ir-nh3" eventType="touchUpInside" id="7Yn-wI-6EQ"/>
+                                                    <action selector="buttonToLoginTapped:" destination="AVW-Zv-1Ld" eventType="touchUpInside" id="LHg-2y-Qxs"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona el tipo de usuario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAo-PR-AkM">
@@ -5619,6 +5668,7 @@ Entonces esta es tu aplicación.
                                                 <state key="selected" image="eye.slash.fill" catalog="system"/>
                                                 <connections>
                                                     <action selector="eyePassTapped2:" destination="5tW-ir-nh3" eventType="touchUpInside" id="OV3-Oj-EL5"/>
+                                                    <action selector="eyePassTapped2:" destination="AVW-Zv-1Ld" eventType="touchUpInside" id="nVl-Sn-Wvs"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXY-pz-Vre">
@@ -5632,6 +5682,7 @@ Entonces esta es tu aplicación.
                                                 <state key="normal" image="eye.fill" catalog="system"/>
                                                 <state key="selected" image="eye.slash.fill" catalog="system"/>
                                                 <connections>
+                                                    <action selector="eyePassTapped:" destination="AVW-Zv-1Ld" eventType="touchUpInside" id="CdS-WZ-z96"/>
                                                     <action selector="eyePassTapped:" destination="5tW-ir-nh3" eventType="touchUpInside" id="aIb-42-JZN"/>
                                                 </connections>
                                             </button>
@@ -5714,6 +5765,17 @@ Entonces esta es tu aplicación.
                             <constraint firstItem="Cna-oM-5Bt" firstAttribute="top" secondItem="OJ6-Uw-Pnl" secondAttribute="bottom" id="y3Z-D5-hWh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="MBi-C8-3a7" id="N6e-mN-yCG"/>
+                        <outlet property="eyeBtn" destination="VXY-pz-Vre" id="HNz-21-vvW"/>
+                        <outlet property="eyeBtn2" destination="on3-8Q-B1X" id="UOb-AC-bfi"/>
+                        <outlet property="nameTF" destination="IBu-p2-gpy" id="xo4-fY-F7c"/>
+                        <outlet property="noDataView" destination="PZH-7y-ZGX" id="rmT-me-mYW"/>
+                        <outlet property="passwordTF" destination="KLk-4X-79B" id="Vjs-Fw-8g8"/>
+                        <outlet property="phoneTF" destination="rrR-9d-MWd" id="xar-L0-4n7"/>
+                        <outlet property="repeatPasswordTF" destination="zsP-Gs-ojs" id="ELZ-BX-BZn"/>
+                        <outlet property="segmentregister" destination="wHs-Bz-TOu" id="8oh-ub-Syf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3t-Js-XSh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5747,6 +5809,7 @@ Entonces esta es tu aplicación.
         <image name="img_marcoMasajistaUsuario" width="149" height="149"/>
         <image name="img_masajeRelajante" width="50" height="50"/>
         <image name="img_masajeTailandes" width="50" height="50"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>

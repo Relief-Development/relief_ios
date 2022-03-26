@@ -51,7 +51,7 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         if tableView == self.tableViewRec {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeUserRecomCellId", for: indexPath) as? HomeUserCell{
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeUserRecomCellId", for: indexPath) as? HomeRecommendedUserCell{
             cell.user = response?.homeList?[indexPath.row]
             return cell
             }

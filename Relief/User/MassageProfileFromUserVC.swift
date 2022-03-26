@@ -96,6 +96,35 @@ class MassageProfileFromUserVC: UIViewController, UITableViewDelegate, UITableVi
                 }
             }
         }
+        let params3: [String: Any] = [
+            "therapist_id": String(self.user?.id ?? 0),
+            "api_token": UserDefaults.standard.object(forKey: "token") as? String ?? "",
+            "rating": button.tag
+        ]
+        
+        DataMapper.shared.addRating(params: params3) { response in
+            print(response)
+            if(response == nil){
+                DispatchQueue.main.async {
+                    self.showAlert(title: "Error en la conexion")
+                }
+            }else{
+                
+                    DispatchQueue.main.async {
+                        self.response = response
+                        if(response?.status == 0){
+                            //error
+                        }else if response?.status == 1{
+                            
+                    }else if response?.status == 2{
+                        self.showAlert(title: (response?.msg)!)
+                    }else if response?.status == 3{
+                        self.showAlert(title: (response?.msg)!)
+                    }
+                }
+            }
+        }
+        
     }
     @IBAction func favButtonnTapped(_ sender: Any) {
         heartButton?.isSelected.toggle()

@@ -16,6 +16,7 @@ class ProfileMassageVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     @IBOutlet var imageProfile: UIImageView!
     @IBOutlet var spinnerView: UIView!
     @IBOutlet var noDataView: UIView!
+    @IBOutlet var noServicesView: UIView!
     @IBOutlet var tableView: UITableView!
 
     var response: Response?
@@ -102,6 +103,8 @@ class ProfileMassageVC: UIViewController, UITableViewDelegate, UITableViewDataSo
                                 
                         }else if response?.status == 2{
                         }else if response?.status == 3{
+                        }else if response?.status == 7 {
+                            self.noServicesView.isHidden = false
                         }
                     }
                 }

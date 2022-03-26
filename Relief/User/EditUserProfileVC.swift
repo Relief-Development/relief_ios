@@ -15,7 +15,6 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate, UITe
     @IBOutlet var emailTf: UITextField!
     @IBOutlet var passwordTf: UITextField!
     @IBOutlet var rpasswordTf: UITextField!
-    @IBOutlet var addressTf: UITextField!
     @IBOutlet var chargeView: UIView!
 
 
@@ -30,7 +29,6 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate, UITe
         imageProfile.layer.borderWidth = 5
         nameTf.delegate = self
         emailTf.delegate = self
-        addressTf.delegate = self
         rpasswordTf.delegate = self
         passwordTf.delegate = self
 
@@ -124,6 +122,7 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate, UITe
             self.present(self.picker, animated: true)
         })
         let galeria = UIAlertAction(title: "Seleccionar foto", style: .default, handler: {(action) in
+            
             self.picker.sourceType = .photoLibrary
             self.picker.delegate = self
             self.picker.allowsEditing = true
@@ -154,18 +153,7 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate, UITe
         imageProfile.layer.borderWidth = 5
         imageProfile.layer.cornerRadius = imageProfile.frame.height / 2.0
         UserDefaults.standard.set(convertImageToBase64(image: image), forKey: "image")
-//        print(" ")
-//        print(" ")
-//        print(" ")
-//        print(" ")
-//        print(" ")
-//        print("ESTA ES LA IMAGEN")
-//        print(" ")
-//        print(" ")
-//        print(" ")
-        
-        
-//        print(params)
+
     }
     func convertImageToBase64(image: UIImage) -> String{
         let imageData = image.jpegData(compressionQuality: 0.6)!
@@ -182,6 +170,9 @@ class EditUserProfileVC: UIViewController, UIImagePickerControllerDelegate, UITe
     }
     @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
+    }
+    func registerAppointments(){
+        
     }
     
 }
