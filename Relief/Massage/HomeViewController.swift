@@ -47,10 +47,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeMassageCellId", for: indexPath) as? HomeMassageCell{
             cell.appointment = response?.appointments?[indexPath.row]
             return cell
-            tableView.deselectRow(at: indexPath, animated: true)
         }else {
             return UITableViewCell()
         }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

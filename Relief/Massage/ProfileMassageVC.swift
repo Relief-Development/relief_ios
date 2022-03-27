@@ -29,11 +29,16 @@ class ProfileMassageVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileMassageCell2", for: indexPath) as? ProfileMassageCell{
             cell.user = response?.list?[indexPath.row]
+            tableView.deselectRow(at: indexPath, animated: true)
             return cell
+            
             
         }else {
             return UITableViewCell()
         }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     

@@ -258,7 +258,7 @@ class EditProfileMassageVC: UIViewController, UIImagePickerControllerDelegate & 
     @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
     }
-    @objc func textViewShouldReturn(_ textView: UITextView) -> Bool {
+    @objc func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
         self.view.endEditing(true)
     }
 }

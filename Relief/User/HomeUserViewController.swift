@@ -52,7 +52,7 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
 
         if tableView == self.tableViewRec {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeUserRecomCellId", for: indexPath) as? HomeRecommendedUserCell{
-            cell.user = response?.homeList?[indexPath.row]
+                cell.user = response?.homeList?[indexPath.row]
             return cell
             }
         } else if tableView == self.tableViewFav {
@@ -62,6 +62,9 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
             }
         }
         return UITableViewCell()
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

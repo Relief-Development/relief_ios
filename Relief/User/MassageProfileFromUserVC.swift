@@ -74,6 +74,9 @@ class MassageProfileFromUserVC: UIViewController, UITableViewDelegate, UITableVi
             return UITableViewCell()
         }
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
     @IBAction func buttonToDetailTapped(){
         self.dismiss(animated: true, completion: nil)
