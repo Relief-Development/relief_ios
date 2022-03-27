@@ -103,7 +103,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
             role = "Masajista"
 
         }else {
-            self.infoMessage = "\(self.infoMessage!) \n- Seleccione el cargo del trabajador."
+            self.infoMessage = "\(self.infoMessage!) \n- Seleccione el tipo de usuario."
         }
         if infoMessage != "Encontramos algunos fallos en el formulario:\n"{
                     self.alert(message:infoMessage!, type: .actionSheet)
@@ -150,8 +150,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
                             self.passwordTF.text = ""
                             self.repeatPasswordTF.text = ""
                             self.nameTF.text = ""
+                            self.phoneTF.text = ""
                             self.segmentregister?.selectedSegmentIndex = UISegmentedControl.noSegment
                             self.showAlert(title: (response?.msg)!)
+                            self.dismiss(animated: true, completion: nil)
 
                         }else if response?.status == 2{
                             self.showAlert(title: (response?.msg)!)
