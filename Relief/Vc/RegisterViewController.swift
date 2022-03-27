@@ -153,7 +153,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
                             self.phoneTF.text = ""
                             self.segmentregister?.selectedSegmentIndex = UISegmentedControl.noSegment
                             self.showAlert(title: (response?.msg)!)
-                            self.dismiss(animated: true, completion: nil)
+                            let login = self.storyboard?.instantiateViewController(withIdentifier: "Login")
+                            login!.modalPresentationStyle = .fullScreen
+                            self.present(login!, animated: true, completion: nil)
 
                         }else if response?.status == 2{
                             self.showAlert(title: (response?.msg)!)
