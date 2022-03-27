@@ -665,25 +665,17 @@ Entonces esta es tu aplicación.
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masajes relajantes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPS-K1-4iF">
-                                                    <rect key="frame" x="93" y="11" width="140.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="93" y="25" width="166.5" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                     <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9 especialistas en tu zona" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0n-hN-ynY">
-                                                    <rect key="frame" x="93" y="39.5" width="167" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="zmM-5a-2Na" firstAttribute="top" secondItem="kBU-BM-ld5" secondAttribute="top" constant="12" id="VjT-cU-pfA"/>
-                                                <constraint firstItem="P0n-hN-ynY" firstAttribute="leading" secondItem="IPS-K1-4iF" secondAttribute="leading" id="YUI-Zu-RhF"/>
-                                                <constraint firstItem="P0n-hN-ynY" firstAttribute="top" secondItem="IPS-K1-4iF" secondAttribute="bottom" constant="8" symbolic="YES" id="Yqb-Us-Y9g"/>
+                                                <constraint firstItem="IPS-K1-4iF" firstAttribute="centerY" secondItem="zmM-5a-2Na" secondAttribute="centerY" id="WjC-EI-WnM"/>
                                                 <constraint firstItem="zmM-5a-2Na" firstAttribute="leading" secondItem="kBU-BM-ld5" secondAttribute="leading" constant="20" symbolic="YES" id="bqg-X4-2lV"/>
                                                 <constraint firstAttribute="bottom" secondItem="zmM-5a-2Na" secondAttribute="bottom" constant="16" id="bzW-jT-HQI"/>
-                                                <constraint firstItem="IPS-K1-4iF" firstAttribute="top" secondItem="kBU-BM-ld5" secondAttribute="top" constant="11" id="mCJ-ke-dgu"/>
                                                 <constraint firstItem="IPS-K1-4iF" firstAttribute="leading" secondItem="zmM-5a-2Na" secondAttribute="trailing" constant="23" id="sfZ-mm-hXk"/>
                                             </constraints>
                                         </tableViewCellContentView>
