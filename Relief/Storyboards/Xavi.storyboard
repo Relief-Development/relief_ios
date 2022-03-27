@@ -33,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logoLoginRegistro" translatesAutoresizingMaskIntoConstraints="NO" id="m59-JM-YXy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recurso 29" translatesAutoresizingMaskIntoConstraints="NO" id="m59-JM-YXy">
                                 <rect key="frame" x="107" y="104" width="200" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="W4K-Z9-jJW"/>
@@ -70,7 +70,41 @@
                                 <color key="tintColor" name="user"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Solicitar contraseña"/>
+                                <connections>
+                                    <action selector="buttonRecoverTapped:" destination="7BT-9S-CDa" eventType="touchUpInside" id="wMZ-mJ-RxI"/>
+                                </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uyx-fF-snV">
+                                <rect key="frame" x="0.0" y="284" width="414" height="578"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2xp-f7-ka8">
+                                        <rect key="frame" x="7" y="209" width="400" height="160"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cable.connector.horizontal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="N32-f8-7CG">
+                                                <rect key="frame" x="0.0" y="6" width="400" height="68"/>
+                                                <color key="tintColor" name="tabbarback"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="eG8-Wc-26H"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error en la conexion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaU-68-rVH">
+                                                <rect key="frame" x="0.0" y="80" width="400" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="400" id="fJs-K0-XDP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                <color key="textColor" name="tabbarback"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="user"/>
+                                <constraints>
+                                    <constraint firstItem="2xp-f7-ka8" firstAttribute="centerX" secondItem="uyx-fF-snV" secondAttribute="centerX" id="E4K-Y9-eKU"/>
+                                    <constraint firstItem="2xp-f7-ka8" firstAttribute="centerY" secondItem="uyx-fF-snV" secondAttribute="centerY" id="rj7-4Q-sXF"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eV0-hV-9zG"/>
                         <color key="backgroundColor" name="user"/>
@@ -81,17 +115,23 @@
                             <constraint firstItem="GkB-RN-cMG" firstAttribute="top" secondItem="9k4-vs-4WN" secondAttribute="bottom" constant="20" id="GBN-AQ-a9A"/>
                             <constraint firstItem="m59-JM-YXy" firstAttribute="top" secondItem="eV0-hV-9zG" secondAttribute="top" constant="60" id="JdO-MX-4eR"/>
                             <constraint firstItem="9k4-vs-4WN" firstAttribute="centerX" secondItem="eV0-hV-9zG" secondAttribute="centerX" id="Meg-no-61W"/>
+                            <constraint firstItem="uyx-fF-snV" firstAttribute="leading" secondItem="eV0-hV-9zG" secondAttribute="leading" id="N5d-t6-A9B"/>
                             <constraint firstItem="GkB-RN-cMG" firstAttribute="width" secondItem="97q-tt-sAA" secondAttribute="width" multiplier="0.8" id="QM4-BZ-m5K"/>
                             <constraint firstItem="9k4-vs-4WN" firstAttribute="top" secondItem="m59-JM-YXy" secondAttribute="bottom" constant="39" id="RjE-7I-C5U"/>
+                            <constraint firstItem="uyx-fF-snV" firstAttribute="bottom" secondItem="eV0-hV-9zG" secondAttribute="bottom" id="Wbu-cH-jZY"/>
                             <constraint firstItem="hRR-ua-UfT" firstAttribute="width" secondItem="97q-tt-sAA" secondAttribute="width" multiplier="0.8" id="XFT-Dm-rbB"/>
                             <constraint firstItem="Zj1-UT-E9Z" firstAttribute="width" secondItem="97q-tt-sAA" secondAttribute="width" multiplier="0.8" id="fAB-qK-Kjf"/>
                             <constraint firstItem="Zj1-UT-E9Z" firstAttribute="top" secondItem="GkB-RN-cMG" secondAttribute="bottom" constant="30" id="gMQ-4U-ZNh"/>
+                            <constraint firstItem="uyx-fF-snV" firstAttribute="top" secondItem="m59-JM-YXy" secondAttribute="bottom" constant="30" id="lky-3M-XII"/>
                             <constraint firstItem="m59-JM-YXy" firstAttribute="centerX" secondItem="eV0-hV-9zG" secondAttribute="centerX" id="mMR-6h-peK"/>
+                            <constraint firstItem="uyx-fF-snV" firstAttribute="centerX" secondItem="hRR-ua-UfT" secondAttribute="centerX" id="q1F-l0-lpw"/>
                             <constraint firstItem="GkB-RN-cMG" firstAttribute="centerX" secondItem="eV0-hV-9zG" secondAttribute="centerX" id="vty-7l-aDe"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="recoveryEmailTextField" destination="Zj1-UT-E9Z" id="F2u-Hh-xya"/>
+                        <outlet property="noDataView" destination="uyx-fF-snV" id="Thz-Va-MzE"/>
+                        <outlet property="recoveryBtn" destination="hRR-ua-UfT" id="s5G-p1-sY7"/>
+                        <outlet property="recoveryEmailTF" destination="Zj1-UT-E9Z" id="gX2-Cf-va5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyB-mM-Lfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -100,7 +140,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="img_logoLoginRegistro" width="126" height="141"/>
+        <image name="Recurso 29" width="344" height="414"/>
+        <image name="cable.connector.horizontal" catalog="system" width="128" height="40"/>
         <namedColor name="tabbarback">
             <color red="0.69800001382827759" green="0.95300000905990601" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

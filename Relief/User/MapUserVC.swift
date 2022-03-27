@@ -16,6 +16,7 @@ class MapUserVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
     @IBOutlet var tutorialView: UIView!
     @IBOutlet var tutorialTextMapView: UIView!
     var mapTutorial = true
+    var response: Response?
 
     
 //    Esther Moreno lat and long
@@ -30,40 +31,48 @@ class MapUserVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
         tutorialTextMapView.layer.cornerRadius = 30
         overrideUserInterfaceStyle = .light
         
-        let mass1 = Massagist()
-        mass1.name = "Esther Moreno"
-        mass1.serviceDescription = "Masajes relajantes"
-        mass1.lng = -3.716440514606122
-        mass1.lat = 40.439797570299035
         
-        let mass2 = Massagist()
-        mass2.name = "La Pili"
-        mass2.serviceDescription = "Masajes sensuales"
-        mass2.lng = -3.718440514506122
-        mass2.lat = 40.436797570199035
-        
-        let mass3 = Massagist()
-        mass3.name = "Antonia la Vallecana"
-        mass3.serviceDescription = "Masajes de espalda"
-        mass3.lng = -3.711440574506122
-        mass3.lat = 40.435797590199035
-        
-        let massagists = [mass1, mass2, mass3]
-        
-        mapView.addAnnotations(massagists)
-        
-        let usLocation = MKPointAnnotation()
-        usLocation.coordinate = CLLocationCoordinate2D(latitude:(mapView?.userLocation.coordinate.latitude)!,longitude:(mapView?.userLocation.coordinate.longitude)!)
-        
-        print(usLocation.coordinate)
-        
-        getUserLocation()
         
         if let value = UserDefaults.standard.object(forKey: "Maptv") as? Bool{
             mapTutorial = value
         }
         if (mapTutorial == false){
             tutorialView.isHidden = true
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        let params: [String: Any] = [
+            "api_token": UserDefaults.standard.object(forKey: "token") as? String ?? ""
+
+        ]
+
+        DataMapper.shared.getTherapistInMap(params: params) { response in
+            DispatchQueue.main.async {
+            self.response = response
+                self.mapView.reloadInputViews()
+            print("AQUI ESTA LA RESPUESTA")
+            print(response)
+            if(response == nil){
+                self.showAlert(title: "Error en la conexion")
+            }else{
+                DispatchQueue.main.async {
+
+                    self.response = response
+
+                    if(response?.status == 0){
+                        self.showAlert(title: (response?.msg)!)
+
+                    }else if response?.status == 1{
+                        self.setupMap()
+                        print(response?.profile)
+
+                    }else if response?.status == 401{
+                        self.showAlert(title: (response?.msg)!)
+                    }
+                }
+            }
+            }
+            
         }
     }
     
@@ -112,6 +121,32 @@ class MapUserVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
         let name = mapTutorial
         UserDefaults.standard.set(name, forKey: "Maptv")
         tutorialView.isHidden = true
+    }
+    func showAlert(title:String){
+        let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .default, handler: {(action) in
+            
+        })
+        alertController.addAction(ok)
+
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    private func setupMap() {
+        for massagist in response?.profile ?? [] {
+            if (massagist.lat ?? 0.0) != 0.0 && (massagist.long ?? 0.0) != 0.0 {
+                let annotation = UserAnnotation(with: massagist)
+                mapView.addAnnotation(annotation)
+            }
+        }
+        
+        mapView.showAnnotations(mapView.annotations, animated: true)
+//        let usLocation = MKPointAnnotation()
+//        usLocation.coordinate = CLLocationCoordinate2D(latitude:(mapView?.userLocation.coordinate.latitude)!,longitude:(mapView?.userLocation.coordinate.longitude)!)
+//
+//        print(usLocation.coordinate)
+//
+//        getUserLocation()
     }
 }
 

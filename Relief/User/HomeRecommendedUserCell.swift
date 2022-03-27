@@ -1,13 +1,13 @@
 //
-//  HomeUserRecomCell.swift
+//  HomeRecommendedUserCell.swift
 //  Relief
 //
-//  Created by Tatiana López Tchalián on 27/1/22.
+//  Created by Alejandro Botana on 26/3/22.
 //
 
 import UIKit
 
-class HomeUserCell: UITableViewCell {
+class HomeRecommendedUserCell: UITableViewCell {
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var button: UIButton?
@@ -42,39 +42,6 @@ class HomeUserCell: UITableViewCell {
         }
     }
     
-    @IBAction func favButtonTapped(_ sender: Any) {
-        heartButton?.isSelected.toggle()
-        let params2: [String: Any] = [
-            "therapist_id": String(self.user?.id ?? 0),
-            "api_token": UserDefaults.standard.object(forKey: "token") as? String ?? ""
-        ]
-        
-        DataMapper.shared.addRemoveFavorites(params: params2) { response in
-//            print(params2)
-//            print(response)
-            if(response == nil){
-                DispatchQueue.main.async {
-                   
-                }
-            }else{
-                
-                    DispatchQueue.main.async {
-                        self.response = response
-                        if(response?.status == 0){
-                            //error
-                        }else if response?.status == 1{
-                            
-                    }else if response?.status == 2{
-                        
-                    }else if response?.status == 3{
-                        
-                    }
-                }
-            }
-        }
-    }
-    
-    
     private func renderUI(){
         guard let user = user else {return}
         
@@ -98,8 +65,8 @@ class HomeUserCell: UITableViewCell {
         }
     }
     func configureButton(){
-        let imageHeart = UIImage(named: "ic_favoritoActivo")
-        let imageHeartFilled = UIImage(named: "ic_favoritoInactivo")
+        let imageHeart = UIImage(named: "ic_favoritoInactivo")
+        let imageHeartFilled = UIImage(named: "ic_favoritoActivo")
         heartButton?.setImage(imageHeart, for: .normal)
         heartButton?.setImage(imageHeartFilled, for: .selected)
     }
