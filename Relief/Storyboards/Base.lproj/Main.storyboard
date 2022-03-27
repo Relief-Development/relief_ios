@@ -151,7 +151,7 @@ Entonces esta es tu aplicación.
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="SOO-jX-iMv">
                                                             <rect key="frame" x="81" y="39" width="201" height="56"/>
                                                             <subviews>
-                                                                <button opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDU-47-Fkl">
+                                                                <button opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDU-47-Fkl">
                                                                     <rect key="frame" x="0.0" y="0.0" width="29" height="56"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="tintColor" white="0.79000000000000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -159,7 +159,7 @@ Entonces esta es tu aplicación.
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
                                                                 </button>
-                                                                <button opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUz-zF-XjX">
+                                                                <button opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUz-zF-XjX">
                                                                     <rect key="frame" x="43" y="0.0" width="29" height="56"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="tintColor" systemColor="systemYellowColor"/>
@@ -167,7 +167,7 @@ Entonces esta es tu aplicación.
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
                                                                 </button>
-                                                                <button opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLC-bX-9gy">
+                                                                <button opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLC-bX-9gy">
                                                                     <rect key="frame" x="86" y="0.0" width="29" height="56"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="tintColor" systemColor="systemYellowColor"/>
@@ -175,7 +175,7 @@ Entonces esta es tu aplicación.
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
                                                                 </button>
-                                                                <button opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vv-74-cqT">
+                                                                <button opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vv-74-cqT">
                                                                     <rect key="frame" x="129" y="0.0" width="29" height="56"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="tintColor" systemColor="systemYellowColor"/>
@@ -183,7 +183,7 @@ Entonces esta es tu aplicación.
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
                                                                 </button>
-                                                                <button opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjG-KQ-qD8">
+                                                                <button opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjG-KQ-qD8">
                                                                     <rect key="frame" x="172" y="0.0" width="29" height="56"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="tintColor" systemColor="systemYellowColor"/>
@@ -274,7 +274,7 @@ Entonces esta es tu aplicación.
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="HJv-vT-9We">
                                                             <rect key="frame" x="81" y="39" width="201" height="56"/>
                                                             <subviews>
-                                                                <button opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrw-9U-K1W">
+                                                                <button opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrw-9U-K1W">
                                                                     <rect key="frame" x="0.0" y="0.0" width="29" height="56"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="tintColor" white="0.79000000000000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -282,7 +282,7 @@ Entonces esta es tu aplicación.
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
                                                                 </button>
-                                                                <button opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VC2-65-uQQ">
+                                                                <button opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VC2-65-uQQ">
                                                                     <rect key="frame" x="43" y="0.0" width="29" height="56"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="tintColor" systemColor="systemYellowColor"/>
@@ -290,7 +290,7 @@ Entonces esta es tu aplicación.
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
                                                                 </button>
-                                                                <button opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8R-6l-b0C">
+                                                                <button opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8R-6l-b0C">
                                                                     <rect key="frame" x="86" y="0.0" width="29" height="56"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="tintColor" systemColor="systemYellowColor"/>
@@ -298,7 +298,7 @@ Entonces esta es tu aplicación.
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
                                                                 </button>
-                                                                <button opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nij-Vu-eoA">
+                                                                <button opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nij-Vu-eoA">
                                                                     <rect key="frame" x="129" y="0.0" width="29" height="56"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="tintColor" systemColor="systemYellowColor"/>
@@ -306,7 +306,7 @@ Entonces esta es tu aplicación.
                                                                     <state key="normal" image="Recurso 16"/>
                                                                     <state key="highlighted" image="Recurso 17"/>
                                                                 </button>
-                                                                <button opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tib-So-3sM">
+                                                                <button opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tib-So-3sM">
                                                                     <rect key="frame" x="172" y="0.0" width="29" height="56"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="tintColor" systemColor="systemYellowColor"/>
