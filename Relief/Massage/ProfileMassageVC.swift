@@ -52,6 +52,7 @@ class ProfileMassageVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         overrideUserInterfaceStyle = .light
     }
     override func viewWillAppear(_ animated: Bool) {
+        self.noServicesView.isHidden = true
         self.spinnerView.isHidden = false
         if let nameP = UserDefaults.standard.object(forKey: "name") as? String{
             nameL.text = nameP

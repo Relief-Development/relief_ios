@@ -4387,7 +4387,7 @@ Entonces esta es tu aplicación.
                                                         </constraints>
                                                         <color key="textColor" name="massage_light"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
