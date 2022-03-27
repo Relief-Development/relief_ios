@@ -68,6 +68,8 @@ class HomeUserViewController: UIViewController, UITableViewDelegate, UITableView
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.chargeRecomended()
+
         
     }
     @IBAction func favTapped() {
