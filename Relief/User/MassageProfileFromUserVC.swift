@@ -209,10 +209,11 @@ class MassageProfileFromUserVC: UIViewController, UITableViewDelegate, UITableVi
             
         let params: [String: Any] = [
             "id": self.user?.id,
-            "api_token": AppData.shared.apiToken ?? ""
+            "api_token": UserDefaults.standard.object(forKey: "token") as? String
         ]
         print(params)
         DataMapper.shared.getServices(params: params) { response in
+            print(response)
             if(response == nil){
                 DispatchQueue.main.async {
                         //print("LA RESPUESTA ES")

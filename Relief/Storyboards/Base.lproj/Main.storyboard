@@ -2843,7 +2843,7 @@ Entonces esta es tu aplicación.
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXQ-gF-ZOE">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Actualmente no dispones de ninguna ubicacion" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXQ-gF-ZOE">
                                 <rect key="frame" x="205" y="270" width="140" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>

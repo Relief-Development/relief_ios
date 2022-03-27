@@ -56,6 +56,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.noServicesView.isHidden = true
         self.spinnerView.isHidden = false
         let params2: [String: Any] = [
             "api_token": UserDefaults.standard.object(forKey: "token") as? String
