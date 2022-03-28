@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RecoverPassViewController: UIViewController {
+class RecoverPassViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var recoveryEmailTF: UITextField?
     @IBOutlet var recoveryBtn: UIButton?
@@ -19,6 +19,7 @@ class RecoverPassViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.recoveryBtn?.layer.cornerRadius = 6
+        self.recoveryEmailTF?.delegate = self
         self.recoveryEmailTF?.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named:"user_light")!] )
         overrideUserInterfaceStyle = .light
         
@@ -75,6 +76,9 @@ class RecoverPassViewController: UIViewController {
         alertController.addAction(ok)
 
         self.present(alertController, animated: true, completion: nil)
+    }
+    @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
     }
 
 
