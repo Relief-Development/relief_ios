@@ -197,7 +197,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
 //            let alertController = UIAlertController(title: nil, message: "Ese usuario no esta registrado", preferredStyle: .alert)
 //            self.present(alertController, animated: true, completion: nil)
 //            Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { _ in alertController.dismiss(animated: true, completion: nil) })
-//        }
+//        
         
         
     }
